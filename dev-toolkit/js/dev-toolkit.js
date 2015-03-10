@@ -1,9 +1,10 @@
     function cleanUp() {
     var whitespace = /\s+/g
     var wow_prefix = /^wow/i
+    var pay_prefix = /^pay/i
     var input = document.getElementById("gitBranchInput").value;
 
-    document.getElementById("gitBranchOutput").innerHTML = input.trim().replace(whitespace, "-").replace(wow_prefix, "WOW");
+    document.getElementById("gitBranchOutput").innerHTML = input.trim().replace(whitespace, "-").replace(wow_prefix, "WOW").replace(pay_prefix, "PAY");
     }
 
     function base64Decode() {
