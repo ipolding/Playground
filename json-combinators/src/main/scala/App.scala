@@ -86,6 +86,209 @@ object Main extends App {
       |{"@BulletinDate":"2015-06-13 00:00:00","@SiteCode":"BG2","@SiteName":"Barking and Dagenham - Scrattons Farm","@SiteType":"Suburban","@Latitude":"51.529389","@Longitude":"0.132857","@LatitudeWGS84":"6715476.18683","@LongitudeWGS84":"14789.5735883","Species":[{"@SpeciesCode":"NO2","@SpeciesDescription":"Nitrogen Dioxide","@AirQualityIndex":"2","@AirQualityBand":"Low","@IndexSource":"Measurement"},{"@SpeciesCode":"PM10","@SpeciesDescription":"PM10 Particulate","@AirQualityIndex":"2","@AirQualityBand":"Low","@IndexSource":"Measurement"}]}
     """.stripMargin
 
+val barking_and_dagenham_json =
+  """
+    |{"@LocalAuthorityCode":"1","@LocalAuthorityName":"Barking and Dagenham","@LaCentreLatitude":"51.538435","@LaCentreLongitude":"0.11467","@LaCentreLatitudeWGS84":"6717095.01808","@LaCentreLongitudeWGS84":"12765.0060093","Site":{"@BulletinDate":"2015-06-13 00:00:00","@SiteCode":"BG2","@SiteName":"Barking and Dagenham - Scrattons Farm","@SiteType":"Suburban","@Latitude":"51.529389","@Longitude":"0.132857","@LatitudeWGS84":"6715476.18683","@LongitudeWGS84":"14789.5735883","Species":[{"@SpeciesCode":"NO2","@SpeciesDescription":"Nitrogen Dioxide","@AirQualityIndex":"2","@AirQualityBand":"Low","@IndexSource":"Measurement"},{"@SpeciesCode":"PM10","@SpeciesDescription":"PM10 Particulate","@AirQualityIndex":"2","@AirQualityBand":"Low","@IndexSource":"Measurement"}]}}
+  """.stripMargin
+val bexley_json =
+  """
+    |  {
+    |        "@LocalAuthorityCode": "3",
+    |        "@LocalAuthorityName": "Bexley",
+    |        "@LaCentreLatitude": "51.441355",
+    |        "@LaCentreLongitude": "0.14861",
+    |        "@LaCentreLatitudeWGS84": "6699738.789844",
+    |        "@LaCentreLongitudeWGS84": "16543.189527",
+    |        "Site": [
+    |          {
+    |            "@BulletinDate": "2015-06-16 00:00:00",
+    |            "@SiteCode": "BQ7",
+    |            "@SiteName": "Bexley - Belvedere West",
+    |            "@SiteType": "Urban Background",
+    |            "@Latitude": "51.4946486813055",
+    |            "@Longitude": "0.137279111232178",
+    |            "@LatitudeWGS84": "6709278.28804",
+    |            "@LongitudeWGS84": "14951.9364255",
+    |            "Species": [
+    |              {
+    |                "@SpeciesCode": "NO2",
+    |                "@SpeciesDescription": "Nitrogen Dioxide",
+    |                "@AirQualityIndex": "1",
+    |                "@AirQualityBand": "Low",
+    |                "@IndexSource": "Measurement"
+    |              },
+    |              {
+    |                "@SpeciesCode": "O3",
+    |                "@SpeciesDescription": "Ozone",
+    |                "@AirQualityIndex": "3",
+    |                "@AirQualityBand": "Low",
+    |                "@IndexSource": "Measurement"
+    |              },
+    |              {
+    |                "@SpeciesCode": "PM10",
+    |                "@SpeciesDescription": "PM10 Particulate",
+    |                "@AirQualityIndex": "2",
+    |                "@AirQualityBand": "Low",
+    |                "@IndexSource": "Measurement"
+    |              }
+    |            ]
+    |          },
+    |          {
+    |            "@BulletinDate": "2015-06-16 00:00:00",
+    |            "@SiteCode": "BQ8",
+    |            "@SiteName": "Bexley - Belvedere West FDMS",
+    |            "@SiteType": "Urban Background",
+    |            "@Latitude": "51.4946486813055",
+    |            "@Longitude": "0.137279111232178",
+    |            "@LatitudeWGS84": "6709278.28804",
+    |            "@LongitudeWGS84": "14951.9364255",
+    |            "Species": {
+    |              "@SpeciesCode": "PM10",
+    |              "@SpeciesDescription": "PM10 Particulate",
+    |              "@AirQualityIndex": "1",
+    |              "@AirQualityBand": "Low",
+    |              "@IndexSource": "Measurement"
+    |            }
+    |          },
+    |          {
+    |            "@BulletinDate": "2015-06-16 00:00:00",
+    |            "@SiteCode": "BX0",
+    |            "@SiteName": "Bexley - Belvedere FDMS",
+    |            "@SiteType": "Suburban",
+    |            "@Latitude": "51.4906102082147",
+    |            "@Longitude": "0.158914493927518",
+    |            "@LatitudeWGS84": "6708546.55118",
+    |            "@LongitudeWGS84": "17686.6633362",
+    |            "Species": {
+    |              "@SpeciesCode": "PM10",
+    |              "@SpeciesDescription": "PM10 Particulate",
+    |              "@AirQualityIndex": "1",
+    |              "@AirQualityBand": "Low",
+    |              "@IndexSource": "Measurement"
+    |            }
+    |          },
+    |          {
+    |            "@BulletinDate": "2015-06-16 00:00:00",
+    |            "@SiteCode": "BX1",
+    |            "@SiteName": "Bexley - Slade Green",
+    |            "@SiteType": "Suburban",
+    |            "@Latitude": "51.4659832746662",
+    |            "@Longitude": "0.184877126994369",
+    |            "@LatitudeWGS84": "6704140.10457",
+    |            "@LongitudeWGS84": "20577.2727637",
+    |            "Species": [
+    |              {
+    |                "@SpeciesCode": "NO2",
+    |                "@SpeciesDescription": "Nitrogen Dioxide",
+    |                "@AirQualityIndex": "1",
+    |                "@AirQualityBand": "Low",
+    |                "@IndexSource": "Measurement"
+    |              },
+    |              {
+    |                "@SpeciesCode": "O3",
+    |                "@SpeciesDescription": "Ozone",
+    |                "@AirQualityIndex": "3",
+    |                "@AirQualityBand": "Low",
+    |                "@IndexSource": "Measurement"
+    |              },
+    |              {
+    |                "@SpeciesCode": "PM10",
+    |                "@SpeciesDescription": "PM10 Particulate",
+    |                "@AirQualityIndex": "2",
+    |                "@AirQualityBand": "Low",
+    |                "@IndexSource": "Measurement"
+    |              }
+    |            ]
+    |          },
+    |          {
+    |            "@BulletinDate": "2015-06-16 00:00:00",
+    |            "@SiteCode": "BX2",
+    |            "@SiteName": "Bexley - Belvedere",
+    |            "@SiteType": "Suburban",
+    |            "@Latitude": "51.4906102082147",
+    |            "@Longitude": "0.158914493927518",
+    |            "@LatitudeWGS84": "6708546.55118",
+    |            "@LongitudeWGS84": "17686.6633362",
+    |            "Species": [
+    |              {
+    |                "@SpeciesCode": "NO2",
+    |                "@SpeciesDescription": "Nitrogen Dioxide",
+    |                "@AirQualityIndex": "1",
+    |                "@AirQualityBand": "Low",
+    |                "@IndexSource": "Measurement"
+    |              },
+    |              {
+    |                "@SpeciesCode": "PM10",
+    |                "@SpeciesDescription": "PM10 Particulate",
+    |                "@AirQualityIndex": "2",
+    |                "@AirQualityBand": "Low",
+    |                "@IndexSource": "Measurement"
+    |              }
+    |            ]
+    |          },
+    |          {
+    |            "@BulletinDate": "2015-06-16 00:00:00",
+    |            "@SiteCode": "BX9",
+    |            "@SiteName": "Bexley - Slade Green FDMS",
+    |            "@SiteType": "Suburban",
+    |            "@Latitude": "51.4659832746662",
+    |            "@Longitude": "0.184877126994369",
+    |            "@LatitudeWGS84": "6704140.10457",
+    |            "@LongitudeWGS84": "20577.2727637",
+    |            "Species": {
+    |              "@SpeciesCode": "PM25",
+    |              "@SpeciesDescription": "PM2.5 Particulate",
+    |              "@AirQualityIndex": "2",
+    |              "@AirQualityBand": "Low",
+    |              "@IndexSource": "Measurement"
+    |            }
+    |          },
+    |          {
+    |            "@BulletinDate": "2015-06-16 00:00:00",
+    |            "@SiteCode": "GB0",
+    |            "@SiteName": "Greenwich and Bexley - Falconwood FDMS",
+    |            "@SiteType": "Roadside",
+    |            "@Latitude": "51.4563",
+    |            "@Longitude": "0.085606",
+    |            "@LatitudeWGS84": "6702408.29265",
+    |            "@LongitudeWGS84": "9529.61632885",
+    |            "Species": {
+    |              "@SpeciesCode": "PM10",
+    |              "@SpeciesDescription": "PM10 Particulate",
+    |              "@AirQualityIndex": "2",
+    |              "@AirQualityBand": "Low",
+    |              "@IndexSource": "Measurement"
+    |            }
+    |          },
+    |          {
+    |            "@BulletinDate": "2015-06-16 00:00:00",
+    |            "@SiteCode": "GB6",
+    |            "@SiteName": "Greenwich and Bexley - Falconwood",
+    |            "@SiteType": "Roadside",
+    |            "@Latitude": "51.4563",
+    |            "@Longitude": "0.085606",
+    |            "@LatitudeWGS84": "6702408.29265",
+    |            "@LongitudeWGS84": "9529.61632885",
+    |            "Species": [
+    |              {
+    |                "@SpeciesCode": "NO2",
+    |                "@SpeciesDescription": "Nitrogen Dioxide",
+    |                "@AirQualityIndex": "2",
+    |                "@AirQualityBand": "Low",
+    |                "@IndexSource": "Measurement"
+    |              },
+    |              {
+    |                "@SpeciesCode": "O3",
+    |                "@SpeciesDescription": "Ozone",
+    |                "@AirQualityIndex": "2",
+    |                "@AirQualityBand": "Low",
+    |                "@IndexSource": "Measurement"
+    |              }
+    |            ]
+    |          }
+    |        ]
+    |      }
+  """.stripMargin
 
 
   authorityList.map(
@@ -111,25 +314,47 @@ object Main extends App {
     JsonConverter.toList(siteList.as[JsValue](readSpecies))
   }
 
-  def collectAndReadPollutantReadings(pollutant : String)(species : List[JsValue]) : List[Int] = {
+  def collectAndReadPollutantLevel(pollutant : String)(species : List[JsValue]) : List[Int] = {
     collectPollutantLevels(pollutant)(species).map(readPollutantLevel(_))
   }
 
   def collectAndReadPollutantForSite(pollutant : String)(site: JsValue) : List[Int] = {
-    collectAndReadPollutantReadings(pollutant)(readSpecies(site))
+    collectAndReadPollutantLevel(pollutant)(readSpecies(site))
+  }
+  
+  def collectAndReadPollutantForAuthority(pollutant : String)(authority : JsValue) : List[Int] = {
+    val sites : List[JsValue] = JsonConverter.toList(authority.as[JsValue](readSites))
+
+    sites.flatMap(collectAndReadPollutantForSite(pollutant)(_))
+    
   }
 
 //  print(readPollutantLevel(Json.parse(site_json).as[JsObject]))
 
+  /*
   for (i <- 1 to 10) {println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")}
   println("Collect and read pollutant readings from species:")
-  print(collectAndReadPollutantReadings("NO2")(JsonConverter.toList(Json.parse(species_json))))
+  print(collectAndReadPollutantLevel("NO2")(JsonConverter.toList(Json.parse(species_json))))
   for (i <- 1 to 10) {println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")}
 
   for (i <- 1 to 10) {println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")}
   println("Collect and read pollutant readings from sites:")
-  print(collectAndReadPollutantForSite("NO2")(Json.parse(site_json).as[JsValue]))
+  print(collectAndReadPollutantForAuthority("NO2")(Json.parse(authority_json).as[JsValue]))
   for (i <- 1 to 10) {println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")}
+*/
+
+  for (i <- 1 to 10) {println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")}
+  println("Collect and read pollutant readings for barking and dagenham:")
+  print(collectAndReadPollutantForAuthority("NO2")(Json.parse(barking_and_dagenham_json).as[JsValue]))
+  for (i <- 1 to 10) {println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")}
+
+
+  for (i <- 1 to 10) {println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")}
+  println("Collect and read pollutant readings for Bexley:")
+  print(collectAndReadPollutantForAuthority("NO2")(Json.parse(bexley_json).as[JsValue]))
+  for (i <- 1 to 10) {println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")}
+
+
 
 
 }
