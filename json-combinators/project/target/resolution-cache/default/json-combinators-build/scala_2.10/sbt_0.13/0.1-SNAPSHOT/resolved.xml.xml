@@ -4,7 +4,7 @@
 		module="json-combinators-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150615120543"
+		publication="20150616170736"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

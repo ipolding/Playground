@@ -8,36 +8,8 @@
 [debug] == resolving dependencies default#json-combinators-build;0.1-SNAPSHOT->com.typesafe.play#play-json_2.10;2.2.1 [compile->default(compile)]
 [info] Resolving com.typesafe.play#play-json_2.10;2.2.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-json_2.10;2.2.1 {compile=[default(compile)]}
-[info] Resolving com.typesafe.play#play-json_2.10;2.2.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#play-json_2.10;2.2.1 {compile=[default(compile)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-json_2.10/2.2.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-json_2.10/2.2.1/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe.play#play-json_2.10;2.2.1
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-json_2.10/2.2.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-json_2.10/2.2.1/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for com.typesafe.play#play-json_2.10;2.2.1
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.typesafe.play\play-json_2.10\2.2.1\ivys\ivy.xml
-[debug] 	local: no ivy file found for com.typesafe.play#play-json_2.10;2.2.1
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.pom
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.pom
-[debug] 	public: no ivy file found for com.typesafe.play#play-json_2.10;2.2.1
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.pom
-[debug] 	Typesafe repository: found md file for com.typesafe.play#play-json_2.10;2.2.1
-[debug] 		=> http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.pom (2.2.1)
-[debug] downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.pom ...
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.pom
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.pom.sha1
-[debug] sha1 OK for http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.pom
-[debug] 	[SUCCESSFUL ] com.typesafe.play#play-json_2.10;2.2.1!play-json_2.10.pom(pom.original) (824ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-json_2.10/2.2.1/jars/play-json_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-json_2.10/2.2.1/jars/play-json_2.10.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-json_2.10/2.2.1/jars/play-json_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-json_2.10/2.2.1/jars/play-json_2.10.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.typesafe.play\play-json_2.10\2.2.1\jars\play-json_2.10.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.jar
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.jar
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.jar
-[debug] 	found com.typesafe.play#play-json_2.10;2.2.1 in Typesafe repository
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-json_2.10;2.2.1
+[debug] 	found com.typesafe.play#play-json_2.10;2.2.1 in sbt-chain
 [debug] == resolving dependencies default#json-combinators-build;0.1-SNAPSHOT->com.typesafe.play#play-json_2.10;2.2.1 [compile->runtime]
 [debug] == resolving dependencies default#json-combinators-build;0.1-SNAPSHOT->com.typesafe.play#play-json_2.10;2.2.1 [compile->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -49,36 +21,8 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [info] Resolving com.typesafe.play#play-iteratees_2.10;2.2.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-iteratees_2.10;2.2.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving com.typesafe.play#play-iteratees_2.10;2.2.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#play-iteratees_2.10;2.2.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-iteratees_2.10/2.2.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-iteratees_2.10/2.2.1/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe.play#play-iteratees_2.10;2.2.1
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-iteratees_2.10/2.2.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-iteratees_2.10/2.2.1/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for com.typesafe.play#play-iteratees_2.10;2.2.1
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.typesafe.play\play-iteratees_2.10\2.2.1\ivys\ivy.xml
-[debug] 	local: no ivy file found for com.typesafe.play#play-iteratees_2.10;2.2.1
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.pom
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.pom
-[debug] 	public: no ivy file found for com.typesafe.play#play-iteratees_2.10;2.2.1
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.pom
-[debug] 	Typesafe repository: found md file for com.typesafe.play#play-iteratees_2.10;2.2.1
-[debug] 		=> http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.pom (2.2.1)
-[debug] downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.pom ...
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.pom
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.pom.sha1
-[debug] sha1 OK for http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.pom
-[debug] 	[SUCCESSFUL ] com.typesafe.play#play-iteratees_2.10;2.2.1!play-iteratees_2.10.pom(pom.original) (1085ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-iteratees_2.10/2.2.1/jars/play-iteratees_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-iteratees_2.10/2.2.1/jars/play-iteratees_2.10.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-iteratees_2.10/2.2.1/jars/play-iteratees_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-iteratees_2.10/2.2.1/jars/play-iteratees_2.10.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.typesafe.play\play-iteratees_2.10\2.2.1\jars\play-iteratees_2.10.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.jar
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.jar
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.jar
-[debug] 	found com.typesafe.play#play-iteratees_2.10;2.2.1 in Typesafe repository
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-iteratees_2.10;2.2.1
+[debug] 	found com.typesafe.play#play-iteratees_2.10;2.2.1 in sbt-chain
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.typesafe.play#play-iteratees_2.10;2.2.1 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#play-iteratees_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -88,31 +32,8 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [info] Resolving org.scala-stm#scala-stm_2.10;0.7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-stm#scala-stm_2.10;0.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.scala-stm#scala-stm_2.10;0.7 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.scala-stm#scala-stm_2.10;0.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-stm/scala-stm_2.10/0.7/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-stm/scala-stm_2.10/0.7/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for org.scala-stm#scala-stm_2.10;0.7
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-stm/scala-stm_2.10/0.7/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-stm/scala-stm_2.10/0.7/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for org.scala-stm#scala-stm_2.10;0.7
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\org.scala-stm\scala-stm_2.10\0.7\ivys\ivy.xml
-[debug] 	local: no ivy file found for org.scala-stm#scala-stm_2.10;0.7
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.pom
-[debug] 	public: found md file for org.scala-stm#scala-stm_2.10;0.7
-[debug] 		=> https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.pom (0.7)
-[debug] downloading https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.pom
-[debug] 	[SUCCESSFUL ] org.scala-stm#scala-stm_2.10;0.7!scala-stm_2.10.pom(pom.original) (342ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-stm/scala-stm_2.10/0.7/jars/scala-stm_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-stm/scala-stm_2.10/0.7/jars/scala-stm_2.10.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-stm/scala-stm_2.10/0.7/jars/scala-stm_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-stm/scala-stm_2.10/0.7/jars/scala-stm_2.10.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\org.scala-stm\scala-stm_2.10\0.7\jars\scala-stm_2.10.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.jar
-[debug] 	found org.scala-stm#scala-stm_2.10;0.7 in public
+[debug] sbt-chain: module revision found in cache: org.scala-stm#scala-stm_2.10;0.7
+[debug] 	found org.scala-stm#scala-stm_2.10;0.7 in sbt-chain
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] == resolving dependencies com.typesafe.play#play-iteratees_2.10;2.2.1->org.scala-stm#scala-stm_2.10;0.7 [compile->compile(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -140,31 +61,8 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [info] Resolving com.typesafe#config;1.0.2 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe#config;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving com.typesafe#config;1.0.2 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe#config;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe/config/1.0.2/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe/config/1.0.2/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe#config;1.0.2
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe/config/1.0.2/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe/config/1.0.2/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for com.typesafe#config;1.0.2
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.typesafe\config\1.0.2\ivys\ivy.xml
-[debug] 	local: no ivy file found for com.typesafe#config;1.0.2
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.pom
-[debug] 	public: found md file for com.typesafe#config;1.0.2
-[debug] 		=> https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.pom (1.0.2)
-[debug] downloading https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.pom
-[debug] 	[SUCCESSFUL ] com.typesafe#config;1.0.2!config.pom(pom.original) (300ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe/config/1.0.2/bundles/config.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe/config/1.0.2/bundles/config.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe/config/1.0.2/bundles/config.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe/config/1.0.2/bundles/config.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.typesafe\config\1.0.2\bundles\config.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.jar
-[debug] 	found com.typesafe#config;1.0.2 in public
+[debug] sbt-chain: module revision found in cache: com.typesafe#config;1.0.2
+[debug] 	found com.typesafe#config;1.0.2 in sbt-chain
 [debug] == resolving dependencies com.typesafe.play#play-iteratees_2.10;2.2.1->com.typesafe#config;1.0.2 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.typesafe.play#play-iteratees_2.10;2.2.1 [compile->runtime(*)]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.typesafe.play#play-iteratees_2.10;2.2.1 [compile->compile]
@@ -183,36 +81,8 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [info] Resolving com.typesafe.play#play-functional_2.10;2.2.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-functional_2.10;2.2.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving com.typesafe.play#play-functional_2.10;2.2.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#play-functional_2.10;2.2.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-functional_2.10/2.2.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-functional_2.10/2.2.1/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe.play#play-functional_2.10;2.2.1
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-functional_2.10/2.2.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-functional_2.10/2.2.1/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for com.typesafe.play#play-functional_2.10;2.2.1
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.typesafe.play\play-functional_2.10\2.2.1\ivys\ivy.xml
-[debug] 	local: no ivy file found for com.typesafe.play#play-functional_2.10;2.2.1
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.pom
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.pom
-[debug] 	public: no ivy file found for com.typesafe.play#play-functional_2.10;2.2.1
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.pom
-[debug] 	Typesafe repository: found md file for com.typesafe.play#play-functional_2.10;2.2.1
-[debug] 		=> http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.pom (2.2.1)
-[debug] downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.pom ...
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.pom
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.pom.sha1
-[debug] sha1 OK for http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.pom
-[debug] 	[SUCCESSFUL ] com.typesafe.play#play-functional_2.10;2.2.1!play-functional_2.10.pom(pom.original) (866ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-functional_2.10/2.2.1/jars/play-functional_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-functional_2.10/2.2.1/jars/play-functional_2.10.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-functional_2.10/2.2.1/jars/play-functional_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-functional_2.10/2.2.1/jars/play-functional_2.10.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.typesafe.play\play-functional_2.10\2.2.1\jars\play-functional_2.10.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.jar
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.jar
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.jar
-[debug] 	found com.typesafe.play#play-functional_2.10;2.2.1 in Typesafe repository
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-functional_2.10;2.2.1
+[debug] 	found com.typesafe.play#play-functional_2.10;2.2.1 in sbt-chain
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.typesafe.play#play-functional_2.10;2.2.1 [compile->compile(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -236,36 +106,8 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [info] Resolving com.typesafe.play#play-datacommons_2.10;2.2.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-datacommons_2.10;2.2.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving com.typesafe.play#play-datacommons_2.10;2.2.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#play-datacommons_2.10;2.2.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-datacommons_2.10/2.2.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-datacommons_2.10/2.2.1/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe.play#play-datacommons_2.10;2.2.1
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-datacommons_2.10/2.2.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-datacommons_2.10/2.2.1/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for com.typesafe.play#play-datacommons_2.10;2.2.1
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.typesafe.play\play-datacommons_2.10\2.2.1\ivys\ivy.xml
-[debug] 	local: no ivy file found for com.typesafe.play#play-datacommons_2.10;2.2.1
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.pom
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.pom
-[debug] 	public: no ivy file found for com.typesafe.play#play-datacommons_2.10;2.2.1
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.pom
-[debug] 	Typesafe repository: found md file for com.typesafe.play#play-datacommons_2.10;2.2.1
-[debug] 		=> http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.pom (2.2.1)
-[debug] downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.pom ...
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.pom
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.pom.sha1
-[debug] sha1 OK for http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.pom
-[debug] 	[SUCCESSFUL ] com.typesafe.play#play-datacommons_2.10;2.2.1!play-datacommons_2.10.pom(pom.original) (744ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-datacommons_2.10/2.2.1/jars/play-datacommons_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/play-datacommons_2.10/2.2.1/jars/play-datacommons_2.10.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-datacommons_2.10/2.2.1/jars/play-datacommons_2.10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/play-datacommons_2.10/2.2.1/jars/play-datacommons_2.10.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.typesafe.play\play-datacommons_2.10\2.2.1\jars\play-datacommons_2.10.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.jar
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.jar
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.jar
-[debug] 	found com.typesafe.play#play-datacommons_2.10;2.2.1 in Typesafe repository
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-datacommons_2.10;2.2.1
+[debug] 	found com.typesafe.play#play-datacommons_2.10;2.2.1 in sbt-chain
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.typesafe.play#play-datacommons_2.10;2.2.1 [compile->compile(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -289,31 +131,8 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [info] Resolving joda-time#joda-time;2.2 ...
 [debug] sbt-chain: Checking cache for: dependency: joda-time#joda-time;2.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving joda-time#joda-time;2.2 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: joda-time#joda-time;2.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/joda-time/joda-time/2.2/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/joda-time/joda-time/2.2/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for joda-time#joda-time;2.2
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/joda-time/joda-time/2.2/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/joda-time/joda-time/2.2/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for joda-time#joda-time;2.2
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\joda-time\joda-time\2.2\ivys\ivy.xml
-[debug] 	local: no ivy file found for joda-time#joda-time;2.2
-[debug] 		tried https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.pom
-[debug] 	public: found md file for joda-time#joda-time;2.2
-[debug] 		=> https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.pom (2.2)
-[debug] downloading https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.pom
-[debug] 	[SUCCESSFUL ] joda-time#joda-time;2.2!joda-time.pom(pom.original) (389ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/joda-time/joda-time/2.2/jars/joda-time.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/joda-time/joda-time/2.2/jars/joda-time.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/joda-time/joda-time/2.2/jars/joda-time.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/joda-time/joda-time/2.2/jars/joda-time.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\joda-time\joda-time\2.2\jars\joda-time.jar
-[debug] 		tried https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.jar
-[debug] 	found joda-time#joda-time;2.2 in public
+[debug] sbt-chain: module revision found in cache: joda-time#joda-time;2.2
+[debug] 	found joda-time#joda-time;2.2 in sbt-chain
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->runtime(*)]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->joda-time#joda-time;2.2 [compile->compile]
@@ -325,31 +144,8 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [info] Resolving org.joda#joda-convert;1.3.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.joda#joda-convert;1.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.joda#joda-convert;1.3.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.joda#joda-convert;1.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.joda/joda-convert/1.3.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.joda/joda-convert/1.3.1/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for org.joda#joda-convert;1.3.1
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.joda/joda-convert/1.3.1/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.joda/joda-convert/1.3.1/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for org.joda#joda-convert;1.3.1
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\org.joda\joda-convert\1.3.1\ivys\ivy.xml
-[debug] 	local: no ivy file found for org.joda#joda-convert;1.3.1
-[debug] 		tried https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.pom
-[debug] 	public: found md file for org.joda#joda-convert;1.3.1
-[debug] 		=> https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.pom (1.3.1)
-[debug] downloading https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.pom
-[debug] 	[SUCCESSFUL ] org.joda#joda-convert;1.3.1!joda-convert.pom(pom.original) (336ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.joda/joda-convert/1.3.1/jars/joda-convert.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.joda/joda-convert/1.3.1/jars/joda-convert.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.joda/joda-convert/1.3.1/jars/joda-convert.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.joda/joda-convert/1.3.1/jars/joda-convert.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\org.joda\joda-convert\1.3.1\jars\joda-convert.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.jar
-[debug] 	found org.joda#joda-convert;1.3.1 in public
+[debug] sbt-chain: module revision found in cache: org.joda#joda-convert;1.3.1
+[debug] 	found org.joda#joda-convert;1.3.1 in sbt-chain
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->runtime(*)]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->org.joda#joda-convert;1.3.1 [compile->compile]
@@ -361,60 +157,8 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [info] Resolving com.fasterxml.jackson.core#jackson-annotations;2.2.2 ...
 [debug] sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-annotations;2.2.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving com.fasterxml.jackson.core#jackson-annotations;2.2.2 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-annotations;2.2.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-annotations/2.2.2/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-annotations/2.2.2/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for com.fasterxml.jackson.core#jackson-annotations;2.2.2
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-annotations/2.2.2/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-annotations/2.2.2/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for com.fasterxml.jackson.core#jackson-annotations;2.2.2
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.fasterxml.jackson.core\jackson-annotations\2.2.2\ivys\ivy.xml
-[debug] 	local: no ivy file found for com.fasterxml.jackson.core#jackson-annotations;2.2.2
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.pom
-[debug] 	public: found md file for com.fasterxml.jackson.core#jackson-annotations;2.2.2
-[debug] 		=> https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.pom (2.2.2)
-[debug] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.pom
-[debug] 	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-annotations;2.2.2!jackson-annotations.pom(pom.original) (410ms)
-[info] Resolving com.fasterxml#oss-parent;10 ...
-[debug] sbt-chain: Checking cache for: dependency: com.fasterxml#oss-parent;10 {}
-[info] Resolving com.fasterxml#oss-parent;10 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.fasterxml#oss-parent;10 {}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml/oss-parent/10/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml/oss-parent/10/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for com.fasterxml#oss-parent;10
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml/oss-parent/10/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml/oss-parent/10/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for com.fasterxml#oss-parent;10
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.fasterxml\oss-parent\10\ivys\ivy.xml
-[debug] 	local: no ivy file found for com.fasterxml#oss-parent;10
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/oss-parent/10/oss-parent-10.pom
-[debug] 	public: found md file for com.fasterxml#oss-parent;10
-[debug] 		=> https://repo1.maven.org/maven2/com/fasterxml/oss-parent/10/oss-parent-10.pom (10)
-[debug] downloading https://repo1.maven.org/maven2/com/fasterxml/oss-parent/10/oss-parent-10.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/oss-parent/10/oss-parent-10.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/oss-parent/10/oss-parent-10.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/fasterxml/oss-parent/10/oss-parent-10.pom
-[debug] 	[SUCCESSFUL ] com.fasterxml#oss-parent;10!oss-parent.pom(pom.original) (375ms)
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml/oss-parent/10/jars/oss-parent.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml/oss-parent/10/jars/oss-parent.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml/oss-parent/10/jars/oss-parent.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml/oss-parent/10/jars/oss-parent.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.fasterxml\oss-parent\10\jars\oss-parent.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/oss-parent/10/oss-parent-10.jar
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/fasterxml/oss-parent/10/oss-parent-10.jar
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/fasterxml/oss-parent/10/oss-parent-10.jar
-[debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/releases/com/fasterxml/oss-parent/10/oss-parent-10.jar
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-annotations/2.2.2/jars/jackson-annotations.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-annotations/2.2.2/jars/jackson-annotations.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-annotations/2.2.2/jars/jackson-annotations.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-annotations/2.2.2/jars/jackson-annotations.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.fasterxml.jackson.core\jackson-annotations\2.2.2\jars\jackson-annotations.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.jar
-[debug] 	found com.fasterxml.jackson.core#jackson-annotations;2.2.2 in public
+[debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-annotations;2.2.2
+[debug] 	found com.fasterxml.jackson.core#jackson-annotations;2.2.2 in sbt-chain
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.fasterxml.jackson.core#jackson-annotations;2.2.2 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.fasterxml.jackson.core#jackson-annotations;2.2.2 [compile->runtime(*)]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.fasterxml.jackson.core#jackson-annotations;2.2.2 [compile->compile]
@@ -426,34 +170,8 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [info] Resolving com.fasterxml.jackson.core#jackson-core;2.2.2 ...
 [debug] sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-core;2.2.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving com.fasterxml.jackson.core#jackson-core;2.2.2 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-core;2.2.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-core/2.2.2/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-core/2.2.2/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for com.fasterxml.jackson.core#jackson-core;2.2.2
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-core/2.2.2/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-core/2.2.2/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for com.fasterxml.jackson.core#jackson-core;2.2.2
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.fasterxml.jackson.core\jackson-core\2.2.2\ivys\ivy.xml
-[debug] 	local: no ivy file found for com.fasterxml.jackson.core#jackson-core;2.2.2
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.pom
-[debug] 	public: found md file for com.fasterxml.jackson.core#jackson-core;2.2.2
-[debug] 		=> https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.pom (2.2.2)
-[debug] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.pom
-[debug] 	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-core;2.2.2!jackson-core.pom(pom.original) (308ms)
-[info] Resolving com.fasterxml#oss-parent;10 ...
-[debug] sbt-chain: Checking cache for: dependency: com.fasterxml#oss-parent;10 {}
-[debug] sbt-chain: module revision found in cache: com.fasterxml#oss-parent;10
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-core/2.2.2/jars/jackson-core.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-core/2.2.2/jars/jackson-core.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-core/2.2.2/jars/jackson-core.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-core/2.2.2/jars/jackson-core.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.fasterxml.jackson.core\jackson-core\2.2.2\jars\jackson-core.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.jar
-[debug] 	found com.fasterxml.jackson.core#jackson-core;2.2.2 in public
+[debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-core;2.2.2
+[debug] 	found com.fasterxml.jackson.core#jackson-core;2.2.2 in sbt-chain
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.fasterxml.jackson.core#jackson-core;2.2.2 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.fasterxml.jackson.core#jackson-core;2.2.2 [compile->runtime(*)]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.fasterxml.jackson.core#jackson-core;2.2.2 [compile->compile]
@@ -465,34 +183,8 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [info] Resolving com.fasterxml.jackson.core#jackson-databind;2.2.2 ...
 [debug] sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-databind;2.2.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving com.fasterxml.jackson.core#jackson-databind;2.2.2 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-databind;2.2.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-databind/2.2.2/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-databind/2.2.2/ivys/ivy.xml
-[debug] 	typesafe-ivy-releases: no ivy file found for com.fasterxml.jackson.core#jackson-databind;2.2.2
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-databind/2.2.2/ivys/ivy.xml
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-databind/2.2.2/ivys/ivy.xml
-[debug] 	sbt-plugin-releases: no ivy file found for com.fasterxml.jackson.core#jackson-databind;2.2.2
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.fasterxml.jackson.core\jackson-databind\2.2.2\ivys\ivy.xml
-[debug] 	local: no ivy file found for com.fasterxml.jackson.core#jackson-databind;2.2.2
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.pom
-[debug] 	public: found md file for com.fasterxml.jackson.core#jackson-databind;2.2.2
-[debug] 		=> https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.pom (2.2.2)
-[debug] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.pom
-[debug] 	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-databind;2.2.2!jackson-databind.pom(pom.original) (304ms)
-[info] Resolving com.fasterxml#oss-parent;10 ...
-[debug] sbt-chain: Checking cache for: dependency: com.fasterxml#oss-parent;10 {}
-[debug] sbt-chain: module revision found in cache: com.fasterxml#oss-parent;10
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-databind/2.2.2/jars/jackson-databind.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.fasterxml.jackson.core/jackson-databind/2.2.2/jars/jackson-databind.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-databind/2.2.2/jars/jackson-databind.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.fasterxml.jackson.core/jackson-databind/2.2.2/jars/jackson-databind.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\com.fasterxml.jackson.core\jackson-databind\2.2.2\jars\jackson-databind.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.jar
-[debug] 	found com.fasterxml.jackson.core#jackson-databind;2.2.2 in public
+[debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-databind;2.2.2
+[debug] 	found com.fasterxml.jackson.core#jackson-databind;2.2.2 in sbt-chain
 [debug] == resolving dependencies com.typesafe.play#play-json_2.10;2.2.1->com.fasterxml.jackson.core#jackson-databind;2.2.2 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.2.2->com.fasterxml.jackson.core#jackson-annotations;2.2.2 [compile->master(compile)]
 [debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.2.2->com.fasterxml.jackson.core#jackson-annotations;2.2.2 [compile->compile(*)]
@@ -3022,73 +2714,18 @@
 [debug] == resolving dependencies default#json-combinators-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->optional(default)]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.jar
-[info] downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.jar ...
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.jar
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.jar.sha1
-[debug] sha1 OK for http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-json_2.10/2.2.1/play-json_2.10-2.2.1.jar
-[info] 	[SUCCESSFUL ] com.typesafe.play#play-json_2.10;2.2.1!play-json_2.10.jar (35302ms)
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.jar
-[info] downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.jar ...
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.jar
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.jar.sha1
-[debug] sha1 OK for http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-iteratees_2.10/2.2.1/play-iteratees_2.10-2.2.1.jar
-[info] 	[SUCCESSFUL ] com.typesafe.play#play-iteratees_2.10;2.2.1!play-iteratees_2.10.jar (23861ms)
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.jar
-[info] downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.jar ...
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.jar
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.jar.sha1
-[debug] sha1 OK for http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-functional_2.10/2.2.1/play-functional_2.10-2.2.1.jar
-[info] 	[SUCCESSFUL ] com.typesafe.play#play-functional_2.10;2.2.1!play-functional_2.10.jar (13364ms)
-[debug] 		tried http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.jar
-[info] downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.jar ...
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.jar
-[debug] 	Typesafe repository: downloading http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.jar.sha1
-[debug] sha1 OK for http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-datacommons_2.10/2.2.1/play-datacommons_2.10-2.2.1.jar
-[info] 	[SUCCESSFUL ] com.typesafe.play#play-datacommons_2.10;2.2.1!play-datacommons_2.10.jar (769ms)
-[debug] 		tried https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.jar
-[info] downloading https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.jar
-[info] 	[SUCCESSFUL ] joda-time#joda-time;2.2!joda-time.jar (583ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.jar
-[info] downloading https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/joda/joda-convert/1.3.1/joda-convert-1.3.1.jar
-[info] 	[SUCCESSFUL ] org.joda#joda-convert;1.3.1!joda-convert.jar (348ms)
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.jar
-[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.jar
-[info] 	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-annotations;2.2.2!jackson-annotations.jar (336ms)
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.jar
-[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.jar
-[info] 	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-core;2.2.2!jackson-core.jar (393ms)
-[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.jar
-[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.jar
-[info] 	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-databind;2.2.2!jackson-databind.jar (732ms)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-json_2.10;2.2.1!play-json_2.10.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-iteratees_2.10;2.2.1!play-iteratees_2.10.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-functional_2.10;2.2.1!play-functional_2.10.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-datacommons_2.10;2.2.1!play-datacommons_2.10.jar
+[debug] 	[NOT REQUIRED] joda-time#joda-time;2.2!joda-time.jar
+[debug] 	[NOT REQUIRED] org.joda#joda-convert;1.3.1!joda-convert.jar
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.2.2!jackson-annotations.jar
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.2.2!jackson-core.jar
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.2.2!jackson-databind.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.4!scala-reflect.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.jar
-[info] 	[SUCCESSFUL ] org.scala-stm#scala-stm_2.10;0.7!scala-stm_2.10.jar (535ms)
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.jar
-[info] downloading https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.jar
-[info] 	[SUCCESSFUL ] com.typesafe#config;1.0.2!config.jar(bundle) (346ms)
+[debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.10;0.7!scala-stm_2.10.jar
+[debug] 	[NOT REQUIRED] com.typesafe#config;1.0.2!config.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.8!sbt.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#main;0.13.8!main.jar
@@ -3144,7 +2781,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 51415ms :: artifacts dl 76959ms
+[debug] :: resolution report :: resolve 6640ms :: artifacts dl 116ms
 [debug] 	report for default#json-combinators-build;0.1-SNAPSHOT compile produced in C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-compile.xml
 [debug] 	report for default#json-combinators-build;0.1-SNAPSHOT runtime produced in C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-runtime.xml
 [debug] 	report for default#json-combinators-build;0.1-SNAPSHOT test produced in C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-test.xml
@@ -3158,5 +2795,5 @@
 [debug] 	report for default#json-combinators-build;0.1-SNAPSHOT docs produced in C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-docs.xml
 [debug] 	report for default#json-combinators-build;0.1-SNAPSHOT pom produced in C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-pom.xml
 [debug] 	report for default#json-combinators-build;0.1-SNAPSHOT scala-tool produced in C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-scala-tool.xml
-[debug] 	resolve done (51415ms resolve - 76959ms download)
+[debug] 	resolve done (6640ms resolve - 116ms download)
 [info] Done updating.

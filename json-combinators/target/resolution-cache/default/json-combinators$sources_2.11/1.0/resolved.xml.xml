@@ -4,7 +4,7 @@
 		module="json-combinators$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150615165305"
+		publication="20150616170931"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

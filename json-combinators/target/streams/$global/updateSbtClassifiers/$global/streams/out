@@ -946,9 +946,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 2638ms :: artifacts dl 180ms
+[debug] :: resolution report :: resolve 915ms :: artifacts dl 171ms
 [debug] 	report for default#json-combinators$sbt_2.11;1.0 default produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sbt_2.11-default.xml
-[debug] 	resolve done (2638ms resolve - 180ms download)
+[debug] 	resolve done (915ms resolve - 171ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#json-combinators$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1411,6 +1411,6 @@
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.2.2!jackson-annotations.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.2.2!jackson-core.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.2.2!jackson-databind.jar(src)
-[debug] :: resolution report :: resolve 371ms :: artifacts dl 123ms
+[debug] :: resolution report :: resolve 409ms :: artifacts dl 131ms
 [debug] 	report for default#json-combinators$sources_2.11;1.0 default produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_2.11-default.xml
-[debug] 	resolve done (371ms resolve - 123ms download)
+[debug] 	resolve done (409ms resolve - 131ms download)

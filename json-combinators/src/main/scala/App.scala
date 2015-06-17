@@ -1,6 +1,5 @@
 import play.api.libs.json._
 
-
 object Main extends App {
 
   val json_string =
@@ -12,13 +11,12 @@ object Main extends App {
   val authoritiesPath : JsPath = JsPath \ "DailyAirQualityIndex" \ "LocalAuthority"
   val readAuthorityName : Reads[String] = (__ \ "@LocalAuthorityName").read[String]
   val authorityJsObjectsReads = authoritiesPath.read[List[JsObject]]
-  val readSites : Reads[Option[JsValue]] = (JsPath \ "Site").readNullable[JsValue] //could be a JsArray or a JsObject
+  val readSites : Reads[JsValue] = (JsPath \ "Site").read[JsValue] //could be a JsArray or a JsObject
   val readSpecies : Reads[JsValue] = (__ \ "Species").read[JsValue] //could be a JsArray or a JsObject
   val readSpeciesCode : Reads[String] = (__ \ "@SpeciesCode").read[String]
   val readAirQualityIndex :  Reads[String] = (__ \ "@AirQualityIndex").read[String]
 
-  def readSpeciesAtSite  = (site : JsObject) =>  {site.as[JsObject](readSpecies)}
-
+  def readSpeciesAtSite  = (site : JsObject) =>  {site.as[JsValue](readSpecies)}
 
   def readPollutantFromSpecies(pollutant : String)(site : JsObject) : Option[Int] = {
 
@@ -30,27 +28,6 @@ object Main extends App {
     }
   }
 
-  def readPollutantInAuthority(pollutant : String)(authority : JsValue) : Option[Int] = {
-
-    val sites = authority.as[Option[JsValue]](readSites).get
-
-    val species : List[JsObject] = sites match {
-      case singleSite : JsObject => List(readSpeciesAtSite(singleSite))
-      case siteArray : JsArray => siteArray.as[List[JsObject]].map(singleSite => readSpeciesAtSite(singleSite))
-      case _  => return None;
-    }
-
-    species.map(species => readPollutantFromSpecies(pollutant)(species)).
-
-    if (authority.as[String](readSpeciesCode).equals(pollutant)) {
-      Option(authority.as[String](readAirQualityIndex).toInt)
-    } else {
-      None
-    }
-  }
-
-  //site is Optional
-
   //species is Optional
 
   val authorityList : List[JsObject] = airQualityJson.as[List[JsObject]](authorityJsObjectsReads)
@@ -59,28 +36,61 @@ object Main extends App {
   authorityList.map(
     authority => {
       val authorityName = authority.as[String](readAuthorityName)
-      print (authorityName, readPollutantInAuthority("NO2")(authority))
 
-      //      val site : JsValue = authorityJs \ "Site"
-      //
-      //
-      //        val x: Option[JsValue] = site match {
-      //          case array :JsArray => Option(array.as[List[JsObject]].map(site => site.as[JsValue](readSpecies)))
-      //          case jsObject :JsObject => println(authority + " has an object");
-      //          case empty => None
-      //        }
+      val sitesJs :Reads[Option[JsValue]] = (JsPath \ "Site").readNullable[JsValue]
+
+      val sitesOption : Option[JsValue] = authority.as[Option[JsValue]](sitesJs)
+
+      val siteList : Option[List[JsValue]] = sitesOption.flatMap(jsValue => Some(JsonConverter.toList(jsValue)))
+
+      print(siteList)
+
+//      val species : List[JsValue] = sites.flatMap(site => JsonConverter.toList(site \ "Species"))
     })
 
   val site_json =
     """
-{
-                    "@SpeciesCode": "NO2",
-                    "@SpeciesDescription": "Nitrogen Dioxide",
-                    "@AirQualityIndex": "2",
-                    "@AirQualityBand": "Low",
-                    "@IndexSource": "Measurement"
-                  }
+        {"@SpeciesCode": "NO2",
+        "@SpeciesDescription": "Nitrogen Dioxide",
+        "@AirQualityIndex": "2",
+        "@AirQualityBand": "Low",
+        "@IndexSource": "Measurement"}
     """
 
+  authorityList.map(
+    authority => {
+      val authorityName = authority.as[String](readAuthorityName)
 
+      val siteJson : JsValue = authority \ "Site"
+
+      val siteList = JsonConverter.toList(siteJson)
+
+      println(s"$authorityName has sites: $siteList")
+
+
+  siteList.foreach(singleSite => {
+        val speciesList = JsonConverter.toList(singleSite \ "Species")
+        println(s"$authorityName has species: $speciesList")}
+
+
+  )
+    })
+
+}
+
+
+object JsonConverter {
+
+
+  def toList(jsVal : JsValue) : List[JsValue] = {
+    val jsValueList : List[JsValue] = jsVal match {
+      case obj: JsObject => List[JsObject](obj.as[JsObject])
+      case number: JsNumber => List[JsNumber](number.as[JsNumber])
+      case string: JsString => List[JsString](string.as[JsString])
+      case boolean: JsBoolean => List[JsBoolean](boolean.as[JsBoolean])
+      case array : JsArray => array.as[List[JsValue]]
+      case _ => List[JsObject]()
+    }
+    jsValueList
+  }
 }

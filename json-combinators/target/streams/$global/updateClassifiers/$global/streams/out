@@ -9,7 +9,7 @@
 [debug] == resolving dependencies for default#json-combinators$sources_javadoc_2.11;1.0 [compile]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.11.6 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@405b900c
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@69db3224
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.6
 [debug] 	found org.scala-lang#scala-library;2.11.6 in sbt-chain
 [debug] 	[2.11.6] org.scala-lang#scala-library;2.11.6
@@ -18,7 +18,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-json_2.11;2.3.4 [compile->default(compile)]
 [info] Resolving com.typesafe.play#play-json_2.11;2.3.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7f31a468
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@b25fbc6
 [debug] sbt-chain: module revision found in cache: com.typesafe.play#play-json_2.11;2.3.4
 [debug] 	found com.typesafe.play#play-json_2.11;2.3.4 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-json_2.11;2.3.4 [compile->runtime]
@@ -26,7 +26,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-json_2.11;2.3.4 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-iteratees_2.11;2.3.4 [compile->default(compile)]
 [info] Resolving com.typesafe.play#play-iteratees_2.11;2.3.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@10b93caf
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1d384697
 [debug] sbt-chain: module revision found in cache: com.typesafe.play#play-iteratees_2.11;2.3.4
 [debug] 	found com.typesafe.play#play-iteratees_2.11;2.3.4 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-iteratees_2.11;2.3.4 [compile->runtime]
@@ -34,7 +34,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-iteratees_2.11;2.3.4 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scala-stm#scala-stm_2.11;0.7 [compile->default(compile)]
 [info] Resolving org.scala-stm#scala-stm_2.11;0.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7343ef08
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4f915346
 [debug] sbt-chain: module revision found in cache: org.scala-stm#scala-stm_2.11;0.7
 [debug] 	found org.scala-stm#scala-stm_2.11;0.7 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scala-stm#scala-stm_2.11;0.7 [compile->runtime]
@@ -42,7 +42,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scala-stm#scala-stm_2.11;0.7 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe#config;1.2.1 [compile->default(compile)]
 [info] Resolving com.typesafe#config;1.2.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4945148d
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@ac19c5a
 [debug] sbt-chain: module revision found in cache: com.typesafe#config;1.2.1
 [debug] 	found com.typesafe#config;1.2.1 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe#config;1.2.1 [compile->runtime]
@@ -50,7 +50,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe#config;1.2.1 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-functional_2.11;2.3.4 [compile->default(compile)]
 [info] Resolving com.typesafe.play#play-functional_2.11;2.3.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@687d03b9
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1212da1d
 [debug] sbt-chain: module revision found in cache: com.typesafe.play#play-functional_2.11;2.3.4
 [debug] 	found com.typesafe.play#play-functional_2.11;2.3.4 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-functional_2.11;2.3.4 [compile->runtime]
@@ -58,7 +58,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-functional_2.11;2.3.4 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-datacommons_2.11;2.3.4 [compile->default(compile)]
 [info] Resolving com.typesafe.play#play-datacommons_2.11;2.3.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@54ef58f0
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7bc07d50
 [debug] sbt-chain: module revision found in cache: com.typesafe.play#play-datacommons_2.11;2.3.4
 [debug] 	found com.typesafe.play#play-datacommons_2.11;2.3.4 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-datacommons_2.11;2.3.4 [compile->runtime]
@@ -66,7 +66,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.typesafe.play#play-datacommons_2.11;2.3.4 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->joda-time#joda-time;2.3 [compile->default(compile)]
 [info] Resolving joda-time#joda-time;2.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1f6c31a1
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@20bcc0a
 [debug] sbt-chain: module revision found in cache: joda-time#joda-time;2.3
 [debug] 	found joda-time#joda-time;2.3 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->joda-time#joda-time;2.3 [compile->runtime]
@@ -74,7 +74,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->joda-time#joda-time;2.3 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.joda#joda-convert;1.6 [compile->default(compile)]
 [info] Resolving org.joda#joda-convert;1.6 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4ff613b
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@458e61d5
 [debug] sbt-chain: module revision found in cache: org.joda#joda-convert;1.6
 [debug] 	found org.joda#joda-convert;1.6 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.joda#joda-convert;1.6 [compile->runtime]
@@ -82,7 +82,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.joda#joda-convert;1.6 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->default(compile)]
 [info] Resolving com.fasterxml.jackson.core#jackson-annotations;2.3.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6cfdcd84
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@60522957
 [debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-annotations;2.3.2
 [debug] 	found com.fasterxml.jackson.core#jackson-annotations;2.3.2 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->runtime]
@@ -90,7 +90,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.fasterxml.jackson.core#jackson-core;2.3.2 [compile->default(compile)]
 [info] Resolving com.fasterxml.jackson.core#jackson-core;2.3.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1b3a7c42
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@173408b1
 [debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-core;2.3.2
 [debug] 	found com.fasterxml.jackson.core#jackson-core;2.3.2 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.fasterxml.jackson.core#jackson-core;2.3.2 [compile->runtime]
@@ -98,7 +98,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.fasterxml.jackson.core#jackson-core;2.3.2 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.fasterxml.jackson.core#jackson-databind;2.3.2 [compile->default(compile)]
 [info] Resolving com.fasterxml.jackson.core#jackson-databind;2.3.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1e720e4
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5b816a1b
 [debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-databind;2.3.2
 [debug] 	found com.fasterxml.jackson.core#jackson-databind;2.3.2 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.fasterxml.jackson.core#jackson-databind;2.3.2 [compile->runtime]
@@ -106,7 +106,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.fasterxml.jackson.core#jackson-databind;2.3.2 [compile->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scala-lang#scala-reflect;2.11.1 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-reflect;2.11.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@73e3b5f6
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@741f8b66
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.1
 [debug] 	found org.scala-lang#scala-reflect;2.11.1 in sbt-chain
 [debug] 	[2.11.1] org.scala-lang#scala-reflect;2.11.1
@@ -372,7 +372,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->com.fasterxml.jackson.core#jackson-databind;2.3.2 [test->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scalatest#scalatest_2.11;2.2.4 [test->default(compile)]
 [info] Resolving org.scalatest#scalatest_2.11;2.2.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1fa51128
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@10dd3bf
 [debug] sbt-chain: module revision found in cache: org.scalatest#scalatest_2.11;2.2.4
 [debug] 	found org.scalatest#scalatest_2.11;2.2.4 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scalatest#scalatest_2.11;2.2.4 [test->runtime]
@@ -380,7 +380,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scalatest#scalatest_2.11;2.2.4 [test->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scala-lang#scala-reflect;2.11.2 [test->default(compile)]
 [info] Resolving org.scala-lang#scala-reflect;2.11.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@702ef461
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4b08d69f
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.2
 [debug] 	found org.scala-lang#scala-reflect;2.11.2 in sbt-chain
 [debug] 	[2.11.2] org.scala-lang#scala-reflect;2.11.2
@@ -389,7 +389,7 @@
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scala-lang#scala-reflect;2.11.2 [test->master]
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.2 [test->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1d0f5ee0
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6a3f5f64
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.2
 [debug] 	found org.scala-lang.modules#scala-xml_2.11;1.0.2 in sbt-chain
 [debug] == resolving dependencies default#json-combinators$sources_javadoc_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.2 [test->runtime]
@@ -966,8 +966,8 @@
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-json_2.11;2.3.4!play-json_2.11.jar
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-iteratees_2.11;2.3.4!play-iteratees_2.11.jar
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-iteratees_2.11;2.3.4!play-iteratees_2.11.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.11;0.7!scala-stm_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.11;0.7!scala-stm_2.11.jar
+[debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.11;0.7!scala-stm_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.11;0.7!scala-stm_2.11.jar(doc)
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(doc)
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar
@@ -995,21 +995,60 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.1!scala-reflect.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.1!scala-reflect.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.2!scala-reflect.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\org.scala-lang\scala-reflect\2.11.2\docs\scala-reflect-javadoc.jar
-[debug] 		tried C:\Users\ian.polding\.ivy2\local\org.scala-lang\scala-reflect\2.11.2\srcs\scala-reflect-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-javadoc.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-javadoc.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-javadoc.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-javadoc.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-javadoc.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.2!scala-reflect.jar(doc) (1886ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.2!scala-reflect.jar(src) (899ms)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.2!scala-reflect.jar(doc)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.2!scala-reflect.jar(src)
 [debug] 		tried C:\Users\ian.polding\.ivy2\local\org.scalatest\scalatest_2.11\2.2.4\srcs\scalatest_2.11-sources.jar
 [debug] 		tried C:\Users\ian.polding\.ivy2\local\org.scalatest\scalatest_2.11\2.2.4\jars\scalatest_2.11.jar
 [debug] 		tried C:\Users\ian.polding\.ivy2\local\org.scalatest\scalatest_2.11\2.2.4\docs\scalatest_2.11-javadoc.jar
 [debug] 		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-sources.jar
+[info] downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-sources.jar
+[info] 	[SUCCESSFUL ] org.scalatest#scalatest_2.11;2.2.4!scalatest_2.11.jar(src) (3683ms)
+[debug] 		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar
+[info] downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar
+[info] 	[SUCCESSFUL ] org.scalatest#scalatest_2.11;2.2.4!scalatest_2.11.jar (2835ms)
+[debug] 		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-javadoc.jar
+[info] downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-javadoc.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-javadoc.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-javadoc.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-javadoc.jar
+[info] 	[SUCCESSFUL ] org.scalatest#scalatest_2.11;2.2.4!scalatest_2.11.jar(doc) (3285ms)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(doc)
+[debug] 		tried C:\Users\ian.polding\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.2\jars\scala-xml_2.11.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar
+[info] downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar
+[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar (714ms)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.6!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.6!scala-compiler.jar(doc)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.6!scala-reflect.jar(doc)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.6!scala-reflect.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(doc)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(doc)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(src)
+[debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(src)
+[debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(doc)
+[debug] :: resolution report :: resolve 504ms :: artifacts dl 11062ms
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 compile produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-compile.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 runtime produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-runtime.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 test produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-test.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 provided produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-provided.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 optional produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-optional.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 compile-internal produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-compile-internal.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 runtime-internal produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-runtime-internal.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 test-internal produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-test-internal.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 plugin produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-plugin.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 sources produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-sources.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 docs produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-docs.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 pom produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-pom.xml
+[debug] 	report for default#json-combinators$sources_javadoc_2.11;1.0 scala-tool produced in C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-scala-tool.xml
+[debug] 	resolve done (504ms resolve - 11062ms download)
