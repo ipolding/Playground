@@ -295,20 +295,11 @@ val bexley_json =
     authority => {
       val authorityName = authority.as[String](readAuthorityName)
 
-      val siteJson : JsValue = authority \ "Site"
-
-      val siteList = JsonConverter.toList(siteJson)
-
-      println(s"$authorityName has sites: $siteList")
-
-
-  siteList.foreach(singleSite => {
-        val speciesList = JsonConverter.toList(singleSite \ "Species")
-        println(s"$authorityName has species: $speciesList")}
-
+      val no2Levels : List[Int]= collectAndReadPollutantForAuthority("NO2")(authority)
+      print(s"$authorityName NO2 levels = $no2Levels")
+    }
 
   )
-    })
 
   def readSpecies(siteList : JsValue): List[JsValue] = {
     JsonConverter.toList(siteList.as[JsValue](readSpecies))
@@ -353,8 +344,6 @@ val bexley_json =
   println("Collect and read pollutant readings for Bexley:")
   print(collectAndReadPollutantForAuthority("NO2")(Json.parse(bexley_json).as[JsValue]))
   for (i <- 1 to 10) {println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")}
-
-
 
 
 }
