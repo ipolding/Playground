@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+        
+    <!-- FONTS --><link href='http://fonts.googleapis.com/css?family=Raleway:800,700,400' rel='stylesheet' type='text/css'> 
+       
+    
+    <!-- JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+          <!-- JQuery -->
+          <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    
+
+
+        
+<title>APACHE ROOT</title>
+
+<style>
+
+#pageTitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 80px;
+  text-align: center;
+  border: none;
+  
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: -93px;
+  
+}
+
+.centralContainer {
+  position: absolute; /* positioning is relative to parent */
+  top: 0; /*This property specifies the distance between the top margin edge of the element and the top edge of its containing block.*/
+  right: 0; 
+  bottom: 0; /**/ 
+  left: 0; /**/
+  margin-top: auto; /* an auto value instructs the browser to render a margin according to the value provided in its own stylesheet*/
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  
+  /* appearance */
+  border-style:none;
+  height:500px;
+  width:500px;
+  
+}
+
+#mainButton {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20pt;
+  font-weight: 400;
+  height: 250px;
+  width: 49%;
+  top: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  
+}
+
+.topLeftButton{
+  background-color:#620CAC;
+  
+  top: 250px;
+}
+
+#mainButton:hover{
+  background-color:white;
+  transition: all 0.5s ease  0s;}
+
+.topRightButton {
+  background-color:#BE008A;
+}
+
+.bottomLeftButton {
+    left: 500px;
+    top: -500px;
+    background-color:#B4F200;
+    margin-top:0.5%;
+
+  }
+
+.bottomRightButton {
+  left: 250px;
+  top: -500px;
+  background-color:#FFF400;
+  margin-top:0.5%;
+  }
+
+</style>
+
+<script>
+
+$(document).ready(function() {
+    $("#pageTitle").delay(9000).fadeIn(900);
+});
+
+</script>
+</head>
+
+
+
+	
+<html>
+<body>
+<header>
+  
+  
+
+
+  <div class="centralContainer">
+          <h1 id="pageTitle">iPolding</h1>
+
+
+	<a href="http://blog.ipolding.co.uk">
+          <button id="mainButton"                 class="topLeftButton" >Blog</button>
+        </a>
+
+
+
+     		  <a href="http://www.google.co.uk"><button id="mainButton" class="topRightButton">Python</button></a>
+     		  <a href="http://www.google.co.uk"><button id="mainButton" class="bottomLeftButton">Java</button></a>
+          <a href="http://tomcat.ipolding.co.uk"><button id="mainButton" class="bottomRightButton" >Tomcat</button></a>       
+   </div>
+
+</header>
+
+
+
+
+
+
+        
+</body>
+</html>

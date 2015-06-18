@@ -1,0 +1,73 @@
+@import url('http://fonts.googleapis.com/css?family=Raleway:800,700,400');
+
+#pageTitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 80px;
+  text-align: center;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: -93px;
+  
+}
+
+.centralContainer {
+  position: absolute; /* positioning is relative to parent */
+  top: 0; /*This property specifies the distance between the top margin edge of the element and the top edge of its containing block.*/
+  right: 0; 
+  bottom: 0; /**/ 
+  left: 0; /**/
+  margin-top: auto; /* an auto value instructs the browser to render a margin according to the value provided in its own stylesheet*/
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  
+  /* appearance */
+  border-style:none;
+  height:500px;
+  width:500px;
+  
+}
+
+#mainButton {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20pt;
+  font-weight: 400;
+  height: 250px;
+  width: 49%;
+  top: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  
+}
+
+.topLeftButton{
+  background-color:#620CAC;
+  
+  top: 250px;
+}
+
+#mainButton:hover{
+  background-color:white;
+  transition: all 0.5s ease  0s;}
+
+.topRightButton {
+  background-color:#BE008A;
+}
+
+.bottomLeftButton {
+    left: 500px;
+    top: -500px;
+    background-color:#B4F200;
+    margin-top:0.5%;
+
+  }
+
+.bottomRightButton {
+  left: 250px;
+  top: -500px;
+  background-color:#FFF400;
+  margin-top:0.5%;
+  }
