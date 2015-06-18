@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+        <br>
+        <h2>About This Blog</h2>
+        <p class="blog-description">I'm a trainee developer slowly but surely
+            demystifying all things code.
+            However, it's easy to lose track of how difficult starting out can be. That's why
+            my goal here is to document the pitfalls and breakthroughs I'm encountering so it's
+            there as a resource to help others along in the addictive, frustrating programming world.</p>
+{% if latest_blog_entries %}
+        <br>
+                <h2>Recent Entries</h2>
+
+
+    {% for entry in latest_blog_entries %}
+        <h3><a href="{% url 'blog_entry' entry.id %}">{{ entry.title }}</a></h3>
+        <p>{{entry.summary}}</p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No blog entries are available.</p>
+{% endif %}
+
+{% endblock content %}
+

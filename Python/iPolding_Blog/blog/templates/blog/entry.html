@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<article >
+
+      <div class="blog-header">
+        <h1 class="blog-title">{{ entry.title }}</h1>
+      </div>
+
+    <div class="blog-post-meta">Published on {{ entry.pub_date|date }} by {{ entry.author }}</div>
+    <p class="lead blog-description">{{ entry.summary }}</p>
+
+    <section>
+        {{ entry.text|safe }}
+    </section>
+
+</article>
+{% endblock content %}
+
+
+
+

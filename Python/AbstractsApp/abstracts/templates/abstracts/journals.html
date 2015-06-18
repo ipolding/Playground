@@ -1,0 +1,9 @@
+{% if all_journals_list %}
+    <ul>
+    {% for journal in all_journals_list %}
+        <li><a href="/abstracts/{{ journal.journal_title }}/abstracts">{{ journal.journal_title}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No journals are available.</p>
+{% endif %}

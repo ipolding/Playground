@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cbcef52f-89eb-4dfd-a3b8-1021abe82fd7" name="Default" comment="" />
+    <ignored path="AbstractsApp.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="AbstractsApp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="manage.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AbstractsProject/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="26" selection-start="882" selection-end="882" vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="1410">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/abstracts/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="11" selection-start="427" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="510">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/abstracts/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="44" selection-start="584" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/abstracts/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="87" selection-start="398" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/abstracts/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="4" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.65982723" vertical-offset="4" max-vertical-offset="930">
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="journals.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/abstracts/templates/abstracts/journals.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="32" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AbstractsProject/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="47" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/abstracts/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="28" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/AbstractsApp/settings.py" />
+        <option value="$PROJECT_DIR$/AbstractsApp/models.py" />
+        <option value="$PROJECT_DIR$/abstracts/admin.py" />
+        <option value="$PROJECT_DIR$/abstracts/models.py" />
+        <option value="$PROJECT_DIR$/abstracts/tests.py" />
+        <option value="$PROJECT_DIR$/AbstractsProject/settings.py" />
+        <option value="$PROJECT_DIR$/AbstractsProject/urls.py" />
+        <option value="$PROJECT_DIR$/abstracts/templates/polls/index.html" />
+        <option value="$PROJECT_DIR$/abstracts/templates/polls/journals.html" />
+        <option value="$PROJECT_DIR$/abstracts/templates/abstracts/journals.html" />
+        <option value="$PROJECT_DIR$/abstracts/urls.py" />
+        <option value="$PROJECT_DIR$/abstracts/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="49" />
+    <option name="y" value="24" />
+    <option name="width" value="1871" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AbstractsApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.sourceCode.Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FlaskTutorial" />
+    <property name="FullScreen" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/abstracts" />
+      <recent name="$PROJECT_DIR$/AbstractsProject" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AbstractsApp" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AbstractsApp" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AbstractsApp" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AbstractsApp" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AbstractsApp" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AbstractsApp" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbcef52f-89eb-4dfd-a3b8-1021abe82fd7" name="Default" comment="" />
+      <created>1393274249815</created>
+      <updated>1393274249815</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="49" y="24" width="1871" height="1056" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24425441" sideWeight="0.67050207" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="150" y="152" width="1671" height="856" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="150" y="152" width="1671" height="856" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24425441" sideWeight="0.67050207" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/abstracts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AbstractsProject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="46" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abstracts/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="28" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AbstractsProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="11" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abstracts/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="45" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abstracts/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="28" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AbstractsProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="26" selection-start="882" selection-end="882" vertical-scroll-proportion="0.0" vertical-offset="244" max-vertical-offset="1410">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abstracts/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="11" selection-start="427" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abstracts/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="44" selection-start="584" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abstracts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="87" selection-start="398" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abstracts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="4" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.65982723" vertical-offset="4" max-vertical-offset="930">
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abstracts/templates/abstracts/journals.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="32" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AbstractsProject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="47" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abstracts/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="28" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
