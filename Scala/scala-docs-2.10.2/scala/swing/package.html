@@ -1,0 +1,1501 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>swing - Scala Standard Library API (Scaladoc) 2.10.2 - scala.swing</title>
+          <meta name="description" content="swing - Scala Standard Library API Scaladoc 2.10.2 - scala.swing" />
+          <meta name="keywords" content="swing Scala Standard Library API Scaladoc 2.10.2 scala.swing" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.swing.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a></p>
+        <h1>swing</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">swing</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Useful imports that don't have wrappers.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/swing/scala/swing/package.scala#L1" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph2" viewBox="0.00 0.00 2635.17 406.00" height="406pt" width="2635pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 402)" class="graph" id="graph1"><polygon points="-4,5 -4,-402 2632.17,-402 2632.17,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node class" id="graph2_0"><a xlink:title="scala.swing.Window" xlink:href="Window.html#inheritance-diagram"><polygon points="249.165,-212 169.165,-212 169.165,-186 249.165,-186 249.165,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="179.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="201.165" text-anchor="start">Window</text></a></g><!-- node18 --><g class="node class" id="graph2_18"><a xlink:title="scala.swing.Dialog" xlink:href="Dialog.html#inheritance-diagram"><polygon points="200.165,-88 128.165,-88 128.165,-62 200.165,-62 200.165,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-83" x="138.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="160.165" text-anchor="start">Dialog</text></a></g><!-- node0&#45;&gt;node18 --><g class="edge inheritance" id="graph2_0_18"><a xlink:title="Dialog is a subtype of Window"><path d="M180.522,-182.986C168.827,-174.785 156.565,-163.633 150.165,-150 140.654,-129.736 149.802,-103.541 157.118,-88.0775" stroke="#d4d4d4" fill="none"></path><polygon points="179.671,-184.523 184.793,-185.874 181.631,-181.624 179.671,-184.523" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node19 --><g class="node class" id="graph2_19"><a xlink:title="scala.swing.Frame" xlink:href="Frame.html#inheritance-diagram"><polygon points="306.165,-88 234.165,-88 234.165,-62 306.165,-62 306.165,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-83" x="244.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="266.165" text-anchor="start">Frame</text></a></g><!-- node0&#45;&gt;node19 --><g class="edge inheritance" id="graph2_0_19"><a xlink:title="Frame is a subtype of Window"><path d="M237.364,-183.099C249.108,-174.864 261.533,-163.653 268.165,-150 277.784,-130.199 275.574,-103.856 272.962,-88.2381" stroke="#d4d4d4" fill="none"></path><polygon points="236.241,-181.746 233.08,-185.998 238.202,-184.645 236.241,-181.746" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node20 --><g class="node trait" id="graph2_20"><a xlink:title="scala.swing.RichWindow" xlink:href="RichWindow.html#inheritance-diagram"><polygon points="259.165,-150 159.165,-150 159.165,-124 259.165,-124 259.165,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-145" x="169.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="191.165" text-anchor="start">RichWindow</text></a></g><!-- node0&#45;&gt;node20 --><g class="edge inheritance" id="graph2_0_20"><a xlink:title="RichWindow is a subtype of Window"><path d="M209.165,-180.646C209.165,-170.843 209.165,-159.003 209.165,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="207.415,-180.851 209.165,-185.851 210.915,-180.851 207.415,-180.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node1 --><g class="node trait" id="graph2_1"><a xlink:title="scala.swing.UIElement" xlink:href="UIElement.html#inheritance-diagram"><polygon points="308.165,-398 218.165,-398 218.165,-372 308.165,-372 308.165,-398" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-393" x="228.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-382.667" x="250.165" text-anchor="start">UIElement</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph2_1_0"><a xlink:title="Window is a subtype of UIElement"><path d="M212.869,-379.602C151.8,-370.052 51.2633,-344.016 5.16535,-274 -1.18911,-264.348 -1.98812,-257.075 5.16535,-248 25.177,-222.612 115.511,-208.874 169.029,-202.835" stroke="#d4d4d4" fill="none"></path><polygon points="212.718,-381.349 217.924,-380.369 213.243,-377.889 212.718,-381.349" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node43 --><g class="node trait" id="graph2_43"><a xlink:title="scala.swing.Container" xlink:href="Container.html#inheritance-diagram"><polygon points="306.165,-336 220.165,-336 220.165,-310 306.165,-310 306.165,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-331" x="230.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="252.165" text-anchor="start">Container</text></a></g><!-- node1&#45;&gt;node43 --><g class="edge inheritance" id="graph2_1_43"><a xlink:title="Container is a subtype of UIElement"><path d="M263.165,-366.646C263.165,-356.843 263.165,-345.003 263.165,-336.13" stroke="#d4d4d4" fill="none"></path><polygon points="261.415,-366.851 263.165,-371.851 264.915,-366.851 261.415,-366.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44 --><g class="node class" id="graph2_44"><a xlink:title="scala.swing.Component" xlink:href="Component.html#inheritance-diagram"><polygon points="1071.17,-336 977.165,-336 977.165,-310 1071.17,-310 1071.17,-336" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-331" x="987.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="1009.17" text-anchor="start">Component</text></a></g><!-- node1&#45;&gt;node44 --><g class="edge inheritance" id="graph2_1_44"><a xlink:title="Component is a subtype of UIElement"><path d="M313.455,-380.903C452.68,-369.56 841.804,-337.857 977.094,-326.835" stroke="#d4d4d4" fill="none"></path><polygon points="313.05,-379.18 308.209,-381.33 313.335,-382.668 313.05,-379.18" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node class" id="graph2_2"><a xlink:title="scala.swing.ToggleButton" xlink:href="ToggleButton.html#inheritance-diagram"><polygon points="1959.17,-212 1857.17,-212 1857.17,-186 1959.17,-186 1959.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="1867.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1889.17" text-anchor="start">ToggleButton</text></a></g><!-- node22 --><g class="node class" id="graph2_22"><a xlink:title="scala.swing.RadioButton" xlink:href="RadioButton.html#inheritance-diagram"><polygon points="1825.17,-150 1727.17,-150 1727.17,-124 1825.17,-124 1825.17,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="1737.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1759.17" text-anchor="start">RadioButton</text></a></g><!-- node2&#45;&gt;node22 --><g class="edge inheritance" id="graph2_2_22"><a xlink:title="RadioButton is a subtype of ToggleButton"><path d="M1875.6,-183.703C1853.66,-173.398 1825.02,-159.948 1804.12,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="1874.9,-185.31 1880.17,-185.851 1876.39,-182.142 1874.9,-185.31" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node46 --><g class="node class" id="graph2_46"><a xlink:title="scala.swing.CheckBox" xlink:href="CheckBox.html#inheritance-diagram"><polygon points="1933.17,-150 1843.17,-150 1843.17,-124 1933.17,-124 1933.17,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="1853.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1875.17" text-anchor="start">CheckBox</text></a></g><!-- node2&#45;&gt;node46 --><g class="edge inheritance" id="graph2_2_46"><a xlink:title="CheckBox is a subtype of ToggleButton"><path d="M1902.33,-180.918C1899.15,-171.062 1895.29,-159.085 1892.4,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="1900.72,-181.63 1903.92,-185.851 1904.05,-180.556 1900.72,-181.63" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node class" id="graph2_3"><a xlink:title="scala.swing.TextField" xlink:href="TextField.html#inheritance-diagram"><polygon points="2379.17,-212 2295.17,-212 2295.17,-186 2379.17,-186 2379.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="2305.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2327.17" text-anchor="start">TextField</text></a></g><!-- node25 --><g class="node class" id="graph2_25"><a xlink:title="scala.swing.PasswordField" xlink:href="PasswordField.html#inheritance-diagram"><polygon points="2411.17,-150 2303.17,-150 2303.17,-124 2411.17,-124 2411.17,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="2313.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="2335.17" text-anchor="start">PasswordField</text></a></g><!-- node3&#45;&gt;node25 --><g class="edge inheritance" id="graph2_3_25"><a xlink:title="PasswordField is a subtype of TextField"><path d="M2343,-180.918C2346.18,-171.062 2350.04,-159.085 2352.93,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="2341.28,-180.556 2341.41,-185.851 2344.61,-181.63 2341.28,-180.556" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node class" id="graph2_4"><a xlink:title="scala.swing.TextComponent" xlink:href="TextComponent.html#inheritance-diagram"><polygon points="2367.17,-274 2255.17,-274 2255.17,-248 2367.17,-248 2367.17,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="2265.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="2287.17" text-anchor="start">TextComponent</text></a></g><!-- node4&#45;&gt;node3 --><g class="edge inheritance" id="graph2_4_3"><a xlink:title="TextField is a subtype of TextComponent"><path d="M2318.63,-243.189C2322.79,-233.282 2327.87,-221.167 2331.66,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="2317,-242.564 2316.68,-247.851 2320.23,-243.917 2317,-242.564" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node5 --><g class="node class" id="graph2_5"><a xlink:title="scala.swing.TextArea" xlink:href="TextArea.html#inheritance-diagram"><polygon points="2481.17,-212 2397.17,-212 2397.17,-186 2481.17,-186 2481.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="2407.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2429.17" text-anchor="start">TextArea</text></a></g><!-- node4&#45;&gt;node5 --><g class="edge inheritance" id="graph2_4_5"><a xlink:title="TextArea is a subtype of TextComponent"><path d="M2343.01,-245.573C2364.25,-235.286 2391.87,-221.907 2412.06,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="2342.05,-244.097 2338.31,-247.851 2343.57,-247.247 2342.05,-244.097" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node40 --><g class="node class" id="graph2_40"><a xlink:title="scala.swing.FormattedTextField" xlink:href="FormattedTextField.html#inheritance-diagram"><polygon points="2627.17,-212 2499.17,-212 2499.17,-186 2627.17,-186 2627.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="2509.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2531.17" text-anchor="start">FormattedTextField</text></a></g><!-- node4&#45;&gt;node40 --><g class="edge inheritance" id="graph2_4_40"><a xlink:title="FormattedTextField is a subtype of TextComponent"><path d="M2369.4,-246.672C2411.85,-236.228 2468.91,-222.19 2510.1,-212.055" stroke="#d4d4d4" fill="none"></path><polygon points="2368.74,-245.033 2364.3,-247.927 2369.57,-248.432 2368.74,-245.033" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node42 --><g class="node class" id="graph2_42"><a xlink:title="scala.swing.EditorPane" xlink:href="EditorPane.html#inheritance-diagram"><polygon points="2277.17,-212 2183.17,-212 2183.17,-186 2277.17,-186 2277.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="2193.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2215.17" text-anchor="start">EditorPane</text></a></g><!-- node4&#45;&gt;node42 --><g class="edge inheritance" id="graph2_4_42"><a xlink:title="EditorPane is a subtype of TextComponent"><path d="M2289.99,-244.789C2276.69,-234.613 2259.77,-221.66 2247.32,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="2288.95,-246.202 2293.99,-247.851 2291.08,-243.423 2288.95,-246.202" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node6 --><g class="node class" id="graph2_6"><a xlink:title="scala.swing.Table" xlink:href="Table.html#inheritance-diagram"><polygon points="856.165,-274 788.165,-274 788.165,-248 856.165,-248 856.165,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="798.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="820.165" text-anchor="start">Table</text></a></g><!-- node7 --><g class="node class" id="graph2_7"><a xlink:title="scala.swing.TabbedPane" xlink:href="TabbedPane.html#inheritance-diagram"><polygon points="1822.17,-274 1724.17,-274 1724.17,-248 1822.17,-248 1822.17,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="1734.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1756.17" text-anchor="start">TabbedPane</text></a></g><!-- node8 --><g class="node class" id="graph2_8"><a xlink:title="scala.swing.SwingApplication" xlink:href="SwingApplication.html#inheritance-diagram"><polygon points="1705.17,-336 1585.17,-336 1585.17,-310 1705.17,-310 1705.17,-336" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-331" x="1595.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="1617.17" text-anchor="start">SwingApplication</text></a></g><!-- node11 --><g class="node class" id="graph2_11"><a xlink:title="scala.swing.SimpleSwingApplication" xlink:href="SimpleSwingApplication.html#inheritance-diagram"><polygon points="1456.17,-274 1306.17,-274 1306.17,-248 1456.17,-248 1456.17,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="1316.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1338.17" text-anchor="start">SimpleSwingApplication</text></a></g><!-- node8&#45;&gt;node11 --><g class="edge inheritance" id="graph2_8_11"><a xlink:title="SimpleSwingApplication is a subtype of SwingApplication"><path d="M1584.43,-308.735C1539.93,-298.285 1480,-284.21 1436.75,-274.055" stroke="#d4d4d4" fill="none"></path><polygon points="1584.23,-310.488 1589.5,-309.927 1585.03,-307.08 1584.23,-310.488" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node9 --><g class="node class" id="graph2_9"><a xlink:title="scala.swing.SplitPane" xlink:href="SplitPane.html#inheritance-diagram"><polygon points="360.165,-274 272.165,-274 272.165,-248 360.165,-248 360.165,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="282.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="304.165" text-anchor="start">SplitPane</text></a></g><!-- node10 --><g class="node class" id="graph2_10"><a xlink:title="scala.swing.Slider" xlink:href="Slider.html#inheritance-diagram"><polygon points="2172.17,-274 2102.17,-274 2102.17,-248 2172.17,-248 2172.17,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="2112.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="2134.17" text-anchor="start">Slider</text></a></g><!-- node12 --><g class="node trait" id="graph2_12"><a xlink:title="scala.swing.SequentialContainer" xlink:href="SequentialContainer.html#inheritance-diagram"><polygon points="146.165,-274 14.1654,-274 14.1654,-248 146.165,-248 146.165,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-269" x="24.1654" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="46.1654" text-anchor="start">SequentialContainer</text></a></g><!-- node13 --><g class="node class" id="graph2_13"><a xlink:title="scala.swing.Separator" xlink:href="Separator.html#inheritance-diagram"><polygon points="962.165,-274 874.165,-274 874.165,-248 962.165,-248 962.165,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="884.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="906.165" text-anchor="start">Separator</text></a></g><!-- node14 --><g class="node trait" id="graph2_14"><a xlink:title="scala.swing.Scrollable" xlink:href="Scrollable.html#inheritance-diagram"><polygon points="1068.17,-274 980.165,-274 980.165,-248 1068.17,-248 1068.17,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-269" x="990.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1012.17" text-anchor="start">Scrollable</text></a></g><!-- node15 --><g class="node class" id="graph2_15"><a xlink:title="scala.swing.ScrollPane" xlink:href="ScrollPane.html#inheritance-diagram"><polygon points="470.165,-274 378.165,-274 378.165,-248 470.165,-248 470.165,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="388.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="410.165" text-anchor="start">ScrollPane</text></a></g><!-- node16 --><g class="node class" id="graph2_16"><a xlink:title="scala.swing.ScrollBar" xlink:href="ScrollBar.html#inheritance-diagram"><polygon points="1170.17,-274 1086.17,-274 1086.17,-248 1170.17,-248 1170.17,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="1096.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1118.17" text-anchor="start">ScrollBar</text></a></g><!-- node17 --><g class="node trait" id="graph2_17"><a xlink:title="scala.swing.RootPanel" xlink:href="RootPanel.html#inheritance-diagram"><polygon points="254.165,-274 164.165,-274 164.165,-248 254.165,-248 254.165,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-269" x="174.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="196.165" text-anchor="start">RootPanel</text></a></g><!-- node17&#45;&gt;node0 --><g class="edge inheritance" id="graph2_17_0"><a xlink:title="Window is a subtype of RootPanel"><path d="M209.165,-242.646C209.165,-232.843 209.165,-221.003 209.165,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="207.415,-242.851 209.165,-247.851 210.915,-242.851 207.415,-242.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node34 --><g class="node class" id="graph2_34"><a xlink:title="scala.swing.MainFrame" xlink:href="MainFrame.html#inheritance-diagram"><polygon points="317.165,-26 223.165,-26 223.165,-1.24345e-14 317.165,-3.55271e-15 317.165,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="233.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="255.165" text-anchor="start">MainFrame</text></a></g><!-- node19&#45;&gt;node34 --><g class="edge inheritance" id="graph2_19_34"><a xlink:title="MainFrame is a subtype of Frame"><path d="M270.165,-56.6463C270.165,-46.8429 270.165,-35.003 270.165,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="268.415,-56.8514 270.165,-61.8514 271.915,-56.8514 268.415,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node20&#45;&gt;node18 --><g class="edge inheritance" id="graph2_20_18"><a xlink:title="Dialog is a subtype of RichWindow"><path d="M196.628,-119.727C189.368,-109.724 180.374,-97.3317 173.695,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="195.269,-120.833 199.622,-123.851 198.101,-118.777 195.269,-120.833" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node20&#45;&gt;node19 --><g class="edge inheritance" id="graph2_20_19"><a xlink:title="Frame is a subtype of RichWindow"><path d="M225.635,-120.261C235.565,-110.168 248.032,-97.496 257.247,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="224.361,-119.06 222.102,-123.851 226.856,-121.515 224.361,-119.06" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node21 --><g class="node trait" id="graph2_21"><a xlink:title="scala.swing.Reactor" xlink:href="Reactor.html#inheritance-diagram"><polygon points="1812.17,-398 1734.17,-398 1734.17,-372 1812.17,-372 1812.17,-398" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-393" x="1744.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-382.667" x="1766.17" text-anchor="start">Reactor</text></a></g><!-- node21&#45;&gt;node8 --><g class="edge inheritance" id="graph2_21_8"><a xlink:title="SwingApplication is a subtype of Reactor"><path d="M1741.32,-369.573C1720.08,-359.286 1692.46,-345.907 1672.27,-336.13" stroke="#d4d4d4" fill="none"></path><polygon points="1740.76,-371.247 1746.02,-371.851 1742.28,-368.097 1740.76,-371.247" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node23 --><g class="node trait" id="graph2_23"><a xlink:title="scala.swing.Publisher" xlink:href="Publisher.html#inheritance-diagram"><polygon points="1944.17,-336 1858.17,-336 1858.17,-310 1944.17,-310 1944.17,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-331" x="1868.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="1890.17" text-anchor="start">Publisher</text></a></g><!-- node21&#45;&gt;node23 --><g class="edge inheritance" id="graph2_21_23"><a xlink:title="Publisher is a subtype of Reactor"><path d="M1805.01,-369.573C1826.25,-359.286 1853.87,-345.907 1874.06,-336.13" stroke="#d4d4d4" fill="none"></path><polygon points="1804.05,-368.097 1800.31,-371.851 1805.57,-371.247 1804.05,-368.097" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node23&#45;&gt;node0 --><g class="edge inheritance" id="graph2_23_0"><a xlink:title="Window is a subtype of Publisher"><path d="M1852.98,-319.93C1761.5,-313.635 1566.2,-297.819 1503.17,-274 1484.02,-266.767 1484.59,-254.428 1465.17,-248 1347.59,-209.1 450.973,-200.66 249.341,-199.246" stroke="#d4d4d4" fill="none"></path><polygon points="1852.94,-321.682 1858.05,-320.277 1853.18,-318.19 1852.94,-321.682" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node23&#45;&gt;node4 --><g class="edge inheritance" id="graph2_23_4"><a xlink:title="TextComponent is a subtype of Publisher"><path d="M1949.29,-310.774C1950.59,-310.505 1951.89,-310.247 1953.17,-310 1967.79,-307.179 2157.91,-281.554 2254.97,-268.529" stroke="#d4d4d4" fill="none"></path><polygon points="1948.74,-309.101 1944.22,-311.854 1949.47,-312.524 1948.74,-309.101" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node23&#45;&gt;node7 --><g class="edge inheritance" id="graph2_23_7"><a xlink:title="TabbedPane is a subtype of Publisher"><path d="M1869.32,-307.573C1848.08,-297.286 1820.46,-283.907 1800.27,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="1868.76,-309.247 1874.02,-309.851 1870.28,-306.097 1868.76,-309.247" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node23&#45;&gt;node10 --><g class="edge inheritance" id="graph2_23_10"><a xlink:title="Slider is a subtype of Publisher"><path d="M1949.29,-310.937C1996.88,-298.968 2066.36,-281.377 2093.17,-274 2096.08,-273.197 2099.11,-272.346 2102.13,-271.478" stroke="#d4d4d4" fill="none"></path><polygon points="1948.6,-309.306 1944.18,-312.222 1949.45,-312.7 1948.6,-309.306" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node45 --><g class="node class" id="graph2_45"><a xlink:title="scala.swing.ComboBox" xlink:href="ComboBox.html#inheritance-diagram"><polygon points="1706.17,-274 1600.17,-274 1600.17,-248 1706.17,-248 1706.17,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="1610.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1632.17" text-anchor="start">ComboBox[A]</text></a></g><!-- node23&#45;&gt;node45 --><g class="edge inheritance" id="graph2_23_45"><a xlink:title="ComboBox[A] is a subtype of Publisher"><path d="M1852.89,-310.931C1810.46,-300.325 1748.87,-284.927 1705.32,-274.04" stroke="#d4d4d4" fill="none"></path><polygon points="1852.69,-312.685 1857.97,-312.2 1853.54,-309.29 1852.69,-312.685" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node47 --><g class="node class" id="graph2_47"><a xlink:title="scala.swing.Button" xlink:href="Button.html#inheritance-diagram"><polygon points="2165.17,-212 2091.17,-212 2091.17,-186 2165.17,-186 2165.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="2101.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2123.17" text-anchor="start">Button</text></a></g><!-- node23&#45;&gt;node47 --><g class="edge inheritance" id="graph2_23_47"><a xlink:title="Button is a subtype of Publisher"><path d="M1949.29,-310.809C1950.6,-310.53 1951.89,-310.26 1953.17,-310 2003.43,-299.77 2147.84,-312.997 2181.17,-274 2198.67,-253.515 2169.97,-227.391 2148.43,-212.001" stroke="#d4d4d4" fill="none"></path><polygon points="1948.74,-309.14 1944.23,-311.923 1949.49,-312.558 1948.74,-309.14" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node51 --><g class="node class" id="graph2_51"><a xlink:title="scala.swing.AbstractButton" xlink:href="AbstractButton.html#inheritance-diagram"><polygon points="2084.17,-274 1974.17,-274 1974.17,-248 2084.17,-248 2084.17,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="1984.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="2006.17" text-anchor="start">AbstractButton</text></a></g><!-- node23&#45;&gt;node51 --><g class="edge inheritance" id="graph2_23_51"><a xlink:title="AbstractButton is a subtype of Publisher"><path d="M1933.01,-307.573C1954.25,-297.286 1981.87,-283.907 2002.06,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="1932.05,-306.097 1928.31,-309.851 1933.57,-309.247 1932.05,-306.097" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node24 --><g class="node class" id="graph2_24"><a xlink:title="scala.swing.ProgressBar" xlink:href="ProgressBar.html#inheritance-diagram"><polygon points="1288.17,-274 1188.17,-274 1188.17,-248 1288.17,-248 1288.17,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="1198.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1220.17" text-anchor="start">ProgressBar</text></a></g><!-- node26 --><g class="node class" id="graph2_26"><a xlink:title="scala.swing.Panel" xlink:href="Panel.html#inheritance-diagram"><polygon points="1582.17,-274 1512.17,-274 1512.17,-248 1582.17,-248 1582.17,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="1522.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1544.17" text-anchor="start">Panel</text></a></g><!-- node38 --><g class="node class" id="graph2_38"><a xlink:title="scala.swing.GridPanel" xlink:href="GridPanel.html#inheritance-diagram"><polygon points="1599.17,-212 1511.17,-212 1511.17,-186 1599.17,-186 1599.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="1521.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1543.17" text-anchor="start">GridPanel</text></a></g><!-- node26&#45;&gt;node38 --><g class="edge inheritance" id="graph2_26_38"><a xlink:title="GridPanel is a subtype of Panel"><path d="M1549.53,-242.646C1550.8,-232.843 1552.33,-221.003 1553.47,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="1547.77,-242.669 1548.86,-247.851 1551.24,-243.116 1547.77,-242.669" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node39 --><g class="node class" id="graph2_39"><a xlink:title="scala.swing.GridBagPanel" xlink:href="GridBagPanel.html#inheritance-diagram"><polygon points="1723.17,-212 1617.17,-212 1617.17,-186 1723.17,-186 1723.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="1627.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1649.17" text-anchor="start">GridBagPanel</text></a></g><!-- node26&#45;&gt;node39 --><g class="edge inheritance" id="graph2_26_39"><a xlink:title="GridBagPanel is a subtype of Panel"><path d="M1577.77,-245.573C1598.18,-235.286 1624.72,-221.907 1644.12,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="1576.93,-244.038 1573.25,-247.851 1578.5,-247.163 1576.93,-244.038" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node41 --><g class="node class" id="graph2_41"><a xlink:title="scala.swing.FlowPanel" xlink:href="FlowPanel.html#inheritance-diagram"><polygon points="1387.17,-212 1297.17,-212 1297.17,-186 1387.17,-186 1387.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="1307.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1329.17" text-anchor="start">FlowPanel</text></a></g><!-- node26&#45;&gt;node41 --><g class="edge inheritance" id="graph2_26_41"><a xlink:title="FlowPanel is a subtype of Panel"><path d="M1506.88,-248.816C1471.89,-238.233 1421.34,-222.944 1385.48,-212.101" stroke="#d4d4d4" fill="none"></path><polygon points="1506.63,-250.569 1511.92,-250.342 1507.65,-247.219 1506.63,-250.569" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node48 --><g class="node class" id="graph2_48"><a xlink:title="scala.swing.BoxPanel" xlink:href="BoxPanel.html#inheritance-diagram"><polygon points="1493.17,-212 1405.17,-212 1405.17,-186 1493.17,-186 1493.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="1415.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1437.17" text-anchor="start">BoxPanel</text></a></g><!-- node26&#45;&gt;node48 --><g class="edge inheritance" id="graph2_26_48"><a xlink:title="BoxPanel is a subtype of Panel"><path d="M1521.96,-245.052C1505.81,-234.837 1485.11,-221.742 1469.92,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="1521.22,-246.657 1526.38,-247.851 1523.09,-243.699 1521.22,-246.657" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node49 --><g class="node class" id="graph2_49"><a xlink:title="scala.swing.BorderPanel" xlink:href="BorderPanel.html#inheritance-diagram"><polygon points="1839.17,-212 1741.17,-212 1741.17,-186 1839.17,-186 1839.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="1751.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1773.17" text-anchor="start">BorderPanel</text></a></g><!-- node26&#45;&gt;node49 --><g class="edge inheritance" id="graph2_26_49"><a xlink:title="BorderPanel is a subtype of Panel"><path d="M1587.28,-249.065C1588.59,-248.702 1589.89,-248.346 1591.17,-248 1642,-234.241 1700.56,-220.014 1740.94,-210.458" stroke="#d4d4d4" fill="none"></path><polygon points="1586.53,-247.458 1582.19,-250.495 1587.48,-250.828 1586.53,-247.458" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node27 --><g class="node trait" id="graph2_27"><a xlink:title="scala.swing.Oriented" xlink:href="Oriented.html#inheritance-diagram"><polygon points="2102.17,-398 2020.17,-398 2020.17,-372 2102.17,-372 2102.17,-398" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-393" x="2030.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-382.667" x="2052.17" text-anchor="start">Oriented</text></a></g><!-- node28 --><g class="node trait" id="graph2_28"><a xlink:title="scala.swing.Orientable" xlink:href="Orientable.html#inheritance-diagram"><polygon points="2052.17,-336 1962.17,-336 1962.17,-310 2052.17,-310 2052.17,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-331" x="1972.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="1994.17" text-anchor="start">Orientable</text></a></g><!-- node27&#45;&gt;node28 --><g class="edge inheritance" id="graph2_27_28"><a xlink:title="Orientable is a subtype of Oriented"><path d="M2046.35,-367.994C2037.6,-357.946 2026.69,-345.414 2018.6,-336.13" stroke="#d4d4d4" fill="none"></path><polygon points="2045.11,-369.23 2049.71,-371.851 2047.75,-366.932 2045.11,-369.23" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node50 --><g class="node trait" id="graph2_50"><a xlink:title="scala.swing.Adjustable" xlink:href="Adjustable.html#inheritance-diagram"><polygon points="2160.17,-336 2070.17,-336 2070.17,-310 2160.17,-310 2160.17,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-331" x="2080.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="2102.17" text-anchor="start">Adjustable</text></a></g><!-- node27&#45;&gt;node50 --><g class="edge inheritance" id="graph2_27_50"><a xlink:title="Adjustable is a subtype of Oriented"><path d="M2075.98,-367.994C2084.73,-357.946 2095.64,-345.414 2103.73,-336.13" stroke="#d4d4d4" fill="none"></path><polygon points="2074.58,-366.932 2072.62,-371.851 2077.22,-369.23 2074.58,-366.932" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node29 --><g class="node class" id="graph2_29"><a xlink:title="scala.swing.CheckMenuItem" xlink:href="CheckMenuItem.html#inheritance-diagram"><polygon points="2155.17,-150 2039.17,-150 2039.17,-124 2155.17,-124 2155.17,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="2049.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="2071.17" text-anchor="start">CheckMenuItem</text></a></g><!-- node30 --><g class="node class" id="graph2_30"><a xlink:title="scala.swing.RadioMenuItem" xlink:href="RadioMenuItem.html#inheritance-diagram"><polygon points="2285.17,-150 2173.17,-150 2173.17,-124 2285.17,-124 2285.17,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="2183.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="2205.17" text-anchor="start">RadioMenuItem</text></a></g><!-- node31 --><g class="node class" id="graph2_31"><a xlink:title="scala.swing.Menu" xlink:href="Menu.html#inheritance-diagram"><polygon points="2021.17,-150 1951.17,-150 1951.17,-124 2021.17,-124 2021.17,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="1961.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1983.17" text-anchor="start">Menu</text></a></g><!-- node32 --><g class="node class" id="graph2_32"><a xlink:title="scala.swing.MenuItem" xlink:href="MenuItem.html#inheritance-diagram"><polygon points="2073.17,-212 1985.17,-212 1985.17,-186 2073.17,-186 2073.17,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="1995.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2017.17" text-anchor="start">MenuItem</text></a></g><!-- node32&#45;&gt;node29 --><g class="edge inheritance" id="graph2_32_29"><a xlink:title="CheckMenuItem is a subtype of MenuItem"><path d="M2047.52,-182.261C2058.59,-172.168 2072.49,-159.496 2082.77,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="2046.1,-181.189 2043.59,-185.851 2048.46,-183.776 2046.1,-181.189" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node32&#45;&gt;node30 --><g class="edge inheritance" id="graph2_32_30"><a xlink:title="RadioMenuItem is a subtype of MenuItem"><path d="M2076.46,-184.34C2110.07,-173.921 2154.8,-160.054 2187.16,-150.023" stroke="#d4d4d4" fill="none"></path><polygon points="2075.84,-182.699 2071.58,-185.851 2076.87,-186.042 2075.84,-182.699" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node32&#45;&gt;node31 --><g class="edge inheritance" id="graph2_32_31"><a xlink:title="Menu is a subtype of MenuItem"><path d="M2017.19,-181.727C2010.25,-171.724 2001.65,-159.332 1995.27,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="2015.76,-182.74 2020.05,-185.851 2018.63,-180.745 2015.76,-182.74" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node33 --><g class="node class" id="graph2_33"><a xlink:title="scala.swing.MenuBar" xlink:href="MenuBar.html#inheritance-diagram"><polygon points="572.165,-274 488.165,-274 488.165,-248 572.165,-248 572.165,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="498.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="520.165" text-anchor="start">MenuBar</text></a></g><!-- node35 --><g class="node class" id="graph2_35"><a xlink:title="scala.swing.ListView" xlink:href="ListView.html#inheritance-diagram"><polygon points="684.165,-274 590.165,-274 590.165,-248 684.165,-248 684.165,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="600.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="622.165" text-anchor="start">ListView[A]</text></a></g><!-- node36 --><g class="node trait" id="graph2_36"><a xlink:title="scala.swing.LayoutContainer" xlink:href="LayoutContainer.html#inheritance-diagram"><polygon points="1956.17,-274 1840.17,-274 1840.17,-248 1956.17,-248 1956.17,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-269" x="1850.17" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1872.17" text-anchor="start">LayoutContainer</text></a></g><!-- node36&#45;&gt;node39 --><g class="edge inheritance" id="graph2_36_39"><a xlink:title="GridBagPanel is a subtype of LayoutContainer"><path d="M1845.01,-246.544C1806.65,-236.114 1755.29,-222.149 1718.17,-212.055" stroke="#d4d4d4" fill="none"></path><polygon points="1844.81,-248.304 1850.09,-247.927 1845.73,-244.926 1844.81,-248.304" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node36&#45;&gt;node49 --><g class="edge inheritance" id="graph2_36_49"><a xlink:title="BorderPanel is a subtype of LayoutContainer"><path d="M1870.84,-245.313C1852.98,-235.061 1829.92,-221.825 1813.04,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="1870.05,-246.88 1875.26,-247.851 1871.8,-243.844 1870.05,-246.88" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node37 --><g class="node class" id="graph2_37"><a xlink:title="scala.swing.Label" xlink:href="Label.html#inheritance-diagram"><polygon points="770.165,-274 702.165,-274 702.165,-248 770.165,-248 770.165,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="712.165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="734.165" text-anchor="start">Label</text></a></g><!-- node43&#45;&gt;node9 --><g class="edge inheritance" id="graph2_43_9"><a xlink:title="SplitPane is a subtype of Container"><path d="M277.702,-305.994C286.293,-295.946 297.005,-283.414 304.942,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="276.324,-304.914 274.405,-309.851 278.984,-307.188 276.324,-304.914" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node43&#45;&gt;node12 --><g class="edge inheritance" id="graph2_43_12"><a xlink:title="SequentialContainer is a subtype of Container"><path d="M219.516,-308.212C188.806,-297.807 148.09,-284.013 118.605,-274.023" stroke="#d4d4d4" fill="none"></path><polygon points="219.059,-309.904 224.356,-309.851 220.182,-306.589 219.059,-309.904" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node43&#45;&gt;node15 --><g class="edge inheritance" id="graph2_43_15"><a xlink:title="ScrollPane is a subtype of Container"><path d="M302.236,-307.954C329.174,-297.581 364.62,-283.93 390.347,-274.023" stroke="#d4d4d4" fill="none"></path><polygon points="301.346,-306.421 297.309,-309.851 302.604,-309.688 301.346,-306.421" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node43&#45;&gt;node17 --><g class="edge inheritance" id="graph2_43_17"><a xlink:title="RootPanel is a subtype of Container"><path d="M248.354,-305.994C239.602,-295.946 228.687,-283.414 220.601,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="247.11,-307.23 251.713,-309.851 249.749,-304.932 247.11,-307.23" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node4 --><g class="edge inheritance" id="graph2_44_4"><a xlink:title="TextComponent is a subtype of Component"><path d="M1076.53,-321.852C1240.01,-318.039 1755.38,-304.281 2181.17,-274 2205.37,-272.278 2232.06,-269.725 2254.92,-267.336" stroke="#d4d4d4" fill="none"></path><polygon points="1076.29,-320.107 1071.33,-321.973 1076.37,-323.606 1076.29,-320.107" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node6 --><g class="edge inheritance" id="graph2_44_6"><a xlink:title="Table is a subtype of Component"><path d="M976.433,-308.35C939.486,-297.009 889.217,-281.58 856.246,-271.46" stroke="#d4d4d4" fill="none"></path><polygon points="976.033,-310.057 981.326,-309.851 977.06,-306.711 976.033,-310.057" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node7 --><g class="edge inheritance" id="graph2_44_7"><a xlink:title="TabbedPane is a subtype of Component"><path d="M1076.39,-321.962C1192.05,-319.081 1478.32,-308.741 1715.17,-274 1718.02,-273.581 1720.95,-273.098 1723.9,-272.57" stroke="#d4d4d4" fill="none"></path><polygon points="1076.3,-320.213 1071.35,-322.085 1076.39,-323.712 1076.3,-320.213" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node9 --><g class="edge inheritance" id="graph2_44_9"><a xlink:title="SplitPane is a subtype of Component"><path d="M971.806,-322.025C860.306,-319.306 591.44,-309.324 369.165,-274 366.265,-273.539 363.289,-272.999 360.3,-272.406" stroke="#d4d4d4" fill="none"></path><polygon points="971.955,-323.779 976.996,-322.149 972.039,-320.28 971.955,-323.779" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node10 --><g class="edge inheritance" id="graph2_44_10"><a xlink:title="Slider is a subtype of Component"><path d="M1076.32,-322.275C1262.52,-319.427 1894.07,-307.469 2093.17,-274 2095.99,-273.525 2098.9,-272.926 2101.8,-272.248" stroke="#d4d4d4" fill="none"></path><polygon points="1076.18,-320.527 1071.21,-322.353 1076.23,-324.026 1076.18,-320.527" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node13 --><g class="edge inheritance" id="graph2_44_13"><a xlink:title="Separator is a subtype of Component"><path d="M997.346,-307.313C979.818,-297.061 957.188,-283.825 940.613,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="996.486,-308.838 1001.69,-309.851 998.253,-305.816 996.486,-308.838" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node14 --><g class="edge inheritance" id="graph2_44_14"><a xlink:title="Scrollable is a subtype of Component"><path d="M1024.17,-304.646C1024.17,-294.843 1024.17,-283.003 1024.17,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="1022.42,-304.851 1024.17,-309.851 1025.92,-304.851 1022.42,-304.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node15 --><g class="edge inheritance" id="graph2_44_15"><a xlink:title="ScrollPane is a subtype of Component"><path d="M971.742,-320.773C874.231,-316.081 658.578,-303.117 479.165,-274 476.26,-273.528 473.28,-272.989 470.283,-272.404" stroke="#d4d4d4" fill="none"></path><polygon points="971.784,-322.527 976.862,-321.017 971.951,-319.031 971.784,-322.527" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node16 --><g class="edge inheritance" id="graph2_44_16"><a xlink:title="ScrollBar is a subtype of Component"><path d="M1050.92,-307.052C1068.05,-296.837 1090.02,-283.742 1106.14,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="1049.62,-305.788 1046.22,-309.851 1051.41,-308.794 1049.62,-305.788" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node24 --><g class="edge inheritance" id="graph2_44_24"><a xlink:title="ProgressBar is a subtype of Component"><path d="M1074.5,-308.416C1110.46,-298 1158.41,-284.107 1193.1,-274.055" stroke="#d4d4d4" fill="none"></path><polygon points="1073.6,-306.855 1069.29,-309.927 1074.58,-310.217 1073.6,-306.855" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node26 --><g class="edge inheritance" id="graph2_44_26"><a xlink:title="Panel is a subtype of Component"><path d="M1076.57,-317.974C1159.28,-309.863 1325.1,-292.874 1465.17,-274 1480.59,-271.921 1497.6,-269.283 1512.1,-266.927" stroke="#d4d4d4" fill="none"></path><polygon points="1076.05,-316.267 1071.25,-318.496 1076.39,-319.75 1076.05,-316.267" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node33 --><g class="edge inheritance" id="graph2_44_33"><a xlink:title="MenuBar is a subtype of Component"><path d="M971.607,-319.569C888.298,-313.598 721.029,-299.433 581.165,-274 578.289,-273.477 575.334,-272.881 572.366,-272.24" stroke="#d4d4d4" fill="none"></path><polygon points="971.86,-321.342 976.972,-319.951 972.108,-317.851 971.86,-321.342" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node35 --><g class="edge inheritance" id="graph2_44_35"><a xlink:title="ListView[A] is a subtype of Component"><path d="M972.091,-316.62C906.702,-308.303 791.202,-292.604 693.165,-274 690.322,-273.46 687.404,-272.876 684.465,-272.264" stroke="#d4d4d4" fill="none"></path><polygon points="971.917,-318.361 977.098,-317.254 972.358,-314.889 971.917,-318.361" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node37 --><g class="edge inheritance" id="graph2_44_37"><a xlink:title="Label is a subtype of Component"><path d="M971.861,-314.045C922.034,-305.16 845.066,-290.511 779.165,-274 776.291,-273.28 773.322,-272.487 770.35,-271.659" stroke="#d4d4d4" fill="none"></path><polygon points="971.668,-315.788 976.897,-314.94 972.28,-312.342 971.668,-315.788" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node45 --><g class="edge inheritance" id="graph2_44_45"><a xlink:title="ComboBox[A] is a subtype of Component"><path d="M1076.7,-320.578C1177.09,-315.483 1402.95,-301.762 1591.17,-274 1594.1,-273.567 1597.11,-273.08 1600.14,-272.557" stroke="#d4d4d4" fill="none"></path><polygon points="1076.34,-318.844 1071.43,-320.844 1076.51,-322.34 1076.34,-318.844" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node44&#45;&gt;node51 --><g class="edge inheritance" id="graph2_44_51"><a xlink:title="AbstractButton is a subtype of Component"><path d="M1076.55,-321.298C1247.96,-315.566 1791.09,-296.088 1965.17,-274 1968.09,-273.629 1971.08,-273.199 1974.09,-272.726" stroke="#d4d4d4" fill="none"></path><polygon points="1076.28,-319.556 1071.34,-321.471 1076.4,-323.054 1076.28,-319.556" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node51&#45;&gt;node2 --><g class="edge inheritance" id="graph2_51_2"><a xlink:title="ToggleButton is a subtype of AbstractButton"><path d="M1998.8,-245.443C1978.76,-235.173 1952.79,-221.866 1933.79,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="1998.26,-247.129 2003.5,-247.851 1999.85,-244.014 1998.26,-247.129" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node51&#45;&gt;node32 --><g class="edge inheritance" id="graph2_51_32"><a xlink:title="MenuItem is a subtype of AbstractButton"><path d="M2029.17,-242.646C2029.17,-232.843 2029.17,-221.003 2029.17,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="2027.42,-242.851 2029.17,-247.851 2030.92,-242.851 2027.42,-242.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node51&#45;&gt;node47 --><g class="edge inheritance" id="graph2_51_47"><a xlink:title="Button is a subtype of AbstractButton"><path d="M2054.63,-245.052C2070.94,-234.837 2091.85,-221.742 2107.2,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="2053.47,-243.714 2050.16,-247.851 2055.33,-246.681 2053.47,-243.714" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.swing"><span>swing</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.swing.AbstractButton" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AbstractButtonextendsComponentwithAction.Trigger.WrapperwithPublisher"></a>
+      <a id="AbstractButton:AbstractButton"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AbstractButton.html"><span class="name">AbstractButton</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Action$$Trigger$$Wrapper.html" class="extype" name="scala.swing.Action.Trigger.Wrapper">Wrapper</a> with <a href="Publisher.html" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base class of all button-like widgets, such as push buttons,
+check boxes, and radio buttons.</p>
+    </li><li name="scala.swing.Action" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ActionextendsAnyRef"></a>
+      <a id="Action:Action"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Action.html"><span class="name">Action</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">An abstract action to be performed in reaction to user input.</p>
+    </li><li name="scala.swing.Adjustable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AdjustableextendsOriented"></a>
+      <a id="Adjustable:Adjustable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Adjustable.html"><span class="name">Adjustable</span></a><span class="result"> extends <a href="Oriented.html" class="extype" name="scala.swing.Oriented">Oriented</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Applet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AppletextendsJApplet"></a>
+      <a id="Applet:Applet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Applet.html"><span class="name">Applet</span></a><span class="result"> extends <span class="extype" name="javax.swing.JApplet">JApplet</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   Clients should implement the ui field.</p>
+    </li><li name="scala.swing.BorderPanel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BorderPanelextendsPanelwithLayoutContainer"></a>
+      <a id="BorderPanel:BorderPanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BorderPanel.html"><span class="name">BorderPanel</span></a><span class="result"> extends <a href="Panel.html" class="extype" name="scala.swing.Panel">Panel</a> with <a href="LayoutContainer.html" class="extype" name="scala.swing.LayoutContainer">LayoutContainer</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A container that arranges its children around a central component that
+takes most of the space.</p>
+    </li><li name="scala.swing.BoxPanel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BoxPanelextendsPanelwithSequentialContainer.Wrapper"></a>
+      <a id="BoxPanel:BoxPanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BoxPanel.html"><span class="name">BoxPanel</span></a><span class="result"> extends <a href="Panel.html" class="extype" name="scala.swing.Panel">Panel</a> with <a href="SequentialContainer$$Wrapper.html" class="extype" name="scala.swing.SequentialContainer.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A panel that lays out its contents one after the other,
+either horizontally or vertically.</p>
+    </li><li name="scala.swing.BufferWrapper" visbl="prt" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BufferWrapper[A]extendsBuffer[A]"></a>
+      <a id="BufferWrapper[A]:BufferWrapper[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BufferWrapper.html"><span class="name">BufferWrapper</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../collection/mutable/Buffer.html" class="extype" name="scala.collection.mutable.Buffer">Buffer</a>[<span class="extype" name="scala.swing.BufferWrapper.A">A</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Default partial implementation for buffer adapters.</p>
+    </li><li name="scala.swing.Button" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ButtonextendsAbstractButtonwithPublisher"></a>
+      <a id="Button:Button"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Button.html"><span class="name">Button</span></a><span class="result"> extends <a href="AbstractButton.html" class="extype" name="scala.swing.AbstractButton">AbstractButton</a> with <a href="Publisher.html" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A button that can be clicked, usually to perform some action.</p>
+    </li><li name="scala.swing.ButtonGroup" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ButtonGroupextendsAnyRef"></a>
+      <a id="ButtonGroup:ButtonGroup"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ButtonGroup.html"><span class="name">ButtonGroup</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A button mutex.</p>
+    </li><li name="scala.swing.CheckBox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CheckBoxextendsToggleButton"></a>
+      <a id="CheckBox:CheckBox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CheckBox.html"><span class="name">CheckBox</span></a><span class="result"> extends <a href="ToggleButton.html" class="extype" name="scala.swing.ToggleButton">ToggleButton</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Two state button that can either be checked or unchecked.</p>
+    </li><li name="scala.swing.CheckMenuItem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CheckMenuItemextendsMenuItem"></a>
+      <a id="CheckMenuItem:CheckMenuItem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CheckMenuItem.html"><span class="name">CheckMenuItem</span></a><span class="result"> extends <a href="MenuItem.html" class="extype" name="scala.swing.MenuItem">MenuItem</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A menu item with a check box.</p>
+    </li><li name="scala.swing.Color" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Color=java.awt.Color"></a>
+      <a id="Color:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Color</span><span class="result"> = <span class="extype" name="java.awt.Color">java.awt.Color</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.ComboBox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ComboBox[A]extendsComponentwithPublisher"></a>
+      <a id="ComboBox[A]:ComboBox[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ComboBox.html"><span class="name">ComboBox</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Publisher.html" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Let's the user make a selection from a list of predefined items.</p>
+    </li><li name="scala.swing.Component" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ComponentextendsUIElement"></a>
+      <a id="Component:Component"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Component.html"><span class="name">Component</span></a><span class="result"> extends <a href="UIElement.html" class="extype" name="scala.swing.UIElement">UIElement</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base class for all UI elements that can be displayed in a window.</p>
+    </li><li name="scala.swing.Container" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ContainerextendsUIElement"></a>
+      <a id="Container:Container"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Container.html"><span class="name">Container</span></a><span class="result"> extends <a href="UIElement.html" class="extype" name="scala.swing.UIElement">UIElement</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The base traits for UI elements that can contain <code>Component</code>s.</code></p>
+    </li><li name="scala.swing.Dialog" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DialogextendsWindowwithRichWindow"></a>
+      <a id="Dialog:Dialog"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Dialog.html"><span class="name">Dialog</span></a><span class="result"> extends <a href="Window.html" class="extype" name="scala.swing.Window">Window</a> with <a href="RichWindow.html" class="extype" name="scala.swing.RichWindow">RichWindow</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A dialog window.</p>
+    </li><li name="scala.swing.Dimension" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Dimension=java.awt.Dimension"></a>
+      <a id="Dimension:Dimension"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Dimension</span><span class="result"> = <span class="extype" name="java.awt.Dimension">java.awt.Dimension</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.EditorPane" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EditorPaneextendsTextComponent"></a>
+      <a id="EditorPane:EditorPane"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="EditorPane.html"><span class="name">EditorPane</span></a><span class="result"> extends <a href="TextComponent.html" class="extype" name="scala.swing.TextComponent">TextComponent</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A text component that allows multiline text input and display.</p>
+    </li><li name="scala.swing.FileChooser" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileChooserextendsAnyRef"></a>
+      <a id="FileChooser:FileChooser"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FileChooser.html"><span class="name">FileChooser</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Used to open file dialogs.</p>
+    </li><li name="scala.swing.FlowPanel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FlowPanelextendsPanelwithSequentialContainer.Wrapper"></a>
+      <a id="FlowPanel:FlowPanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FlowPanel.html"><span class="name">FlowPanel</span></a><span class="result"> extends <a href="Panel.html" class="extype" name="scala.swing.Panel">Panel</a> with <a href="SequentialContainer$$Wrapper.html" class="extype" name="scala.swing.SequentialContainer.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A panel that arranges its contents horizontally, one after the other.</p>
+    </li><li name="scala.swing.Font" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Font=java.awt.Font"></a>
+      <a id="Font:Font"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Font</span><span class="result"> = <span class="extype" name="java.awt.Font">java.awt.Font</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.FormattedTextField" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FormattedTextFieldextendsTextComponent"></a>
+      <a id="FormattedTextField:FormattedTextField"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FormattedTextField.html"><span class="name">FormattedTextField</span></a><span class="result"> extends <a href="TextComponent.html" class="extype" name="scala.swing.TextComponent">TextComponent</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A text field with formatted input.</p>
+    </li><li name="scala.swing.Frame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FrameextendsWindowwithRichWindow"></a>
+      <a id="Frame:Frame"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Frame.html"><span class="name">Frame</span></a><span class="result"> extends <a href="Window.html" class="extype" name="scala.swing.Window">Window</a> with <a href="RichWindow.html" class="extype" name="scala.swing.RichWindow">RichWindow</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A window with decoration such as a title, border, and action buttons.</p>
+    </li><li name="scala.swing.Graphics2D" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Graphics2D=java.awt.Graphics2D"></a>
+      <a id="Graphics2D:Graphics2D"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Graphics2D</span><span class="result"> = <span class="extype" name="java.awt.Graphics2D">java.awt.Graphics2D</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.GridBagPanel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GridBagPanelextendsPanelwithLayoutContainer"></a>
+      <a id="GridBagPanel:GridBagPanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GridBagPanel.html"><span class="name">GridBagPanel</span></a><span class="result"> extends <a href="Panel.html" class="extype" name="scala.swing.Panel">Panel</a> with <a href="LayoutContainer.html" class="extype" name="scala.swing.LayoutContainer">LayoutContainer</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A panel that arranges its children in a grid.</p>
+    </li><li name="scala.swing.GridPanel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GridPanelextendsPanelwithSequentialContainer.Wrapper"></a>
+      <a id="GridPanel:GridPanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GridPanel.html"><span class="name">GridPanel</span></a><span class="result"> extends <a href="Panel.html" class="extype" name="scala.swing.Panel">Panel</a> with <a href="SequentialContainer$$Wrapper.html" class="extype" name="scala.swing.SequentialContainer.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A panel that lays out its contents in a uniform grid.</p>
+    </li><li name="scala.swing.Image" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Image=java.awt.Image"></a>
+      <a id="Image:Image"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Image</span><span class="result"> = <span class="extype" name="java.awt.Image">java.awt.Image</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Insets" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Insets=java.awt.Insets"></a>
+      <a id="Insets:Insets"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Insets</span><span class="result"> = <span class="extype" name="java.awt.Insets">java.awt.Insets</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Label" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LabelextendsComponent"></a>
+      <a id="Label:Label"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Label.html"><span class="name">Label</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A label component that display either a text, an icon, or both.</p>
+    </li><li name="scala.swing.LayoutContainer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LayoutContainerextendsContainer.Wrapper"></a>
+      <a id="LayoutContainer:LayoutContainer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="LayoutContainer.html"><span class="name">LayoutContainer</span></a><span class="result"> extends <a href="Container$$Wrapper.html" class="extype" name="scala.swing.Container.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A container that associates layout constraints of member type
+ <code>Constraints</code> with its children.</p>
+    </li><li name="scala.swing.ListView" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ListView[A]extendsComponent"></a>
+      <a id="ListView[A]:ListView[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ListView.html"><span class="name">ListView</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A component that displays a number of elements in a list.</p>
+    </li><li name="scala.swing.MainFrame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MainFrameextendsFrame"></a>
+      <a id="MainFrame:MainFrame"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MainFrame.html"><span class="name">MainFrame</span></a><span class="result"> extends <a href="Frame.html" class="extype" name="scala.swing.Frame">Frame</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A frame that can be used for main application windows.</p>
+    </li><li name="scala.swing.Menu" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MenuextendsMenuItemwithSequentialContainer.Wrapper"></a>
+      <a id="Menu:Menu"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Menu.html"><span class="name">Menu</span></a><span class="result"> extends <a href="MenuItem.html" class="extype" name="scala.swing.MenuItem">MenuItem</a> with <a href="SequentialContainer$$Wrapper.html" class="extype" name="scala.swing.SequentialContainer.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A menu.</p>
+    </li><li name="scala.swing.MenuBar" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MenuBarextendsComponentwithSequentialContainer.Wrapper"></a>
+      <a id="MenuBar:MenuBar"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MenuBar.html"><span class="name">MenuBar</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="SequentialContainer$$Wrapper.html" class="extype" name="scala.swing.SequentialContainer.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A menu bar.</p>
+    </li><li name="scala.swing.MenuItem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MenuItemextendsAbstractButton"></a>
+      <a id="MenuItem:MenuItem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MenuItem.html"><span class="name">MenuItem</span></a><span class="result"> extends <a href="AbstractButton.html" class="extype" name="scala.swing.AbstractButton">AbstractButton</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A menu item that can be used in a menu.</p>
+    </li><li name="scala.swing.Orientable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="OrientableextendsOriented"></a>
+      <a id="Orientable:Orientable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Orientable.html"><span class="name">Orientable</span></a><span class="result"> extends <a href="Oriented.html" class="extype" name="scala.swing.Oriented">Oriented</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">An <code>Oriented</code> whose orientation can be changed.</code></p>
+    </li><li name="scala.swing.Oriented" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="OrientedextendsAnyRef"></a>
+      <a id="Oriented:Oriented"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Oriented.html"><span class="name">Oriented</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Something that can have an orientation.</p>
+    </li><li name="scala.swing.Panel" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PanelextendsComponentwithContainer.Wrapper"></a>
+      <a id="Panel:Panel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Panel.html"><span class="name">Panel</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Container$$Wrapper.html" class="extype" name="scala.swing.Container.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A component that can contain other components.</p>
+    </li><li name="scala.swing.PasswordField" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PasswordFieldextendsTextField"></a>
+      <a id="PasswordField:PasswordField"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PasswordField.html"><span class="name">PasswordField</span></a><span class="result"> extends <a href="TextField.html" class="extype" name="scala.swing.TextField">TextField</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A password field, that displays a replacement character for each character in the password.</p>
+    </li><li name="scala.swing.Point" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Point=java.awt.Point"></a>
+      <a id="Point:Point"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Point</span><span class="result"> = <span class="extype" name="java.awt.Point">java.awt.Point</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.ProgressBar" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ProgressBarextendsComponentwithOrientable.Wrapper"></a>
+      <a id="ProgressBar:ProgressBar"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ProgressBar.html"><span class="name">ProgressBar</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Orientable$$Wrapper.html" class="extype" name="scala.swing.Orientable.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A bar indicating progress of some action.</p>
+    </li><li name="scala.swing.Publisher" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PublisherextendsReactor"></a>
+      <a id="Publisher:Publisher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Publisher.html"><span class="name">Publisher</span></a><span class="result"> extends <a href="Reactor.html" class="extype" name="scala.swing.Reactor">Reactor</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   Notifies registered reactions when an event is published.</p>
+    </li><li name="scala.swing.RadioButton" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RadioButtonextendsToggleButton"></a>
+      <a id="RadioButton:RadioButton"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RadioButton.html"><span class="name">RadioButton</span></a><span class="result"> extends <a href="ToggleButton.html" class="extype" name="scala.swing.ToggleButton">ToggleButton</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A two state button that is usually used in a <code>ButtonGroup</code>
+together with other <code>RadioButton</code>s, in order to indicate
+that at most one of them can be selected.</code></code></p>
+    </li><li name="scala.swing.RadioMenuItem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RadioMenuItemextendsMenuItem"></a>
+      <a id="RadioMenuItem:RadioMenuItem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RadioMenuItem.html"><span class="name">RadioMenuItem</span></a><span class="result"> extends <a href="MenuItem.html" class="extype" name="scala.swing.MenuItem">MenuItem</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A menu item with a radio button.</p>
+    </li><li name="scala.swing.Reactions" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Reactionsextendsswing.Reactions.Reaction"></a>
+      <a id="Reactions:Reactions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Reactions.html"><span class="name">Reactions</span></a><span class="result"> extends <a href="Reactions$.html#Reaction=PartialFunction[scala.swing.event.Event,Unit]" class="extmbr" name="scala.swing.Reactions.Reaction">Reaction</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Used by reactors to let clients register custom event reactions.</p>
+    </li><li name="scala.swing.Reactor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReactorextendsAnyRef"></a>
+      <a id="Reactor:Reactor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Reactor.html"><span class="name">Reactor</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The counterpart to publishers.</p>
+    </li><li name="scala.swing.Rectangle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Rectangle=java.awt.Rectangle"></a>
+      <a id="Rectangle:Rectangle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Rectangle</span><span class="result"> = <span class="extype" name="java.awt.Rectangle">java.awt.Rectangle</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.RefBuffer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RefBuffer[A&lt;:AnyRef]extendsBuffer[A]withSingleRefCollection[A]"></a>
+      <a id="RefBuffer[A&lt;:AnyRef]:RefBuffer[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RefBuffer.html"><span class="name">RefBuffer</span></a><span class="tparams">[<span name="A">A &lt;: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="../collection/mutable/Buffer.html" class="extype" name="scala.collection.mutable.Buffer">Buffer</a>[<span class="extype" name="scala.swing.RefBuffer.A">A</span>] with <span class="extype" name="scala.swing.SingleRefCollection">SingleRefCollection</span>[<span class="extype" name="scala.swing.RefBuffer.A">A</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.RichWindow" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RichWindowextendsWindow"></a>
+      <a id="RichWindow:RichWindow"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RichWindow.html"><span class="name">RichWindow</span></a><span class="result"> extends <a href="Window.html" class="extype" name="scala.swing.Window">Window</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A window that adds some functionality to the plain Window class and serves as
+the common base class for frames and dialogs.</p>
+    </li><li name="scala.swing.RootPanel" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RootPanelextendsContainer"></a>
+      <a id="RootPanel:RootPanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RootPanel.html"><span class="name">RootPanel</span></a><span class="result"> extends <a href="Container.html" class="extype" name="scala.swing.Container">Container</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The root of a component hierarchy.</p>
+    </li><li name="scala.swing.ScrollBar" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScrollBarextendsComponentwithOrientable.WrapperwithAdjustable.Wrapper"></a>
+      <a id="ScrollBar:ScrollBar"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScrollBar.html"><span class="name">ScrollBar</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Orientable$$Wrapper.html" class="extype" name="scala.swing.Orientable.Wrapper">Wrapper</a> with <a href="Adjustable$$Wrapper.html" class="extype" name="scala.swing.Adjustable.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.ScrollPane" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScrollPaneextendsComponentwithContainer"></a>
+      <a id="ScrollPane:ScrollPane"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScrollPane.html"><span class="name">ScrollPane</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Container.html" class="extype" name="scala.swing.Container">Container</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Can have at most a single child component, which will be put inside a canvas (the viewport)
+that can be scrolled.</p>
+    </li><li name="scala.swing.Scrollable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ScrollableextendsComponent"></a>
+      <a id="Scrollable:Scrollable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Scrollable.html"><span class="name">Scrollable</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A component that is specially suitable for being placed inside a
+<code>ScrollPane</code>.</code></p>
+    </li><li name="scala.swing.Separator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SeparatorextendsComponentwithOriented.Wrapper"></a>
+      <a id="Separator:Separator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Separator.html"><span class="name">Separator</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Oriented$$Wrapper.html" class="extype" name="scala.swing.Oriented.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A bar that can be used a separator, most commonly in menus.</p>
+    </li><li name="scala.swing.SequentialContainer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SequentialContainerextendsContainer"></a>
+      <a id="SequentialContainer:SequentialContainer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SequentialContainer.html"><span class="name">SequentialContainer</span></a><span class="result"> extends <a href="Container.html" class="extype" name="scala.swing.Container">Container</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A container for which a sequential order of children makes sense, such as
+flow panels, or menus.</p>
+    </li><li name="scala.swing.SimpleSwingApplication" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SimpleSwingApplicationextendsSwingApplication"></a>
+      <a id="SimpleSwingApplication:SimpleSwingApplication"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleSwingApplication.html"><span class="name">SimpleSwingApplication</span></a><span class="result"> extends <a href="SwingApplication.html" class="extype" name="scala.swing.SwingApplication">SwingApplication</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Extend this class for most simple UI applications.</p>
+    </li><li name="scala.swing.Slider" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SliderextendsComponentwithOrientable.WrapperwithPublisher"></a>
+      <a id="Slider:Slider"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Slider.html"><span class="name">Slider</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Orientable$$Wrapper.html" class="extype" name="scala.swing.Orientable.Wrapper">Wrapper</a> with <a href="Publisher.html" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Lets users select a value from a given range.</p>
+    </li><li name="scala.swing.SplitPane" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SplitPaneextendsComponentwithContainerwithOrientable.Wrapper"></a>
+      <a id="SplitPane:SplitPane"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SplitPane.html"><span class="name">SplitPane</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Container.html" class="extype" name="scala.swing.Container">Container</a> with <a href="Orientable$$Wrapper.html" class="extype" name="scala.swing.Orientable.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A container with exactly two children.</p>
+    </li><li name="scala.swing.SwingApplication" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SwingApplicationextendsReactor"></a>
+      <a id="SwingApplication:SwingApplication"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SwingApplication.html"><span class="name">SwingApplication</span></a><span class="result"> extends <a href="Reactor.html" class="extype" name="scala.swing.Reactor">Reactor</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Convenience class with utility methods for GUI applications.</p>
+    </li><li name="scala.swing.TabbedPane" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TabbedPaneextendsComponentwithPublisher"></a>
+      <a id="TabbedPane:TabbedPane"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TabbedPane.html"><span class="name">TabbedPane</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Publisher.html" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Displays the contents of one of several pages at a time.</p>
+    </li><li name="scala.swing.Table" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TableextendsComponentwithScrollable.Wrapper"></a>
+      <a id="Table:Table"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Table.html"><span class="name">Table</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Scrollable$$Wrapper.html" class="extype" name="scala.swing.Scrollable.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Displays a matrix of items.</p>
+    </li><li name="scala.swing.TextArea" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TextAreaextendsTextComponentwithTextComponent.HasColumnswithTextComponent.HasRows"></a>
+      <a id="TextArea:TextArea"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TextArea.html"><span class="name">TextArea</span></a><span class="result"> extends <a href="TextComponent.html" class="extype" name="scala.swing.TextComponent">TextComponent</a> with <a href="TextComponent$$HasColumns.html" class="extype" name="scala.swing.TextComponent.HasColumns">HasColumns</a> with <a href="TextComponent$$HasRows.html" class="extype" name="scala.swing.TextComponent.HasRows">HasRows</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A text component that allows multiline text input and display.</p>
+    </li><li name="scala.swing.TextComponent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TextComponentextendsComponentwithPublisher"></a>
+      <a id="TextComponent:TextComponent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TextComponent.html"><span class="name">TextComponent</span></a><span class="result"> extends <a href="Component.html" class="extype" name="scala.swing.Component">Component</a> with <a href="Publisher.html" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A component that allows some kind of text input and display.</p>
+    </li><li name="scala.swing.TextField" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TextFieldextendsTextComponentwithTextComponent.HasColumnswithAction.Trigger.Wrapper"></a>
+      <a id="TextField:TextField"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TextField.html"><span class="name">TextField</span></a><span class="result"> extends <a href="TextComponent.html" class="extype" name="scala.swing.TextComponent">TextComponent</a> with <a href="TextComponent$$HasColumns.html" class="extype" name="scala.swing.TextComponent.HasColumns">HasColumns</a> with <a href="Action$$Trigger$$Wrapper.html" class="extype" name="scala.swing.Action.Trigger.Wrapper">Wrapper</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A text component that allows single line text input and display.</p>
+    </li><li name="scala.swing.ToggleButton" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ToggleButtonextendsAbstractButton"></a>
+      <a id="ToggleButton:ToggleButton"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ToggleButton.html"><span class="name">ToggleButton</span></a><span class="result"> extends <a href="AbstractButton.html" class="extype" name="scala.swing.AbstractButton">AbstractButton</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A two state button with a push button like user interface.</p>
+    </li><li name="scala.swing.UIElement" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="UIElementextendsProxywithLazyPublisher"></a>
+      <a id="UIElement:UIElement"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="UIElement.html"><span class="name">UIElement</span></a><span class="result"> extends <a href="../Proxy.html" class="extype" name="scala.Proxy">Proxy</a> with <span class="extype" name="scala.swing.LazyPublisher">LazyPublisher</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The base trait of all user interface elements.</p>
+    </li><li name="scala.swing.Window" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="WindowextendsUIElementwithRootPanelwithPublisher"></a>
+      <a id="Window:Window"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Window.html"><span class="name">Window</span></a><span class="result"> extends <a href="UIElement.html" class="extype" name="scala.swing.UIElement">UIElement</a> with <a href="RootPanel.html" class="extype" name="scala.swing.RootPanel">RootPanel</a> with <a href="Publisher.html" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A window with decoration such as a title, border, and action buttons.</p>
+    </li><li name="scala.swing.SwingActor" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SwingActorextendsAnyRef"></a>
+      <a id="SwingActor:SwingActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SwingActor.html"><span class="name deprecated" title="Deprecated: (Since version 2.10.1) Will be removed in 2.11.0">SwingActor</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.1)</i> Will be removed in 2.11.0</p></dd></dl></div>
+    </li><li name="scala.swing.SwingWorker" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SwingWorkerextendsActor"></a>
+      <a id="SwingWorker:SwingWorker"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SwingWorker.html"><span class="name deprecated" title="Deprecated: (Since version 2.10.1) Depends on the deprecated package scala.actors. Will be removed in 2.11.0">SwingWorker</span></a><span class="result"> extends <a href="../actors/Actor.html" class="extype" name="scala.actors.Actor">Actor</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.1)</i> Depends on the deprecated package scala.actors. Will be removed in 2.11.0</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.swing.Action" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Action"></a>
+      <a id="Action:Action"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Action$.html"><span class="name">Action</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Adjustable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Adjustable"></a>
+      <a id="Adjustable:Adjustable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Adjustable$.html"><span class="name">Adjustable</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Alignment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Alignment"></a>
+      <a id="Alignment:Alignment"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Alignment$.html"><span class="name">Alignment</span></a><span class="result"> extends <a href="../Enumeration.html" class="extype" name="scala.Enumeration">Enumeration</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Horizontal and vertical alignments.</p>
+    </li><li name="scala.swing.BorderPanel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BorderPanel"></a>
+      <a id="BorderPanel:BorderPanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BorderPanel$.html"><span class="name">BorderPanel</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Button" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Button"></a>
+      <a id="Button:Button"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Button$.html"><span class="name">Button</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.ComboBox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ComboBox"></a>
+      <a id="ComboBox:ComboBox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ComboBox$.html"><span class="name">ComboBox</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Component" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Component"></a>
+      <a id="Component:Component"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Component$.html"><span class="name">Component</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Utility methods, mostly for wrapping components.</p>
+    </li><li name="scala.swing.Container" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Container"></a>
+      <a id="Container:Container"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Container$.html"><span class="name">Container</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Dialog" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Dialog"></a>
+      <a id="Dialog:Dialog"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Dialog$.html"><span class="name">Dialog</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Simple predefined dialogs.</p>
+    </li><li name="scala.swing.FileChooser" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileChooser"></a>
+      <a id="FileChooser:FileChooser"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FileChooser$.html"><span class="name">FileChooser</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.FlowPanel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FlowPanel"></a>
+      <a id="FlowPanel:FlowPanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FlowPanel$.html"><span class="name">FlowPanel</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.FormattedTextField" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FormattedTextField"></a>
+      <a id="FormattedTextField:FormattedTextField"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FormattedTextField$.html"><span class="name">FormattedTextField</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.GridBagPanel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GridBagPanel"></a>
+      <a id="GridBagPanel:GridBagPanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GridBagPanel$.html"><span class="name">GridBagPanel</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.GridPanel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GridPanel"></a>
+      <a id="GridPanel:GridPanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GridPanel$.html"><span class="name">GridPanel</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.ListView" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ListView"></a>
+      <a id="ListView:ListView"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ListView$.html"><span class="name">ListView</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.MenuBar" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MenuBar"></a>
+      <a id="MenuBar:MenuBar"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MenuBar$.html"><span class="name">MenuBar</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Orientable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Orientable"></a>
+      <a id="Orientable:Orientable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Orientable$.html"><span class="name">Orientable</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Orientation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Orientation"></a>
+      <a id="Orientation:Orientation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Orientation$.html"><span class="name">Orientation</span></a><span class="result"> extends <a href="../Enumeration.html" class="extype" name="scala.Enumeration">Enumeration</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Oriented" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Oriented"></a>
+      <a id="Oriented:Oriented"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Oriented$.html"><span class="name">Oriented</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Reactions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Reactions"></a>
+      <a id="Reactions:Reactions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Reactions$.html"><span class="name">Reactions</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.RichWindow" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RichWindow"></a>
+      <a id="RichWindow:RichWindow"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RichWindow$.html"><span class="name">RichWindow</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.ScrollBar" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScrollBar"></a>
+      <a id="ScrollBar:ScrollBar"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ScrollBar$.html"><span class="name">ScrollBar</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.ScrollPane" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScrollPane"></a>
+      <a id="ScrollPane:ScrollPane"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ScrollPane$.html"><span class="name">ScrollPane</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Scrollable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Scrollable"></a>
+      <a id="Scrollable:Scrollable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Scrollable$.html"><span class="name">Scrollable</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.SequentialContainer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SequentialContainer"></a>
+      <a id="SequentialContainer:SequentialContainer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SequentialContainer$.html"><span class="name">SequentialContainer</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Swing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Swing"></a>
+      <a id="Swing:Swing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Swing$.html"><span class="name">Swing</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Helpers for this package.</p>
+    </li><li name="scala.swing.TabbedPane" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TabbedPane"></a>
+      <a id="TabbedPane:TabbedPane"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TabbedPane$.html"><span class="name">TabbedPane</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.Table" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Table"></a>
+      <a id="Table:Table"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Table$.html"><span class="name">Table</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.TextComponent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TextComponent"></a>
+      <a id="TextComponent:TextComponent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TextComponent$.html"><span class="name">TextComponent</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.UIElement" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UIElement"></a>
+      <a id="UIElement:UIElement"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UIElement$.html"><span class="name">UIElement</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.event" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="event"></a>
+      <a id="event:event"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="event/package.html"><span class="name">event</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.package#implicitConversions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="implicitConversions:languageFeature.implicitConversions"></a>
+      <a id="implicitConversions:implicitConversions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">implicitConversions</span><span class="result">: <a href="../languageFeature$$implicitConversions.html" class="extype" name="scala.languageFeature.implicitConversions">implicitConversions</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.model" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="model"></a>
+      <a id="model:model"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="model/package.html"><span class="name">model</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.swing.package#reflectiveCalls" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="reflectiveCalls:languageFeature.reflectiveCalls"></a>
+      <a id="reflectiveCalls:reflectiveCalls"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reflectiveCalls</span><span class="result">: <a href="../languageFeature$$reflectiveCalls.html" class="extype" name="scala.languageFeature.reflectiveCalls">reflectiveCalls</a></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.swing.SwingWorker" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SwingWorker"></a>
+      <a id="SwingWorker:SwingWorker"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SwingWorker$.html"><span class="name deprecated" title="Deprecated: (Since version 2.10.1) Will be removed in 2.11.0">SwingWorker</span></a><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.1)</i> Will be removed in 2.11.0</p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../lib/diagrams.js"></script>
+    </body>
+      </html>

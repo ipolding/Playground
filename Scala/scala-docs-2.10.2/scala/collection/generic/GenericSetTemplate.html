@@ -1,0 +1,948 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>GenericSetTemplate - Scala Standard Library API (Scaladoc) 2.10.2 - scala.collection.generic.GenericSetTemplate</title>
+          <meta name="description" content="GenericSetTemplate - Scala Standard Library API Scaladoc 2.10.2 - scala.collection.generic.GenericSetTemplate" />
+          <meta name="keywords" content="GenericSetTemplate Scala Standard Library API Scaladoc 2.10.2 scala.collection.generic.GenericSetTemplate" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'scala.collection.generic.GenericSetTemplate';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../lib/trait_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.collection">collection</a>.<a href="package.html" class="extype" name="scala.collection.generic">generic</a></p>
+        <h1>GenericSetTemplate</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GenericSetTemplate</span><span class="tparams">[<span name="A">A</span>, <span name="CC">+CC<span class="tparams">[<span name="X">X</span>]</span> &lt;: <a href="../GenSet.html" class="extype" name="scala.collection.GenSet">GenSet</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.CC.X">X</span>]</span>]</span><span class="result"> extends <a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/library/scala/collection/generic/GenericSetTemplate.scala#L1" target="_blank">GenericSetTemplate.scala</a></dd><dt>Since</dt><dd><p>2.8
+</p></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>], <a href="HasNewBuilder.html" class="extype" name="scala.collection.generic.HasNewBuilder">HasNewBuilder</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, CC[A] @scala.annotation.unchecked.uncheckedVariance], <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a href="../mutable/BitSet.html" class="extype" name="scala.collection.mutable.BitSet">BitSet</a>, <a href="../immutable/BitSet.html" class="extype" name="scala.collection.immutable.BitSet">BitSet</a>, <a href="../BitSet.html" class="extype" name="scala.collection.BitSet">BitSet</a>, <a href="../immutable/BitSet$$BitSet1.html" class="extype" name="scala.collection.immutable.BitSet.BitSet1">BitSet1</a>, <a href="../immutable/BitSet$$BitSet2.html" class="extype" name="scala.collection.immutable.BitSet.BitSet2">BitSet2</a>, <a href="../immutable/BitSet$$BitSetN.html" class="extype" name="scala.collection.immutable.BitSet.BitSetN">BitSetN</a>, <a href="../mutable/LinkedHashMap$DefaultKeySet.html" class="extype" name="scala.collection.mutable.LinkedHashMap.DefaultKeySet">DefaultKeySet</a>, <a href="../parallel/ParMapLike$DefaultKeySet.html" class="extype" name="scala.collection.parallel.ParMapLike.DefaultKeySet">DefaultKeySet</a>, <a href="../MapLike$DefaultKeySet.html" class="extype" name="scala.collection.MapLike.DefaultKeySet">DefaultKeySet</a>, <a href="../immutable/SortedMap$DefaultKeySortedSet.html" class="extype" name="scala.collection.immutable.SortedMap.DefaultKeySortedSet">DefaultKeySortedSet</a>, <a href="../SortedMapLike$DefaultKeySortedSet.html" class="extype" name="scala.collection.SortedMapLike.DefaultKeySortedSet">DefaultKeySortedSet</a>, <a href="../GenSet.html" class="extype" name="scala.collection.GenSet">GenSet</a>, <a href="../mutable/HashSet.html" class="extype" name="scala.collection.mutable.HashSet">HashSet</a>, <a href="../immutable/HashSet.html" class="extype" name="scala.collection.immutable.HashSet">HashSet</a>, <a href="../immutable/HashSet$$HashSet1.html" class="extype" name="scala.collection.immutable.HashSet.HashSet1">HashSet1</a>, <a href="../immutable/HashSet$$HashTrieSet.html" class="extype" name="scala.collection.immutable.HashSet.HashTrieSet">HashTrieSet</a>, <a href="../immutable/MapLike$ImmutableDefaultKeySet.html" class="extype" name="scala.collection.immutable.MapLike.ImmutableDefaultKeySet">ImmutableDefaultKeySet</a>, <a href="../mutable/ImmutableSetAdaptor.html" class="extype" name="scala.collection.mutable.ImmutableSetAdaptor">ImmutableSetAdaptor</a>, <a href="../../swing/ListView$selection$$Indices.html" class="extype" name="scala.swing.ListView.selection.Indices">Indices</a>, <a href="../mutable/LinkedHashSet.html" class="extype" name="scala.collection.mutable.LinkedHashSet">LinkedHashSet</a>, <a href="../immutable/ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>, <a href="../immutable/ListSet$Node.html" class="extype" name="scala.collection.immutable.ListSet.Node">Node</a>, <a href="../mutable/ObservableSet.html" class="extype" name="scala.collection.mutable.ObservableSet">ObservableSet</a>, <a href="../parallel/mutable/ParHashSet.html" class="extype" name="scala.collection.parallel.mutable.ParHashSet">ParHashSet</a>, <a href="../parallel/immutable/ParHashSet.html" class="extype" name="scala.collection.parallel.immutable.ParHashSet">ParHashSet</a>, <a href="../parallel/mutable/ParSet.html" class="extype" name="scala.collection.parallel.mutable.ParSet">ParSet</a>, <a href="../parallel/immutable/ParSet.html" class="extype" name="scala.collection.parallel.immutable.ParSet">ParSet</a>, <a href="../parallel/ParSet.html" class="extype" name="scala.collection.parallel.ParSet">ParSet</a>, <a href="../../swing/Table$selection$$SelectionSet.html" class="extype" name="scala.swing.Table.selection.SelectionSet">SelectionSet</a>, <a href="../mutable/Set.html" class="extype" name="scala.collection.mutable.Set">Set</a>, <a href="../immutable/Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>, <a href="../Set.html" class="extype" name="scala.collection.Set">Set</a>, <a href="../immutable/Set$$Set1.html" class="extype" name="scala.collection.immutable.Set.Set1">Set1</a>, <a href="../immutable/Set$$Set2.html" class="extype" name="scala.collection.immutable.Set.Set2">Set2</a>, <a href="../immutable/Set$$Set3.html" class="extype" name="scala.collection.immutable.Set.Set3">Set3</a>, <a href="../immutable/Set$$Set4.html" class="extype" name="scala.collection.immutable.Set.Set4">Set4</a>, <a href="../mutable/SetProxy.html" class="extype" name="scala.collection.mutable.SetProxy">SetProxy</a>, <a href="../immutable/SetProxy.html" class="extype" name="scala.collection.immutable.SetProxy">SetProxy</a>, <a href="../SetProxy.html" class="extype" name="scala.collection.SetProxy">SetProxy</a>, <a href="../mutable/SortedSet.html" class="extype" name="scala.collection.mutable.SortedSet">SortedSet</a>, <a href="../immutable/SortedSet.html" class="extype" name="scala.collection.immutable.SortedSet">SortedSet</a>, <a href="../SortedSet.html" class="extype" name="scala.collection.SortedSet">SortedSet</a>, <a href="../mutable/SynchronizedSet.html" class="extype" name="scala.collection.mutable.SynchronizedSet">SynchronizedSet</a>, <a href="../mutable/TreeSet.html" class="extype" name="scala.collection.mutable.TreeSet">TreeSet</a>, <a href="../immutable/TreeSet.html" class="extype" name="scala.collection.immutable.TreeSet">TreeSet</a>, <a href="../../Enumeration$ValueSet.html" class="extype" name="scala.Enumeration.ValueSet">ValueSet</a>, <a href="../../swing/Table$selection$$columns$.html" class="extype" name="scala.swing.Table.selection.columns">columns</a>, <a href="../../swing/ListView$selection$$indices$.html" class="extype" name="scala.swing.ListView.selection.indices">indices</a>, <a href="../../swing/Table$selection$$rows$.html" class="extype" name="scala.swing.Table.selection.rows">rows</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph552" viewBox="0.00 0.00 930.00 158.00" height="158pt" width="930pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph1"><polygon points="-4,5 -4,-154 927,-154 927,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this trait" id="graph552_0"><a xlink:title="scala.collection.generic.GenericSetTemplate (this trait)" xlink:href="#inheritance-diagram"><polygon points="543,-88 377,-88 377,-62 543,-62 543,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-83" x="387" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="409" text-anchor="start">GenericSetTemplate[A, CC]</text></a></g><!-- node1 --><g class="node trait" id="graph552_1"><a xlink:title="scala.collection.GenSet" xlink:href="../GenSet.html#inheritance-diagram"><polygon points="90,-26 3.55271e-14,-26 0,-1.24345e-14 90,-3.55271e-15 90,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="32" text-anchor="start">GenSet[A]</text></a></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph552_0_1"><a xlink:title="GenSet[A] is a subtype of GenericSetTemplate[A, CC]"><path d="M371.593,-65.5342C298.261,-57.0763 191.424,-43.3515 99,-26 96.062,-25.4484 93.0438,-24.8398 90.0078,-24.1961" stroke="#d4d4d4" fill="none"></path><polygon points="371.648,-67.3019 376.815,-66.134 372.047,-63.8247 371.648,-67.3019" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node class" id="graph552_2"><a xlink:title="scala.collection.immutable.HashSet" xlink:href="../immutable/HashSet.html#inheritance-diagram"><polygon points="204,-26 108,-26 108,-1.24345e-14 204,-3.55271e-15 204,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-21" x="118" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="140" text-anchor="start">HashSet[A]</text></a></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph552_0_2"><a xlink:title="HashSet[A] is a subtype of GenericSetTemplate[A, CC]"><path d="M386.477,-60.9814C337.299,-51.4653 271.182,-38.4033 213,-26 210.121,-25.3863 207.163,-24.7448 204.181,-24.0897" stroke="#d4d4d4" fill="none"></path><polygon points="386.242,-62.7182 391.483,-61.9491 386.906,-59.2818 386.242,-62.7182" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node class" id="graph552_3"><a xlink:title="scala.collection.mutable.HashSet" xlink:href="../mutable/HashSet.html#inheritance-diagram"><polygon points="318,-26 222,-26 222,-1.24345e-14 318,-3.55271e-15 318,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-21" x="232" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="254" text-anchor="start">HashSet[A]</text></a></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph552_0_3"><a xlink:title="HashSet[A] is a subtype of GenericSetTemplate[A, CC]"><path d="M414.681,-60.2118C382.797,-49.8074 340.522,-36.0126 309.91,-26.0232" stroke="#d4d4d4" fill="none"></path><polygon points="414.41,-61.9639 419.706,-61.8514 415.495,-58.6366 414.41,-61.9639" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node class" id="graph552_4"><a xlink:title="scala.collection.mutable.LinkedHashSet" xlink:href="../mutable/LinkedHashSet.html#inheritance-diagram"><polygon points="460,-26 336,-26 336,-1.24345e-14 460,-3.55271e-15 460,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-21" x="346" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="368" text-anchor="start">LinkedHashSet[A]</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge inheritance" id="graph552_0_4"><a xlink:title="LinkedHashSet[A] is a subtype of GenericSetTemplate[A, CC]"><path d="M443.261,-58.2605C433.168,-48.1676 420.496,-35.496 411.13,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="442.078,-59.5533 446.851,-61.8514 444.553,-57.0784 442.078,-59.5533" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node5 --><g class="node class" id="graph552_5"><a xlink:title="scala.collection.immutable.ListSet" xlink:href="../immutable/ListSet.html#inheritance-diagram"><polygon points="566,-26 478,-26 478,-1.24345e-14 566,-3.55271e-15 566,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-21" x="488" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="510" text-anchor="start">ListSet[A]</text></a></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph552_0_5"><a xlink:title="ListSet[A] is a subtype of GenericSetTemplate[A, CC]"><path d="M476.739,-58.2605C486.832,-48.1676 499.504,-35.496 508.87,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="475.447,-57.0784 473.149,-61.8514 477.922,-59.5533 475.447,-57.0784" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node6 --><g class="node trait" id="graph552_6"><a xlink:title="scala.collection.Set" xlink:href="../Set.html#inheritance-diagram"><polygon points="656,-26 584,-26 584,-1.24345e-14 656,-3.55271e-15 656,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="594" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="616" text-anchor="start">Set[A]</text></a></g><!-- node0&#45;&gt;node6 --><g class="edge inheritance" id="graph552_0_6"><a xlink:title="Set[A] is a subtype of GenericSetTemplate[A, CC]"><path d="M498.828,-59.9542C525.599,-49.5805 560.825,-35.9304 586.392,-26.0232" stroke="#d4d4d4" fill="none"></path><polygon points="497.962,-58.413 493.932,-61.8514 499.226,-61.6765 497.962,-58.413" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node7 --><g class="node trait" id="graph552_7"><a xlink:title="scala.collection.immutable.Set" xlink:href="../immutable/Set.html#inheritance-diagram"><polygon points="794,-26 674,-26 674,-1.24345e-14 794,-3.55271e-15 794,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="684" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="706" text-anchor="start">immutable.Set[A]</text></a></g><!-- node0&#45;&gt;node7 --><g class="edge inheritance" id="graph552_0_7"><a xlink:title="immutable.Set[A] is a subtype of GenericSetTemplate[A, CC]"><path d="M522.759,-60.799C568.973,-50.3419 631.334,-36.2311 676.305,-26.055" stroke="#d4d4d4" fill="none"></path><polygon points="522.264,-59.1167 517.774,-61.9272 523.037,-62.5304 522.264,-59.1167" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node8 --><g class="node trait" id="graph552_8"><a xlink:title="scala.collection.mutable.Set" xlink:href="../mutable/Set.html#inheritance-diagram"><polygon points="922,-26 812,-26 812,-1.24345e-14 922,-3.55271e-15 922,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="822" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="844" text-anchor="start">mutable.Set[A]</text></a></g><!-- node0&#45;&gt;node8 --><g class="edge inheritance" id="graph552_0_8"><a xlink:title="mutable.Set[A] is a subtype of GenericSetTemplate[A, CC]"><path d="M548.399,-63.8174C617.801,-54.6894 716.779,-40.9023 803,-26 805.905,-25.4979 808.88,-24.9638 811.881,-24.4092" stroke="#d4d4d4" fill="none"></path><polygon points="547.766,-62.1355 543.036,-64.5213 548.222,-65.6057 547.766,-62.1355" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node9 --><g class="node trait" id="graph552_9"><a xlink:title="scala.collection.generic.GenericTraversableTemplate" xlink:href="GenericTraversableTemplate.html#inheritance-diagram"><polygon points="559,-150 361,-150 361,-124 559,-124 559,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="371" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="393" text-anchor="start">GenericTraversableTemplate[A, CC]</text></a></g><!-- node9&#45;&gt;node0 --><g class="edge inheritance" id="graph552_9_0"><a xlink:title="GenericSetTemplate[A, CC] is a subtype of GenericTraversableTemplate[A, CC]"><path d="M460,-118.646C460,-108.843 460,-97.003 460,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="458.25,-118.851 460,-123.851 461.75,-118.851 458.25,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.collection.generic.GenericSetTemplate"><span>GenericSetTemplate</span></li><li class="in" name="scala.collection.generic.GenericTraversableTemplate"><span>GenericTraversableTemplate</span></li><li class="in" name="scala.collection.generic.HasNewBuilder"><span>HasNewBuilder</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.collection.generic.GenericTraversableTemplate#companion" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="companion:scala.collection.generic.GenericCompanion[CC]"></a>
+      <a id="companion:GenericCompanion[CC]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">companion</span><span class="result">: <a href="GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The factory companion object that builds instances of class CC.</p><div class="fullcomment"><div class="comment cmt"><p>The factory companion object that builds instances of class CC.
+ (or its <code>Iterable</code> superclass where class CC is not a <code>Seq</code>.)
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenericTraversableTemplate#head" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="head:A"></a>
+      <a id="head:A"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">head</span><span class="result">: <span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Selects the first element of this collection.</p><div class="fullcomment"><div class="comment cmt"><p>Selects the first element of this collection.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the first element of this collection.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt">`NoSuchElementException`<p>if the collection is empty.
+</p></span></dd></dl></div>
+    </li><li name="scala.collection.generic.GenericTraversableTemplate#isEmpty" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="isEmpty:Boolean"></a>
+      <a id="isEmpty:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isEmpty</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether this collection is empty.</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether this collection is empty.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the collection contain no elements, <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+ For <code>null</code> returns a hashcode where <code>null.hashCode</code> throws a
+ <code>NullPointerException</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(GenericSetTemplate[A,CC],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]] performed by method any2ArrowAssoc in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+ The expression <code>x == that</code> is equivalent to <code>if (x eq null) that eq null else x.equals(that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt">ClassCastException<p>if the receiver object is not an instance of the erasure of type <code>T0</code>.</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.collection.generic.GenericSetTemplate#empty" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="empty:CC[A]"></a>
+      <a id="empty:CC[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">empty</span><span class="result">: <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((GenericSetTemplate[A,CC])⇒Boolean,⇒Any):GenericSetTemplate[A,CC]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]) ⇒ <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((GenericSetTemplate[A,CC])⇒Boolean):GenericSetTemplate[A,CC]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]) ⇒ <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):GenericSetTemplate[A,CC]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):GenericSetTemplate[A,CC]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation" target="_blank">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  Default implementation delegates to <code>eq</code>.</p><p> See also <code>equals</code> in <a href="../../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.collection.generic.GenericTraversableTemplate#flatten" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="flatten[B]:CC[B]"></a>
+      <a id="flatten[B]:CC[B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flatten</span><span class="tparams">[<span name="B">B</span>]</span><span class="result">: <span class="extype" name="CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.flatten.B">B</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">[use case]     Converts this collection of traversable collections into
+ a collection formed by the elements of these traversable
+ collections.</p><div class="fullcomment">[use case] <div class="comment cmt"><p>    Converts this collection of traversable collections into
+ a collection formed by the elements of these traversable
+ collections.</p><p>   The resulting collection's type will be guided by the
+   static type of collection. For example:</p><pre><span class="kw">val</span> xs = <span class="std">List</span>(<span class="std">Set</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>), <span class="std">Set</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>))
+<span class="cmt">// xs == List(1, 2, 3, 1, 2, 3)</span>
+
+<span class="kw">val</span> ys = <span class="std">Set</span>(<span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>), <span class="std">List</span>(<span class="num">3</span>, <span class="num">2</span>, <span class="num">1</span>))
+<span class="cmt">// ys == Set(1, 2, 3)</span></pre></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the type of the elements of each traversable collection.
+</p></dd><dt>returns</dt><dd class="cmt"><p>a new collection resulting from concatenating all element collections.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd><div class="full-signature-block toggleContainer">
+            <span class="toggle">Full Signature</span>
+            <div class="hiddenContent full-signature-usecase"><h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flatten</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="asTraversable">asTraversable: (<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>) ⇒ <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.flatten.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.flatten.B">B</span>]</span>
+      </span>
+      </h4></div>
+          </div></dl></div>
+    </li><li name="scala.collection.generic.GenericTraversableTemplate#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreach(f:A=&gt;Unit):Unit"></a>
+      <a id="foreach((A)⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreach</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>) ⇒ <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">[use case] </p><div class="fullcomment">[use case] <div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>the function that is applied for its side-effect to every element.
+             The result of function <code>f</code> is discarded.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd><div class="full-signature-block toggleContainer">
+            <span class="toggle">Full Signature</span>
+            <div class="hiddenContent full-signature-usecase"><h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>) ⇒ <span class="extype" name="scala.collection.generic.GenericTraversableTemplate.foreach.U">U</span></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4></div>
+          </div></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns string formatted according to given <code>format</code> string.</p><div class="fullcomment"><div class="comment cmt"><p>Returns string formatted according to given <code>format</code> string.
+ Format strings are as for <code>String.format</code>
+ (@see java.lang.String.format).
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.collection.generic.GenericTraversableTemplate#genericBuilder" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="genericBuilder[B]:scala.collection.mutable.Builder[B,CC[B]]"></a>
+      <a id="genericBuilder[B]:Builder[B,CC[B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">genericBuilder</span><span class="tparams">[<span name="B">B</span>]</span><span class="result">: <a href="../mutable/Builder.html" class="extype" name="scala.collection.mutable.Builder">Builder</a>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.genericBuilder.B">B</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.genericBuilder.B">B</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The generic builder that builds instances of CC
+ at arbitrary element types.</p><div class="fullcomment"><div class="comment cmt"><p>The generic builder that builds instances of CC
+ at arbitrary element types.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a href="../../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.collection.generic.GenericTraversableTemplate#newBuilder" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="newBuilder:scala.collection.mutable.Builder[A,CC[A]]"></a>
+      <a id="newBuilder:Builder[A,CC[A]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">newBuilder</span><span class="result">: <a href="../mutable/Builder.html" class="extype" name="scala.collection.mutable.Builder">Builder</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The builder that builds instances of type CC[A]
+</p><div class="fullcomment"><div class="comment cmt"><p>The builder that builds instances of type CC[A]
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd><dt>Definition Classes</dt><dd><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a> → <a href="HasNewBuilder.html" class="extype" name="scala.collection.generic.HasNewBuilder">HasNewBuilder</a></dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenericTraversableTemplate#transpose" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transpose[B](implicitasTraversable:A=&gt;scala.collection.GenTraversableOnce[B]):CC[CC[B]@scala.annotation.unchecked.uncheckedVariance]"></a>
+      <a id="transpose[B]((A)⇒GenTraversableOnce[B]):CC[CC[B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transpose</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="asTraversable">asTraversable: (<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>) ⇒ <a href="../GenTraversableOnce.html" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.transpose.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.transpose.B">B</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Transposes this collection of traversable collections into
+ a collection of collections.</p><div class="fullcomment"><div class="comment cmt"><p>Transposes this collection of traversable collections into
+ a collection of collections.
+</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>the type of the elements of each traversable collection.</p></dd><dt class="param">asTraversable</dt><dd class="cmt"><p>an implicit conversion which asserts that the
+         element type of this collection is a <code>Traversable</code>.</p></dd><dt>returns</dt><dd class="cmt"><p>a two-dimensional collection of collections which has as <i>n</i>th row
+         the <i>n</i>th column of this collection.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@migration</span>
+              
+        </dd><dt>Migration</dt><dd class="cmt"><p><i>(Changed in version 2.9.0)</i> <code>transpose</code> throws an <code>IllegalArgumentException</code> if collections are not uniformly sized.</p></dd><dt>Exceptions thrown</dt><dd><span class="cmt">`IllegalArgumentException`<p>if all collections in this collection
+         are not of the same size.
+</p></span></dd></dl></div>
+    </li><li name="scala.collection.generic.GenericTraversableTemplate#unzip" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unzip[A1,A2](implicitasPair:A=&gt;(A1,A2)):(CC[A1],CC[A2])"></a>
+      <a id="unzip[A1,A2]((A)⇒(A1,A2)):(CC[A1],CC[A2])"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unzip</span><span class="tparams">[<span name="A1">A1</span>, <span name="A2">A2</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="asPair">asPair: (<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>) ⇒ (<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.unzip.A1">A1</span>, <span class="extype" name="scala.collection.generic.GenericTraversableTemplate.unzip.A2">A2</span>)</span>)</span><span class="result">: (<span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.unzip.A1">A1</span>], <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.unzip.A2">A2</span>])</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Converts this collection of pairs into two collections of the first and second
+ half of each pair.</p><div class="fullcomment"><div class="comment cmt"><p>Converts this collection of pairs into two collections of the first and second
+ half of each pair.
+</p></div><dl class="paramcmts block"><dt class="tparam">A1</dt><dd class="cmt"><p>the type of the first half of the element pairs</p></dd><dt class="tparam">A2</dt><dd class="cmt"><p>the type of the second half of the element pairs</p></dd><dt class="param">asPair</dt><dd class="cmt"><p>an implicit conversion which asserts that the element type
+               of this collection is a pair.</p></dd><dt>returns</dt><dd class="cmt"><p>a pair collections, containing the first, respectively second
+               half of each element pair of this collection.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenericTraversableTemplate#unzip3" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unzip3[A1,A2,A3](implicitasTriple:A=&gt;(A1,A2,A3)):(CC[A1],CC[A2],CC[A3])"></a>
+      <a id="unzip3[A1,A2,A3]((A)⇒(A1,A2,A3)):(CC[A1],CC[A2],CC[A3])"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unzip3</span><span class="tparams">[<span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="asTriple">asTriple: (<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>) ⇒ (<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.unzip3.A1">A1</span>, <span class="extype" name="scala.collection.generic.GenericTraversableTemplate.unzip3.A2">A2</span>, <span class="extype" name="scala.collection.generic.GenericTraversableTemplate.unzip3.A3">A3</span>)</span>)</span><span class="result">: (<span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.unzip3.A1">A1</span>], <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.unzip3.A2">A2</span>], <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenericTraversableTemplate.unzip3.A3">A3</span>])</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Converts this collection of triples into three collections of the first, second,
+ and third element of each triple.</p><div class="fullcomment"><div class="comment cmt"><p>Converts this collection of triples into three collections of the first, second,
+ and third element of each triple.
+</p></div><dl class="paramcmts block"><dt class="tparam">A1</dt><dd class="cmt"><p>the type of the first member of the element triples</p></dd><dt class="tparam">A2</dt><dd class="cmt"><p>the type of the second member of the element triples</p></dd><dt class="tparam">A3</dt><dd class="cmt"><p>the type of the third member of the element triples</p></dd><dt class="param">asTriple</dt><dd class="cmt"><p>an implicit conversion which asserts that the element type
+                  of this collection is a triple.</p></dd><dt>returns</dt><dd class="cmt"><p>a triple collections, containing the first, second, respectively
+                  third member of each element triple of this collection.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../../Long.html" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../../Long.html" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(GenericSetTemplate[A,CC],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]] performed by method any2ArrowAssoc in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Shadowed Implicit Value Members</h3>
+              <ol><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(genericSetTemplate: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(genericSetTemplate: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:GenericSetTemplate[A,CC]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]] performed by method any2ArrowAssoc in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(genericSetTemplate: ArrowAssoc[GenericSetTemplate[A, CC]]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:GenericSetTemplate[A,CC]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(genericSetTemplate: Ensuring[GenericSetTemplate[A, CC]]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.collection.generic.GenericTraversableTemplate">
+              <h3>Inherited from <a href="GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]</h3>
+            </div><div class="parent" name="scala.collection.generic.HasNewBuilder">
+              <h3>Inherited from <a href="HasNewBuilder.html" class="extype" name="scala.collection.generic.HasNewBuilder">HasNewBuilder</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, CC[A] @scala.annotation.unchecked.uncheckedVariance]</h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to <a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringfmt">
+              <h3>Inherited by implicit conversion any2stringfmt from
+                <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to <a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
+              <h3>Inherited by implicit conversion any2ArrowAssoc from
+                <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2Ensuring">
+              <h3>Inherited by implicit conversion any2Ensuring from
+                <a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>] to <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.generic.GenericSetTemplate.A">A</span>, <span class="extype" name="scala.collection.generic.GenericSetTemplate.CC">CC</span>]]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../../lib/diagrams.js"></script>
+    </body>
+      </html>

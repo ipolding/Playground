@@ -1,0 +1,14 @@
+<batch:tasklet ref="deleteLoyaltyCustomerWeeklyFeedTasklet"/>
+<batch:tasklet ref="loyaltyCustomerWeeklyFeedRemoteFileTasklet" />
+<batch:tasklet ref="cleanupBackupTableLoyaltyCustomerWeeklyDataExtractTasklet" />
+<batch:tasklet ref="backupTableLoyaltyCustomerWeeklyDataExtractTasklet" />
+<batch:tasklet ref="cleanupIncrementalTableLoyaltyCustomerWeeklyDataExtractTasklet" />
+<batch:tasklet>
+	<batch:chunk reader="loyaltyCustomerWeeklyDataExtractJobItemReader" processor="passThroughItemProcessor" writer="loyaltyCustomerWeeklyDataExtractItemWriter"  commit-interval="50000" />
+</batch:tasklet>
+<batch:tasklet ref="deleteDuplicatesOnIncrementalTableLoyaltyCustomerWeeklyDataExtractTasklet"/>
+<batch:tasklet ref="mergeIncrementalTableLoyaltyCustomerWeeklyDataExtractTasklet" />
+<batch:tasklet>
+<batch:chunk reader="exactTargetLoyaltyDynamicModuleJobItemReader" processor="passThroughItemProcessor" writer="exactTargetLoyaltyDynamicModuleJobItemWriter"  commit-interval="50000" />
+</batch:tasklet>
+<batch:tasklet ref="exactTargetDynamicModuleFTPTasklet" />

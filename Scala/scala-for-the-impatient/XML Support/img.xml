@@ -1,0 +1,13 @@
+    <html>
+        <body>
+
+            <p>This is a paragraph</p>
+
+            <img src="asdjflk" alt="this has an alt tag"/>
+            <img src="there is no alt tag"/>
+
+            <img src="there is an alt tag here too" alt="I am the second alt tag"/>
+            <img src="there is no alt tag here neither"/>
+
+        </body>
+    </html>

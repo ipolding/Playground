@@ -1,0 +1,16 @@
+Q1) According to the precedence rules, how are 3 + 4 -> 5 and 3 -> 4 + 5 evaluated?
+A1) + and -> have the same precedence. We just need to go left to right.
+
+EXPECTED:
+
+(3 + 4) -> 5
+res0: (Int, Int) = (7, 5) // CORRECT
+
+(3 -> 4) + 5
+res1: ERROR??? // CORRECT
+
+
+
+
+
+

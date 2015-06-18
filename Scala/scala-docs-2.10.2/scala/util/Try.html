@@ -1,0 +1,980 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>Try - Scala Standard Library API (Scaladoc) 2.10.2 - scala.util.Try</title>
+          <meta name="description" content="Try - Scala Standard Library API Scaladoc 2.10.2 - scala.util.Try" />
+          <meta name="keywords" content="Try Scala Standard Library API Scaladoc 2.10.2 scala.util.Try" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.util.Try';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="Try$.html" title="Go to companion"><img src="../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a>.<a href="package.html" class="extype" name="scala.util">util</a></p>
+        <h1><a href="Try$.html" title="Go to companion">Try</a></h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Try</span><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The <code>Try</code> type represents a computation that may either result in an exception, or return a
+successfully computed value. It's similar to, but semantically different from the <a href="Either.html" class="extype" name="scala.util.Either">scala.util.Either</a> type.</p><p>Instances of <code>Try[T]</code>, are either an instance of <a href="Success.html" class="extype" name="scala.util.Success">scala.util.Success</a>[T] or <a href="Failure.html" class="extype" name="scala.util.Failure">scala.util.Failure</a>[T].</p><p>For example, <code>Try</code> can be used to perform division on a user-defined input, without the need to do explicit
+exception-handling in all of the places that an exception might occur.</p><p>Example:</p><pre><span class="kw">import</span> scala.util.{Try, Success, Failure}
+
+<span class="kw">def</span> divide: Try[<span class="std">Int</span>] = {
+  <span class="kw">val</span> dividend = Try(<span class="std">Console</span>.readLine(<span class="lit">"Enter an Int that you'd like to divide:\n"</span>).toInt)
+  <span class="kw">val</span> divisor = Try(<span class="std">Console</span>.readLine(<span class="lit">"Enter an Int that you'd like to divide by:\n"</span>).toInt)
+  <span class="kw">val</span> problem = dividend.flatMap(x <span class="kw">=&gt;</span> divisor.map(y <span class="kw">=&gt;</span> x/y))
+  problem <span class="kw">match</span> {
+    <span class="kw">case</span> Success(v) <span class="kw">=&gt;</span>
+      println(<span class="lit">"Result of "</span> + dividend.get + <span class="lit">"/"</span>+ divisor.get +<span class="lit">" is: "</span> + v)
+      Success(v)
+    <span class="kw">case</span> Failure(e) <span class="kw">=&gt;</span>
+      println(<span class="lit">"You must've divided by zero or entered something that's not an Int. Try again!"</span>)
+      println(<span class="lit">"Info from the exception: "</span> + e.getMessage)
+      divide
+  }
+}</pre><p>An important property of <code>Try</code> shown in the above example is its ability to <i>pipeline</i>, or chain, operations,
+catching exceptions along the way. The <code>flatMap</code> and <code>map</code> combinators in the above example each essentially
+pass off either their successfully completed value, wrapped in the <code>Success</code> type for it to be further operated
+upon by the next combinator in the chain, or the exception wrapped in the <code>Failure</code> type usually to be simply
+passed on down the chain. Combinators such as <code>rescue</code> and <code>recover</code> are designed to provide some type of
+default behavior in the case of failure.</p><p><i>Note</i>: only non-fatal exceptions are caught by the combinators on <code>Try</code> (see <a href="control/NonFatal$.html" class="extype" name="scala.util.control.NonFatal">scala.util.control.NonFatal</a>).
+Serious system errors, on the other hand, will be thrown.</p><p><i>Note:</i>: all Try combinators will catch exceptions and return failure unless otherwise specified in the documentation.</p><p><code>Try</code> comes to the Scala standard library after years of use as an integral part of Twitter's stack.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/library/scala/util/Try.scala#L1" target="_blank">Try.scala</a></dd><dt>Since</dt><dd><p>2.10
+</p></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a href="Failure.html" class="extype" name="scala.util.Failure">Failure</a>, <a href="Success.html" class="extype" name="scala.util.Success">Success</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph380" viewBox="0.00 0.00 206.00 158.00" height="158pt" width="206pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph1"><polygon points="-4,5 -4,-154 203,-154 203,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this class" id="graph380_0"><a xlink:title="scala.util.Try (this class)" xlink:href="#inheritance-diagram"><polygon points="132,-88 62,-88 62,-62 132,-62 132,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-83" x="72" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="94" text-anchor="start">Try[T]</text></a></g><!-- node1 --><g class="node class" id="graph380_1"><a xlink:title="scala.util.Failure" xlink:href="Failure.html#inheritance-diagram"><polygon points="86,-26 4.26326e-14,-26 0,-1.24345e-14 86,-3.55271e-15 86,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="32" text-anchor="start">Failure[T]</text></a></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph380_0_1"><a xlink:title="Failure[T] is a subtype of Try[T]"><path d="M82.1886,-57.9943C73.4365,-47.9456 62.5217,-35.4138 54.4355,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="80.9444,-59.2303 85.548,-61.8514 83.5837,-56.9316 80.9444,-59.2303" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node class" id="graph380_2"><a xlink:title="scala.util.Success" xlink:href="Success.html#inheritance-diagram"><polygon points="198,-26 104,-26 104,-1.24345e-14 198,-3.55271e-15 198,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="114" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="136" text-anchor="start">Success[T]</text></a></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph380_0_2"><a xlink:title="Success[T] is a subtype of Try[T]"><path d="M111.811,-57.9943C120.564,-47.9456 131.478,-35.4138 139.564,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="110.416,-56.9316 108.452,-61.8514 113.056,-59.2303 110.416,-56.9316" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node class" id="graph380_3"><a xlink:title="scala.AnyRef" xlink:href="../AnyRef.html#inheritance-diagram"><polygon points="135,-150 59,-150 59,-124 135,-124 135,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="69" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="91" text-anchor="start">AnyRef</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph380_3_0"><a xlink:title="Try[T] is a subtype of AnyRef"><path d="M97,-118.646C97,-108.843 97,-97.003 97,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="95.2501,-118.851 97,-123.851 98.7501,-118.851 95.2501,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.util.Try"><span>Try</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="scala.util.Try#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():scala.util.Try[T]"></a>
+      <a id="&lt;init&gt;:Try[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Try</span><span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.util.Try#failed" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="failed:scala.util.Try[Throwable]"></a>
+      <a id="failed:Try[Throwable]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">failed</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<a href="../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Completes this <code>Try</code> with an exception wrapped in a <code>Success</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Completes this <code>Try</code> with an exception wrapped in a <code>Success</code>. The exception is either the exception that the
+<code>Try</code> failed with (if a <code>Failure</code>) or an <code>UnsupportedOperationException</code>.
+</p></div></div>
+    </li><li name="scala.util.Try#filter" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="filter(p:T=&gt;Boolean):scala.util.Try[T]"></a>
+      <a id="filter((T)⇒Boolean):Try[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">filter</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.util.Try.T">T</span>) ⇒ <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Converts this to a <code>Failure</code> if the predicate is not satisfied.</p>
+    </li><li name="scala.util.Try#flatMap" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="flatMap[U](f:T=&gt;scala.util.Try[U]):scala.util.Try[U]"></a>
+      <a id="flatMap[U]((T)⇒Try[U]):Try[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.util.Try.T">T</span>) ⇒ <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.flatMap.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the given function applied to the value from this <code>Success</code> or returns this if this is a <code>Failure</code>.</p>
+    </li><li name="scala.util.Try#flatten" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="flatten[U](implicitev:&lt;:&lt;[T,scala.util.Try[U]]):scala.util.Try[U]"></a>
+      <a id="flatten[U](&lt;:&lt;[T,Try[U]]):Try[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flatten</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <a href="../Predef$$$less$colon$less.html" class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</a>[<span class="extype" name="scala.util.Try.T">T</span>, <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.flatten.U">U</span>]]</span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.flatten.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Transforms a nested <code>Try</code>, ie, a <code>Try</code> of type <code>Try[Try[T]]</code>,
+into an un-nested <code>Try</code>, ie, a <code>Try</code> of type <code>Try[T]</code>.</p>
+    </li><li name="scala.util.Try#foreach" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="foreach[U](f:T=&gt;U):Unit"></a>
+      <a id="foreach[U]((T)⇒U):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.util.Try.T">T</span>) ⇒ <span class="extype" name="scala.util.Try.foreach.U">U</span></span>)</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Applies the given function <code>f</code> if this is a <code>Success</code>, otherwise returns <code>Unit</code> if this is a <code>Failure</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Applies the given function <code>f</code> if this is a <code>Success</code>, otherwise returns <code>Unit</code> if this is a <code>Failure</code>.</p><p><i>Note:</i> If <code>f</code> throws, then this method may throw an exception.
+</p></div></div>
+    </li><li name="scala.util.Try#get" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="get:T"></a>
+      <a id="get:T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get</span><span class="result">: <span class="extype" name="scala.util.Try.T">T</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the value from this <code>Success</code> or throws the exception if this is a <code>Failure</code>.</p>
+    </li><li name="scala.util.Try#isFailure" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="isFailure:Boolean"></a>
+      <a id="isFailure:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isFailure</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns <code>true</code> if the <code>Try</code> is a <code>Failure</code>, <code>false</code> otherwise.</p>
+    </li><li name="scala.util.Try#isSuccess" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="isSuccess:Boolean"></a>
+      <a id="isSuccess:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isSuccess</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns <code>true</code> if the <code>Try</code> is a <code>Success</code>, <code>false</code> otherwise.</p>
+    </li><li name="scala.util.Try#map" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="map[U](f:T=&gt;U):scala.util.Try[U]"></a>
+      <a id="map[U]((T)⇒U):Try[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.util.Try.T">T</span>) ⇒ <span class="extype" name="scala.util.Try.map.U">U</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.map.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Maps the given function to the value from this <code>Success</code> or returns this if this is a <code>Failure</code>.</p>
+    </li><li name="scala.util.Try#recover" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="recover[U&gt;:T](f:PartialFunction[Throwable,U]):scala.util.Try[U]"></a>
+      <a id="recover[U&gt;:T](PartialFunction[Throwable,U]):Try[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">recover</span><span class="tparams">[<span name="U">U &gt;: <span class="extype" name="scala.util.Try.T">T</span></span>]</span><span class="params">(<span name="f">f: <a href="../PartialFunction.html" class="extype" name="scala.PartialFunction">PartialFunction</a>[<a href="../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>, <span class="extype" name="scala.util.Try.recover.U">U</span>]</span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.recover.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Applies the given function <code>f</code> if this is a <code>Failure</code>, otherwise returns this if this is a <code>Success</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Applies the given function <code>f</code> if this is a <code>Failure</code>, otherwise returns this if this is a <code>Success</code>.
+This is like map for the exception.
+</p></div></div>
+    </li><li name="scala.util.Try#recoverWith" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="recoverWith[U&gt;:T](f:PartialFunction[Throwable,scala.util.Try[U]]):scala.util.Try[U]"></a>
+      <a id="recoverWith[U&gt;:T](PartialFunction[Throwable,Try[U]]):Try[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">recoverWith</span><span class="tparams">[<span name="U">U &gt;: <span class="extype" name="scala.util.Try.T">T</span></span>]</span><span class="params">(<span name="f">f: <a href="../PartialFunction.html" class="extype" name="scala.PartialFunction">PartialFunction</a>[<a href="../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>, <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.recoverWith.U">U</span>]]</span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.recoverWith.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Applies the given function <code>f</code> if this is a <code>Failure</code>, otherwise returns this if this is a <code>Success</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Applies the given function <code>f</code> if this is a <code>Failure</code>, otherwise returns this if this is a <code>Success</code>.
+This is like <code>flatMap</code> for the exception.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+ For <code>null</code> returns a hashcode where <code>null.hashCode</code> throws a
+ <code>NullPointerException</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(Try[T],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]] performed by method any2ArrowAssoc in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+ The expression <code>x == that</code> is equivalent to <code>if (x eq null) that eq null else x.equals(that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt">ClassCastException<p>if the receiver object is not an instance of the erasure of type <code>T0</code>.</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((Try[T])⇒Boolean,⇒Any):Try[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]) ⇒ <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((Try[T])⇒Boolean):Try[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]) ⇒ <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):Try[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):Try[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation" target="_blank">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  Default implementation delegates to <code>eq</code>.</p><p> See also <code>equals</code> in <a href="../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns string formatted according to given <code>format</code> string.</p><div class="fullcomment"><div class="comment cmt"><p>Returns string formatted according to given <code>format</code> string.
+ Format strings are as for <code>String.format</code>
+ (@see java.lang.String.format).
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.util.Try#getOrElse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOrElse[U&gt;:T](default:=&gt;U):U"></a>
+      <a id="getOrElse[U&gt;:T](⇒U):U"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOrElse</span><span class="tparams">[<span name="U">U &gt;: <span class="extype" name="scala.util.Try.T">T</span></span>]</span><span class="params">(<span name="default">default: ⇒ <span class="extype" name="scala.util.Try.getOrElse.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.util.Try.getOrElse.U">U</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the value from this <code>Success</code> or the given <code>default</code> argument if this is a <code>Failure</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the value from this <code>Success</code> or the given <code>default</code> argument if this is a <code>Failure</code>.</p><p><i>Note:</i>: This will throw an exception if it is not a success and default throws an exception.
+</p></div></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a href="../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.util.Try#orElse" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="orElse[U&gt;:T](default:=&gt;scala.util.Try[U]):scala.util.Try[U]"></a>
+      <a id="orElse[U&gt;:T](⇒Try[U]):Try[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">orElse</span><span class="tparams">[<span name="U">U &gt;: <span class="extype" name="scala.util.Try.T">T</span></span>]</span><span class="params">(<span name="default">default: ⇒ <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.orElse.U">U</span>]</span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.orElse.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns this <code>Try</code> if it's a <code>Success</code> or the given <code>default</code> argument if this is a <code>Failure</code>.</p>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.util.Try#toOption" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toOption:Option[T]"></a>
+      <a id="toOption:Option[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toOption</span><span class="result">: <a href="../Option.html" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.util.Try.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns <code>None</code> if this is a <code>Failure</code> or a <code>Some</code> containing the value if this is a <code>Success</code>.</p>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.util.Try#transform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="transform[U](s:T=&gt;scala.util.Try[U],f:Throwable=&gt;scala.util.Try[U]):scala.util.Try[U]"></a>
+      <a id="transform[U]((T)⇒Try[U],(Throwable)⇒Try[U]):Try[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transform</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="s">s: (<span class="extype" name="scala.util.Try.T">T</span>) ⇒ <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.transform.U">U</span>]</span>, <span name="f">f: (<a href="../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>) ⇒ <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.transform.U">U</span>]</span>)</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.transform.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Completes this <code>Try</code> by applying the function <code>f</code> to this if this is of type <code>Failure</code>, or conversely, by applying
+ <code>s</code> if this is a <code>Success</code>.</p>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../Long.html" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../Long.html" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(Try[T],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]] performed by method any2ArrowAssoc in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Shadowed Implicit Value Members</h3>
+              <ol><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(try: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(try: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Try[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]] performed by method any2ArrowAssoc in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(try: ArrowAssoc[Try[T]]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Try[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(try: Ensuring[Try[T]]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to <a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringfmt">
+              <h3>Inherited by implicit conversion any2stringfmt from
+                <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to <a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
+              <h3>Inherited by implicit conversion any2ArrowAssoc from
+                <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2Ensuring">
+              <h3>Inherited by implicit conversion any2Ensuring from
+                <a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>] to <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Try.T">T</span>]]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../lib/diagrams.js"></script>
+    </body>
+      </html>

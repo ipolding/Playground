@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>api - Scala Standard Library API (Scaladoc) 2.10.2 - scala.reflect.api</title>
+          <meta name="description" content="api - Scala Standard Library API Scaladoc 2.10.2 - scala.reflect.api" />
+          <meta name="keywords" content="api Scala Standard Library API Scaladoc 2.10.2 scala.reflect.api" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'scala.reflect.api.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.reflect">reflect</a></p>
+        <h1>api</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">api</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><p>The Scala Reflection API (located in scala-reflect.jar).</p><p>In Scala 2.10.0, the Scala Reflection API and its implementation have an &quot;experimental&quot; status.
+This means that the API and the docs are not complete and can be changed in binary- and source-incompatible
+manner in 2.10.1. This also means that the implementation has some known issues.</p><p>The following types are the backbone of the Scala Reflection API, and serve as a good starting point
+for information about Scala Reflection:</p><ul><li><a href="Symbols.html" class="extype" name="scala.reflect.api.Symbols">scala.reflect.api.Symbols</a></li><li><a href="Types.html" class="extype" name="scala.reflect.api.Types">scala.reflect.api.Types</a></li><li><a href="Mirrors.html" class="extype" name="scala.reflect.api.Mirrors">scala.reflect.api.Mirrors</a></li><li><a href="Universe.html" class="extype" name="scala.reflect.api.Universe">scala.reflect.api.Universe</a></li></ul><p> For more information about Scala Reflection, see the
+<a href="http://docs.scala-lang.org/overviews/reflection/overview.html" target="_blank">Reflection Guide</a>
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/reflect/scala/reflect/api/package.scala#L1" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1162" viewBox="0.00 0.00 1760.00 158.00" height="158pt" width="1760pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph1"><polygon points="-4,5 -4,-154 1757,-154 1757,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node trait" id="graph1162_0"><a xlink:title="scala.reflect.api.Importers" xlink:href="Importers.html#inheritance-diagram"><polygon points="86,-150 4.26326e-14,-150 0,-124 86,-124 86,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="32" text-anchor="start">Importers</text></a></g><!-- node19 --><g class="node class" id="graph1162_19"><a xlink:title="scala.reflect.api.Universe" xlink:href="Universe.html#inheritance-diagram"><polygon points="876,-88 794,-88 794,-62 876,-62 876,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="804" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="826" text-anchor="start">Universe</text></a></g><!-- node0&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_0_19"><a xlink:title="Universe is a subtype of Importers"><path d="M91.1001,-124.653C92.4111,-124.42 93.7129,-124.202 95,-124 231.421,-102.607 658.755,-82.663 793.72,-76.759" stroke="#d4d4d4" fill="none"></path><polygon points="90.5953,-122.968 86.0086,-125.618 91.247,-126.407 90.5953,-122.968" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node1 --><g class="node trait" id="graph1162_1"><a xlink:title="scala.reflect.api.FlagSets" xlink:href="FlagSets.html#inheritance-diagram"><polygon points="188,-150 104,-150 104,-124 188,-124 188,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="114" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="136" text-anchor="start">FlagSets</text></a></g><!-- node1&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_1_19"><a xlink:title="Universe is a subtype of FlagSets"><path d="M193.175,-124.669C194.461,-124.432 195.738,-124.208 197,-124 420.067,-87.2872 691.645,-77.9789 793.653,-75.705" stroke="#d4d4d4" fill="none"></path><polygon points="192.751,-122.969 188.182,-125.649 193.425,-126.404 192.751,-122.969" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph1162_2"><a xlink:title="scala.reflect.api.Constants" xlink:href="Constants.html#inheritance-diagram"><polygon points="296,-150 206,-150 206,-124 296,-124 296,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="216" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="238" text-anchor="start">Constants</text></a></g><!-- node2&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_2_19"><a xlink:title="Universe is a subtype of Constants"><path d="M301.217,-124.658C302.489,-124.427 303.751,-124.207 305,-124 485.731,-94.051 704.391,-81.1017 793.847,-76.7834" stroke="#d4d4d4" fill="none"></path><polygon points="300.86,-122.944 296.276,-125.599 301.516,-126.382 300.86,-122.944" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph1162_3"><a xlink:title="scala.reflect.api.Names" xlink:href="Names.html#inheritance-diagram"><polygon points="390,-150 314,-150 314,-124 390,-124 390,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="324" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="346" text-anchor="start">Names</text></a></g><!-- node3&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_3_19"><a xlink:title="Universe is a subtype of Names"><path d="M395.14,-124.786C396.438,-124.509 397.727,-124.246 399,-124 542.592,-96.253 716.046,-82.564 793.798,-77.4537" stroke="#d4d4d4" fill="none"></path><polygon points="394.594,-123.115 390.1,-125.919 395.362,-126.53 394.594,-123.115" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node trait" id="graph1162_4"><a xlink:title="scala.reflect.api.Scopes" xlink:href="Scopes.html#inheritance-diagram"><polygon points="486,-150 408,-150 408,-124 486,-124 486,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="418" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="440" text-anchor="start">Scopes</text></a></g><!-- node4&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_4_19"><a xlink:title="Universe is a subtype of Scopes"><path d="M491.185,-124.818C492.469,-124.534 493.742,-124.26 495,-124 601.878,-101.91 729.694,-86.363 793.899,-79.2923" stroke="#d4d4d4" fill="none"></path><polygon points="490.679,-123.139 486.2,-125.967 491.465,-126.55 490.679,-123.139" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node5 --><g class="node trait" id="graph1162_5"><a xlink:title="scala.reflect.api.JavaMirrors" xlink:href="JavaMirrors.html#inheritance-diagram"><polygon points="988,-88 894,-88 894,-62 988,-62 988,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-83" x="904" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="926" text-anchor="start">JavaMirrors</text></a></g><!-- node10 --><g class="node trait" id="graph1162_10"><a xlink:title="scala.reflect.api.JavaUniverse" xlink:href="JavaUniverse.html#inheritance-diagram"><polygon points="938,-26 838,-26 838,-1.24345e-14 938,-3.55271e-15 938,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="848" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="870" text-anchor="start">JavaUniverse</text></a></g><!-- node5&#45;&gt;node10 --><g class="edge inheritance" id="graph1162_5_10"><a xlink:title="JavaUniverse is a subtype of JavaMirrors"><path d="M926.463,-57.9943C917.873,-47.9456 907.16,-35.4138 899.224,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="925.181,-59.1879 929.76,-61.8514 927.841,-56.9136 925.181,-59.1879" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node6 --><g class="node trait" id="graph1162_6"><a xlink:title="scala.reflect.api.Positions" xlink:href="Positions.html#inheritance-diagram"><polygon points="590,-150 504,-150 504,-124 590,-124 590,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="514" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="536" text-anchor="start">Positions</text></a></g><!-- node6&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_6_19"><a xlink:title="Universe is a subtype of Positions"><path d="M595.146,-124.891C596.443,-124.588 597.73,-124.29 599,-124 667.124,-108.419 746.798,-92.3143 793.962,-82.9996" stroke="#d4d4d4" fill="none"></path><polygon points="594.562,-123.231 590.098,-126.084 595.367,-126.637 594.562,-123.231" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node7 --><g class="node trait" id="graph1162_7"><a xlink:title="scala.reflect.api.Printers" xlink:href="Printers.html#inheritance-diagram"><polygon points="686,-150 608,-150 608,-124 686,-124 686,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="618" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="640" text-anchor="start">Printers</text></a></g><!-- node7&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_7_19"><a xlink:title="Universe is a subtype of Printers"><path d="M691.379,-122.364C722.914,-111.965 764.894,-98.12 795.318,-88.0867" stroke="#d4d4d4" fill="none"></path><polygon points="690.611,-120.775 686.411,-124.003 691.708,-124.099 690.611,-120.775" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node8 --><g class="node trait" id="graph1162_8"><a xlink:title="scala.reflect.api.Exprs" xlink:href="Exprs.html#inheritance-diagram"><polygon points="774,-150 704,-150 704,-124 774,-124 774,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="714" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="736" text-anchor="start">Exprs</text></a></g><!-- node8&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_8_19"><a xlink:title="Universe is a subtype of Exprs"><path d="M763.694,-121.052C779.511,-110.837 799.786,-97.7425 814.67,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="762.61,-119.669 759.359,-123.851 764.509,-122.609 762.61,-119.669" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node9 --><g class="node trait" id="graph1162_9"><a xlink:title="scala.reflect.api.TypeTags" xlink:href="TypeTags.html#inheritance-diagram"><polygon points="878,-150 792,-150 792,-124 878,-124 878,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="802" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="824" text-anchor="start">TypeTags</text></a></g><!-- node9&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_9_19"><a xlink:title="Universe is a subtype of TypeTags"><path d="M835,-118.646C835,-108.843 835,-97.003 835,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="833.25,-118.851 835,-123.851 836.75,-118.851 833.25,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node11 --><g class="node trait" id="graph1162_11"><a xlink:title="scala.reflect.api.Mirrors" xlink:href="Mirrors.html#inheritance-diagram"><polygon points="972,-150 896,-150 896,-124 972,-124 972,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="906" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="928" text-anchor="start">Mirrors</text></a></g><!-- node11&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_11_19"><a xlink:title="Universe is a subtype of Mirrors"><path d="M908.534,-121.052C892.223,-110.837 871.315,-97.7425 855.965,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="907.838,-122.681 913.005,-123.851 909.696,-119.714 907.838,-122.681" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node12 --><g class="node trait" id="graph1162_12"><a xlink:title="scala.reflect.api.Symbols" xlink:href="Symbols.html#inheritance-diagram"><polygon points="1074,-150 990,-150 990,-124 1074,-124 1074,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1000" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1022" text-anchor="start">Symbols</text></a></g><!-- node12&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_12_19"><a xlink:title="Universe is a subtype of Symbols"><path d="M985.403,-122.335C952.182,-111.88 907.935,-97.954 876.043,-87.9171" stroke="#d4d4d4" fill="none"></path><polygon points="984.927,-124.02 990.221,-123.851 985.977,-120.681 984.927,-124.02" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node13 --><g class="node trait" id="graph1162_13"><a xlink:title="scala.reflect.api.Annotations" xlink:href="Annotations.html#inheritance-diagram"><polygon points="1188,-150 1092,-150 1092,-124 1188,-124 1188,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1102" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1124" text-anchor="start">Annotations</text></a></g><!-- node13&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_13_19"><a xlink:title="Universe is a subtype of Annotations"><path d="M1086.83,-124.793C1085.54,-124.523 1084.26,-124.258 1083,-124 995.377,-106.051 972.343,-107.267 885,-88 882.11,-87.3624 879.134,-86.6732 876.142,-85.9563" stroke="#d4d4d4" fill="none"></path><polygon points="1086.58,-126.529 1091.83,-125.856 1087.3,-123.105 1086.58,-126.529" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node14 --><g class="node trait" id="graph1162_14"><a xlink:title="scala.reflect.api.TagInterop" xlink:href="TagInterop.html#inheritance-diagram"><polygon points="1296,-150 1206,-150 1206,-124 1296,-124 1296,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1216" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1238" text-anchor="start">TagInterop</text></a></g><!-- node14&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_14_19"><a xlink:title="Universe is a subtype of TagInterop"><path d="M1200.78,-124.696C1199.51,-124.454 1198.25,-124.221 1197,-124 1059.56,-99.6197 1022.21,-113.625 885,-88 882.09,-87.4566 879.1,-86.8374 876.098,-86.1707" stroke="#d4d4d4" fill="none"></path><polygon points="1200.47,-126.418 1205.71,-125.675 1201.15,-122.985 1200.47,-126.418" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node15 --><g class="node trait" id="graph1162_15"><a xlink:title="scala.reflect.api.StandardDefinitions" xlink:href="StandardDefinitions.html#inheritance-diagram"><polygon points="1444,-150 1314,-150 1314,-124 1444,-124 1444,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1324" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1346" text-anchor="start">StandardDefinitions</text></a></g><!-- node15&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_15_19"><a xlink:title="Universe is a subtype of StandardDefinitions"><path d="M1308.49,-124.468C1307.32,-124.307 1306.16,-124.151 1305,-124 1119.22,-99.768 1069.65,-119.685 885,-88 882.083,-87.4994 879.087,-86.9119 876.081,-86.2681" stroke="#d4d4d4" fill="none"></path><polygon points="1308.48,-126.233 1313.68,-125.202 1308.97,-122.768 1308.48,-126.233" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node16 --><g class="node trait" id="graph1162_16"><a xlink:title="scala.reflect.api.Trees" xlink:href="Trees.html#inheritance-diagram"><polygon points="1532,-150 1462,-150 1462,-124 1532,-124 1532,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1472" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1494" text-anchor="start">Trees</text></a></g><!-- node16&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_16_19"><a xlink:title="Universe is a subtype of Trees"><path d="M1456.47,-124.664C1455.31,-124.426 1454.15,-124.203 1453,-124 1203.93,-79.8873 1134.77,-128.008 885,-88 882.077,-87.5319 879.077,-86.9684 876.069,-86.342" stroke="#d4d4d4" fill="none"></path><polygon points="1456.36,-126.432 1461.62,-125.807 1457.12,-123.015 1456.36,-126.432" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node17 --><g class="node trait" id="graph1162_17"><a xlink:title="scala.reflect.api.StandardNames" xlink:href="StandardNames.html#inheritance-diagram"><polygon points="1664,-150 1550,-150 1550,-124 1664,-124 1664,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1560" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1582" text-anchor="start">StandardNames</text></a></g><!-- node17&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_17_19"><a xlink:title="Universe is a subtype of StandardNames"><path d="M1544.84,-124.506C1543.55,-124.328 1542.27,-124.159 1541,-124 1251.27,-87.6966 1173.51,-132.961 885,-88 882.075,-87.5442 879.074,-86.99 876.064,-86.3701" stroke="#d4d4d4" fill="none"></path><polygon points="1544.64,-126.246 1549.84,-125.234 1545.15,-122.782 1544.64,-126.246" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node18 --><g class="node trait" id="graph1162_18"><a xlink:title="scala.reflect.api.Types" xlink:href="Types.html#inheritance-diagram"><polygon points="1752,-150 1682,-150 1682,-124 1752,-124 1752,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1692" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1714" text-anchor="start">Types</text></a></g><!-- node18&#45;&gt;node19 --><g class="edge inheritance" id="graph1162_18_19"><a xlink:title="Universe is a subtype of Types"><path d="M1676.48,-124.637C1675.31,-124.406 1674.15,-124.193 1673,-124 1327.26,-65.9077 1231.65,-140.395 885,-88 882.073,-87.5577 879.071,-87.0133 876.06,-86.4007" stroke="#d4d4d4" fill="none"></path><polygon points="1676.37,-126.405 1681.63,-125.752 1677.11,-122.984 1676.37,-126.405" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node19&#45;&gt;node10 --><g class="edge inheritance" id="graph1162_19_10"><a xlink:title="JavaUniverse is a subtype of Universe"><path d="M849.537,-57.9943C858.127,-47.9456 868.84,-35.4138 876.776,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="848.159,-56.9136 846.24,-61.8514 850.819,-59.1879 848.159,-56.9136" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.reflect.api"><span>api</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.reflect.api.Annotations" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="AnnotationsextendsAnyRef"></a>
+      <a id="Annotations:Annotations"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Annotations.html"><span class="name">Annotations</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Constants" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="ConstantsextendsAnyRef"></a>
+      <a id="Constants:Constants"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Constants.html"><span class="name">Constants</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Exprs" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="ExprsextendsAnyRef"></a>
+      <a id="Exprs:Exprs"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Exprs.html"><span class="name">Exprs</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.FlagSets" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="FlagSetsextendsAnyRef"></a>
+      <a id="FlagSets:FlagSets"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="FlagSets.html"><span class="name">FlagSets</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Importers" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="ImportersextendsAnyRef"></a>
+      <a id="Importers:Importers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Importers.html"><span class="name">Importers</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.JavaMirrors" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="JavaMirrorsextendsAnyRef"></a>
+      <a id="JavaMirrors:JavaMirrors"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="JavaMirrors.html"><span class="name">JavaMirrors</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.JavaUniverse" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="JavaUniverseextendsUniversewithJavaMirrors"></a>
+      <a id="JavaUniverse:JavaUniverse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="JavaUniverse.html"><span class="name">JavaUniverse</span></a><span class="result"> extends <a href="Universe.html" class="extype" name="scala.reflect.api.Universe">Universe</a> with <a href="JavaMirrors.html" class="extype" name="scala.reflect.api.JavaMirrors">JavaMirrors</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Mirror" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="Mirror[U&lt;:scala.reflect.api.UniversewithSingleton]extendsAnyRef"></a>
+      <a id="Mirror[U&lt;:UniversewithSingleton]:Mirror[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Mirror.html"><span class="name">Mirror</span></a><span class="tparams">[<span name="U">U &lt;: <a href="Universe.html" class="extype" name="scala.reflect.api.Universe">Universe</a> with <span class="extype" name="scala.Singleton">Singleton</span></span>]</span><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Mirrors" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="MirrorsextendsAnyRef"></a>
+      <a id="Mirrors:Mirrors"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Mirrors.html"><span class="name">Mirrors</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Names" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="NamesextendsAnyRef"></a>
+      <a id="Names:Names"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Names.html"><span class="name">Names</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Position" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="PositionextendsAttachments"></a>
+      <a id="Position:Position"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Position.html"><span class="name">Position</span></a><span class="result"> extends <a href="../macros/Attachments.html" class="extype" name="scala.reflect.macros.Attachments">Attachments</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Positions" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="PositionsextendsAnyRef"></a>
+      <a id="Positions:Positions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Positions.html"><span class="name">Positions</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Printers" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="PrintersextendsAnyRef"></a>
+      <a id="Printers:Printers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Printers.html"><span class="name">Printers</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Scopes" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="ScopesextendsAnyRef"></a>
+      <a id="Scopes:Scopes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Scopes.html"><span class="name">Scopes</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.StandardDefinitions" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="StandardDefinitionsextendsAnyRef"></a>
+      <a id="StandardDefinitions:StandardDefinitions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardDefinitions.html"><span class="name">StandardDefinitions</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.StandardNames" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="StandardNamesextendsAnyRef"></a>
+      <a id="StandardNames:StandardNames"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardNames.html"><span class="name">StandardNames</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.Symbols" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="SymbolsextendsAnyRef"></a>
+      <a id="Symbols:Symbols"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Symbols.html"><span class="name">Symbols</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.TagInterop" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="TagInteropextendsAnyRef"></a>
+      <a id="TagInterop:TagInterop"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TagInterop.html"><span class="name">TagInterop</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.TreeCreator" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="TreeCreatorextendsAnyRef"></a>
+      <a id="TreeCreator:TreeCreator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TreeCreator.html"><span class="name">TreeCreator</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This is an internal implementation class.</p>
+    </li><li name="scala.reflect.api.Trees" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="TreesextendsAnyRef"></a>
+      <a id="Trees:Trees"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Trees.html"><span class="name">Trees</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.api.TypeCreator" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="TypeCreatorextendsAnyRef"></a>
+      <a id="TypeCreator:TypeCreator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TypeCreator.html"><span class="name">TypeCreator</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mirror-aware factory for types.</p>
+    </li><li name="scala.reflect.api.TypeTags" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="TypeTagsextendsAnyRef"></a>
+      <a id="TypeTags:TypeTags"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TypeTags.html"><span class="name">TypeTags</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A <code>TypeTag[T]</code> encapsulates the runtime type representation of some type <code>T</code>.</p>
+    </li><li name="scala.reflect.api.Types" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="TypesextendsAnyRef"></a>
+      <a id="Types:Types"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Types.html"><span class="name">Types</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"> <span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></span></p>
+    </li><li name="scala.reflect.api.Universe" visbl="pub" data-isabs="true" fullComment="no" group="ReflectionAPI">
+      <a id="UniverseextendsSymbolswithTypeswithFlagSetswithScopeswithNameswithTreeswithConstantswithAnnotationswithPositionswithExprswithTypeTagswithTagInteropwithStandardDefinitionswithStandardNameswithBuildUtilswithMirrorswithPrinterswithImporters"></a>
+      <a id="Universe:Universe"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Universe.html"><span class="name">Universe</span></a><span class="result"> extends <a href="Symbols.html" class="extype" name="scala.reflect.api.Symbols">Symbols</a> with <a href="Types.html" class="extype" name="scala.reflect.api.Types">Types</a> with <a href="FlagSets.html" class="extype" name="scala.reflect.api.FlagSets">FlagSets</a> with <a href="Scopes.html" class="extype" name="scala.reflect.api.Scopes">Scopes</a> with <a href="Names.html" class="extype" name="scala.reflect.api.Names">Names</a> with <a href="Trees.html" class="extype" name="scala.reflect.api.Trees">Trees</a> with <a href="Constants.html" class="extype" name="scala.reflect.api.Constants">Constants</a> with <a href="Annotations.html" class="extype" name="scala.reflect.api.Annotations">Annotations</a> with <a href="Positions.html" class="extype" name="scala.reflect.api.Positions">Positions</a> with <a href="Exprs.html" class="extype" name="scala.reflect.api.Exprs">Exprs</a> with <a href="TypeTags.html" class="extype" name="scala.reflect.api.TypeTags">TypeTags</a> with <a href="TagInterop.html" class="extype" name="scala.reflect.api.TagInterop">TagInterop</a> with <a href="StandardDefinitions.html" class="extype" name="scala.reflect.api.StandardDefinitions">StandardDefinitions</a> with <a href="StandardNames.html" class="extype" name="scala.reflect.api.StandardNames">StandardNames</a> with <span class="extype" name="scala.reflect.api.BuildUtils">BuildUtils</span> with <a href="Mirrors.html" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> with <a href="Printers.html" class="extype" name="scala.reflect.api.Printers">Printers</a> with <a href="Importers.html" class="extype" name="scala.reflect.api.Importers">Importers</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="ReflectionAPI">
+              <h3>Scala Reflection API</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../../lib/diagrams.js"></script>
+    </body>
+      </html>

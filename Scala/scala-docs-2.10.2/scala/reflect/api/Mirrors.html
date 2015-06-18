@@ -1,0 +1,1021 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>Mirrors - Scala Standard Library API (Scaladoc) 2.10.2 - scala.reflect.api.Mirrors</title>
+          <meta name="description" content="Mirrors - Scala Standard Library API Scaladoc 2.10.2 - scala.reflect.api.Mirrors" />
+          <meta name="keywords" content="Mirrors Scala Standard Library API Scaladoc 2.10.2 scala.reflect.api.Mirrors" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'scala.reflect.api.Mirrors';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../lib/trait_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.reflect">reflect</a>.<a href="package.html" class="extype" name="scala.reflect.api">api</a></p>
+        <h1>Mirrors</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Mirrors</span><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><p>This trait provides support for Mirrors in the Scala Reflection API.</p><p><code>Mirror</code>s are a central part of Scala Reflection. All information provided by
+reflection is made accessible through <code>Mirror</code>s. Depending on the type of information
+to be obtained, or the reflective action to be taken, different flavors of mirrors
+must be used. &quot;Classloader&quot; mirrors can be used to obtain representations of types
+and members. From a classloader <code>Mirror</code>, it's possible to obtain more specialized
+&quot;invoker&quot; <code>Mirror</code>s (the most commonly-used mirrors), which implement reflective
+invocations, such as method/constructor calls and field accesses.</p><p>The two flavors of mirrors:</p><ul><li><b>“Classloader” mirrors</b>. These mirrors translate names to symbols
+(via methods <code>staticClass</code>/<code>staticModule</code>/<code>staticPackage</code>).</li><li><b>&quot;Invoker” mirrors</b>. These mirrors implement reflective invocations
+(via methods <code>MethodMirror.apply</code>, <code>FieldMirror.get</code>, etc). These &quot;invoker&quot;
+mirrors are the types of mirrors that are most commonly used.</li></ul><h5> Compile-time Mirrors </h5><p>Compile-time <code>Mirror</code>s make use of only classloader <code>Mirror</code>s to load <code>Symbol</code>s
+by name.</p><p>The entry point to classloader <code>Mirror</code>s is via <a href="../macros/Context.html#mirror:Context.this.universe.Mirror" class="extmbr" name="scala.reflect.macros.Context#mirror">scala.reflect.macros.Context#mirror</a>.
+Typical methods which use classloader <code>Mirror</code>s include <a href="Mirror.html#staticClass(fullName:String):U#ClassSymbol" class="extmbr" name="scala.reflect.api.Mirror#staticClass">scala.reflect.api.Mirror#staticClass</a>,
+<a href="Mirror.html#staticModule(fullName:String):U#ModuleSymbol" class="extmbr" name="scala.reflect.api.Mirror#staticModule">scala.reflect.api.Mirror#staticModule</a>, and <a href="Mirror.html#staticPackage(fullName:String):U#ModuleSymbol" class="extmbr" name="scala.reflect.api.Mirror#staticPackage">scala.reflect.api.Mirror#staticPackage</a>. For
+example:</p><pre><span class="kw">import</span> scala.reflect.macros.Context
+
+<span class="kw">case</span> <span class="kw">class</span> Location(filename: <span class="std">String</span>, line: <span class="std">Int</span>, column: <span class="std">Int</span>)
+
+<span class="kw">object</span> Macros {
+  <span class="kw">def</span> currentLocation: Location = macro impl
+
+  <span class="kw">def</span> impl(c: Context): c.Expr[Location] = {
+    <span class="kw">import</span> c.universe._
+    <span class="kw">val</span> pos = c.macroApplication.pos
+    <span class="kw">val</span> clsLocation = c.mirror.staticModule(<span class="lit">"Location"</span>) <span class="cmt">// get symbol of "Location" object</span>
+    c.Expr(Apply(Ident(clsLocation), <span class="std">List</span>(Literal(Constant(pos.source.path)), Literal(Constant(pos.line)), Literal(Constant(pos.column)))))
+  }
+}</pre><p><i>Of Note:</i> There are several high-level alternatives that one can use to avoid having to manually
+lookup symbols. For example, <code>typeOf[Location.type].termSymbol</code> (or <code>typeOf[Location].typeSymbol</code>
+if we needed a <code>ClassSymbol</code>), which are type safe since we don’t have to use <code>String</code>s to lookup
+the <code>Symbol</code>.</p><h5> Runtime Mirrors </h5><p>Runtime <code>Mirror</code>s make use of both classloader and invoker <code>Mirror</code>s.</p><p>The entry point to <code>Mirror</code>s for use at runtime is via <code>ru.runtimeMirror(&lt;classloader&gt;)</code>, where
+<code>ru</code> is <a href="../runtime/package.html#universe:scala.reflect.api.JavaUniverse" class="extmbr" name="scala.reflect.runtime#universe">scala.reflect.runtime.universe</a>.</p><p>The result of a <a href="JavaMirrors.html#runtimeMirror(cl:ClassLoader):JavaMirrors.this.Mirror" class="extmbr" name="scala.reflect.api.JavaMirrors#runtimeMirror">scala.reflect.api.JavaMirrors#runtimeMirror</a> call is a classloader mirror,
+of type <a href="Mirrors$ReflectiveMirror.html" class="extype" name="scala.reflect.api.Mirrors.ReflectiveMirror">scala.reflect.api.Mirrors#ReflectiveMirror</a>, which can load symbols by names as
+discussed above (in the “Compile-time” section).</p><p>A classloader mirror can create invoker mirrors, which include: <a href="Mirrors$InstanceMirror.html" class="extype" name="scala.reflect.api.Mirrors.InstanceMirror">scala.reflect.api.Mirrors#InstanceMirror</a>,
+<a href="Mirrors$MethodMirror.html" class="extype" name="scala.reflect.api.Mirrors.MethodMirror">scala.reflect.api.Mirrors#MethodMirror</a>, <a href="Mirrors$FieldMirror.html" class="extype" name="scala.reflect.api.Mirrors.FieldMirror">scala.reflect.api.Mirrors#FieldMirror</a>,
+<a href="Mirrors$ClassMirror.html" class="extype" name="scala.reflect.api.Mirrors.ClassMirror">scala.reflect.api.Mirrors#ClassMirror</a> and <a href="Mirrors$ModuleMirror.html" class="extype" name="scala.reflect.api.Mirrors.ModuleMirror">scala.reflect.api.Mirrors#ModuleMirror</a>.</p><p>Examples of how these two types of <code>Mirror</code>s interact are available below.</p><h5> Types of Mirrors, Their Use Cases &amp; Examples </h5><p><b><a href="Mirrors$ReflectiveMirror.html" class="extype" name="scala.reflect.api.Mirrors.ReflectiveMirror">scala.reflect.api.Mirrors#ReflectiveMirror</a></b>. Used for loading <code>Symbol</code>s by name, and
+as an entry point into invoker mirrors. Entry point: <code>val m = ru.runtimeMirror(&lt;classloader&gt;)</code>.
+Example:</p><pre>scala&gt; <span class="kw">val</span> ru = scala.reflect.runtime.universe
+ru: scala.reflect.api.JavaUniverse = ...
+
+scala&gt; <span class="kw">val</span> m = ru.runtimeMirror(getClass.getClassLoader)
+m: reflect.runtime.universe.Mirror = JavaMirror ...</pre><p><b><a href="Mirrors$InstanceMirror.html" class="extype" name="scala.reflect.api.Mirrors.InstanceMirror">scala.reflect.api.Mirrors#InstanceMirror</a></b>. Used for creating invoker <code>Mirror</code>s for methods
+and fields and for inner classes and inner objects (modules). Entry point: <code>val im = m.reflect(&lt;value&gt;)</code>.
+Example:</p><pre>scala&gt; <span class="kw">class</span> C { <span class="kw">def</span> x = <span class="num">2</span> }
+defined <span class="kw">class</span> C
+
+scala&gt; <span class="kw">val</span> im = m.reflect(<span class="kw">new</span> C)
+im: reflect.runtime.universe.InstanceMirror = instance mirror <span class="kw">for</span> C@<span class="num">3442299</span>e</pre><p><b><a href="Mirrors$MethodMirror.html" class="extype" name="scala.reflect.api.Mirrors.MethodMirror">scala.reflect.api.Mirrors#MethodMirror</a></b>. Used for invoking instance methods (Scala only has
+instance methods-- methods of objects are instance methods of object instances, obtainable
+via <code>ModuleMirror.instance</code>). Entry point: <code>val mm = im.reflectMethod(&lt;method symbol&gt;)</code>.
+Example:</p><pre>scala&gt; <span class="kw">val</span> methodX = typeOf[C].declaration(newTermName(<span class="lit">"x"</span>)).asMethod
+methodX: reflect.runtime.universe.MethodSymbol = method x
+
+scala&gt; <span class="kw">val</span> mm = im.reflectMethod(methodX)
+mm: reflect.runtime.universe.MethodMirror = method mirror <span class="kw">for</span> C.x: scala.<span class="std">Int</span> (bound to C@<span class="num">3442299</span>e)
+
+scala&gt; mm()
+res0: <span class="std">Any</span> = <span class="num">2</span></pre><p><b><a href="Mirrors$FieldMirror.html" class="extype" name="scala.reflect.api.Mirrors.FieldMirror">scala.reflect.api.Mirrors#FieldMirror</a></b>. Used for getting/setting instance fields
+(Scala only has instance fields-- fields of objects are instance methods of object instances
+obtainable via ModuleMirror.instance). Entry point:
+<code>val fm = im.reflectMethod(&lt;field or accessor symbol&gt;)</code>.
+Example:</p><pre>scala&gt; <span class="kw">class</span> C { <span class="kw">val</span> x = <span class="num">2</span>; <span class="kw">val</span> y = <span class="num">3</span> }
+defined <span class="kw">class</span> C
+
+scala&gt; <span class="kw">val</span> m = ru.runtimeMirror(getClass.getClassLoader)
+m: reflect.runtime.universe.Mirror = JavaMirror ...
+
+scala&gt; <span class="kw">val</span> im = m.reflect(<span class="kw">new</span> C)
+im: reflect.runtime.universe.InstanceMirror = instance mirror <span class="kw">for</span> C@<span class="num">5</span>f0c8ac1
+
+scala&gt; <span class="kw">val</span> fieldX = typeOf[C].declaration(newTermName(<span class="lit">"x"</span>)).asTerm.accessed.asTerm
+fieldX: reflect.runtime.universe.TermSymbol = value x
+scala&gt; <span class="kw">val</span> fmX = im.reflectField(fieldX)
+fmX: reflect.runtime.universe.FieldMirror = field mirror <span class="kw">for</span> C.x (bound to C@<span class="num">5</span>f0c8ac1)
+
+scala&gt; fmX.get
+res0: <span class="std">Any</span> = <span class="num">2</span>
+
+scala&gt; fmX.set(<span class="num">3</span>) <span class="cmt">// NOTE: can set an underlying value of an immutable field!</span>
+
+scala&gt; <span class="kw">val</span> fieldY = typeOf[C].declaration(newTermName(<span class="lit">"y"</span>)).asTerm.accessed.asTerm
+fieldY: reflect.runtime.universe.TermSymbol = variable y
+
+scala&gt; <span class="kw">val</span> fmY = im.reflectField(fieldY)
+fmY: reflect.runtime.universe.FieldMirror = field mirror <span class="kw">for</span> C.y (bound to C@<span class="num">5</span>f0c8ac1)
+
+scala&gt; fmY.get
+res1: <span class="std">Any</span> = <span class="num">3</span>
+
+scala&gt; fmY.set(<span class="num">4</span>)
+
+scala&gt; fmY.get
+res2: <span class="std">Any</span> = <span class="num">4</span></pre><p><b><a href="Mirrors$ClassMirror.html" class="extype" name="scala.reflect.api.Mirrors.ClassMirror">scala.reflect.api.Mirrors#ClassMirror</a></b>. Used for creating invoker mirrors for constructors.
+Entry points: for <i>static classes</i> <code>val cm1 = m.reflectClass(&lt;class symbol&gt;)</code>,
+for <i>inner classes</i> <code>val mm2 = im.reflectClass(&lt;module symbol&gt;)</code>.
+Example:</p><pre>scala&gt; <span class="kw">case</span> <span class="kw">class</span> C(x: <span class="std">Int</span>)
+defined <span class="kw">class</span> C
+
+scala&gt; <span class="kw">val</span> m = ru.runtimeMirror(getClass.getClassLoader)
+m: reflect.runtime.universe.Mirror = JavaMirror ...
+
+scala&gt; <span class="kw">val</span> classC = typeOf[C].typeSymbol.asClass
+
+classC: reflect.runtime.universe.<span class="std">Symbol</span> = <span class="kw">class</span> C
+
+scala&gt; <span class="kw">val</span> cm = m.reflectClass(classC)
+cm: reflect.runtime.universe.ClassMirror = <span class="kw">class</span> mirror <span class="kw">for</span> C (bound to <span class="kw">null</span>)
+
+scala&gt; <span class="kw">val</span> ctorC = typeOf[C].declaration(ru.nme.CONSTRUCTOR).asMethod
+ctorC: reflect.runtime.universe.MethodSymbol = constructor C
+
+scala&gt; <span class="kw">val</span> ctorm = cm.reflectConstructor(ctorC)
+ctorm: reflect.runtime.universe.MethodMirror = constructor mirror <span class="kw">for</span> C.&lt;init&gt;(x: scala.<span class="std">Int</span>): C (bound to <span class="kw">null</span>)
+
+scala&gt; ctorm(<span class="num">2</span>)
+res0: <span class="std">Any</span> = C(<span class="num">2</span>)</pre><p><b><a href="Mirrors$ModuleMirror.html" class="extype" name="scala.reflect.api.Mirrors.ModuleMirror">scala.reflect.api.Mirrors#ModuleMirror</a></b>. Used for getting singleton instances of objects.
+Entry points: for <i>static objects (modules)</i> <code>val mm1 = m.reflectModule(&lt;module symbol&gt;)</code>,
+for <i>inner objects (modules)</i> <code>val mm2 = im.reflectModule(&lt;module symbol&gt;)</code>.
+Example:</p><pre>scala&gt; <span class="kw">object</span> C { <span class="kw">def</span> x = <span class="num">2</span> }
+defined module C
+
+scala&gt; <span class="kw">val</span> m = ru.runtimeMirror(getClass.getClassLoader)
+m: reflect.runtime.universe.Mirror = JavaMirror ...
+
+scala&gt; <span class="kw">val</span> objectC = typeOf[C.<span class="kw">type</span>].termSymbol.asModule
+objectC: reflect.runtime.universe.ModuleSymbol = <span class="kw">object</span> C
+
+scala&gt; <span class="kw">val</span> mm = m.reflectModule(objectC)
+mm: reflect.runtime.universe.ModuleMirror = module mirror <span class="kw">for</span> C (bound to <span class="kw">null</span>)
+
+scala&gt; <span class="kw">val</span> obj = mm.instance
+obj: <span class="std">Any</span> = C$@<span class="num">1005</span>ec04</pre><p>For more information about <code>Mirrors</code>s, see the
+<a href="http://docs.scala-lang.org/overviews/reflection/environment-universes-mirrors.html" target="_blank">Reflection Guide: Mirrors</a>
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="Universe.html" class="extype" name="scala.reflect.api.Universe">Universe</a></dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/reflect/scala/reflect/api/Mirrors.scala#L1" target="_blank">Mirrors.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a href="JavaUniverse.html" class="extype" name="scala.reflect.api.JavaUniverse">JavaUniverse</a>, <a href="../runtime/JavaUniverse.html" class="extype" name="scala.reflect.runtime.JavaUniverse">JavaUniverse</a>, <a href="Universe.html" class="extype" name="scala.reflect.api.Universe">Universe</a>, <a href="../macros/Universe.html" class="extype" name="scala.reflect.macros.Universe">Universe</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1349" viewBox="0.00 0.00 132.00 158.00" height="158pt" width="132pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph1"><polygon points="-4,5 -4,-154 129,-154 129,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this trait" id="graph1349_0"><a xlink:title="scala.reflect.api.Mirrors (this trait)" xlink:href="#inheritance-diagram"><polygon points="100,-88 24,-88 24,-62 100,-62 100,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-83" x="34" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="56" text-anchor="start">Mirrors</text></a></g><!-- node1 --><g class="node class" id="graph1349_1"><a xlink:title="scala.reflect.api.Universe" xlink:href="Universe.html#inheritance-diagram"><polygon points="103,-26 21,-26 21,-1.24345e-14 103,-3.55271e-15 103,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-21" x="31" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="53" text-anchor="start">Universe</text></a></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1349_0_1"><a xlink:title="Universe is a subtype of Mirrors"><path d="M62,-56.6463C62,-46.8429 62,-35.003 62,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="60.2501,-56.8514 62,-61.8514 63.7501,-56.8514 60.2501,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node class" id="graph1349_2"><a xlink:title="scala.AnyRef" xlink:href="../../AnyRef.html#inheritance-diagram"><polygon points="100,-150 24,-150 24,-124 100,-124 100,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-145" x="34" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="56" text-anchor="start">AnyRef</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1349_2_0"><a xlink:title="Mirrors is a subtype of AnyRef"><path d="M62,-118.646C62,-108.843 62,-97.003 62,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="60.2501,-118.851 62,-123.851 63.7501,-118.851 60.2501,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1350" viewBox="0.00 0.00 468.00 96.00" height="96pt" width="468pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 92)" class="graph" id="graph1"><polygon points="-4,5 -4,-92 465,-92 465,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node trait" id="graph1350_0"><a xlink:title="scala.reflect.api.Mirrors.ModuleMirror" xlink:href="Mirrors$ModuleMirror.html#inheritance-diagram"><polygon points="142,-26 5.68434e-14,-26 0,-1.24345e-14 142,-3.55271e-15 142,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="32" text-anchor="start">Universe.ModuleMirror</text></a></g><!-- node1 --><g class="node trait" id="graph1350_1"><a xlink:title="scala.reflect.api.Mirrors.ClassMirror" xlink:href="Mirrors$ClassMirror.html#inheritance-diagram"><polygon points="294,-26 160,-26 160,-1.24345e-14 294,-3.55271e-15 294,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="170" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="192" text-anchor="start">Universe.ClassMirror</text></a></g><!-- node2 --><g class="node trait" id="graph1350_2"><a xlink:title="scala.reflect.api.Mirrors.RuntimeMirror" xlink:href="Mirrors$RuntimeMirror.html#inheritance-diagram"><polygon points="458,-26 312,-26 312,-1.24345e-14 458,-3.55271e-15 458,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="322" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="344" text-anchor="start">Universe.RuntimeMirror</text></a></g><!-- node3 --><g class="node trait" id="graph1350_3"><a xlink:title="scala.reflect.api.Mirrors.TemplateMirror" xlink:href="Mirrors$TemplateMirror.html#inheritance-diagram"><polygon points="218,-88 70,-88 70,-62 218,-62 218,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-83" x="80" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="102" text-anchor="start">Universe.TemplateMirror</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1350_3_0"><a xlink:title="Universe.ModuleMirror is a subtype of Universe.TemplateMirror"><path d="M124.603,-58.5255C112.669,-48.3902 97.584,-35.5782 86.4591,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="123.575,-59.9485 128.519,-61.8514 125.84,-57.2808 123.575,-59.9485" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3&#45;&gt;node1 --><g class="edge inheritance" id="graph1350_3_1"><a xlink:title="Universe.ClassMirror is a subtype of Universe.TemplateMirror"><path d="M165.701,-58.7893C179.324,-48.6132 196.664,-35.6603 209.423,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="164.561,-57.4571 161.602,-61.8514 166.655,-60.2611 164.561,-57.4571" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node trait" id="graph1350_4"><a xlink:title="scala.reflect.api.Mirrors.ReflectiveMirror" xlink:href="Mirrors$ReflectiveMirror.html#inheritance-diagram"><polygon points="460,-88 310,-88 310,-62 460,-62 460,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-83" x="320" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="342" text-anchor="start">Universe.ReflectiveMirror</text></a></g><!-- node4&#45;&gt;node2 --><g class="edge inheritance" id="graph1350_4_2"><a xlink:title="Universe.RuntimeMirror is a subtype of Universe.ReflectiveMirror"><path d="M385,-56.6463C385,-46.8429 385,-35.003 385,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="383.25,-56.8514 385,-61.8514 386.75,-56.8514 383.25,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                <li class="group out"><span>Grouped</span></li>
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.reflect.api.Mirrors"><span>Mirrors</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.reflect.api.Mirrors.ClassMirror" visbl="pub" data-isabs="true" fullComment="no" group="Mirrors">
+      <a id="ClassMirrorextendsMirrors.this.TemplateMirror"></a>
+      <a id="ClassMirror:Universe.ClassMirror"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Mirrors$ClassMirror.html"><span class="name">ClassMirror</span></a><span class="result"> extends <a href="Universe.html#TemplateMirrorextendsAnyRef" class="extmbr" name="scala.reflect.api.Mirrors.TemplateMirror">Universe.TemplateMirror</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mirror that reflects the instance parts of a runtime class.</p>
+    </li><li name="scala.reflect.api.Mirrors.FieldMirror" visbl="pub" data-isabs="true" fullComment="no" group="Mirrors">
+      <a id="FieldMirrorextendsAnyRef"></a>
+      <a id="FieldMirror:Universe.FieldMirror"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Mirrors$FieldMirror.html"><span class="name">FieldMirror</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mirror that reflects a field.</p>
+    </li><li name="scala.reflect.api.Mirrors.InstanceMirror" visbl="pub" data-isabs="true" fullComment="no" group="Mirrors">
+      <a id="InstanceMirrorextendsAnyRef"></a>
+      <a id="InstanceMirror:Universe.InstanceMirror"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Mirrors$InstanceMirror.html"><span class="name">InstanceMirror</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mirror that reflects a runtime value.</p>
+    </li><li name="scala.reflect.api.Mirrors.MethodMirror" visbl="pub" data-isabs="true" fullComment="no" group="Mirrors">
+      <a id="MethodMirrorextendsAnyRef"></a>
+      <a id="MethodMirror:Universe.MethodMirror"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Mirrors$MethodMirror.html"><span class="name">MethodMirror</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mirror that reflects a method.</p>
+    </li><li name="scala.reflect.api.Mirrors.Mirror" visbl="pub" data-isabs="true" fullComment="yes" group="Mirrors">
+      <a id="Mirror&gt;:Null&lt;:scala.reflect.api.Mirror[Mirrors.this.type]"></a>
+      <a id="Mirror:Universe.Mirror"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Mirror</span><span class="result"> &gt;: <a href="../../Null.html" class="extype" name="scala.Null">Null</a> &lt;: <a href="Mirror.html" class="extype" name="scala.reflect.api.Mirror">api.Mirror</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>.this.type]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The base type of all mirrors of this universe.</p><div class="fullcomment"><div class="comment cmt"><p>The base type of all mirrors of this universe.</p><p> This abstract type conforms the base interface for all mirrors defined in <a href="Mirror.html" class="extype" name="scala.reflect.api.Mirror">scala.reflect.api.Mirror</a>
+ and is gradually refined in specific universes (e.g. <code>Mirror</code> of a <a href="JavaUniverse.html" class="extype" name="scala.reflect.api.JavaUniverse">scala.reflect.api.JavaUniverse</a> is capable of reflection).</p></div></div>
+    </li><li name="scala.reflect.api.Mirrors.ModuleMirror" visbl="pub" data-isabs="true" fullComment="no" group="Mirrors">
+      <a id="ModuleMirrorextendsMirrors.this.TemplateMirror"></a>
+      <a id="ModuleMirror:Universe.ModuleMirror"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Mirrors$ModuleMirror.html"><span class="name">ModuleMirror</span></a><span class="result"> extends <a href="Universe.html#TemplateMirrorextendsAnyRef" class="extmbr" name="scala.reflect.api.Mirrors.TemplateMirror">Universe.TemplateMirror</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mirror that reflects a Scala object definition or the static parts of a runtime class.</p>
+    </li><li name="scala.reflect.api.Mirrors.ReflectiveMirror" visbl="pub" data-isabs="true" fullComment="no" group="Mirrors">
+      <a id="ReflectiveMirrorextendsMirror[Mirrors.this.type]"></a>
+      <a id="ReflectiveMirror:Universe.ReflectiveMirror"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Mirrors$ReflectiveMirror.html"><span class="name">ReflectiveMirror</span></a><span class="result"> extends <a href="Mirror.html" class="extype" name="scala.reflect.api.Mirror">api.Mirror</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>.this.type]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mirror that reflects instances and static classes.</p>
+    </li><li name="scala.reflect.api.Mirrors.RuntimeClass" visbl="pub" data-isabs="true" fullComment="no" group="Mirrors">
+      <a id="RuntimeClass&gt;:Null"></a>
+      <a id="RuntimeClass:Universe.RuntimeClass"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RuntimeClass</span><span class="result"> &gt;: <a href="../../Null.html" class="extype" name="scala.Null">Null</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Abstracts the runtime representation of a class on the underlying platform.</p>
+    </li><li name="scala.reflect.api.Mirrors.RuntimeMirror" visbl="pub" data-isabs="true" fullComment="no" group="Mirrors">
+      <a id="RuntimeMirrorextendsMirror[Mirrors.this.type]withMirrors.this.ReflectiveMirror"></a>
+      <a id="RuntimeMirror:Universe.RuntimeMirror"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Mirrors$RuntimeMirror.html"><span class="name">RuntimeMirror</span></a><span class="result"> extends <a href="Mirror.html" class="extype" name="scala.reflect.api.Mirror">api.Mirror</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>.this.type] with <a href="Universe.html#ReflectiveMirrorextendsMirror[Mirrors.this.type]" class="extmbr" name="scala.reflect.api.Mirrors.ReflectiveMirror">Universe.ReflectiveMirror</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The API of a mirror for a reflective universe.</p>
+    </li><li name="scala.reflect.api.Mirrors.TemplateMirror" visbl="pub" data-isabs="true" fullComment="no" group="Mirrors">
+      <a id="TemplateMirrorextendsAnyRef"></a>
+      <a id="TemplateMirror:Universe.TemplateMirror"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Mirrors$TemplateMirror.html"><span class="name">TemplateMirror</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mirror that reflects the instance or static parts of a runtime class.</p>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.reflect.api.Mirrors#rootMirror" visbl="pub" data-isabs="true" fullComment="yes" group="Mirrors">
+      <a id="rootMirror:Mirrors.this.Mirror"></a>
+      <a id="rootMirror:Universe.Mirror"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rootMirror</span><span class="result">: <a href="Universe.html#Mirror&gt;:Null&lt;:scala.reflect.api.Mirror[Mirrors.this.type]" class="extmbr" name="scala.reflect.api.Universe.Mirror">Universe.Mirror</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The root mirror of this universe.</p><div class="fullcomment"><div class="comment cmt"><p>The root mirror of this universe. This mirror contains standard Scala classes and types such as <code>Any</code>, <code>AnyRef</code>, <code>AnyVal</code>,
+ <code>Nothing</code>, <code>Null</code>, and all classes loaded from scala-library, which are shared across all mirrors within the enclosing universe.</p></div></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+ For <code>null</code> returns a hashcode where <code>null.hashCode</code> throws a
+ <code>NullPointerException</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(Mirrors,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>] performed by method any2ArrowAssoc in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+ The expression <code>x == that</code> is equivalent to <code>if (x eq null) that eq null else x.equals(that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt">ClassCastException<p>if the receiver object is not an instance of the erasure of type <code>T0</code>.</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((Mirrors)⇒Boolean,⇒Any):Mirrors"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>) ⇒ <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((Mirrors)⇒Boolean):Mirrors"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>) ⇒ <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):Mirrors"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):Mirrors"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation" target="_blank">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  Default implementation delegates to <code>eq</code>.</p><p> See also <code>equals</code> in <a href="../../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns string formatted according to given <code>format</code> string.</p><div class="fullcomment"><div class="comment cmt"><p>Returns string formatted according to given <code>format</code> string.
+ Format strings are as for <code>String.format</code>
+ (@see java.lang.String.format).
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a href="../../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../../Long.html" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../../Long.html" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(Mirrors,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>] performed by method any2ArrowAssoc in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Shadowed Implicit Value Members</h3>
+              <ol><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mirrors: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mirrors: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Mirrors"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>] performed by method any2ArrowAssoc in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mirrors: ArrowAssoc[Mirrors]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Mirrors"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mirrors: Ensuring[Mirrors]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to <a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringfmt">
+              <h3>Inherited by implicit conversion any2stringfmt from
+                <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to <a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
+              <h3>Inherited by implicit conversion any2ArrowAssoc from
+                <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2Ensuring">
+              <h3>Inherited by implicit conversion any2Ensuring from
+                <a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a> to <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.reflect.api.Mirrors">Mirrors</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Mirrors">
+              <h3>Mirrors</h3>
+              
+            </div><div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../../lib/diagrams.js"></script>
+    </body>
+      </html>

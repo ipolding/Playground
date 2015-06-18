@@ -1,0 +1,890 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>xml - Scala Standard Library API (Scaladoc) 2.10.2 - scala.xml</title>
+          <meta name="description" content="xml - Scala Standard Library API Scaladoc 2.10.2 - scala.xml" />
+          <meta name="keywords" content="xml Scala Standard Library API Scaladoc 2.10.2 scala.xml" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.xml.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a></p>
+        <h1>xml</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">xml</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/library/scala/xml/package.scala#L1" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1447" viewBox="0.00 0.00 668.00 344.00" height="344pt" width="668pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 340)" class="graph" id="graph1"><polygon points="-4,5 -4,-340 665,-340 665,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node class" id="graph1447_0"><a xlink:title="scala.xml.ProcInstr" xlink:href="ProcInstr.html#inheritance-diagram"><polygon points="189,-88 105,-88 105,-62 189,-62 189,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-83" x="115" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="137" text-anchor="start">ProcInstr</text></a></g><!-- node1 --><g class="node class" id="graph1447_1"><a xlink:title="scala.xml.Document" xlink:href="Document.html#inheritance-diagram"><polygon points="197,-212 107,-212 107,-186 197,-186 197,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="117" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="139" text-anchor="start">Document</text></a></g><!-- node2 --><g class="node class" id="graph1447_2"><a xlink:title="scala.xml.Text" xlink:href="Text.html#inheritance-diagram"><polygon points="187,-26 123,-26 123,-1.24345e-14 187,-3.55271e-15 187,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="133" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="155" text-anchor="start">Text</text></a></g><!-- node3 --><g class="node class" id="graph1447_3"><a xlink:title="scala.xml.Unparsed" xlink:href="Unparsed.html#inheritance-diagram"><polygon points="291,-26 205,-26 205,-1.24345e-14 291,-3.55271e-15 291,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="215" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="237" text-anchor="start">Unparsed</text></a></g><!-- node4 --><g class="node class" id="graph1447_4"><a xlink:title="scala.xml.Atom" xlink:href="Atom.html#inheritance-diagram"><polygon points="289,-88 207,-88 207,-62 289,-62 289,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-83" x="217" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="239" text-anchor="start">Atom[A]</text></a></g><!-- node4&#45;&gt;node2 --><g class="edge inheritance" id="graph1447_4_2"><a xlink:title="Text is a subtype of Atom[A]"><path d="M224.078,-59.0519C208.755,-48.8368 189.114,-35.7425 174.694,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="223.146,-60.5339 228.277,-61.8514 225.088,-57.6218 223.146,-60.5339" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4&#45;&gt;node3 --><g class="edge inheritance" id="graph1447_4_3"><a xlink:title="Unparsed is a subtype of Atom[A]"><path d="M248,-56.6463C248,-46.8429 248,-35.003 248,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="246.25,-56.8514 248,-61.8514 249.75,-56.8514 246.25,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node18 --><g class="node class" id="graph1447_18"><a xlink:title="scala.xml.PCData" xlink:href="PCData.html#inheritance-diagram"><polygon points="387,-26 309,-26 309,-1.24345e-14 387,-3.55271e-15 387,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="319" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="341" text-anchor="start">PCData</text></a></g><!-- node4&#45;&gt;node18 --><g class="edge inheritance" id="graph1447_4_18"><a xlink:title="PCData is a subtype of Atom[A]"><path d="M273.723,-59.0519C290.199,-48.8368 311.319,-35.7425 326.823,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="272.535,-57.7293 269.207,-61.8514 274.379,-60.704 272.535,-57.7293" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node5 --><g class="node trait" id="graph1447_5"><a xlink:title="scala.xml.Attribute" xlink:href="Attribute.html#inheritance-diagram"><polygon points="542,-212 460,-212 460,-186 542,-186 542,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-207" x="470" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="492" text-anchor="start">Attribute</text></a></g><!-- node10 --><g class="node class" id="graph1447_10"><a xlink:title="scala.xml.UnprefixedAttribute" xlink:href="UnprefixedAttribute.html#inheritance-diagram"><polygon points="496,-150 368,-150 368,-124 496,-124 496,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="378" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="400" text-anchor="start">UnprefixedAttribute</text></a></g><!-- node5&#45;&gt;node10 --><g class="edge inheritance" id="graph1447_5_10"><a xlink:title="UnprefixedAttribute is a subtype of Attribute"><path d="M482.371,-182.261C471.138,-172.168 457.036,-159.496 446.612,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="481.478,-183.811 486.367,-185.851 483.817,-181.208 481.478,-183.811" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node14 --><g class="node class" id="graph1447_14"><a xlink:title="scala.xml.PrefixedAttribute" xlink:href="PrefixedAttribute.html#inheritance-diagram"><polygon points="632,-150 514,-150 514,-124 632,-124 632,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="524" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="546" text-anchor="start">PrefixedAttribute</text></a></g><!-- node5&#45;&gt;node14 --><g class="edge inheritance" id="graph1447_5_14"><a xlink:title="PrefixedAttribute is a subtype of Attribute"><path d="M520.132,-182.526C531.902,-172.39 546.78,-159.578 557.753,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="518.916,-181.263 516.269,-185.851 521.2,-183.915 518.916,-181.263" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node6 --><g class="node class" id="graph1447_6"><a xlink:title="scala.xml.NamespaceBinding" xlink:href="NamespaceBinding.html#inheritance-diagram"><polygon points="130,-274 5.68434e-14,-274 0,-248 130,-248 130,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="32" text-anchor="start">NamespaceBinding</text></a></g><!-- node13 --><g class="node object" id="graph1447_13"><a xlink:title="scala.xml.TopScope" xlink:href="TopScope$.html#inheritance-diagram"><polygon points="89,-212 1,-212 1,-186 89,-186 89,-212" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-207" x="11" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="33" text-anchor="start">TopScope</text></a></g><!-- node6&#45;&gt;node13 --><g class="edge inheritance" id="graph1447_6_13"><a xlink:title="TopScope is a subtype of NamespaceBinding"><path d="M59.1671,-242.918C55.9879,-233.062 52.1243,-221.085 49.2354,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="57.5579,-243.63 60.7585,-247.851 60.8889,-242.556 57.5579,-243.63" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node7 --><g class="node class" id="graph1447_7"><a xlink:title="scala.xml.Comment" xlink:href="Comment.html#inheritance-diagram"><polygon points="395,-88 307,-88 307,-62 395,-62 395,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-83" x="317" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="339" text-anchor="start">Comment</text></a></g><!-- node8 --><g class="node trait" id="graph1447_8"><a xlink:title="scala.xml.Equality" xlink:href="Equality.html#inheritance-diagram"><polygon points="269,-336 189,-336 189,-310 269,-310 269,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-331" x="199" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="221" text-anchor="start">Equality</text></a></g><!-- node8&#45;&gt;node6 --><g class="edge inheritance" id="graph1447_8_6"><a xlink:title="NamespaceBinding is a subtype of Equality"><path d="M189.543,-308.083C162.061,-297.694 125.763,-283.971 99.4485,-274.023" stroke="#d4d4d4" fill="none"></path><polygon points="188.924,-309.72 194.22,-309.851 190.162,-306.446 188.924,-309.72" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node17 --><g class="node class" id="graph1447_17"><a xlink:title="scala.xml.NodeSeq" xlink:href="NodeSeq.html#inheritance-diagram"><polygon points="271,-274 187,-274 187,-248 271,-248 271,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="197" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="219" text-anchor="start">NodeSeq</text></a></g><!-- node8&#45;&gt;node17 --><g class="edge inheritance" id="graph1447_8_17"><a xlink:title="NodeSeq is a subtype of Equality"><path d="M229,-304.646C229,-294.843 229,-283.003 229,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="227.25,-304.851 229,-309.851 230.75,-304.851 227.25,-304.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node19 --><g class="node class" id="graph1447_19"><a xlink:title="scala.xml.MetaData" xlink:href="MetaData.html#inheritance-diagram"><polygon points="545,-274 457,-274 457,-248 545,-248 545,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="467" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="489" text-anchor="start">MetaData</text></a></g><!-- node8&#45;&gt;node19 --><g class="edge inheritance" id="graph1447_8_19"><a xlink:title="MetaData is a subtype of Equality"><path d="M274.239,-312.688C324.865,-301.148 406.362,-282.572 456.631,-271.113" stroke="#d4d4d4" fill="none"></path><polygon points="273.621,-311.034 269.135,-313.852 274.398,-314.447 273.621,-311.034" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node9 --><g class="node class" id="graph1447_9"><a xlink:title="scala.xml.EntityRef" xlink:href="EntityRef.html#inheritance-diagram"><polygon points="497,-88 413,-88 413,-62 497,-62 497,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-83" x="423" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="445" text-anchor="start">EntityRef</text></a></g><!-- node11 --><g class="node class" id="graph1447_11"><a xlink:title="scala.xml.Node" xlink:href="Node.html#inheritance-diagram"><polygon points="283,-212 215,-212 215,-186 283,-186 283,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-207" x="225" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="247" text-anchor="start">Node</text></a></g><!-- node12 --><g class="node class" id="graph1447_12"><a xlink:title="scala.xml.Group" xlink:href="Group.html#inheritance-diagram"><polygon points="146,-150 74,-150 74,-124 146,-124 146,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="84" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="106" text-anchor="start">Group</text></a></g><!-- node11&#45;&gt;node12 --><g class="edge inheritance" id="graph1447_11_12"><a xlink:title="Group is a subtype of Node"><path d="M214.704,-183.703C191.602,-173.398 161.448,-159.948 139.436,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="214.242,-185.413 219.522,-185.851 215.668,-182.216 214.242,-185.413" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node16 --><g class="node class" id="graph1447_16"><a xlink:title="scala.xml.Elem" xlink:href="Elem.html#inheritance-diagram"><polygon points="232,-150 164,-150 164,-124 232,-124 232,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="174" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="196" text-anchor="start">Elem</text></a></g><!-- node11&#45;&gt;node16 --><g class="edge inheritance" id="graph1447_11_16"><a xlink:title="Elem is a subtype of Node"><path d="M234.792,-181.727C226.563,-171.724 216.37,-159.332 208.8,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="233.656,-183.102 238.184,-185.851 236.359,-180.878 233.656,-183.102" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node20 --><g class="node class" id="graph1447_20"><a xlink:title="scala.xml.SpecialNode" xlink:href="SpecialNode.html#inheritance-diagram"><polygon points="350,-150 250,-150 250,-124 350,-124 350,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-145" x="260" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="282" text-anchor="start">SpecialNode</text></a></g><!-- node11&#45;&gt;node20 --><g class="edge inheritance" id="graph1447_11_20"><a xlink:title="SpecialNode is a subtype of Node"><path d="M263.208,-181.727C271.437,-171.724 281.63,-159.332 289.2,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="261.641,-180.878 259.816,-185.851 264.344,-183.102 261.641,-180.878" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node15 --><g class="node object" id="graph1447_15"><a xlink:title="scala.xml.Null" xlink:href="Null$.html#inheritance-diagram"><polygon points="660,-212 598,-212 598,-186 660,-186 660,-212" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-207" x="608" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="630" text-anchor="start">Null</text></a></g><!-- node17&#45;&gt;node1 --><g class="edge inheritance" id="graph1447_17_1"><a xlink:title="Document is a subtype of NodeSeq"><path d="M208.54,-244.526C195.952,-234.39 180.041,-221.578 168.306,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="207.678,-246.079 212.67,-247.851 209.873,-243.352 207.678,-246.079" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node17&#45;&gt;node11 --><g class="edge inheritance" id="graph1447_17_11"><a xlink:title="Node is a subtype of NodeSeq"><path d="M234.833,-242.918C238.012,-233.062 241.876,-221.085 244.765,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="233.111,-242.556 233.241,-247.851 236.442,-243.63 233.111,-242.556" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node19&#45;&gt;node5 --><g class="edge inheritance" id="graph1447_19_5"><a xlink:title="Attribute is a subtype of MetaData"><path d="M501,-242.646C501,-232.843 501,-221.003 501,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="499.25,-242.851 501,-247.851 502.75,-242.851 499.25,-242.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node19&#45;&gt;node10 --><g class="edge inheritance" id="graph1447_19_10"><a xlink:title="UnprefixedAttribute is a subtype of MetaData"><path d="M479.383,-244.539C469.387,-235.872 458.167,-224.464 451,-212 439.618,-192.204 434.974,-165.626 433.139,-150.003" stroke="#d4d4d4" fill="none"></path><polygon points="478.34,-245.948 483.288,-247.841 480.6,-243.276 478.34,-245.948" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node19&#45;&gt;node14 --><g class="edge inheritance" id="graph1447_19_14"><a xlink:title="PrefixedAttribute is a subtype of MetaData"><path d="M522.416,-244.421C532.365,-235.727 543.603,-224.329 551,-212 562.868,-192.219 568.676,-165.636 571.238,-150.008" stroke="#d4d4d4" fill="none"></path><polygon points="521.2,-243.159 518.534,-247.737 523.473,-245.82 521.2,-243.159" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node19&#45;&gt;node15 --><g class="edge inheritance" id="graph1447_19_15"><a xlink:title="Null is a subtype of MetaData"><path d="M532.849,-245.573C554.088,-235.286 581.709,-221.907 601.894,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="531.883,-244.097 528.146,-247.851 533.408,-247.247 531.883,-244.097" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node20&#45;&gt;node0 --><g class="edge inheritance" id="graph1447_20_0"><a xlink:title="ProcInstr is a subtype of SpecialNode"><path d="M262.871,-121.954C237.271,-111.581 203.586,-97.9304 179.138,-88.0232" stroke="#d4d4d4" fill="none"></path><polygon points="262.261,-123.595 267.553,-123.851 263.576,-120.352 262.261,-123.595" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node20&#45;&gt;node4 --><g class="edge inheritance" id="graph1447_20_4"><a xlink:title="Atom[A] is a subtype of SpecialNode"><path d="M285.737,-119.994C277.309,-109.946 266.799,-97.4138 259.012,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="284.418,-121.145 288.972,-123.851 287.1,-118.896 284.418,-121.145" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node20&#45;&gt;node7 --><g class="edge inheritance" id="graph1447_20_7"><a xlink:title="Comment is a subtype of SpecialNode"><path d="M314.208,-119.727C322.437,-109.724 332.63,-97.3317 340.2,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="312.641,-118.878 310.816,-123.851 315.344,-121.102 312.641,-118.878" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node20&#45;&gt;node9 --><g class="edge inheritance" id="graph1447_20_9"><a xlink:title="EntityRef is a subtype of SpecialNode"><path d="M337.615,-121.954C363.549,-111.581 397.674,-97.9304 422.442,-88.0232" stroke="#d4d4d4" fill="none"></path><polygon points="336.864,-120.37 332.872,-123.851 338.164,-123.619 336.864,-120.37" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.xml"><span>xml</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.xml.Atom" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Atom[+A]extendsSpecialNodewithSerializable"></a>
+      <a id="Atom[+A]:Atom[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Atom.html"><span class="name">Atom</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <a href="SpecialNode.html" class="extype" name="scala.xml.SpecialNode">SpecialNode</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The class <code>Atom</code> provides an XML node for text (<code>PCDATA</code>).</p>
+    </li><li name="scala.xml.Attribute" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AttributeextendsMetaData"></a>
+      <a id="Attribute:Attribute"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Attribute.html"><span class="name">Attribute</span></a><span class="result"> extends <a href="MetaData.html" class="extype" name="scala.xml.MetaData">MetaData</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The <code>Attribute</code> trait defines the interface shared by both
+ <a href="PrefixedAttribute.html" class="extype" name="scala.xml.PrefixedAttribute">scala.xml.PrefixedAttribute</a> and <a href="UnprefixedAttribute.html" class="extype" name="scala.xml.UnprefixedAttribute">scala.xml.UnprefixedAttribute</a>.</p>
+    </li><li name="scala.xml.Comment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CommentextendsSpecialNodewithProductwithSerializable"></a>
+      <a id="Comment:Comment"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Comment.html"><span class="name">Comment</span></a><span class="params">(<span name="commentText">commentText: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result"> extends <a href="SpecialNode.html" class="extype" name="scala.xml.SpecialNode">SpecialNode</a> with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The class <code>Comment</code> implements an XML node for comments.</p>
+    </li><li name="scala.xml.Document" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DocumentextendsNodeSeqwithXMLEventwithSerializable"></a>
+      <a id="Document:Document"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Document.html"><span class="name">Document</span></a><span class="result"> extends <a href="NodeSeq.html" class="extype" name="scala.xml.NodeSeq">NodeSeq</a> with <a href="pull/XMLEvent.html" class="extype" name="scala.xml.pull.XMLEvent">XMLEvent</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A document information item (according to InfoSet spec).</p>
+    </li><li name="scala.xml.Elem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ElemextendsNodewithSerializable"></a>
+      <a id="Elem:Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Elem.html"><span class="name">Elem</span></a><span class="result"> extends <a href="Node.html" class="extype" name="scala.xml.Node">Node</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The case class <code>Elem</code> extends the <code>Node</code> class,
+ providing an immutable data object representing an XML element.</p>
+    </li><li name="scala.xml.EntityRef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EntityRefextendsSpecialNodewithProductwithSerializable"></a>
+      <a id="EntityRef:EntityRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="EntityRef.html"><span class="name">EntityRef</span></a><span class="params">(<span name="entityName">entityName: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result"> extends <a href="SpecialNode.html" class="extype" name="scala.xml.SpecialNode">SpecialNode</a> with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The class <code>EntityRef</code> implements an XML node for entity references.</p>
+    </li><li name="scala.xml.EntityResolver" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EntityResolver=org.xml.sax.EntityResolver"></a>
+      <a id="EntityResolver:EntityResolver"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EntityResolver</span><span class="result"> = <span class="extype" name="org.xml.sax.EntityResolver">org.xml.sax.EntityResolver</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.Equality" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EqualityextendsEquals"></a>
+      <a id="Equality:Equality"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Equality.html"><span class="name">Equality</span></a><span class="result"> extends <a href="../Equals.html" class="extype" name="scala.Equals">Equals</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.Group" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GroupextendsNodewithProductwithSerializable"></a>
+      <a id="Group:Group"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Group.html"><span class="name">Group</span></a><span class="params">(<span name="nodes">nodes: <a href="../package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="Node.html" class="extype" name="scala.xml.Node">Node</a>]</span>)</span><span class="result"> extends <a href="Node.html" class="extype" name="scala.xml.Node">Node</a> with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A hack to group XML nodes in one node for output.</p>
+    </li><li name="scala.xml.InputSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InputSource=org.xml.sax.InputSource"></a>
+      <a id="InputSource:InputSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">InputSource</span><span class="result"> = <span class="extype" name="org.xml.sax.InputSource">org.xml.sax.InputSource</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.MalformedAttributeException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MalformedAttributeExceptionextendsRuntimeExceptionwithProductwithSerializable"></a>
+      <a id="MalformedAttributeException:MalformedAttributeException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MalformedAttributeException.html"><span class="name">MalformedAttributeException</span></a><span class="params">(<span name="msg">msg: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result"> extends <a href="../package.html#RuntimeException=RuntimeException" class="extmbr" name="scala.RuntimeException">RuntimeException</a> with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.MetaData" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MetaDataextendsAbstractIterable[scala.xml.MetaData]withIterable[scala.xml.MetaData]withEqualitywithSerializable"></a>
+      <a id="MetaData:MetaData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MetaData.html"><span class="name">MetaData</span></a><span class="result"> extends <span class="extype" name="scala.collection.AbstractIterable">AbstractIterable</span>[<a href="MetaData.html" class="extype" name="scala.xml.MetaData">MetaData</a>] with <a href="../package.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<a href="MetaData.html" class="extype" name="scala.xml.MetaData">MetaData</a>] with <a href="Equality.html" class="extype" name="scala.xml.Equality">Equality</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class represents an attribute and at the same time a linked list of
+ attributes.</p>
+    </li><li name="scala.xml.NamespaceBinding" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NamespaceBindingextendsEqualitywithProductwithSerializable"></a>
+      <a id="NamespaceBinding:NamespaceBinding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="NamespaceBinding.html"><span class="name">NamespaceBinding</span></a><span class="params">(<span name="prefix">prefix: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>, <span name="uri">uri: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>, <span name="parent">parent: <a href="NamespaceBinding.html" class="extype" name="scala.xml.NamespaceBinding">NamespaceBinding</a></span>)</span><span class="result"> extends <a href="Equality.html" class="extype" name="scala.xml.Equality">Equality</a> with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The class <code>NamespaceBinding</code> represents namespace bindings
+ and scopes.</p>
+    </li><li name="scala.xml.Node" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="NodeextendsNodeSeq"></a>
+      <a id="Node:Node"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Node.html"><span class="name">Node</span></a><span class="result"> extends <a href="NodeSeq.html" class="extype" name="scala.xml.NodeSeq">NodeSeq</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">An abstract class representing XML with nodes of a labelled tree.</p>
+    </li><li name="scala.xml.NodeBuffer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NodeBufferextendsArrayBuffer[scala.xml.Node]"></a>
+      <a id="NodeBuffer:NodeBuffer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NodeBuffer.html"><span class="name">NodeBuffer</span></a><span class="result"> extends <a href="../collection/mutable/ArrayBuffer.html" class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</a>[<a href="Node.html" class="extype" name="scala.xml.Node">Node</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class acts as a Buffer for nodes.</p>
+    </li><li name="scala.xml.NodeSeq" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="NodeSeqextendsAbstractSeq[scala.xml.Node]withSeq[scala.xml.Node]withSeqLike[scala.xml.Node,scala.xml.NodeSeq]withEquality"></a>
+      <a id="NodeSeq:NodeSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NodeSeq.html"><span class="name">NodeSeq</span></a><span class="result"> extends <span class="extype" name="scala.collection.AbstractSeq">AbstractSeq</span>[<a href="Node.html" class="extype" name="scala.xml.Node">Node</a>] with <a href="../collection/immutable/Seq.html" class="extype" name="scala.collection.immutable.Seq">collection.immutable.Seq</a>[<a href="Node.html" class="extype" name="scala.xml.Node">Node</a>] with <a href="../collection/SeqLike.html" class="extype" name="scala.collection.SeqLike">SeqLike</a>[<a href="Node.html" class="extype" name="scala.xml.Node">Node</a>, <a href="NodeSeq.html" class="extype" name="scala.xml.NodeSeq">NodeSeq</a>] with <a href="Equality.html" class="extype" name="scala.xml.Equality">Equality</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class implements a wrapper around <code>Seq[Node]</code> that adds XPath
+ and comprehension methods.</p>
+    </li><li name="scala.xml.PCData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PCDataextendsAtom[String]"></a>
+      <a id="PCData:PCData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PCData.html"><span class="name">PCData</span></a><span class="result"> extends <a href="Atom.html" class="extype" name="scala.xml.Atom">Atom</a>[<a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class (which is not used by all XML parsers, but always used by the
+ XHTML one) represents parseable character data, which appeared as CDATA
+ sections in the input and is to be preserved as CDATA section in the output.</p>
+    </li><li name="scala.xml.PrefixedAttribute" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PrefixedAttributeextendsMetaDatawithAttribute"></a>
+      <a id="PrefixedAttribute:PrefixedAttribute"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PrefixedAttribute.html"><span class="name">PrefixedAttribute</span></a><span class="result"> extends <a href="MetaData.html" class="extype" name="scala.xml.MetaData">MetaData</a> with <a href="Attribute.html" class="extype" name="scala.xml.Attribute">Attribute</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">prefixed attributes always have a non-null namespace.</p>
+    </li><li name="scala.xml.PrettyPrinter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PrettyPrinterextendsAnyRef"></a>
+      <a id="PrettyPrinter:PrettyPrinter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PrettyPrinter.html"><span class="name">PrettyPrinter</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Class for pretty printing.</p>
+    </li><li name="scala.xml.ProcInstr" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ProcInstrextendsSpecialNodewithProductwithSerializable"></a>
+      <a id="ProcInstr:ProcInstr"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ProcInstr.html"><span class="name">ProcInstr</span></a><span class="params">(<span name="target">target: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>, <span name="proctext">proctext: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result"> extends <a href="SpecialNode.html" class="extype" name="scala.xml.SpecialNode">SpecialNode</a> with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">an XML node for processing instructions (PI)
+</p>
+    </li><li name="scala.xml.SAXException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SAXException=org.xml.sax.SAXException"></a>
+      <a id="SAXException:SAXException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SAXException</span><span class="result"> = <span class="extype" name="org.xml.sax.SAXException">org.xml.sax.SAXException</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.SAXParseException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SAXParseException=org.xml.sax.SAXParseException"></a>
+      <a id="SAXParseException:SAXParseException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SAXParseException</span><span class="result"> = <span class="extype" name="org.xml.sax.SAXParseException">org.xml.sax.SAXParseException</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.SAXParser" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SAXParser=javax.xml.parsers.SAXParser"></a>
+      <a id="SAXParser:SAXParser"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SAXParser</span><span class="result"> = <span class="extype" name="javax.xml.parsers.SAXParser">javax.xml.parsers.SAXParser</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.SpecialNode" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SpecialNodeextendsNodewithXMLEvent"></a>
+      <a id="SpecialNode:SpecialNode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SpecialNode.html"><span class="name">SpecialNode</span></a><span class="result"> extends <a href="Node.html" class="extype" name="scala.xml.Node">Node</a> with <a href="pull/XMLEvent.html" class="extype" name="scala.xml.pull.XMLEvent">XMLEvent</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><code>SpecialNode</code> is a special XML node which represents either text
+ <code>(PCDATA)</code>, a comment, a <code>PI</code>, or an entity ref.</p>
+    </li><li name="scala.xml.Text" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TextextendsAtom[String]"></a>
+      <a id="Text:Text"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Text.html"><span class="name">Text</span></a><span class="result"> extends <a href="Atom.html" class="extype" name="scala.xml.Atom">Atom</a>[<a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The class <code>Text</code> implements an XML node for text (PCDATA).</p>
+    </li><li name="scala.xml.TextBuffer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TextBufferextendsAnyRef"></a>
+      <a id="TextBuffer:TextBuffer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TextBuffer.html"><span class="name">TextBuffer</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The class <code>TextBuffer</code> is for creating text nodes without surplus
+ whitespace.</p>
+    </li><li name="scala.xml.TypeSymbol" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeSymbolextendsAnyRef"></a>
+      <a id="TypeSymbol:TypeSymbol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TypeSymbol.html"><span class="name">TypeSymbol</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.Unparsed" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnparsedextendsAtom[String]"></a>
+      <a id="Unparsed:Unparsed"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Unparsed.html"><span class="name">Unparsed</span></a><span class="result"> extends <a href="Atom.html" class="extype" name="scala.xml.Atom">Atom</a>[<a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An XML node for unparsed content.</p>
+    </li><li name="scala.xml.UnprefixedAttribute" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnprefixedAttributeextendsMetaDatawithAttribute"></a>
+      <a id="UnprefixedAttribute:UnprefixedAttribute"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UnprefixedAttribute.html"><span class="name">UnprefixedAttribute</span></a><span class="result"> extends <a href="MetaData.html" class="extype" name="scala.xml.MetaData">MetaData</a> with <a href="Attribute.html" class="extype" name="scala.xml.Attribute">Attribute</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Unprefixed attributes have the null namespace, and no prefix field
+</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.xml.Attribute" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Attribute"></a>
+      <a id="Attribute:Attribute"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Attribute$.html"><span class="name">Attribute</span></a><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This singleton object contains the <code>apply</code> and <code>unapply</code> methods for
+ convenient construction and deconstruction.</p>
+    </li><li name="scala.xml.Elem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Elem"></a>
+      <a id="Elem:Elem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Elem$.html"><span class="name">Elem</span></a><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This singleton object contains the <code>apply</code> and <code>unapplySeq</code> methods for
+ convenient construction and deconstruction.</p>
+    </li><li name="scala.xml.Equality" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Equality"></a>
+      <a id="Equality:Equality"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Equality$.html"><span class="name">Equality</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">In an attempt to contain the damage being inflicted on consistency by the
+ ad hoc <code>equals</code> methods spread around <code>xml</code>, the logic is centralized and
+ all the <code>xml</code> classes go through the <code>xml.Equality trait</code>.</p>
+    </li><li name="scala.xml.MetaData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MetaData"></a>
+      <a id="MetaData:MetaData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MetaData$.html"><span class="name">MetaData</span></a><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Copyright 2008 Google Inc.</p>
+    </li><li name="scala.xml.MinimizeMode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MinimizeMode"></a>
+      <a id="MinimizeMode:MinimizeMode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MinimizeMode$.html"><span class="name">MinimizeMode</span></a><span class="result"> extends <a href="../Enumeration.html" class="extype" name="scala.Enumeration">Enumeration</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Governs how empty elements (i.</p>
+    </li><li name="scala.xml.Node" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Node"></a>
+      <a id="Node:Node"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Node$.html"><span class="name">Node</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">This singleton object contains the <code>unapplySeq</code> method for
+ convenient deconstruction.</p>
+    </li><li name="scala.xml.NodeSeq" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NodeSeq"></a>
+      <a id="NodeSeq:NodeSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NodeSeq$.html"><span class="name">NodeSeq</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">This object .</p>
+    </li><li name="scala.xml.Null" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Null"></a>
+      <a id="Null:Null"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Null$.html"><span class="name">Null</span></a><span class="result"> extends <a href="MetaData.html" class="extype" name="scala.xml.MetaData">MetaData</a> with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Essentially, every method in here is a dummy, returning Zero[T].</p>
+    </li><li name="scala.xml.PCData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PCData"></a>
+      <a id="PCData:PCData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PCData$.html"><span class="name">PCData</span></a><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This singleton object contains the <code>apply</code>and <code>unapply</code> methods for
+ convenient construction and deconstruction.</p>
+    </li><li name="scala.xml.PrefixedAttribute" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PrefixedAttribute"></a>
+      <a id="PrefixedAttribute:PrefixedAttribute"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PrefixedAttribute$.html"><span class="name">PrefixedAttribute</span></a><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.QNode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QNode"></a>
+      <a id="QNode:QNode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="QNode$.html"><span class="name">QNode</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">This object provides an extractor method to match a qualified node with
+ its namespace URI
+</p>
+    </li><li name="scala.xml.Source" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Source"></a>
+      <a id="Source:Source"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Source$.html"><span class="name">Source</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.Text" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Text"></a>
+      <a id="Text:Text"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Text$.html"><span class="name">Text</span></a><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This singleton object contains the <code>apply</code>and <code>unapply</code> methods for
+ convenient construction and deconstruction.</p>
+    </li><li name="scala.xml.TextBuffer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TextBuffer"></a>
+      <a id="TextBuffer:TextBuffer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TextBuffer$.html"><span class="name">TextBuffer</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.TopScope" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TopScope"></a>
+      <a id="TopScope:TopScope"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TopScope$.html"><span class="name">TopScope</span></a><span class="result"> extends <a href="NamespaceBinding.html" class="extype" name="scala.xml.NamespaceBinding">NamespaceBinding</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">top level namespace scope.</p>
+    </li><li name="scala.xml.Unparsed" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Unparsed"></a>
+      <a id="Unparsed:Unparsed"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Unparsed$.html"><span class="name">Unparsed</span></a><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This singleton object contains the <code>apply</code>and <code>unapply</code> methods for
+ convenient construction and deconstruction.</p>
+    </li><li name="scala.xml.UnprefixedAttribute" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnprefixedAttribute"></a>
+      <a id="UnprefixedAttribute:UnprefixedAttribute"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UnprefixedAttribute$.html"><span class="name">UnprefixedAttribute</span></a><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.Utility" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Utility"></a>
+      <a id="Utility:Utility"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Utility$.html"><span class="name">Utility</span></a><span class="result"> extends <a href="parsing/TokenTests.html" class="extype" name="scala.xml.parsing.TokenTests">TokenTests</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The <code>Utility</code> object provides utility functions for processing instances
+of bound and not bound XML classes, as well as escaping text nodes.</p>
+    </li><li name="scala.xml.XML" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="XML"></a>
+      <a id="XML:XML"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="XML$.html"><span class="name">XML</span></a><span class="result"> extends <a href="factory/XMLLoader.html" class="extype" name="scala.xml.factory.XMLLoader">XMLLoader</a>[<a href="Elem.html" class="extype" name="scala.xml.Elem">Elem</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The object <code>XML</code> provides constants, and functions to load
+ and save XML elements.</p>
+    </li><li name="scala.xml.package#XercesClassName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="XercesClassName:String"></a>
+      <a id="XercesClassName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">XercesClassName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.Xhtml" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Xhtml"></a>
+      <a id="Xhtml:Xhtml"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Xhtml$.html"><span class="name">Xhtml</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.dtd" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dtd"></a>
+      <a id="dtd:dtd"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="dtd/package.html"><span class="name">dtd</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.factory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="factory"></a>
+      <a id="factory:factory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="factory/package.html"><span class="name">factory</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.include" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="include"></a>
+      <a id="include:include"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="include/package.html"><span class="name">include</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.parsing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="parsing"></a>
+      <a id="parsing:parsing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="parsing/package.html"><span class="name">parsing</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.persistent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="persistent"></a>
+      <a id="persistent:persistent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="persistent/package.html"><span class="name">persistent</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.xml.pull" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pull"></a>
+      <a id="pull:pull"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="pull/package.html"><span class="name">pull</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Classes needed to view an XML document as a series of events.</p>
+    </li><li name="scala.xml.transform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="transform"></a>
+      <a id="transform:transform"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="transform/package.html"><span class="name">transform</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../lib/diagrams.js"></script>
+    </body>
+      </html>

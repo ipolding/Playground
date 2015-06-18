@@ -1,0 +1,484 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>actors - Scala Standard Library API (Scaladoc) 2.10.2 - scala.actors</title>
+          <meta name="description" content="actors - Scala Standard Library API Scaladoc 2.10.2 - scala.actors" />
+          <meta name="keywords" content="actors Scala Standard Library API Scaladoc 2.10.2 scala.actors" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.actors.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a></p>
+        <h1>actors</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">actors</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A library that provides both asynchronous and synchronous messaging to allow
+for concurrent programming without explicit synchronization.</p><h4> Guide </h4><p>A detailed guide for the actors library is available
+<a href="http://docs.scala-lang.org/overviews/core/actors.html" target="_blank">http://docs.scala-lang.org/overviews/core/actors.html</a>.</p><h4> Getting Started </h4><p>A starting point for using the actors library would be <a href="Reactor.html" class="extype" name="scala.actors.Reactor">scala.actors.Reactor</a>,
+<a href="ReplyReactor.html" class="extype" name="scala.actors.ReplyReactor">scala.actors.ReplyReactor</a>, or <a href="Actor.html" class="extype" name="scala.actors.Actor">scala.actors.Actor</a> or their companion objects.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/actors/scala/actors/package.scala#L1" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph204" viewBox="0.00 0.00 592.00 344.00" height="344pt" width="592pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 340)" class="graph" id="graph1"><polygon points="-4,5 -4,-340 589,-340 589,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node trait" id="graph204_0"><a xlink:title="scala.actors.DaemonActor" xlink:href="DaemonActor.html#inheritance-diagram"><polygon points="120,-26 16,-26 16,-1.24345e-14 120,-3.55271e-15 120,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-21" x="26" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="48" text-anchor="start">DaemonActor</text></a></g><!-- node1 --><g class="node trait" id="graph204_1"><a xlink:title="scala.actors.InternalReplyReactor" xlink:href="InternalReplyReactor.html#inheritance-diagram"><polygon points="136,-212 7.10543e-14,-212 0,-186 136,-186 136,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-207" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="32" text-anchor="start">InternalReplyReactor</text></a></g><!-- node11 --><g class="node trait" id="graph204_11"><a xlink:title="scala.actors.ReplyReactor" xlink:href="ReplyReactor.html#inheritance-diagram"><polygon points="120,-150 16,-150 16,-124 120,-124 120,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-145" x="26" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="48" text-anchor="start">ReplyReactor</text></a></g><!-- node1&#45;&gt;node11 --><g class="edge inheritance" id="graph204_1_11"><a xlink:title="ReplyReactor is a subtype of InternalReplyReactor"><path d="M68,-180.646C68,-170.843 68,-159.003 68,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="66.2501,-180.851 68,-185.851 69.7501,-180.851 66.2501,-180.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph204_2"><a xlink:title="scala.actors.InputChannel" xlink:href="InputChannel.html#inheritance-diagram"><polygon points="460,-336 334,-336 334,-310 460,-310 460,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-331" x="344" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="366" text-anchor="start">InputChannel[Msg]</text></a></g><!-- node10 --><g class="node class" id="graph204_10"><a xlink:title="scala.actors.Channel" xlink:href="Channel.html#inheritance-diagram"><polygon points="368,-274 262,-274 262,-248 368,-248 368,-274" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-269" x="272" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="294" text-anchor="start">Channel[Msg]</text></a></g><!-- node2&#45;&gt;node10 --><g class="edge inheritance" id="graph204_2_10"><a xlink:title="Channel[Msg] is a subtype of InputChannel[Msg]"><path d="M375.56,-306.789C362.101,-296.613 344.97,-283.66 332.365,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="374.566,-308.232 379.61,-309.851 376.677,-305.44 374.566,-308.232" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph204_3"><a xlink:title="scala.actors.IScheduler" xlink:href="IScheduler.html#inheritance-diagram"><polygon points="568,-336 478,-336 478,-310 568,-310 568,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-331" x="488" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="510" text-anchor="start">IScheduler</text></a></g><!-- node6 --><g class="node trait" id="graph204_6"><a xlink:title="scala.actors.SchedulerAdapter" xlink:href="SchedulerAdapter.html#inheritance-diagram"><polygon points="584,-274 462,-274 462,-248 584,-248 584,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-269" x="472" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="494" text-anchor="start">SchedulerAdapter</text></a></g><!-- node3&#45;&gt;node6 --><g class="edge inheritance" id="graph204_3_6"><a xlink:title="SchedulerAdapter is a subtype of IScheduler"><path d="M523,-304.646C523,-294.843 523,-283.003 523,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="521.25,-304.851 523,-309.851 524.75,-304.851 521.25,-304.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node trait" id="graph204_4"><a xlink:title="scala.actors.Reactor" xlink:href="Reactor.html#inheritance-diagram"><polygon points="120,-274 16,-274 16,-248 120,-248 120,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-269" x="26" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="48" text-anchor="start">Reactor[Msg]</text></a></g><!-- node4&#45;&gt;node1 --><g class="edge inheritance" id="graph204_4_1"><a xlink:title="InternalReplyReactor is a subtype of Reactor[Msg]"><path d="M68,-242.646C68,-232.843 68,-221.003 68,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="66.2501,-242.851 68,-247.851 69.7501,-242.851 66.2501,-242.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node5 --><g class="node trait" id="graph204_5"><a xlink:title="scala.actors.Actor" xlink:href="Actor.html#inheritance-diagram"><polygon points="102,-88 34,-88 34,-62 102,-62 102,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-83" x="44" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="66" text-anchor="start">Actor</text></a></g><!-- node5&#45;&gt;node0 --><g class="edge inheritance" id="graph204_5_0"><a xlink:title="DaemonActor is a subtype of Actor"><path d="M68,-56.6463C68,-46.8429 68,-35.003 68,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="66.2501,-56.8514 68,-61.8514 69.7501,-56.8514 66.2501,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node7 --><g class="node trait" id="graph204_7"><a xlink:title="scala.actors.CanReply" xlink:href="CanReply.html#inheritance-diagram"><polygon points="316,-336 206,-336 206,-310 316,-310 316,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-331" x="216" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="238" text-anchor="start">CanReply[T, R]</text></a></g><!-- node9 --><g class="node trait" id="graph204_9"><a xlink:title="scala.actors.AbstractActor" xlink:href="AbstractActor.html#inheritance-diagram"><polygon points="244,-274 138,-274 138,-248 244,-248 244,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-269" x="148" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="170" text-anchor="start">AbstractActor</text></a></g><!-- node7&#45;&gt;node9 --><g class="edge inheritance" id="graph204_7_9"><a xlink:title="AbstractActor is a subtype of CanReply[T, R]"><path d="M242.4,-306.526C230.957,-296.39 216.491,-283.578 205.824,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="241.252,-307.846 246.155,-309.851 243.572,-305.226 241.252,-307.846" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node7&#45;&gt;node10 --><g class="edge inheritance" id="graph204_7_10"><a xlink:title="Channel[Msg] is a subtype of CanReply[T, R]"><path d="M275.811,-305.994C284.564,-295.946 295.478,-283.414 303.564,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="274.416,-304.932 272.452,-309.851 277.056,-307.23 274.416,-304.932" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node8 --><g class="node trait" id="graph204_8"><a xlink:title="scala.actors.OutputChannel" xlink:href="OutputChannel.html#inheritance-diagram"><polygon points="188,-336 54,-336 54,-310 188,-310 188,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-331" x="64" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="86" text-anchor="start">OutputChannel[Msg]</text></a></g><!-- node8&#45;&gt;node4 --><g class="edge inheritance" id="graph204_8_4"><a xlink:title="Reactor[Msg] is a subtype of OutputChannel[Msg]"><path d="M106.463,-305.994C97.8728,-295.946 87.1602,-283.414 79.2237,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="105.181,-307.188 109.76,-309.851 107.841,-304.914 105.181,-307.188" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node8&#45;&gt;node9 --><g class="edge inheritance" id="graph204_8_9"><a xlink:title="AbstractActor is a subtype of OutputChannel[Msg]"><path d="M139.6,-306.526C151.043,-296.39 165.509,-283.578 176.176,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="138.428,-305.226 135.845,-309.851 140.748,-307.846 138.428,-305.226" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node8&#45;&gt;node10 --><g class="edge inheritance" id="graph204_8_10"><a xlink:title="Channel[Msg] is a subtype of OutputChannel[Msg]"><path d="M167.273,-308.212C199.829,-297.807 242.993,-284.013 274.25,-274.023" stroke="#d4d4d4" fill="none"></path><polygon points="166.372,-306.662 162.142,-309.851 167.438,-309.996 166.372,-306.662" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node11&#45;&gt;node5 --><g class="edge inheritance" id="graph204_11_5"><a xlink:title="Actor is a subtype of ReplyReactor"><path d="M68,-118.646C68,-108.843 68,-97.003 68,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="66.2501,-118.851 68,-123.851 69.7501,-118.851 66.2501,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.actors"><span>actors</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.actors.!" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="![a]extendsProductwithSerializable"></a>
+      <a id="![a]:![a]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="$bang.html"><span title="gt4s: $bang" class="name">!</span></a><span class="tparams">[<span name="a">a</span>]</span><span class="params">(<span name="ch">ch: <a href="Channel.html" class="extype" name="scala.actors.Channel">Channel</a>[<span class="extype" name="scala.actors.!.a">a</span>]</span>, <span name="msg">msg: <span class="extype" name="scala.actors.!.a">a</span></span>)</span><span class="result"> extends <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Used to pattern match on values that were sent to some channel <code>Chan<sub>n</sub></code>
+by the current actor <code>self</code>.</p>
+    </li><li name="scala.actors.AbstractActor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AbstractActorextendsOutputChannel[Any]withCanReply[Any,Any]"></a>
+      <a id="AbstractActor:AbstractActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="AbstractActor.html"><span class="name">AbstractActor</span></a><span class="result"> extends <a href="OutputChannel.html" class="extype" name="scala.actors.OutputChannel">OutputChannel</a>[<a href="../Any.html" class="extype" name="scala.Any">Any</a>] with <a href="CanReply.html" class="extype" name="scala.actors.CanReply">CanReply</a>[<a href="../Any.html" class="extype" name="scala.Any">Any</a>, <a href="../Any.html" class="extype" name="scala.Any">Any</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li name="scala.actors.Actor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ActorextendsInternalActorwithReplyReactor"></a>
+      <a id="Actor:Actor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Actor.html"><span class="name">Actor</span></a><span class="result"> extends <span class="extype" name="scala.actors.InternalActor">InternalActor</span> with <a href="ReplyReactor.html" class="extype" name="scala.actors.ReplyReactor">ReplyReactor</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides lightweight, concurrent actors.</p>
+    </li><li name="scala.actors.AskTimeoutException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AskTimeoutExceptionextendsTimeoutException"></a>
+      <a id="AskTimeoutException:AskTimeoutException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AskTimeoutException.html"><span class="name">AskTimeoutException</span></a><span class="result"> extends <span class="extype" name="java.util.concurrent.TimeoutException">TimeoutException</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This is what is used to complete a Future that is returned from an ask/? call,
+when it times out.</p>
+    </li><li name="scala.actors.CanReply" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CanReply[-T,+R]extendsAnyRef"></a>
+      <a id="CanReply[-T,+R]:CanReply[T,R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CanReply.html"><span class="name">CanReply</span></a><span class="tparams">[<span name="T">-T</span>, <span name="R">+R</span>]</span><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Defines result-bearing message send operations.</p>
+    </li><li name="scala.actors.Channel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Channel[Msg]extendsInputChannel[Msg]withOutputChannel[Msg]withCanReply[Msg,Any]"></a>
+      <a id="Channel[Msg]:Channel[Msg]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Channel.html"><span class="name">Channel</span></a><span class="tparams">[<span name="Msg">Msg</span>]</span><span class="result"> extends <a href="InputChannel.html" class="extype" name="scala.actors.InputChannel">InputChannel</a>[<span class="extype" name="scala.actors.Channel.Msg">Msg</span>] with <a href="OutputChannel.html" class="extype" name="scala.actors.OutputChannel">OutputChannel</a>[<span class="extype" name="scala.actors.Channel.Msg">Msg</span>] with <a href="CanReply.html" class="extype" name="scala.actors.CanReply">CanReply</a>[<span class="extype" name="scala.actors.Channel.Msg">Msg</span>, <a href="../Any.html" class="extype" name="scala.Any">Any</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides a means for typed communication among actors.</p>
+    </li><li name="scala.actors.DaemonActor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DaemonActorextendsActor"></a>
+      <a id="DaemonActor:DaemonActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DaemonActor.html"><span class="name">DaemonActor</span></a><span class="result"> extends <a href="Actor.html" class="extype" name="scala.actors.Actor">Actor</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base trait for actors with daemon semantics.</p>
+    </li><li name="scala.actors.Exit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExitextendsProductwithSerializable"></a>
+      <a id="Exit:Exit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Exit.html"><span class="name">Exit</span></a><span class="params">(<span name="from">from: <a href="AbstractActor.html" class="extype" name="scala.actors.AbstractActor">AbstractActor</a></span>, <span name="reason">reason: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result"> extends <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Sent to an actor
+ with <code>trapExit</code> set to <code>true</code> whenever one of its linked actors
+ terminates.</p>
+    </li><li name="scala.actors.Future" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Future[+T]extendsResponder[T]with()=&gt;T"></a>
+      <a id="Future[+T]:Future[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Future.html"><span class="name">Future</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="../Responder.html" class="extype" name="scala.Responder">Responder</a>[<span class="extype" name="scala.actors.Future.T">T</span>] with () ⇒ <span class="extype" name="scala.actors.Future.T">T</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A function of arity 0, returing a value of type <code>T</code> that,
+ when applied, blocks the current actor (<code>Actor.self</code>)
+ until the future's value is available.</p>
+    </li><li name="scala.actors.IScheduler" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ISchedulerextendsAnyRef"></a>
+      <a id="IScheduler:IScheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="IScheduler.html"><span class="name">IScheduler</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A common interface for all schedulers used to execute actor tasks.</p>
+    </li><li name="scala.actors.InputChannel" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="InputChannel[+Msg]extendsAnyRef"></a>
+      <a id="InputChannel[+Msg]:InputChannel[Msg]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="InputChannel.html"><span class="name">InputChannel</span></a><span class="tparams">[<span name="Msg">+Msg</span>]</span><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A common interface for all channels from which values can be received.</p>
+    </li><li name="scala.actors.InternalReplyReactor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="InternalReplyReactorextendsReactor[Any]withReactorCanReply"></a>
+      <a id="InternalReplyReactor:InternalReplyReactor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="InternalReplyReactor.html"><span class="name">InternalReplyReactor</span></a><span class="result"> extends <a href="Reactor.html" class="extype" name="scala.actors.Reactor">Reactor</a>[<a href="../Any.html" class="extype" name="scala.Any">Any</a>] with <span class="extype" name="scala.actors.ReactorCanReply">ReactorCanReply</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Extends the <a href="Reactor.html" class="extype" name="scala.actors.Reactor">scala.actors.Reactor</a>
+   trait with methods to reply to the sender of a message.</p>
+    </li><li name="scala.actors.OutputChannel" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="OutputChannel[-Msg]extendsAnyRef"></a>
+      <a id="OutputChannel[-Msg]:OutputChannel[Msg]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="OutputChannel.html"><span class="name">OutputChannel</span></a><span class="tparams">[<span name="Msg">-Msg</span>]</span><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A common interface for all channels to which values can be sent.</p>
+    </li><li name="scala.actors.Reactor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Reactor[Msg&gt;:Null]extendsOutputChannel[Msg]withCombinators"></a>
+      <a id="Reactor[Msg&gt;:Null]:Reactor[Msg]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Reactor.html"><span class="name">Reactor</span></a><span class="tparams">[<span name="Msg">Msg &gt;: <a href="../Null.html" class="extype" name="scala.Null">Null</a></span>]</span><span class="result"> extends <a href="OutputChannel.html" class="extype" name="scala.actors.OutputChannel">OutputChannel</a>[<span class="extype" name="scala.actors.Reactor.Msg">Msg</span>] with <span class="extype" name="scala.actors.Combinators">Combinators</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Super trait of all actor traits.</p>
+    </li><li name="scala.actors.SchedulerAdapter" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SchedulerAdapterextendsIScheduler"></a>
+      <a id="SchedulerAdapter:SchedulerAdapter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SchedulerAdapter.html"><span class="name">SchedulerAdapter</span></a><span class="result"> extends <a href="IScheduler.html" class="extype" name="scala.actors.IScheduler">IScheduler</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Adapts
+ the behavior of the standard <a href="Scheduler$.html" class="extype" name="scala.actors.Scheduler">scala.actors.Scheduler</a> object.</p>
+    </li><li name="scala.actors.UncaughtException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UncaughtExceptionextendsExceptionwithProductwithSerializable"></a>
+      <a id="UncaughtException:UncaughtException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="UncaughtException.html"><span class="name">UncaughtException</span></a><span class="params">(<span name="actor">actor: <span class="extype" name="scala.actors.InternalActor">InternalActor</span></span>, <span name="message">message: <a href="../Option.html" class="extype" name="scala.Option">Option</a>[<a href="../Any.html" class="extype" name="scala.Any">Any</a>]</span>, <span name="sender">sender: <a href="../Option.html" class="extype" name="scala.Option">Option</a>[<a href="OutputChannel.html" class="extype" name="scala.actors.OutputChannel">OutputChannel</a>[<a href="../Any.html" class="extype" name="scala.Any">Any</a>]]</span>, <span name="thread">thread: <span class="extype" name="java.lang.Thread">Thread</span></span>, <span name="cause">cause: <a href="../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result"> extends <a href="../package.html#Exception=Exception" class="extmbr" name="scala.Exception">Exception</a> with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The exit reason when an actor fails to catch an exception.</p>
+    </li><li name="scala.actors.ActorRef" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ActorRefextendsAnyRef"></a>
+      <a id="ActorRef:ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ActorRef.html"><span class="name deprecated" title="Deprecated: (Since version 2.10.0) ActorRef ought to be used only with the Actor Migration Kit.">ActorRef</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait used for migration of Scala actors to Akka.</p>
+    </li><li name="scala.actors.ReplyReactor" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ReplyReactorextendsInternalReplyReactor"></a>
+      <a id="ReplyReactor:ReplyReactor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ReplyReactor.html"><span class="name deprecated" title="Deprecated: (Since version 2.10) Scala Actors are being removed from the standard library. Please refer to the migration guide.">ReplyReactor</span></a><span class="result"> extends <a href="InternalReplyReactor.html" class="extype" name="scala.actors.InternalReplyReactor">InternalReplyReactor</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10)</i> Scala Actors are being removed from the standard library. Please refer to the migration guide.</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.actors.Actor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Actor"></a>
+      <a id="Actor:Actor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Actor$.html"><span class="name">Actor</span></a><span class="result"> extends <span class="extype" name="scala.actors.Combinators">Combinators</span> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides functions for the definition of actors, as well as actor
+operations, such as <code>receive</code>, <code>react</code>, <code>reply</code>, etc.</p>
+    </li><li name="scala.actors.Debug" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Debug"></a>
+      <a id="Debug:Debug"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Debug$.html"><span class="name">Debug</span></a><span class="result"> extends <span class="extype" name="scala.actors.Logger">Logger</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides methods for generating debugging output.</p>
+    </li><li name="scala.actors.Futures" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Futures"></a>
+      <a id="Futures:Futures"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Futures$.html"><span class="name">Futures</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Methods that operate on futures.</p>
+    </li><li name="scala.actors.PoisonPill" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PoisonPill"></a>
+      <a id="PoisonPill:PoisonPill"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PoisonPill$.html"><span class="name">PoisonPill</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.actors.Scheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Scheduler"></a>
+      <a id="Scheduler:Scheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Scheduler$.html"><span class="name">Scheduler</span></a><span class="result"> extends <span class="extype" name="scala.actors.scheduler.DelegatingScheduler">DelegatingScheduler</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Used by <a href="Actor.html" class="extype" name="scala.actors.Actor">scala.actors.Actor</a> instances to
+execute tasks of an actor execution.</p>
+    </li><li name="scala.actors.TIMEOUT" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TIMEOUT"></a>
+      <a id="TIMEOUT:TIMEOUT"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TIMEOUT$.html"><span class="name">TIMEOUT</span></a><span class="result"> extends <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   Used as the timeout pattern in
+   <a href="Actor.html#receiveWithin(Long)" target="contentFrame">
+   <code>receiveWithin</code></a> and
+   <a href="Actor.html#reactWithin(Long)" target="contentFrame">
+   <code>reactWithin</code></a>.</a></a></p>
+    </li><li name="scala.actors.remote" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="remote"></a>
+      <a id="remote:remote"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="remote/package.html"><span class="name">remote</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.actors.scheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="scheduler"></a>
+      <a id="scheduler:scheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="scheduler/package.html"><span class="name">scheduler</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../lib/diagrams.js"></script>
+    </body>
+      </html>

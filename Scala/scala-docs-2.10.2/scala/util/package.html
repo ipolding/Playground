@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>util - Scala Standard Library API (Scaladoc) 2.10.2 - scala.util</title>
+          <meta name="description" content="util - Scala Standard Library API Scaladoc 2.10.2 - scala.util" />
+          <meta name="keywords" content="util Scala Standard Library API Scaladoc 2.10.2 scala.util" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.util.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a></p>
+        <h1>util</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">util</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph250" viewBox="0.00 0.00 522.00 96.00" height="96pt" width="522pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 92)" class="graph" id="graph1"><polygon points="-4,5 -4,-92 519,-92 519,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node class" id="graph250_0"><a xlink:title="scala.util.Try" xlink:href="Try.html#inheritance-diagram"><polygon points="136,-88 66,-88 66,-62 136,-62 136,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-83" x="76" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="98" text-anchor="start">Try[T]</text></a></g><!-- node2 --><g class="node class" id="graph250_2"><a xlink:title="scala.util.Success" xlink:href="Success.html#inheritance-diagram"><polygon points="94,-26 4.9738e-14,-26 0,-1.24345e-14 94,-3.55271e-15 94,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="32" text-anchor="start">Success[T]</text></a></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph250_0_2"><a xlink:title="Success[T] is a subtype of Try[T]"><path d="M86.1886,-57.9943C77.4365,-47.9456 66.5217,-35.4138 58.4355,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="84.9444,-59.2303 89.548,-61.8514 87.5837,-56.9316 84.9444,-59.2303" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node5 --><g class="node class" id="graph250_5"><a xlink:title="scala.util.Failure" xlink:href="Failure.html#inheritance-diagram"><polygon points="198,-26 112,-26 112,-1.24345e-14 198,-3.55271e-15 198,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="122" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="144" text-anchor="start">Failure[T]</text></a></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph250_0_5"><a xlink:title="Failure[T] is a subtype of Try[T]"><path d="M115.811,-57.9943C124.564,-47.9456 135.478,-35.4138 143.564,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="114.416,-56.9316 112.452,-61.8514 117.056,-59.2303 114.416,-56.9316" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node1 --><g class="node class" id="graph250_1"><a xlink:title="scala.util.Either" xlink:href="Either.html#inheritance-diagram"><polygon points="362,-88 266,-88 266,-62 362,-62 362,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-83" x="276" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="298" text-anchor="start">Either[A, B]</text></a></g><!-- node6 --><g class="node class" id="graph250_6"><a xlink:title="scala.util.Right" xlink:href="Right.html#inheritance-diagram"><polygon points="310,-26 216,-26 216,-1.24345e-14 310,-3.55271e-15 310,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="226" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="248" text-anchor="start">Right[A, B]</text></a></g><!-- node1&#45;&gt;node6 --><g class="edge inheritance" id="graph250_1_6"><a xlink:title="Right[A, B] is a subtype of Either[A, B]"><path d="M299.792,-57.727C291.563,-47.724 281.37,-35.3317 273.8,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="298.656,-59.1017 303.184,-61.8514 301.359,-56.8782 298.656,-59.1017" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node7 --><g class="node class" id="graph250_7"><a xlink:title="scala.util.Left" xlink:href="Left.html#inheritance-diagram"><polygon points="414,-26 328,-26 328,-1.24345e-14 414,-3.55271e-15 414,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="338" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="360" text-anchor="start">Left[A, B]</text></a></g><!-- node1&#45;&gt;node7 --><g class="edge inheritance" id="graph250_1_7"><a xlink:title="Left[A, B] is a subtype of Either[A, B]"><path d="M329.634,-57.9943C338.873,-47.9456 350.394,-35.4138 358.929,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="328.184,-56.9861 326.088,-61.8514 330.761,-59.3549 328.184,-56.9861" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node object" id="graph250_3"><a xlink:title="scala.util.Random" xlink:href="Random$.html#inheritance-diagram"><polygon points="514,-26 432,-26 432,-1.24345e-14 514,-3.55271e-15 514,-26" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-21" x="442" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="464" text-anchor="start">Random</text></a></g><!-- node4 --><g class="node class" id="graph250_4"><a xlink:title="scala.util.Random" xlink:href="Random.html#inheritance-diagram"><polygon points="514,-88 432,-88 432,-62 514,-62 514,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-83" x="442" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="464" text-anchor="start">Random</text></a></g><!-- node4&#45;&gt;node3 --><g class="edge inheritance" id="graph250_4_3"><a xlink:title="Random is a subtype of Random"><path d="M473,-56.6463C473,-46.8429 473,-35.003 473,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="471.25,-56.8514 473,-61.8514 474.75,-56.8514 471.25,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.util.DynamicVariable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DynamicVariable[T]extendsAnyRef"></a>
+      <a id="DynamicVariable[T]:DynamicVariable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DynamicVariable.html"><span class="name">DynamicVariable</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><code>DynamicVariables</code> provide a binding mechanism where the current
+ value is found through dynamic scope, but where access to the
+ variable itself is resolved through static scope.</p>
+    </li><li name="scala.util.Either" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Either[+A,+B]extendsAnyRef"></a>
+      <a id="Either[+A,+B]:Either[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Either.html"><span class="name">Either</span></a><span class="tparams">[<span name="A">+A</span>, <span name="B">+B</span>]</span><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Represents a value of one of two possible types (a disjoint union.</p>
+    </li><li name="scala.util.Failure" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Failure[+T]extendsTry[T]withProductwithSerializable"></a>
+      <a id="Failure[+T]:Failure[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Failure.html"><span class="name">Failure</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="params">(<span name="exception">exception: <a href="../package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result"> extends <a href="Try.html" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Failure.T">T</span>] with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.Left" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Left[+A,+B]extendsEither[A,B]withProductwithSerializable"></a>
+      <a id="Left[+A,+B]:Left[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Left.html"><span class="name">Left</span></a><span class="tparams">[<span name="A">+A</span>, <span name="B">+B</span>]</span><span class="params">(<span name="a">a: <span class="extype" name="scala.util.Left.A">A</span></span>)</span><span class="result"> extends <a href="Either.html" class="extype" name="scala.util.Either">Either</a>[<span class="extype" name="scala.util.Left.A">A</span>, <span class="extype" name="scala.util.Left.B">B</span>] with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The left side of the disjoint union, as opposed to the <a href="Right.html" class="extype" name="scala.util.Right">scala.util.Right</a> side.</p>
+    </li><li name="scala.util.Random" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RandomextendsAnyRef"></a>
+      <a id="Random:Random"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Random.html"><span class="name">Random</span></a><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li name="scala.util.Right" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Right[+A,+B]extendsEither[A,B]withProductwithSerializable"></a>
+      <a id="Right[+A,+B]:Right[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Right.html"><span class="name">Right</span></a><span class="tparams">[<span name="A">+A</span>, <span name="B">+B</span>]</span><span class="params">(<span name="b">b: <span class="extype" name="scala.util.Right.B">B</span></span>)</span><span class="result"> extends <a href="Either.html" class="extype" name="scala.util.Either">Either</a>[<span class="extype" name="scala.util.Right.A">A</span>, <span class="extype" name="scala.util.Right.B">B</span>] with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The right side of the disjoint union, as opposed to the <a href="Left.html" class="extype" name="scala.util.Left">scala.util.Left</a> side.</p>
+    </li><li name="scala.util.Success" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Success[+T]extendsTry[T]withProductwithSerializable"></a>
+      <a id="Success[+T]:Success[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Success.html"><span class="name">Success</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="scala.util.Success.T">T</span></span>)</span><span class="result"> extends <a href="Try.html" class="extype" name="scala.util.Try">Try</a>[<span class="extype" name="scala.util.Success.T">T</span>] with <a href="../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.Try" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Try[+T]extendsAnyRef"></a>
+      <a id="Try[+T]:Try[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Try.html"><span class="name">Try</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The <code>Try</code> type represents a computation that may either result in an exception, or return a
+successfully computed value.</p>
+    </li><li name="scala.util.MurmurHash" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MurmurHash[T]extendsT=&gt;Unit"></a>
+      <a id="MurmurHash[T]:MurmurHash[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MurmurHash.html"><span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use the object MurmurHash3 instead.">MurmurHash</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends (<span class="extype" name="scala.util.MurmurHash.T">T</span>) ⇒ <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A class designed to generate well-distributed non-cryptographic
+ hashes.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.util.Either" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Either"></a>
+      <a id="Either:Either"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Either$.html"><span class="name">Either</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.Properties" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Properties"></a>
+      <a id="Properties:Properties"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Properties$.html"><span class="name">Properties</span></a><span class="result"> extends <span class="extype" name="scala.util.PropertiesTrait">PropertiesTrait</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Loads <code>library.properties</code> from the jar.</p>
+    </li><li name="scala.util.Random" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Random"></a>
+      <a id="Random:Random"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Random$.html"><span class="name">Random</span></a><span class="result"> extends <a href="Random.html" class="extype" name="scala.util.Random">Random</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The object <code>Random</code> offers a default implementation
+ of scala.</p>
+    </li><li name="scala.util.Sorting" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Sorting"></a>
+      <a id="Sorting:Sorting"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Sorting$.html"><span class="name">Sorting</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">The Sorting object provides functions that can sort various kinds of
+objects.</p>
+    </li><li name="scala.util.Try" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Try"></a>
+      <a id="Try:Try"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Try$.html"><span class="name">Try</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.automata" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="automata"></a>
+      <a id="automata:automata"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="automata/package.html"><span class="name">automata</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.continuations" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="continuations"></a>
+      <a id="continuations:continuations"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="continuations/package.html"><span class="name">continuations</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Delimited continuations are a feature for modifying the usual control flow
+of a program.</p>
+    </li><li name="scala.util.control" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="control"></a>
+      <a id="control:control"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="control/package.html"><span class="name">control</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.grammar" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="grammar"></a>
+      <a id="grammar:grammar"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="grammar/package.html"><span class="name">grammar</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.hashing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hashing"></a>
+      <a id="hashing:hashing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="hashing/package.html"><span class="name">hashing</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.logging" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="logging"></a>
+      <a id="logging:logging"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="logging/package.html"><span class="name">logging</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.matching" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="matching"></a>
+      <a id="matching:matching"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="matching/package.html"><span class="name">matching</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.parsing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="parsing"></a>
+      <a id="parsing:parsing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="parsing/package.html"><span class="name">parsing</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="scala.util.regexp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="regexp"></a>
+      <a id="regexp:regexp"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="regexp/package.html"><span class="name">regexp</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.util.Marshal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Marshal"></a>
+      <a id="Marshal:Marshal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Marshal$.html"><span class="name deprecated" title="Deprecated: (Since version 2.10.0) This class will be removed">Marshal</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Marshalling of Scala objects using Scala tags.</p>
+    </li><li name="scala.util.MurmurHash" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MurmurHash"></a>
+      <a id="MurmurHash:MurmurHash"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MurmurHash$.html"><span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use the object MurmurHash3 instead.">MurmurHash</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">An object designed to generate well-distributed non-cryptographic
+ hashes.</p>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../lib/diagrams.js"></script>
+    </body>
+      </html>

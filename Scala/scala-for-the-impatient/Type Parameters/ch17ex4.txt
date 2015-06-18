@@ -1,0 +1,58 @@
+/*
+Why don't we need a lower bound for replaceFirst method in section 17.3?
+if we want to replace the first component of a Pair[Person] with Student?
+*/
+
+The lower bound S <: T means that S must be a subtype of T.
+
+The prpelace first method looks like this
+
+class Pair[T](val first: T, val second: T) {
+    def replaceFirst(newFirst: T) = new Pair[T](newFirst, second)
+}
+
+Pair has a Type of T and only T.
+
+A Pair[Person].replaceFirst(Student)
+
+Student will get treated as a Person, not as a student.
+
+Proof?:
+
+class Person(val firstName : String){
+    override def toString : String = this.getClass() + " " + firstName
+}
+
+class Student(firstName: String)  extends Person(firstName){}
+
+class Pair[T](val first: T, val second: T) {
+    def replaceFirst(newFirst: T) = new Pair[T](newFirst, second)
+}
+
+val davidCameron = new Person("Dave")
+val nickClegg = new Person("Nick")
+val peterParker = new Student("Peter")
+
+val couple = new Pair[Person](davidCameron, nickClegg)
+
+scala> davidCameron
+res1: Person = class Person Dave
+
+scala> couple.first
+res2: Person = class Person Dave
+
+scala> val peterParker = new Student("Peter")
+peterParker: Student = class Student Peter
+
+couple.replaceFirst(peterParker) 
+scala> couple.replaceFirst(peterParker) 
+res4: Pair[Person] = Pair@1521f901
+
+scala> res4.first
+res5: Person = class Student Peter //here Peter is treated as a Person even though he is a student
+
+WE DON'T NEED NO LOWER BOUNDS!!!!!
+
+
+
+

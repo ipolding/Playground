@@ -1,0 +1,810 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>Publisher - Scala Standard Library API (Scaladoc) 2.10.2 - scala.swing.Publisher</title>
+          <meta name="description" content="Publisher - Scala Standard Library API Scaladoc 2.10.2 - scala.swing.Publisher" />
+          <meta name="keywords" content="Publisher Scala Standard Library API Scaladoc 2.10.2 scala.swing.Publisher" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.swing.Publisher';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../lib/trait_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a>.<a href="package.html" class="extype" name="scala.swing">swing</a></p>
+        <h1>Publisher</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Publisher</span><span class="result"> extends <a href="Reactor.html" class="extype" name="scala.swing.Reactor">Reactor</a></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>   Notifies registered reactions when an event is published. Publishers are
+   also reactors and listen to themselves per default as a convenience.</p><p>   In order to reduce memory leaks, reactions are weakly referenced by default,
+   unless they implement <code>Reactions.StronglyReferenced</code>. That way,
+   the lifetime of reactions are more easily bound to the registering object,
+   which are reactors in common client code and hold strong references to their
+   reactions. As a result, reactors can be garbage collected even though they
+   still have reactions registered at some publisher, but not vice versa
+   since reactors (strongly) reference publishers they are interested in.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/swing/scala/swing/Publisher.scala#L1" target="_blank">Publisher.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="Reactor.html" class="extype" name="scala.swing.Reactor">Reactor</a>, <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a href="AbstractButton.html" class="extype" name="scala.swing.AbstractButton">AbstractButton</a>, <a href="BorderPanel.html" class="extype" name="scala.swing.BorderPanel">BorderPanel</a>, <a href="BoxPanel.html" class="extype" name="scala.swing.BoxPanel">BoxPanel</a>, <a href="ComboBox$$BuiltInEditor.html" class="extype" name="scala.swing.ComboBox.BuiltInEditor">BuiltInEditor</a>, <a href="Button.html" class="extype" name="scala.swing.Button">Button</a>, <a href="TextComponent$Caret.html" class="extype" name="scala.swing.TextComponent.Caret">Caret</a>, <a href="CheckBox.html" class="extype" name="scala.swing.CheckBox">CheckBox</a>, <a href="CheckMenuItem.html" class="extype" name="scala.swing.CheckMenuItem">CheckMenuItem</a>, <a href="ComboBox.html" class="extype" name="scala.swing.ComboBox">ComboBox</a>, <a href="Component.html" class="extype" name="scala.swing.Component">Component</a>, <a href="Container.html" class="extype" name="scala.swing.Container">Container</a>, <a href="Dialog.html" class="extype" name="scala.swing.Dialog">Dialog</a>, <a href="ComboBox$$Editor.html" class="extype" name="scala.swing.ComboBox.Editor">Editor</a>, <a href="EditorPane.html" class="extype" name="scala.swing.EditorPane">EditorPane</a>, <a href="FlowPanel.html" class="extype" name="scala.swing.FlowPanel">FlowPanel</a>, <a href="FormattedTextField.html" class="extype" name="scala.swing.FormattedTextField">FormattedTextField</a>, <a href="Frame.html" class="extype" name="scala.swing.Frame">Frame</a>, <a href="GridBagPanel.html" class="extype" name="scala.swing.GridBagPanel">GridBagPanel</a>, <a href="GridPanel.html" class="extype" name="scala.swing.GridPanel">GridPanel</a>, <a href="TextComponent$$HasColumns.html" class="extype" name="scala.swing.TextComponent.HasColumns">HasColumns</a>, <a href="TextComponent$$HasRows.html" class="extype" name="scala.swing.TextComponent.HasRows">HasRows</a>, <a href="Label.html" class="extype" name="scala.swing.Label">Label</a>, <a href="LayoutContainer.html" class="extype" name="scala.swing.LayoutContainer">LayoutContainer</a>, <a href="ListView.html" class="extype" name="scala.swing.ListView">ListView</a>, <a href="MainFrame.html" class="extype" name="scala.swing.MainFrame">MainFrame</a>, <a href="Menu.html" class="extype" name="scala.swing.Menu">Menu</a>, <a href="MenuBar.html" class="extype" name="scala.swing.MenuBar">MenuBar</a>, <a href="MenuItem.html" class="extype" name="scala.swing.MenuItem">MenuItem</a>, <a href="MenuBar$$NoMenuBar$.html" class="extype" name="scala.swing.MenuBar.NoMenuBar">NoMenuBar</a>, <a href="Panel.html" class="extype" name="scala.swing.Panel">Panel</a>, <a href="PasswordField.html" class="extype" name="scala.swing.PasswordField">PasswordField</a>, <a href="ProgressBar.html" class="extype" name="scala.swing.ProgressBar">ProgressBar</a>, <a href="RadioButton.html" class="extype" name="scala.swing.RadioButton">RadioButton</a>, <a href="RadioMenuItem.html" class="extype" name="scala.swing.RadioMenuItem">RadioMenuItem</a>, <a href="RichWindow.html" class="extype" name="scala.swing.RichWindow">RichWindow</a>, <a href="RootPanel.html" class="extype" name="scala.swing.RootPanel">RootPanel</a>, <a href="ScrollBar.html" class="extype" name="scala.swing.ScrollBar">ScrollBar</a>, <a href="ScrollPane.html" class="extype" name="scala.swing.ScrollPane">ScrollPane</a>, <a href="Scrollable.html" class="extype" name="scala.swing.Scrollable">Scrollable</a>, <a href="Separator.html" class="extype" name="scala.swing.Separator">Separator</a>, <a href="SequentialContainer.html" class="extype" name="scala.swing.SequentialContainer">SequentialContainer</a>, <a href="Slider.html" class="extype" name="scala.swing.Slider">Slider</a>, <a href="SplitPane.html" class="extype" name="scala.swing.SplitPane">SplitPane</a>, <a href="TabbedPane.html" class="extype" name="scala.swing.TabbedPane">TabbedPane</a>, <a href="Table.html" class="extype" name="scala.swing.Table">Table</a>, <a href="TextArea.html" class="extype" name="scala.swing.TextArea">TextArea</a>, <a href="TextComponent.html" class="extype" name="scala.swing.TextComponent">TextComponent</a>, <a href="TextField.html" class="extype" name="scala.swing.TextField">TextField</a>, <a href="ToggleButton.html" class="extype" name="scala.swing.ToggleButton">ToggleButton</a>, <a href="Applet$UI.html" class="extype" name="scala.swing.Applet.UI">UI</a>, <a href="UIElement.html" class="extype" name="scala.swing.UIElement">UIElement</a>, <a href="RichWindow$$Undecorated.html" class="extype" name="scala.swing.RichWindow.Undecorated">Undecorated</a>, <a href="Window.html" class="extype" name="scala.swing.Window">Window</a>, <a href="SequentialContainer$$Wrapper.html" class="extype" name="scala.swing.SequentialContainer.Wrapper">Wrapper</a>, <a href="Scrollable$$Wrapper.html" class="extype" name="scala.swing.Scrollable.Wrapper">Wrapper</a>, <a href="Container$$Wrapper.html" class="extype" name="scala.swing.Container.Wrapper">Wrapper</a>, <a href="TextComponent$caret$.html" class="extype" name="scala.swing.TextComponent.caret">caret</a>, <a href="Component$keys$.html" class="extype" name="scala.swing.Component.keys">keys</a>, <a href="Table$selection$.html" class="extype" name="scala.swing.Table.selection">selection</a>, <a href="TabbedPane$selection$.html" class="extype" name="scala.swing.TabbedPane.selection">selection</a>, <a href="ListView$selection$.html" class="extype" name="scala.swing.ListView.selection">selection</a>, <a href="ComboBox$selection$.html" class="extype" name="scala.swing.ComboBox.selection">selection</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph137" viewBox="0.00 0.00 1546.00 158.00" height="158pt" width="1546pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph1"><polygon points="-4,5 -4,-154 1543,-154 1543,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this trait" id="graph137_0"><a xlink:title="scala.swing.Publisher (this trait)" xlink:href="#inheritance-diagram"><polygon points="835,-88 749,-88 749,-62 835,-62 835,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-83" x="759" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="781" text-anchor="start">Publisher</text></a></g><!-- node1 --><g class="node class" id="graph137_1"><a xlink:title="scala.swing.AbstractButton" xlink:href="AbstractButton.html#inheritance-diagram"><polygon points="110,-26 3.55271e-14,-26 0,-1.24345e-14 110,-3.55271e-15 110,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="32" text-anchor="start">AbstractButton</text></a></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph137_0_1"><a xlink:title="AbstractButton is a subtype of Publisher"><path d="M743.742,-73.6012C632.906,-69.9275 351.776,-57.982 119,-26 116.08,-25.5987 113.092,-25.1449 110.082,-24.6533" stroke="#d4d4d4" fill="none"></path><polygon points="743.835,-75.3551 748.89,-73.7699 743.95,-71.857 743.835,-75.3551" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node class" id="graph137_2"><a xlink:title="scala.swing.Button" xlink:href="Button.html#inheritance-diagram"><polygon points="202,-26 128,-26 128,-1.24345e-14 202,-3.55271e-15 202,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="138" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="160" text-anchor="start">Button</text></a></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph137_0_2"><a xlink:title="Button is a subtype of Publisher"><path d="M743.749,-74.043C643.651,-71.377 406.443,-61.5207 211,-26 208.061,-25.4658 205.038,-24.8247 202.014,-24.1174" stroke="#d4d4d4" fill="none"></path><polygon points="743.946,-75.7987 748.99,-74.1793 744.037,-72.2998 743.946,-75.7987" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node class" id="graph137_3"><a xlink:title="scala.swing.TextComponent.Caret" xlink:href="TextComponent$Caret.html#inheritance-diagram"><polygon points="288,-26 220,-26 220,-1.24345e-14 288,-3.55271e-15 288,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="230" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="252" text-anchor="start">Caret</text></a></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph137_0_3"><a xlink:title="Caret is a subtype of Publisher"><path d="M743.684,-73.3408C654.589,-69.5923 458.735,-58.134 297,-26 294.093,-25.4225 291.102,-24.73 288.115,-23.9693" stroke="#d4d4d4" fill="none"></path><polygon points="743.812,-75.0975 748.88,-73.5557 743.957,-71.6005 743.812,-75.0975" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node class" id="graph137_4"><a xlink:title="scala.swing.ComboBox" xlink:href="ComboBox.html#inheritance-diagram"><polygon points="412,-26 306,-26 306,-1.24345e-14 412,-3.55271e-15 412,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="316" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="338" text-anchor="start">ComboBox[A]</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge inheritance" id="graph137_0_4"><a xlink:title="ComboBox[A] is a subtype of Publisher"><path d="M744.008,-69.8322C673.13,-61.9354 536.391,-45.6888 421,-26 418.073,-25.5006 415.073,-24.9618 412.05,-24.3977" stroke="#d4d4d4" fill="none"></path><polygon points="743.834,-71.5735 748.996,-70.3863 744.22,-68.0949 743.834,-71.5735" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node5 --><g class="node trait" id="graph137_5"><a xlink:title="scala.swing.ComboBox.Editor" xlink:href="ComboBox$$Editor.html#inheritance-diagram"><polygon points="514,-26 430,-26 430,-1.24345e-14 514,-3.55271e-15 514,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-21" x="440" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="462" text-anchor="start">Editor[A]</text></a></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph137_0_5"><a xlink:title="Editor[A] is a subtype of Publisher"><path d="M743.846,-67.2645C689.865,-58.3529 599.828,-42.768 523,-26 520.143,-25.3765 517.204,-24.7058 514.247,-24.0093" stroke="#d4d4d4" fill="none"></path><polygon points="743.737,-69.0202 748.955,-68.1059 744.306,-65.5667 743.737,-69.0202" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node6 --><g class="node class" id="graph137_6"><a xlink:title="scala.swing.Slider" xlink:href="Slider.html#inheritance-diagram"><polygon points="602,-26 532,-26 532,-1.24345e-14 602,-3.55271e-15 602,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="542" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="564" text-anchor="start">Slider</text></a></g><!-- node0&#45;&gt;node6 --><g class="edge inheritance" id="graph137_0_6"><a xlink:title="Slider is a subtype of Publisher"><path d="M743.494,-62.1915C706.999,-52.4762 655.784,-38.6759 611,-26 608.088,-25.1757 605.07,-24.3096 602.043,-23.4324" stroke="#d4d4d4" fill="none"></path><polygon points="743.487,-64.0005 748.769,-63.5946 744.387,-60.6181 743.487,-64.0005" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node7 --><g class="node class" id="graph137_7"><a xlink:title="scala.swing.TabbedPane" xlink:href="TabbedPane.html#inheritance-diagram"><polygon points="718,-26 620,-26 620,-1.24345e-14 718,-3.55271e-15 718,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="630" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="652" text-anchor="start">TabbedPane</text></a></g><!-- node0&#45;&gt;node7 --><g class="edge inheritance" id="graph137_0_7"><a xlink:title="TabbedPane is a subtype of Publisher"><path d="M761.395,-59.5732C740.986,-49.2855 714.444,-35.9068 695.048,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="760.662,-61.1635 765.915,-61.8514 762.238,-58.0381 760.662,-61.1635" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node8 --><g class="node class" id="graph137_8"><a xlink:title="scala.swing.TextComponent" xlink:href="TextComponent.html#inheritance-diagram"><polygon points="848,-26 736,-26 736,-1.24345e-14 848,-3.55271e-15 848,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="746" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="768" text-anchor="start">TextComponent</text></a></g><!-- node0&#45;&gt;node8 --><g class="edge inheritance" id="graph137_0_8"><a xlink:title="TextComponent is a subtype of Publisher"><path d="M792,-56.6463C792,-46.8429 792,-35.003 792,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="790.25,-56.8514 792,-61.8514 793.75,-56.8514 790.25,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node9 --><g class="node class" id="graph137_9"><a xlink:title="scala.swing.Window" xlink:href="Window.html#inheritance-diagram"><polygon points="946,-26 866,-26 866,-1.24345e-14 946,-3.55271e-15 946,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="876" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="898" text-anchor="start">Window</text></a></g><!-- node0&#45;&gt;node9 --><g class="edge inheritance" id="graph137_0_9"><a xlink:title="Window is a subtype of Publisher"><path d="M820.844,-59.3132C839.694,-49.0609 864.032,-35.8246 881.858,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="819.733,-57.9251 816.176,-61.8514 821.405,-60.9998 819.733,-57.9251" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node10 --><g class="node trait" id="graph137_10"><a xlink:title="scala.swing.Container.Wrapper" xlink:href="Container$$Wrapper.html#inheritance-diagram"><polygon points="1046,-26 964,-26 964,-1.24345e-14 1046,-3.55271e-15 1046,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-21" x="974" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="996" text-anchor="start">Wrapper</text></a></g><!-- node0&#45;&gt;node10 --><g class="edge inheritance" id="graph137_0_10"><a xlink:title="Wrapper is a subtype of Publisher"><path d="M840.035,-61.0181C877.284,-50.1755 928.361,-35.3081 963.77,-25.0013" stroke="#d4d4d4" fill="none"></path><polygon points="839.415,-59.3756 835.104,-62.4534 840.394,-62.7362 839.415,-59.3756" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node11 --><g class="node object" id="graph137_11"><a xlink:title="scala.swing.Component.keys" xlink:href="Component$keys$.html#inheritance-diagram"><polygon points="1130,-26 1064,-26 1064,-1.24345e-14 1130,-3.55271e-15 1130,-26" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-21" x="1074" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1096" text-anchor="start">keys</text></a></g><!-- node0&#45;&gt;node11 --><g class="edge inheritance" id="graph137_0_11"><a xlink:title="keys is a subtype of Publisher"><path d="M840.169,-67.7465C893.184,-59.3649 980.742,-44.3442 1055,-26 1057.82,-25.3044 1060.72,-24.5288 1063.63,-23.7124" stroke="#d4d4d4" fill="none"></path><polygon points="839.815,-66.0306 835.148,-68.5368 840.36,-69.488 839.815,-66.0306" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node12 --><g class="node object" id="graph137_12"><a xlink:title="scala.swing.ComboBox.selection" xlink:href="ComboBox$selection$.html#inheritance-diagram"><polygon points="1232,-26 1148,-26 1148,-1.24345e-14 1232,-3.55271e-15 1232,-26" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-21" x="1158" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1180" text-anchor="start">selection</text></a></g><!-- node0&#45;&gt;node12 --><g class="edge inheritance" id="graph137_0_12"><a xlink:title="selection is a subtype of Publisher"><path d="M840.403,-69.8578C907.723,-62.3219 1033.27,-46.8754 1139,-26 1141.87,-25.4336 1144.82,-24.8057 1147.78,-24.1405" stroke="#d4d4d4" fill="none"></path><polygon points="840.037,-68.1376 835.261,-70.4306 840.424,-71.6161 840.037,-68.1376" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node13 --><g class="node object" id="graph137_13"><a xlink:title="scala.swing.ListView.selection" xlink:href="ListView$selection$.html#inheritance-diagram"><polygon points="1334,-26 1250,-26 1250,-1.24345e-14 1334,-3.55271e-15 1334,-26" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-21" x="1260" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1282" text-anchor="start">selection</text></a></g><!-- node0&#45;&gt;node13 --><g class="edge inheritance" id="graph137_0_13"><a xlink:title="selection is a subtype of Publisher"><path d="M840.315,-71.9694C922.926,-66.2886 1096.41,-52.1823 1241,-26 1243.88,-25.479 1246.83,-24.8851 1249.8,-24.2447" stroke="#d4d4d4" fill="none"></path><polygon points="839.875,-70.2453 835.006,-72.3315 840.113,-73.7371 839.875,-70.2453" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node14 --><g class="node object" id="graph137_14"><a xlink:title="scala.swing.TabbedPane.selection" xlink:href="TabbedPane$selection$.html#inheritance-diagram"><polygon points="1436,-26 1352,-26 1352,-1.24345e-14 1436,-3.55271e-15 1436,-26" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-21" x="1362" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1384" text-anchor="start">selection</text></a></g><!-- node0&#45;&gt;node14 --><g class="edge inheritance" id="graph137_0_14"><a xlink:title="selection is a subtype of Publisher"><path d="M840.212,-73.3203C936.427,-69.3952 1158.85,-57.4471 1343,-26 1345.88,-25.5078 1348.84,-24.9355 1351.81,-24.3109" stroke="#d4d4d4" fill="none"></path><polygon points="840.095,-71.5735 835.169,-73.5233 840.236,-75.0706 840.095,-71.5735" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node15 --><g class="node object" id="graph137_15"><a xlink:title="scala.swing.Table.selection" xlink:href="Table$selection$.html#inheritance-diagram"><polygon points="1538,-26 1454,-26 1454,-1.24345e-14 1538,-3.55271e-15 1538,-26" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-21" x="1464" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1486" text-anchor="start">selection</text></a></g><!-- node0&#45;&gt;node15 --><g class="edge inheritance" id="graph137_0_15"><a xlink:title="selection is a subtype of Publisher"><path d="M840.139,-74.2582C948.739,-71.9598 1220.81,-62.6964 1445,-26 1447.89,-25.5277 1450.85,-24.9703 1453.82,-24.3566" stroke="#d4d4d4" fill="none"></path><polygon points="840.054,-72.5095 835.092,-74.3625 840.127,-76.0087 840.054,-72.5095" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node16 --><g class="node trait" id="graph137_16"><a xlink:title="scala.swing.Reactor" xlink:href="Reactor.html#inheritance-diagram"><polygon points="831,-150 753,-150 753,-124 831,-124 831,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-145" x="763" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="785" text-anchor="start">Reactor</text></a></g><!-- node16&#45;&gt;node0 --><g class="edge inheritance" id="graph137_16_0"><a xlink:title="Publisher is a subtype of Reactor"><path d="M792,-118.646C792,-108.843 792,-97.003 792,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="790.25,-118.851 792,-123.851 793.75,-118.851 790.25,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.swing.Publisher"><span>Publisher</span></li><li class="in" name="scala.swing.Reactor"><span>Reactor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+ For <code>null</code> returns a hashcode where <code>null.hashCode</code> throws a
+ <code>NullPointerException</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(Publisher,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>] performed by method any2ArrowAssoc in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+ The expression <code>x == that</code> is equivalent to <code>if (x eq null) that eq null else x.equals(that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt">ClassCastException<p>if the receiver object is not an instance of the erasure of type <code>T0</code>.</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.swing.Reactor#deafTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="deafTo(ps:scala.swing.Publisher*):Unit"></a>
+      <a id="deafTo(Publisher*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deafTo</span><span class="params">(<span name="ps">ps: <a href="" class="extype" name="scala.swing.Publisher">Publisher</a>*</span>)</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Installed reaction won't receive events from the given publisher anylonger.</p><div class="fullcomment"><div class="comment cmt"><p>Installed reaction won't receive events from the given publisher anylonger.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactor.html" class="extype" name="scala.swing.Reactor">Reactor</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((Publisher)⇒Boolean,⇒Any):Publisher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>) ⇒ <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((Publisher)⇒Boolean):Publisher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>) ⇒ <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):Publisher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):Publisher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation" target="_blank">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  Default implementation delegates to <code>eq</code>.</p><p> See also <code>equals</code> in <a href="../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns string formatted according to given <code>format</code> string.</p><div class="fullcomment"><div class="comment cmt"><p>Returns string formatted according to given <code>format</code> string.
+ Format strings are as for <code>String.format</code>
+ (@see java.lang.String.format).
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a href="../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.swing.Reactor#listenTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="listenTo(ps:scala.swing.Publisher*):Unit"></a>
+      <a id="listenTo(Publisher*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">listenTo</span><span class="params">(<span name="ps">ps: <a href="" class="extype" name="scala.swing.Publisher">Publisher</a>*</span>)</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Listen to the given publisher as long as <code>deafTo</code> isn't called for
+them.</code></p><div class="fullcomment"><div class="comment cmt"><p>Listen to the given publisher as long as <code>deafTo</code> isn't called for
+them.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactor.html" class="extype" name="scala.swing.Reactor">Reactor</a></dd></dl></div>
+    </li><li name="scala.swing.Publisher#listeners" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="listeners:scala.swing.RefSet[scala.swing.Reactions.Reaction]{valunderlying:scala.collection.mutable.HashSet[scala.ref.Reference[scala.swing.Reactions.Reaction]]}"></a>
+      <a id="listeners:RefSet[Reaction]{valunderlying:scala.collection.mutable.HashSet[scala.ref.Reference[scala.swing.Reactions.Reaction]]}"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">listeners</span><span class="result">: <span class="extype" name="scala.swing.RefSet">RefSet</span>[<a href="Reactions$.html#Reaction=PartialFunction[scala.swing.event.Event,Unit]" class="extmbr" name="scala.swing.Reactions.Reaction">Reaction</a>] { val underlying: scala.collection.mutable.HashSet[scala.ref.Reference[scala.swing.Reactions.Reaction]] }</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.swing.Publisher#publish" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="publish(e:scala.swing.event.Event):Unit"></a>
+      <a id="publish(Event):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">publish</span><span class="params">(<span name="e">e: <a href="event/Event.html" class="extype" name="scala.swing.event.Event">Event</a></span>)</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Notify all registered reactions.</p>
+    </li><li name="scala.swing.Reactor#reactions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reactions:scala.swing.Reactions"></a>
+      <a id="reactions:Reactions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reactions</span><span class="result">: <a href="Reactions.html" class="extype" name="scala.swing.Reactions">Reactions</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">All reactions of this reactor.</p><div class="fullcomment"><div class="comment cmt"><p>All reactions of this reactor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reactor.html" class="extype" name="scala.swing.Reactor">Reactor</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../Long.html" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../Long.html" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(Publisher,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>] performed by method any2ArrowAssoc in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Shadowed Implicit Value Members</h3>
+              <ol><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(publisher: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(publisher: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Publisher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>] performed by method any2ArrowAssoc in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(publisher: ArrowAssoc[Publisher]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Publisher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="scala.swing.Publisher">Publisher</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(publisher: Ensuring[Publisher]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.swing.Reactor">
+              <h3>Inherited from <a href="Reactor.html" class="extype" name="scala.swing.Reactor">Reactor</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to <a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringfmt">
+              <h3>Inherited by implicit conversion any2stringfmt from
+                <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to <a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
+              <h3>Inherited by implicit conversion any2ArrowAssoc from
+                <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2Ensuring">
+              <h3>Inherited by implicit conversion any2Ensuring from
+                <a href="" class="extype" name="scala.swing.Publisher">Publisher</a> to <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.swing.Publisher">Publisher</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../lib/diagrams.js"></script>
+    </body>
+      </html>

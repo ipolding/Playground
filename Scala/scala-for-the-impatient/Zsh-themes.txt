@@ -1,0 +1,12 @@
+OK themes
+gozilla:  some color + not too bust + git info
+davewervere:  + not too busy + git info - colors bit too dark
+lambda: + nice and simple + git info
+
+Reject themes:
+Garyblessington: good but too similar and not as good as lambda
+Kardan:
+rkj: - too Busy
+mujes: - way too simple
+soncradish: - way too much going on
+mikeh - too busy

@@ -1,0 +1,14 @@
+<ul>
+<li>Opening bracket: [</li>
+<li>Closing bracket: ]</li>
+<li>Opening bracket: {{</li>
+<li>Closing bracket: }</li>
+</ul>
+
+Fix #1
+<ul>
+<li>Opening bracket: [</li>
+<li>Closing bracket: ]</li>
+<li>Opening bracket: {{</li>
+<li>Closing bracket: }}</li>
+</ul>

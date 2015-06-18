@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>process - Scala Standard Library API (Scaladoc) 2.10.2 - scala.sys.process</title>
+          <meta name="description" content="process - Scala Standard Library API Scaladoc 2.10.2 - scala.sys.process" />
+          <meta name="keywords" content="process Scala Standard Library API Scaladoc 2.10.2 scala.sys.process" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'scala.sys.process.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.sys">sys</a></p>
+        <h1>process</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">process</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This package handles the execution of external processes.  The contents of
+this package can be divided in three groups, according to their
+responsibilities:</p><ul><li>Indicating what to run and how to run it.</li><li>Handling a process input and output.</li><li>Running the process.</li></ul><p>For simple uses, the only group that matters is the first one. Running an
+external command can be as simple as <code>&quot;ls&quot;.!</code>, or as complex as building a
+pipeline of commands such as this:</p><pre><span class="kw">import</span> scala.sys.process._
+<span class="lit">"ls"</span> #| <span class="lit">"grep .scala"</span> #&amp;&amp; <span class="lit">"scalac *.scala"</span> #|| <span class="lit">"echo nothing found"</span> lines</pre><p>We describe below the general concepts and architecture of the package,
+and then take a closer look at each of the categories mentioned above.</p><h4>Concepts and Architecture</h4><p>The underlying basis for the whole package is Java's <code>Process</code> and
+<code>ProcessBuilder</code> classes. While there's no need to use these Java classes,
+they impose boundaries on what is possible. One cannot, for instance,
+retrieve a <i>process id</i> for whatever is executing.</p><p>When executing an external process, one can provide a command's name,
+arguments to it, the directory in which it will be executed and what
+environment variables will be set. For each executing process, one can
+feed its standard input through a <code>java.io.OutputStream</code>, and read from
+its standard output and standard error through a pair of
+<code>java.io.InputStream</code>. One can wait until a process finishes execution and
+then retrieve its return value, or one can kill an executing process.
+Everything else must be built on those features.</p><p>This package provides a DSL for running and chaining such processes,
+mimicking Unix shells ability to pipe output from one process to the input
+of another, or control the execution of further processes based on the
+return status of the previous one.</p><p>In addition to this DSL, this package also provides a few ways of
+controlling input and output of these processes, going from simple and
+easy to use to complex and flexible.</p><p>When processes are composed, a new <code>ProcessBuilder</code> is created which, when
+run, will execute the <code>ProcessBuilder</code> instances it is composed of
+according to the manner of the composition. If piping one process to
+another, they'll be executed simultaneously, and each will be passed a
+<code>ProcessIO</code> that will copy the output of one to the input of the other.</p><h4>What to Run and How</h4><p>The central component of the process execution DSL is the
+<a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">scala.sys.process.ProcessBuilder</a> trait. It is <code>ProcessBuilder</code> that
+implements the process execution DSL, that creates the
+<a href="Process.html" class="extype" name="scala.sys.process.Process">scala.sys.process.Process</a> that will handle the execution, and return
+the results of such execution to the caller. We can see that DSL in the
+introductory example: <code>#|</code>, <code>#&amp;&amp;</code> and <code>#!!</code> are methods on
+<code>ProcessBuilder</code> used to create a new <code>ProcessBuilder</code> through
+composition.</p><p>One creates a <code>ProcessBuilder</code> either through factories on the
+<a href="Process.html" class="extype" name="scala.sys.process.Process">scala.sys.process.Process</a>'s companion object, or through implicit
+conversions available in this package object itself.  Implicitly, each
+process is created either out of a <code>String</code>, with arguments separated by
+spaces -- no escaping of spaces is possible -- or out of a
+<a href="../../collection/Seq.html" class="extype" name="scala.collection.Seq">scala.collection.Seq</a>, where the first element represents the command
+name, and the remaining elements are arguments to it. In this latter case,
+arguments may contain spaces.  One can also implicitly convert
+<a href="../../xml/Elem.html" class="extype" name="scala.xml.Elem">scala.xml.Elem</a> and <code>java.lang.ProcessBuilder</code> into a <code>ProcessBuilder</code>.
+In the introductory example, the strings were converted into
+<code>ProcessBuilder</code> implicitly.</p><p>To further control what how the process will be run, such as specifying
+the directory in which it will be run, see the factories on
+<a href="Process.html" class="extype" name="scala.sys.process.Process">scala.sys.process.Process</a>'s object companion.</p><p>Once the desired <code>ProcessBuilder</code> is available, it can be executed in
+different ways, depending on how one desires to control its I/O, and what
+kind of result one wishes for:</p><ul><li>Return status of the process (<code>!</code> methods)</li><li>Output of the process as a <code>String</code> (<code>!!</code> methods)</li><li>Continuous output of the process as a <code>Stream[String]</code> (<code>lines</code> methods)</li><li>The <code>Process</code> representing it (<code>run</code> methods)</li></ul><p>Some simple examples of these methods:</p><pre><span class="kw">import</span> scala.sys.process._
+
+<span class="cmt">// This uses ! to get the exit code</span>
+<span class="kw">def</span> fileExists(name: <span class="std">String</span>) = <span class="std">Seq</span>(<span class="lit">"test"</span>, <span class="lit">"-f"</span>, name).! == <span class="num">0</span>
+
+<span class="cmt">// This uses !! to get the whole result as a string</span>
+<span class="kw">val</span> dirContents = <span class="lit">"ls"</span>.!!
+
+<span class="cmt">// This "fire-and-forgets" the method, which can be lazily read through</span>
+<span class="cmt">// a Stream[String]</span>
+<span class="kw">def</span> sourceFilesAt(baseDir: <span class="std">String</span>): Stream[<span class="std">String</span>] = {
+  <span class="kw">val</span> cmd = <span class="std">Seq</span>(<span class="lit">"find"</span>, baseDir, <span class="lit">"-name"</span>, <span class="lit">"*.scala"</span>, <span class="lit">"-type"</span>, <span class="lit">"f"</span>)
+  cmd.lines
+}</pre><p>We'll see more details about controlling I/O of the process in the next
+section.</p><h4>Handling Input and Output</h4><p>In the underlying Java model, once a <code>Process</code> has been started, one can
+get <code>java.io.InputStream</code> and <code>java.io.OutpuStream</code> representing its
+output and input respectively. That is, what one writes to an
+<code>OutputStream</code> is turned into input to the process, and the output of a
+process can be read from an <code>InputStream</code> -- of which there are two, one
+representing normal output, and the other representing error output.</p><p>This model creates a difficulty, which is that the code responsible for
+actually running the external processes is the one that has to take
+decisions about how to handle its I/O.</p><p>This package presents an alternative model: the I/O of a running process
+is controlled by a <a href="ProcessIO.html" class="extype" name="scala.sys.process.ProcessIO">scala.sys.process.ProcessIO</a> object, which can be
+passed _to_ the code that runs the external process. A <code>ProcessIO</code> will
+have direct access to the java streams associated with the process I/O. It
+must, however, close these streams afterwards.</p><p>Simpler abstractions are available, however. The components of this
+package that handle I/O are:</p><ul><li><a href="ProcessIO.html" class="extype" name="scala.sys.process.ProcessIO">scala.sys.process.ProcessIO</a>: provides the low level abstraction.</li><li><a href="ProcessLogger.html" class="extype" name="scala.sys.process.ProcessLogger">scala.sys.process.ProcessLogger</a>: provides a higher level abstraction
+  for output, and can be created through its object companion</li><li><a href="BasicIO$.html" class="extype" name="scala.sys.process.BasicIO">scala.sys.process.BasicIO</a>: a library of helper methods for the
+  creation of <code>ProcessIO</code>.</li><li>This package object itself, with a few implicit conversions.</li></ul><p>Some examples of I/O handling:</p><pre><span class="kw">import</span> scala.sys.process._
+
+<span class="cmt">// An overly complex way of computing size of a compressed file</span>
+<span class="kw">def</span> gzFileSize(name: <span class="std">String</span>) = {
+  <span class="kw">val</span> cat = <span class="std">Seq</span>(<span class="lit">"zcat"</span>, <span class="lit">"name"</span>)
+  <span class="kw">var</span> count = <span class="num">0</span>
+  <span class="kw">def</span> byteCounter(input: java.io.InputStream) = {
+    <span class="kw">while</span>(input.read() != -<span class="num">1</span>) count += <span class="num">1</span>
+    input.close()
+  }
+  cat ! <span class="kw">new</span> ProcessIO(_.close(), byteCounter, _.close())
+  count
+}
+
+<span class="cmt">// This "fire-and-forgets" the method, which can be lazily read through</span>
+<span class="cmt">// a Stream[String], and accumulates all errors on a StringBuffer</span>
+<span class="kw">def</span> sourceFilesAt(baseDir: <span class="std">String</span>): (Stream[<span class="std">String</span>], StringBuffer) = {
+  <span class="kw">val</span> buffer = <span class="kw">new</span> StringBuffer()
+  <span class="kw">val</span> cmd = <span class="std">Seq</span>(<span class="lit">"find"</span>, baseDir, <span class="lit">"-name"</span>, <span class="lit">"*.scala"</span>, <span class="lit">"-type"</span>, <span class="lit">"f"</span>)
+  <span class="kw">val</span> lines = cmd lines_! ProcessLogger(buffer append _)
+  (lines, buffer)
+}</pre><p>Instances of the java classes <code>java.io.File</code> and <code>java.net.URL</code> can both
+be used directly as input to other processes, and <code>java.io.File</code> can be
+used as output as well. One can even pipe one to the other directly
+without any intervening process, though that's not a design goal or
+recommended usage. For example, the following code will copy a web page to
+a file:</p><pre><span class="kw">import</span> java.io.File
+<span class="kw">import</span> java.net.URL
+<span class="kw">import</span> scala.sys.process._
+<span class="kw">new</span> URL(<span class="lit">"http://www.scala-lang.org/"</span>) #&gt; <span class="kw">new</span> File(<span class="lit">"scala-lang.html"</span>) !</pre><p>More information about the other ways of controlling I/O can be looked at
+in the scaladoc for the associated objects, traits and classes.</p><h4>Running the Process</h4><p>Paradoxically, this is the simplest component of all, and the one least
+likely to be interacted with. It consists solely of
+<a href="Process.html" class="extype" name="scala.sys.process.Process">scala.sys.process.Process</a>, and it provides only two methods:</p><ul><li><code>exitValue()</code>: blocks until the process exit, and then returns the exit
+  value. This is what happens when one uses the <code>!</code> method of
+  <code>ProcessBuilder</code>.</li><li><code>destroy()</code>: this will kill the external process and close the streams
+  associated with it.
+</li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/library/scala/sys/process/package.scala#L1" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="ProcessImplicits.html" class="extype" name="scala.sys.process.ProcessImplicits">ProcessImplicits</a>, <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1553" viewBox="0.00 0.00 262.00 96.00" height="96pt" width="262pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 92)" class="graph" id="graph1"><polygon points="-4,5 -4,-92 259,-92 259,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node object" id="graph1553_0"><a xlink:title="scala.sys.process.Process" xlink:href="Process$.html#inheritance-diagram"><polygon points="100,-26 18,-26 18,-1.24345e-14 100,-3.55271e-15 100,-26" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../../lib/object_diagram.png" y="-21" x="28" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="50" text-anchor="start">Process</text></a></g><!-- node1 --><g class="node class" id="graph1553_1"><a xlink:title="scala.sys.process.FileProcessLogger" xlink:href="FileProcessLogger.html#inheritance-diagram"><polygon points="254,-26 128,-26 128,-1.24345e-14 254,-3.55271e-15 254,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-21" x="138" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="160" text-anchor="start">FileProcessLogger</text></a></g><!-- node2 --><g class="node trait" id="graph1553_2"><a xlink:title="scala.sys.process.ProcessLogger" xlink:href="ProcessLogger.html#inheritance-diagram"><polygon points="246,-88 136,-88 136,-62 246,-62 246,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-83" x="146" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="168" text-anchor="start">ProcessLogger</text></a></g><!-- node2&#45;&gt;node1 --><g class="edge inheritance" id="graph1553_2_1"><a xlink:title="FileProcessLogger is a subtype of ProcessLogger"><path d="M191,-56.6463C191,-46.8429 191,-35.003 191,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="189.25,-56.8514 191,-61.8514 192.75,-56.8514 189.25,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph1553_3"><a xlink:title="scala.sys.process.ProcessCreation" xlink:href="ProcessCreation.html#inheritance-diagram"><polygon points="118,-88 4.26326e-14,-88 0,-62 118,-62 118,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-83" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="32" text-anchor="start">ProcessCreation</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1553_3_0"><a xlink:title="Process is a subtype of ProcessCreation"><path d="M59,-56.6463C59,-46.8429 59,-35.003 59,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="57.2501,-56.8514 59,-61.8514 60.7501,-56.8514 57.2501,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.sys.process"><span>process</span></li><li class="in" name="scala.sys.process.ProcessImplicits"><span>ProcessImplicits</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.sys.process.FileProcessLogger" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileProcessLoggerextendsProcessLoggerwithCloseablewithFlushable"></a>
+      <a id="FileProcessLogger:FileProcessLogger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FileProcessLogger.html"><span class="name">FileProcessLogger</span></a><span class="result"> extends <a href="ProcessLogger.html" class="extype" name="scala.sys.process.ProcessLogger">ProcessLogger</a> with <span class="extype" name="java.io.Closeable">Closeable</span> with <span class="extype" name="java.io.Flushable">Flushable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A <a href="ProcessLogger.html" class="extype" name="scala.sys.process.ProcessLogger">scala.sys.process.ProcessLogger</a> that writes output to a file.</p>
+    </li><li name="scala.sys.process.Process" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ProcessextendsAnyRef"></a>
+      <a id="Process:Process"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Process.html"><span class="name">Process</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Represents a process that is running or has finished running.</p>
+    </li><li name="scala.sys.process.ProcessBuilder" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ProcessBuilderextendsProcessBuilder.SourcewithProcessBuilder.Sink"></a>
+      <a id="ProcessBuilder:ProcessBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ProcessBuilder.html"><span class="name">ProcessBuilder</span></a><span class="result"> extends <a href="ProcessBuilder$$Source.html" class="extype" name="scala.sys.process.ProcessBuilder.Source">Source</a> with <a href="ProcessBuilder$$Sink.html" class="extype" name="scala.sys.process.ProcessBuilder.Sink">Sink</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Represents a sequence of one or more external processes that can be
+executed.</p>
+    </li><li name="scala.sys.process.ProcessCreation" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ProcessCreationextendsAnyRef"></a>
+      <a id="ProcessCreation:ProcessCreation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ProcessCreation.html"><span class="name">ProcessCreation</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Factories for creating <a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">scala.sys.process.ProcessBuilder</a>.</p>
+    </li><li name="scala.sys.process.ProcessIO" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ProcessIOextendsAnyRef"></a>
+      <a id="ProcessIO:ProcessIO"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ProcessIO.html"><span class="name">ProcessIO</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class is used to control the I/O of every
+<a href="Process.html" class="extype" name="scala.sys.process.Process">scala.sys.process.Process</a>.</p>
+    </li><li name="scala.sys.process.ProcessImplicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ProcessImplicitsextendsAnyRef"></a>
+      <a id="ProcessImplicits:ProcessImplicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ProcessImplicits.html"><span class="name">ProcessImplicits</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide implicit conversions for the factories offered by <a href="Process.html" class="extype" name="scala.sys.process.Process">scala.sys.process.Process</a>'s
+companion object.</p>
+    </li><li name="scala.sys.process.ProcessLogger" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ProcessLoggerextendsAnyRef"></a>
+      <a id="ProcessLogger:ProcessLogger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ProcessLogger.html"><span class="name">ProcessLogger</span></a><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Encapsulates the output and error streams of a running process.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.sys.process.BasicIO" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BasicIO"></a>
+      <a id="BasicIO:BasicIO"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BasicIO$.html"><span class="name">BasicIO</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">This object contains factories for <a href="ProcessIO.html" class="extype" name="scala.sys.process.ProcessIO">scala.sys.process.ProcessIO</a>,
+which can be used to control the I/O of a <a href="Process.html" class="extype" name="scala.sys.process.Process">scala.sys.process.Process</a>
+when a <a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">scala.sys.process.ProcessBuilder</a> is started with the <code>run</code>
+command.</p>
+    </li><li name="scala.sys.process.Process" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Process"></a>
+      <a id="Process:Process"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Process$.html"><span class="name">Process</span></a><span class="result"> extends <span class="extype" name="scala.sys.process.ProcessImpl">ProcessImpl</span> with <a href="ProcessCreation.html" class="extype" name="scala.sys.process.ProcessCreation">ProcessCreation</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Methods for constructing simple commands that can then be combined.</p>
+    </li><li name="scala.sys.process.ProcessBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ProcessBuilder"></a>
+      <a id="ProcessBuilder:ProcessBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ProcessBuilder$.html"><span class="name">ProcessBuilder</span></a><span class="result"> extends <span class="extype" name="scala.sys.process.ProcessBuilderImpl">ProcessBuilderImpl</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This object contains traits used to describe input and output sources.</p>
+    </li><li name="scala.sys.process.ProcessLogger" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ProcessLogger"></a>
+      <a id="ProcessLogger:ProcessLogger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ProcessLogger$.html"><span class="name">ProcessLogger</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides factories to create <a href="ProcessLogger.html" class="extype" name="scala.sys.process.ProcessLogger">scala.sys.process.ProcessLogger</a>, which
+ are used to capture output of <a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">scala.sys.process.ProcessBuilder</a> commands
+ when run.</p>
+    </li><li name="scala.sys.process.ProcessImplicits#builderToProcess" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="builderToProcess(builder:scala.sys.process.processInternal.JProcessBuilder):scala.sys.process.ProcessBuilder"></a>
+      <a id="builderToProcess(JProcessBuilder):ProcessBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">builderToProcess</span><span class="params">(<span name="builder">builder: <span class="extype" name="scala.sys.process.processInternal.JProcessBuilder">JProcessBuilder</span></span>)</span><span class="result">: <a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Implicitly convert a <code>java.lang.ProcessBuilder</code> into a Scala one.</p><div class="fullcomment"><div class="comment cmt"><p>Implicitly convert a <code>java.lang.ProcessBuilder</code> into a Scala one.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ProcessImplicits.html" class="extype" name="scala.sys.process.ProcessImplicits">ProcessImplicits</a></dd></dl></div>
+    </li><li name="scala.sys.process.ProcessImplicits#buildersToProcess" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="buildersToProcess[T](builders:Seq[T])(implicitconvert:T=&gt;scala.sys.process.ProcessBuilder.Source):Seq[scala.sys.process.ProcessBuilder.Source]"></a>
+      <a id="buildersToProcess[T](Seq[T])((T)⇒Source):Seq[Source]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buildersToProcess</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="builders">builders: <a href="../../package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="scala.sys.process.ProcessImplicits.buildersToProcess.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="convert">convert: (<span class="extype" name="scala.sys.process.ProcessImplicits.buildersToProcess.T">T</span>) ⇒ <a href="ProcessBuilder$$Source.html" class="extype" name="scala.sys.process.ProcessBuilder.Source">Source</a></span>)</span><span class="result">: <a href="../../package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="ProcessBuilder$$Source.html" class="extype" name="scala.sys.process.ProcessBuilder.Source">Source</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return a sequence of <a href="ProcessBuilder$$Source.html" class="extype" name="scala.sys.process.ProcessBuilder.Source">scala.sys.process.ProcessBuilder.Source</a> from a sequence
+of values for which an implicit conversion to <code>Source</code> is available.</p><div class="fullcomment"><div class="comment cmt"><p>Return a sequence of <a href="ProcessBuilder$$Source.html" class="extype" name="scala.sys.process.ProcessBuilder.Source">scala.sys.process.ProcessBuilder.Source</a> from a sequence
+of values for which an implicit conversion to <code>Source</code> is available.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ProcessImplicits.html" class="extype" name="scala.sys.process.ProcessImplicits">ProcessImplicits</a></dd></dl></div>
+    </li><li name="scala.sys.process.ProcessImplicits#fileToProcess" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fileToProcess(file:scala.sys.process.processInternal.File):scala.sys.process.ProcessBuilder.FileBuilder"></a>
+      <a id="fileToProcess(File):FileBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fileToProcess</span><span class="params">(<span name="file">file: <span class="extype" name="scala.sys.process.processInternal.File">File</span></span>)</span><span class="result">: <a href="ProcessBuilder$$FileBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder.FileBuilder">FileBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Implicitly convert a <code>java.io.File</code> into a
+<a href="ProcessBuilder$$FileBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder.FileBuilder">scala.sys.process.ProcessBuilder.FileBuilder</a>, which can be used as
+either input or output of a process.</p><div class="fullcomment"><div class="comment cmt"><p>Implicitly convert a <code>java.io.File</code> into a
+<a href="ProcessBuilder$$FileBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder.FileBuilder">scala.sys.process.ProcessBuilder.FileBuilder</a>, which can be used as
+either input or output of a process. For example:</p><pre><span class="kw">import</span> scala.sys.process._
+<span class="lit">"ls"</span> #&gt; <span class="kw">new</span> java.io.File(<span class="lit">"dirContents.txt"</span>) !</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ProcessImplicits.html" class="extype" name="scala.sys.process.ProcessImplicits">ProcessImplicits</a></dd></dl></div>
+    </li><li name="scala.sys.process.package#javaVmArguments" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="javaVmArguments:List[String]"></a>
+      <a id="javaVmArguments:List[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">javaVmArguments</span><span class="result">: <a href="../../package.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The arguments passed to <code>java</code> when creating this process</p>
+    </li><li name="scala.sys.process.package#stderr" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stderr:java.io.PrintStream"></a>
+      <a id="stderr:PrintStream"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stderr</span><span class="result">: <span class="extype" name="java.io.PrintStream">PrintStream</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The error stream of this process</p>
+    </li><li name="scala.sys.process.package#stdin" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stdin:java.io.InputStream"></a>
+      <a id="stdin:InputStream"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stdin</span><span class="result">: <span class="extype" name="java.io.InputStream">InputStream</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The input stream of this process</p>
+    </li><li name="scala.sys.process.package#stdout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stdout:java.io.PrintStream"></a>
+      <a id="stdout:PrintStream"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stdout</span><span class="result">: <span class="extype" name="java.io.PrintStream">PrintStream</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The output stream of this process</p>
+    </li><li name="scala.sys.process.ProcessImplicits#stringSeqToProcess" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stringSeqToProcess(command:Seq[String]):scala.sys.process.ProcessBuilder"></a>
+      <a id="stringSeqToProcess(Seq[String]):ProcessBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stringSeqToProcess</span><span class="params">(<span name="command">command: <a href="../../package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a>]</span>)</span><span class="result">: <a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Implicitly convert a sequence of <code>String</code> into a
+<a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">scala.sys.process.ProcessBuilder</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Implicitly convert a sequence of <code>String</code> into a
+<a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">scala.sys.process.ProcessBuilder</a>. The first argument will be taken to
+be the command to be executed, and the remaining will be its arguments.
+When using this, arguments may contain spaces.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ProcessImplicits.html" class="extype" name="scala.sys.process.ProcessImplicits">ProcessImplicits</a></dd></dl></div>
+    </li><li name="scala.sys.process.ProcessImplicits#stringToProcess" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stringToProcess(command:String):scala.sys.process.ProcessBuilder"></a>
+      <a id="stringToProcess(String):ProcessBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stringToProcess</span><span class="params">(<span name="command">command: <a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Implicitly convert a <code>String</code> into a <a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">scala.sys.process.ProcessBuilder</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Implicitly convert a <code>String</code> into a <a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">scala.sys.process.ProcessBuilder</a>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ProcessImplicits.html" class="extype" name="scala.sys.process.ProcessImplicits">ProcessImplicits</a></dd></dl></div>
+    </li><li name="scala.sys.process.ProcessImplicits#urlToProcess" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="urlToProcess(url:scala.sys.process.processInternal.URL):scala.sys.process.ProcessBuilder.URLBuilder"></a>
+      <a id="urlToProcess(URL):URLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">urlToProcess</span><span class="params">(<span name="url">url: <span class="extype" name="scala.sys.process.processInternal.URL">URL</span></span>)</span><span class="result">: <a href="ProcessBuilder$$URLBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder.URLBuilder">URLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Implicitly convert a <code>java.net.URL</code> into a
+<a href="ProcessBuilder$$URLBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder.URLBuilder">scala.sys.process.ProcessBuilder.URLBuilder</a> , which can be used as
+input to a process.</p><div class="fullcomment"><div class="comment cmt"><p>Implicitly convert a <code>java.net.URL</code> into a
+<a href="ProcessBuilder$$URLBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder.URLBuilder">scala.sys.process.ProcessBuilder.URLBuilder</a> , which can be used as
+input to a process. For example:</p><pre><span class="kw">import</span> scala.sys.process._
+<span class="std">Seq</span>(<span class="lit">"xmllint"</span>, <span class="lit">"--html"</span>, <span class="lit">"-"</span>) #&lt; <span class="kw">new</span> java.net.URL(<span class="lit">"http://www.scala-lang.org"</span>) #&gt; <span class="kw">new</span> java.io.File(<span class="lit">"fixed.html"</span>) !</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ProcessImplicits.html" class="extype" name="scala.sys.process.ProcessImplicits">ProcessImplicits</a></dd></dl></div>
+    </li><li name="scala.sys.process.ProcessImplicits#xmlToProcess" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="xmlToProcess(command:scala.xml.Elem):scala.sys.process.ProcessBuilder"></a>
+      <a id="xmlToProcess(Elem):ProcessBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">xmlToProcess</span><span class="params">(<span name="command">command: <a href="../../xml/Elem.html" class="extype" name="scala.xml.Elem">Elem</a></span>)</span><span class="result">: <a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Implicitly convert a <a href="../../xml/Elem.html" class="extype" name="scala.xml.Elem">scala.xml.Elem</a> into a
+<a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">scala.sys.process.ProcessBuilder</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Implicitly convert a <a href="../../xml/Elem.html" class="extype" name="scala.xml.Elem">scala.xml.Elem</a> into a
+<a href="ProcessBuilder.html" class="extype" name="scala.sys.process.ProcessBuilder">scala.sys.process.ProcessBuilder</a>. This is done by obtaining the text
+elements of the element, trimming spaces, and then converting the result
+from string to a process. Importantly, tags are completely ignored, so
+they cannot be used to separate parameters.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ProcessImplicits.html" class="extype" name="scala.sys.process.ProcessImplicits">ProcessImplicits</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.sys.process.ProcessImplicits">
+              <h3>Inherited from <a href="ProcessImplicits.html" class="extype" name="scala.sys.process.ProcessImplicits">ProcessImplicits</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../../lib/diagrams.js"></script>
+    </body>
+      </html>

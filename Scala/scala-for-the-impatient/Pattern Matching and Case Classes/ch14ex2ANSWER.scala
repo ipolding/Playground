@@ -1,0 +1,1 @@
+val matcher = (arr: Array[Int]) => arr match {case Array(x,y,_*) => arr(0) = y; arr(1) = x; arr }

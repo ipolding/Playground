@@ -1,0 +1,27 @@
+Chapter 18 Questions to be completed
+
+Question 3:
+Complete the fluent interface in Section 18.1, "Singleton Types", on page 246 so that one can call:
+
+book set Title to "Scala for the Impatient" set Author to "Cay Horstmann"
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Question 4:
+Implement the equals method for the Member class that is nested inside the Network class in Section 18.2 "Type Projections"
+
+For two members to be equal, they need to be in the same network.
+
+---------------------------------------------------------------------------------------------------
+Question 5:
+Consider the type alias
+
+type NetworkMember = n.Member forSome { val n: Network }
+
+and the function
+
+def process(m1: NetworkMember, m2: NetworkMember) = (m1, m2)
+
+How does this differ from the process function in Section 18.8, "Existential Types", on page 252

@@ -1,0 +1,11 @@
+class Point(var x: double, var y: double) {
+
+
+
+}
+
+
+class LabeledPoint (var "Black Thursday", x : Double, y: Double) extends Point(x, y) {
+
+
+}

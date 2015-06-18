@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>ref - Scala Standard Library API (Scaladoc) 2.10.2 - scala.ref</title>
+          <meta name="description" content="ref - Scala Standard Library API Scaladoc 2.10.2 - scala.ref" />
+          <meta name="keywords" content="ref Scala Standard Library API Scaladoc 2.10.2 scala.ref" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.ref.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a></p>
+        <h1>ref</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ref</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1440" viewBox="0.00 0.00 426.00 158.00" height="158pt" width="426pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph1"><polygon points="-4,5 -4,-154 423,-154 423,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node class" id="graph1440_0"><a xlink:title="scala.ref.SoftReference" xlink:href="SoftReference.html#inheritance-diagram"><polygon points="118,-26 4.26326e-14,-26 0,-1.24345e-14 118,-3.55271e-15 118,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="32" text-anchor="start">SoftReference[T]</text></a></g><!-- node1 --><g class="node trait" id="graph1440_1"><a xlink:title="scala.ref.Reference" xlink:href="Reference.html#inheritance-diagram"><polygon points="255,-150 155,-150 155,-124 255,-124 255,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-145" x="165" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="187" text-anchor="start">Reference[T]</text></a></g><!-- node3 --><g class="node trait" id="graph1440_3"><a xlink:title="scala.ref.ReferenceWrapper" xlink:href="ReferenceWrapper.html#inheritance-diagram"><polygon points="273,-88 137,-88 137,-62 273,-62 273,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-83" x="147" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="169" text-anchor="start">ReferenceWrapper[T]</text></a></g><!-- node1&#45;&gt;node3 --><g class="edge inheritance" id="graph1440_1_3"><a xlink:title="ReferenceWrapper[T] is a subtype of Reference[T]"><path d="M205,-118.646C205,-108.843 205,-97.003 205,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="203.25,-118.851 205,-123.851 206.75,-118.851 203.25,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node class" id="graph1440_2"><a xlink:title="scala.ref.PhantomReference" xlink:href="PhantomReference.html#inheritance-diagram"><polygon points="274,-26 136,-26 136,-1.24345e-14 274,-3.55271e-15 274,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="146" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="168" text-anchor="start">PhantomReference[T]</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1440_3_0"><a xlink:title="SoftReference[T] is a subtype of ReferenceWrapper[T]"><path d="M169.281,-59.8319C144.977,-49.5106 113.135,-35.989 89.9182,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="168.751,-61.5077 174.037,-61.8514 170.119,-58.2862 168.751,-61.5077" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3&#45;&gt;node2 --><g class="edge inheritance" id="graph1440_3_2"><a xlink:title="PhantomReference[T] is a subtype of ReferenceWrapper[T]"><path d="M205,-56.6463C205,-46.8429 205,-35.003 205,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="203.25,-56.8514 205,-61.8514 206.75,-56.8514 203.25,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node class" id="graph1440_4"><a xlink:title="scala.ref.WeakReference" xlink:href="WeakReference.html#inheritance-diagram"><polygon points="418,-26 292,-26 292,-1.24345e-14 418,-3.55271e-15 418,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="302" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="324" text-anchor="start">WeakReference[T]</text></a></g><!-- node3&#45;&gt;node4 --><g class="edge inheritance" id="graph1440_3_4"><a xlink:title="WeakReference[T] is a subtype of ReferenceWrapper[T]"><path d="M241.714,-59.8249C266.773,-49.4673 299.623,-35.8893 323.492,-26.0232" stroke="#d4d4d4" fill="none"></path><polygon points="240.763,-58.3241 236.811,-61.8514 242.1,-61.5587 240.763,-58.3241" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.ref.PhantomReference" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PhantomReference[+T&lt;:AnyRef]extendsReferenceWrapper[T]"></a>
+      <a id="PhantomReference[+T&lt;:AnyRef]:PhantomReference[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PhantomReference.html"><span class="name">PhantomReference</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="ReferenceWrapper.html" class="extype" name="scala.ref.ReferenceWrapper">ReferenceWrapper</a>[<span class="extype" name="scala.ref.PhantomReference.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li name="scala.ref.Reference" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Reference[+T&lt;:AnyRef]extends()=&gt;T"></a>
+      <a id="Reference[+T&lt;:AnyRef]:Reference[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Reference.html"><span class="name">Reference</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends () ⇒ <span class="extype" name="scala.ref.Reference.T">T</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li name="scala.ref.ReferenceQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReferenceQueue[+T&lt;:AnyRef]extendsAnyRef"></a>
+      <a id="ReferenceQueue[+T&lt;:AnyRef]:ReferenceQueue[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ReferenceQueue.html"><span class="name">ReferenceQueue</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li name="scala.ref.ReferenceWrapper" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReferenceWrapper[+T&lt;:AnyRef]extendsReference[T]withProxy"></a>
+      <a id="ReferenceWrapper[+T&lt;:AnyRef]:ReferenceWrapper[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ReferenceWrapper.html"><span class="name">ReferenceWrapper</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="Reference.html" class="extype" name="scala.ref.Reference">Reference</a>[<span class="extype" name="scala.ref.ReferenceWrapper.T">T</span>] with <a href="../Proxy.html" class="extype" name="scala.Proxy">Proxy</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li name="scala.ref.SoftReference" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SoftReference[+T&lt;:AnyRef]extendsReferenceWrapper[T]"></a>
+      <a id="SoftReference[+T&lt;:AnyRef]:SoftReference[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SoftReference.html"><span class="name">SoftReference</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="ReferenceWrapper.html" class="extype" name="scala.ref.ReferenceWrapper">ReferenceWrapper</a>[<span class="extype" name="scala.ref.SoftReference.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li><li name="scala.ref.WeakReference" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WeakReference[+T&lt;:AnyRef]extendsReferenceWrapper[T]"></a>
+      <a id="WeakReference[+T&lt;:AnyRef]:WeakReference[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="WeakReference.html"><span class="name">WeakReference</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="ReferenceWrapper.html" class="extype" name="scala.ref.ReferenceWrapper">ReferenceWrapper</a>[<span class="extype" name="scala.ref.WeakReference.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"> A wrapper class for java.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.ref.WeakReference" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WeakReference"></a>
+      <a id="WeakReference:WeakReference"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="WeakReference$.html"><span class="name">WeakReference</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">An extractor for weak reference values</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../lib/diagrams.js"></script>
+    </body>
+      </html>

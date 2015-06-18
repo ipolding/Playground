@@ -1,0 +1,1124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>TypeApi - Scala Standard Library API (Scaladoc) 2.10.2 - scala.reflect.api.Types.TypeApi</title>
+          <meta name="description" content="TypeApi - Scala Standard Library API Scaladoc 2.10.2 - scala.reflect.api.Types.TypeApi" />
+          <meta name="keywords" content="TypeApi Scala Standard Library API Scaladoc 2.10.2 scala.reflect.api.Types.TypeApi" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'scala.reflect.api.Types$TypeApi';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../lib/class_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.reflect">reflect</a>.<a href="package.html" class="extype" name="scala.reflect.api">api</a>.<a href="Types.html" class="extype" name="scala.reflect.api.Types">Types</a></p>
+        <h1>TypeApi</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeApi</span><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The API of types.
+ The main source of information about types is the <a href="Types.html" class="extype" name="scala.reflect.api.Types">scala.reflect.api.Types</a> page.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/reflect/scala/reflect/api/Types.scala#L1" target="_blank">Types.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent">AnnotatedType, <a href="Types$AnnotatedTypeApi.html" class="extype" name="scala.reflect.api.Types.AnnotatedTypeApi">AnnotatedTypeApi</a>, BoundedWildcardType, <a href="Types$BoundedWildcardTypeApi.html" class="extype" name="scala.reflect.api.Types.BoundedWildcardTypeApi">BoundedWildcardTypeApi</a>, ClassInfoType, <a href="Types$ClassInfoTypeApi.html" class="extype" name="scala.reflect.api.Types.ClassInfoTypeApi">ClassInfoTypeApi</a>, CompoundType, ConstantType, <a href="Types$ConstantTypeApi.html" class="extype" name="scala.reflect.api.Types.ConstantTypeApi">ConstantTypeApi</a>, ExistentialType, <a href="Types$ExistentialTypeApi.html" class="extype" name="scala.reflect.api.Types.ExistentialTypeApi">ExistentialTypeApi</a>, MethodType, <a href="Types$MethodTypeApi.html" class="extype" name="scala.reflect.api.Types.MethodTypeApi">MethodTypeApi</a>, NullaryMethodType, <a href="Types$NullaryMethodTypeApi.html" class="extype" name="scala.reflect.api.Types.NullaryMethodTypeApi">NullaryMethodTypeApi</a>, PolyType, <a href="Types$PolyTypeApi.html" class="extype" name="scala.reflect.api.Types.PolyTypeApi">PolyTypeApi</a>, RefinedType, <a href="Types$RefinedTypeApi.html" class="extype" name="scala.reflect.api.Types.RefinedTypeApi">RefinedTypeApi</a>, SingleType, <a href="Types$SingleTypeApi.html" class="extype" name="scala.reflect.api.Types.SingleTypeApi">SingleTypeApi</a>, SuperType, <a href="Types$SuperTypeApi.html" class="extype" name="scala.reflect.api.Types.SuperTypeApi">SuperTypeApi</a>, ThisType, <a href="Types$ThisTypeApi.html" class="extype" name="scala.reflect.api.Types.ThisTypeApi">ThisTypeApi</a>, TypeBounds, <a href="Types$TypeBoundsApi.html" class="extype" name="scala.reflect.api.Types.TypeBoundsApi">TypeBoundsApi</a>, TypeRef, <a href="Types$TypeRefApi.html" class="extype" name="scala.reflect.api.Types.TypeRefApi">TypeRefApi</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1340" viewBox="0.00 0.00 2424.00 158.00" height="158pt" width="2424pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph1"><polygon points="-4,5 -4,-154 2421,-154 2421,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this class" id="graph1340_0"><a xlink:title="scala.reflect.api.Types.TypeApi (this class)" xlink:href="#inheritance-diagram"><polygon points="1344,-88 1224,-88 1224,-62 1344,-62 1344,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="1234" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1256" text-anchor="start">Universe.TypeApi</text></a></g><!-- node1 --><g class="node trait" id="graph1340_1"><a xlink:title="scala.reflect.api.Types.AnnotatedTypeApi" xlink:href="Types$AnnotatedTypeApi.html#inheritance-diagram"><polygon points="164,-26 8.52651e-14,-26 0,-1.24345e-14 164,-3.55271e-15 164,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="32" text-anchor="start">Universe.AnnotatedTypeApi</text></a></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1340_0_1"><a xlink:title="Universe.AnnotatedTypeApi is a subtype of Universe.TypeApi"><path d="M1218.71,-74.3485C1047.04,-72.1534 568.987,-62.928 173,-26 170.14,-25.7333 167.232,-25.4398 164.297,-25.1246" stroke="#d4d4d4" fill="none"></path><polygon points="1218.92,-76.1013 1223.94,-74.4145 1218.97,-72.6015 1218.92,-76.1013" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph1340_2"><a xlink:title="scala.reflect.api.Types.BoundedWildcardTypeApi" xlink:href="Types$BoundedWildcardTypeApi.html#inheritance-diagram"><polygon points="378,-26 182,-26 182,-1.24345e-14 378,-3.55271e-15 378,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="192" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="214" text-anchor="start">Universe.BoundedWildcardTypeApi</text></a></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1340_0_2"><a xlink:title="Universe.BoundedWildcardTypeApi is a subtype of Universe.TypeApi"><path d="M1218.62,-72.9156C1070.44,-67.8656 697.728,-53.3327 387,-26 384.111,-25.7458 381.179,-25.4748 378.221,-25.1899" stroke="#d4d4d4" fill="none"></path><polygon points="1218.74,-74.6705 1223.8,-73.0912 1218.86,-71.1726 1218.74,-74.6705" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph1340_3"><a xlink:title="scala.reflect.api.Types.ClassInfoTypeApi" xlink:href="Types$ClassInfoTypeApi.html#inheritance-diagram"><polygon points="556,-26 396,-26 396,-1.24345e-14 556,-3.55271e-15 556,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="406" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="428" text-anchor="start">Universe.ClassInfoTypeApi</text></a></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1340_0_3"><a xlink:title="Universe.ClassInfoTypeApi is a subtype of Universe.TypeApi"><path d="M1218.57,-72.23C1092.06,-66.5004 805.196,-51.6886 565,-26 562.05,-25.6845 559.047,-25.3442 556.017,-24.9846" stroke="#d4d4d4" fill="none"></path><polygon points="1218.66,-73.9859 1223.74,-72.463 1218.82,-70.4895 1218.66,-73.9859" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node trait" id="graph1340_4"><a xlink:title="scala.reflect.api.Types.ConstantTypeApi" xlink:href="Types$ConstantTypeApi.html#inheritance-diagram"><polygon points="732,-26 574,-26 574,-1.24345e-14 732,-3.55271e-15 732,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="584" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="606" text-anchor="start">Universe.ConstantTypeApi</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge inheritance" id="graph1340_0_4"><a xlink:title="Universe.ConstantTypeApi is a subtype of Universe.TypeApi"><path d="M1218.53,-70.2966C1116.38,-62.6858 912.923,-46.4393 741,-26 738.086,-25.6536 735.12,-25.287 732.126,-24.9051" stroke="#d4d4d4" fill="none"></path><polygon points="1218.5,-72.0492 1223.62,-70.6747 1218.76,-68.5588 1218.5,-72.0492" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node5 --><g class="node trait" id="graph1340_5"><a xlink:title="scala.reflect.api.Types.ExistentialTypeApi" xlink:href="Types$ExistentialTypeApi.html#inheritance-diagram"><polygon points="916,-26 750,-26 750,-1.24345e-14 916,-3.55271e-15 916,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="760" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="782" text-anchor="start">Universe.ExistentialTypeApi</text></a></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph1340_0_5"><a xlink:title="Universe.ExistentialTypeApi is a subtype of Universe.TypeApi"><path d="M1218.86,-66.2038C1146.93,-56.4669 1027.68,-40.2615 925,-26 922.124,-25.6005 919.198,-25.193 916.242,-24.7804" stroke="#d4d4d4" fill="none"></path><polygon points="1218.77,-67.9571 1223.96,-66.8935 1219.24,-64.4887 1218.77,-67.9571" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node6 --><g class="node trait" id="graph1340_6"><a xlink:title="scala.reflect.api.Types.MethodTypeApi" xlink:href="Types$MethodTypeApi.html#inheritance-diagram"><polygon points="1086,-26 934,-26 934,-1.24345e-14 1086,-3.55271e-15 1086,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="944" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="966" text-anchor="start">Universe.MethodTypeApi</text></a></g><!-- node0&#45;&gt;node6 --><g class="edge inheritance" id="graph1340_0_6"><a xlink:title="Universe.MethodTypeApi is a subtype of Universe.TypeApi"><path d="M1221.24,-60.799C1175.03,-50.3419 1112.67,-36.2311 1067.69,-26.055" stroke="#d4d4d4" fill="none"></path><polygon points="1220.96,-62.5304 1226.23,-61.9272 1221.74,-59.1167 1220.96,-62.5304" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node7 --><g class="node trait" id="graph1340_7"><a xlink:title="scala.reflect.api.Types.NullaryMethodTypeApi" xlink:href="Types$NullaryMethodTypeApi.html#inheritance-diagram"><polygon points="1286,-26 1104,-26 1104,-1.24345e-14 1286,-3.55271e-15 1286,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="1114" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1136" text-anchor="start">Universe.NullaryMethodTypeApi</text></a></g><!-- node0&#45;&gt;node7 --><g class="edge inheritance" id="graph1340_0_7"><a xlink:title="Universe.NullaryMethodTypeApi is a subtype of Universe.TypeApi"><path d="M1260.73,-58.7893C1246.12,-48.6132 1227.53,-35.6603 1213.85,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1260.02,-60.4293 1265.13,-61.8514 1262.02,-57.5574 1260.02,-60.4293" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node8 --><g class="node trait" id="graph1340_8"><a xlink:title="scala.reflect.api.Types.PolyTypeApi" xlink:href="Types$PolyTypeApi.html#inheritance-diagram"><polygon points="1442,-26 1304,-26 1304,-1.24345e-14 1442,-3.55271e-15 1442,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="1314" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1336" text-anchor="start">Universe.PolyTypeApi</text></a></g><!-- node0&#45;&gt;node8 --><g class="edge inheritance" id="graph1340_0_8"><a xlink:title="Universe.PolyTypeApi is a subtype of Universe.TypeApi"><path d="M1307.27,-58.7893C1321.88,-48.6132 1340.47,-35.6603 1354.15,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1305.98,-57.5574 1302.87,-61.8514 1307.98,-60.4293 1305.98,-57.5574" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node9 --><g class="node trait" id="graph1340_9"><a xlink:title="scala.reflect.api.Types.RefinedTypeApi" xlink:href="Types$RefinedTypeApi.html#inheritance-diagram"><polygon points="1612,-26 1460,-26 1460,-1.24345e-14 1612,-3.55271e-15 1612,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="1470" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1492" text-anchor="start">Universe.RefinedTypeApi</text></a></g><!-- node0&#45;&gt;node9 --><g class="edge inheritance" id="graph1340_0_9"><a xlink:title="Universe.RefinedTypeApi is a subtype of Universe.TypeApi"><path d="M1342.24,-60.6718C1384.69,-50.2277 1441.74,-36.1899 1482.94,-26.055" stroke="#d4d4d4" fill="none"></path><polygon points="1341.57,-59.0332 1337.13,-61.9272 1342.41,-62.4319 1341.57,-59.0332" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node10 --><g class="node trait" id="graph1340_10"><a xlink:title="scala.reflect.api.Types.SingleTypeApi" xlink:href="Types$SingleTypeApi.html#inheritance-diagram"><polygon points="1776,-26 1630,-26 1630,-1.24345e-14 1776,-3.55271e-15 1776,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="1640" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1662" text-anchor="start">Universe.SingleTypeApi</text></a></g><!-- node0&#45;&gt;node10 --><g class="edge inheritance" id="graph1340_0_10"><a xlink:title="Universe.SingleTypeApi is a subtype of Universe.TypeApi"><path d="M1349.53,-65.7264C1417.46,-56.0524 1526.72,-40.3271 1621,-26 1623.85,-25.5669 1626.76,-25.1221 1629.69,-24.6701" stroke="#d4d4d4" fill="none"></path><polygon points="1349.01,-64.0328 1344.3,-66.47 1349.5,-67.4979 1349.01,-64.0328" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node11 --><g class="node trait" id="graph1340_11"><a xlink:title="scala.reflect.api.Types.SuperTypeApi" xlink:href="Types$SuperTypeApi.html#inheritance-diagram"><polygon points="1938,-26 1794,-26 1794,-1.24345e-14 1938,-3.55271e-15 1938,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="1804" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1826" text-anchor="start">Universe.SuperTypeApi</text></a></g><!-- node0&#45;&gt;node11 --><g class="edge inheritance" id="graph1340_0_11"><a xlink:title="Universe.SuperTypeApi is a subtype of Universe.TypeApi"><path d="M1349.34,-69.9027C1445.12,-62.1383 1629.17,-46.1057 1785,-26 1787.83,-25.6355 1790.7,-25.2486 1793.61,-24.845" stroke="#d4d4d4" fill="none"></path><polygon points="1349.13,-68.1642 1344.29,-70.3116 1349.41,-71.6528 1349.13,-68.1642" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node12 --><g class="node trait" id="graph1340_12"><a xlink:title="scala.reflect.api.Types.ThisTypeApi" xlink:href="Types$ThisTypeApi.html#inheritance-diagram"><polygon points="2094,-26 1956,-26 1956,-1.24345e-14 2094,-3.55271e-15 2094,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="1966" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1988" text-anchor="start">Universe.ThisTypeApi</text></a></g><!-- node0&#45;&gt;node12 --><g class="edge inheritance" id="graph1340_0_12"><a xlink:title="Universe.ThisTypeApi is a subtype of Universe.TypeApi"><path d="M1349.28,-72.1573C1468.38,-66.5302 1728.79,-52.1924 1947,-26 1949.86,-25.6564 1952.78,-25.2817 1955.72,-24.8833" stroke="#d4d4d4" fill="none"></path><polygon points="1348.97,-70.4196 1344.06,-72.4024 1349.14,-73.9157 1348.97,-70.4196" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node13 --><g class="node trait" id="graph1340_13"><a xlink:title="scala.reflect.api.Types.TypeBoundsApi" xlink:href="Types$TypeBoundsApi.html#inheritance-diagram"><polygon points="2264,-26 2112,-26 2112,-1.24345e-14 2264,-3.55271e-15 2264,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="2122" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="2144" text-anchor="start">Universe.TypeBoundsApi</text></a></g><!-- node0&#45;&gt;node13 --><g class="edge inheritance" id="graph1340_0_13"><a xlink:title="Universe.TypeBoundsApi is a subtype of Universe.TypeApi"><path d="M1349.27,-73.1347C1488.24,-68.7155 1823.48,-55.6732 2103,-26 2105.82,-25.7006 2108.69,-25.374 2111.59,-25.0259" stroke="#d4d4d4" fill="none"></path><polygon points="1348.95,-71.3938 1344.01,-73.3009 1349.06,-74.8921 1348.95,-71.3938" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node14 --><g class="node trait" id="graph1340_14"><a xlink:title="scala.reflect.api.Types.TypeRefApi" xlink:href="Types$TypeRefApi.html#inheritance-diagram"><polygon points="2416,-26 2282,-26 2282,-1.24345e-14 2416,-3.55271e-15 2416,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-21" x="2292" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="2314" text-anchor="start">Universe.TypeRefApi</text></a></g><!-- node0&#45;&gt;node14 --><g class="edge inheritance" id="graph1340_0_14"><a xlink:title="Universe.TypeRefApi is a subtype of Universe.TypeApi"><path d="M1349.2,-74.4688C1507.81,-72.5899 1926.24,-64.1081 2273,-26 2275.93,-25.6783 2278.91,-25.3159 2281.92,-24.9221" stroke="#d4d4d4" fill="none"></path><polygon points="1349.1,-72.7197 1344.12,-74.5277 1349.14,-76.2195 1349.1,-72.7197" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node15 --><g class="node class" id="graph1340_15"><a xlink:title="scala.AnyRef" xlink:href="../../AnyRef.html#inheritance-diagram"><polygon points="1322,-150 1246,-150 1246,-124 1322,-124 1322,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-145" x="1256" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1278" text-anchor="start">AnyRef</text></a></g><!-- node15&#45;&gt;node0 --><g class="edge inheritance" id="graph1340_15_0"><a xlink:title="Universe.TypeApi is a subtype of AnyRef"><path d="M1284,-118.646C1284,-108.843 1284,-97.003 1284,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1282.25,-118.851 1284,-123.851 1285.75,-118.851 1282.25,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.reflect.api.Types.TypeApi"><span>TypeApi</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="scala.reflect.api.Types.TypeApi#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():Types.this.TypeApi"></a>
+      <a id="&lt;init&gt;:Universe.TypeApi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeApi</span><span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.reflect.api.Types.TypeApi#&lt;:&lt;" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="&lt;:&lt;(that:Types.this.Type):Boolean"></a>
+      <a id="&lt;:&lt;(Universe.Type):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less$colon$less" class="name">&lt;:&lt;</span><span class="params">(<span name="that">that: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does this type conform to given type argument <code>that</code>?</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#=:=" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="=:=(that:Types.this.Type):Boolean"></a>
+      <a id="=:=(Universe.Type):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$colon$eq" class="name">=:=</span><span class="params">(<span name="that">that: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Is this type equivalent to given type argument <code>that</code>?</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#asSeenFrom" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="asSeenFrom(pre:Types.this.Type,clazz:Types.this.Symbol):Types.this.Type"></a>
+      <a id="asSeenFrom(Universe.Type,Universe.Symbol):Universe.Type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asSeenFrom</span><span class="params">(<span name="pre">pre: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>, <span name="clazz">clazz: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This type as seen from prefix <code>pre</code> and class <code>clazz</code>.</p><div class="fullcomment"><div class="comment cmt"><p>This type as seen from prefix <code>pre</code> and class <code>clazz</code>. This means:
+ Replace all <code>ThisType</code>s of <code>clazz</code> or one of its subclasses
+ by <code>pre</code> and instantiate all parameters by arguments of <code>pre</code>.
+ Proceed analogously for <code>ThisType</code>s referring to outer classes.</p><p> Example:</p><pre>scala&gt; <span class="kw">import</span> scala.reflect.runtime.universe._
+<span class="kw">import</span> scala.reflect.runtime.universe._
+
+scala&gt; <span class="kw">class</span> D[T] { <span class="kw">def</span> m: T = ??? }
+defined <span class="kw">class</span> D
+
+scala&gt; <span class="kw">class</span> C <span class="kw">extends</span> D[<span class="std">Int</span>]
+defined <span class="kw">class</span> C
+
+scala&gt; <span class="kw">val</span> D = typeOf[D[_]].typeSymbol.asClass
+D: reflect.runtime.universe.ClassSymbol = <span class="kw">class</span> D
+
+scala&gt; <span class="kw">val</span> C = typeOf[C].typeSymbol.asClass
+C: reflect.runtime.universe.ClassSymbol = <span class="kw">class</span> C
+
+scala&gt; <span class="kw">val</span> T = D.typeParams(<span class="num">0</span>).asType.toType
+T: reflect.runtime.universe.Type = T
+
+scala&gt; T.asSeenFrom(ThisType(C), D)
+res0: reflect.runtime.universe.Type = scala.<span class="std">Int</span></pre></div></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#baseClasses" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="baseClasses:List[Types.this.Symbol]"></a>
+      <a id="baseClasses:List[Universe.Symbol]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">baseClasses</span><span class="result">: <a href="../../package.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The list of all base classes of this type (including its own typeSymbol)
+ in linearization order, starting with the class itself and ending
+ in class Any.</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#baseType" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="baseType(clazz:Types.this.Symbol):Types.this.Type"></a>
+      <a id="baseType(Universe.Symbol):Universe.Type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">baseType</span><span class="params">(<span name="clazz">clazz: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The least type instance of given class which is a super-type
+ of this type.</p><div class="fullcomment"><div class="comment cmt"><p>The least type instance of given class which is a super-type
+ of this type.  Example:</p><pre><span class="kw">class</span> D[T]
+<span class="kw">class</span> C <span class="kw">extends</span> p.D[<span class="std">Int</span>]
+ThisType(C).baseType(D) = p.D[<span class="std">Int</span>]</pre></div></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#contains" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="contains(sym:Types.this.Symbol):Boolean"></a>
+      <a id="contains(Universe.Symbol):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">contains</span><span class="params">(<span name="sym">sym: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does this type contain a reference to given symbol?</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#declaration" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="declaration(name:Types.this.Name):Types.this.Symbol"></a>
+      <a id="declaration(Universe.Name):Universe.Symbol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">declaration</span><span class="params">(<span name="name">name: <a href="Universe.html#Name&gt;:Null&lt;:Names.this.NameApi" class="extmbr" name="scala.reflect.api.Universe.Name">Universe.Name</a></span>)</span><span class="result">: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The defined or declared members with name <code>name</code> in this type;
+ an OverloadedSymbol if several exist, NoSymbol if none exist.</p><div class="fullcomment"><div class="comment cmt"><p>The defined or declared members with name <code>name</code> in this type;
+ an OverloadedSymbol if several exist, NoSymbol if none exist.
+ Alternatives of overloaded symbol appear in the order they are declared.
+</p></div></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#declarations" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="declarations:Types.this.MemberScope"></a>
+      <a id="declarations:Universe.MemberScope"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">declarations</span><span class="result">: <a href="Universe.html#MemberScope&gt;:Null&lt;:Scopes.this.ScopewithScopes.this.MemberScopeApi" class="extmbr" name="scala.reflect.api.Scopes.MemberScope">Universe.MemberScope</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A <code>Scope</code> containing directly declared members of this type.</p><div class="fullcomment"><div class="comment cmt"><p>A <code>Scope</code> containing directly declared members of this type.
+ Unlike <code>members</code> this method doesn't returns inherited members.</p><p> Members in the returned scope might appear in arbitrary order.
+ Use <code>declarations.sorted</code> to get an ordered list of members.
+</p></div></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#erasure" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="erasure:Types.this.Type"></a>
+      <a id="erasure:Universe.Type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">erasure</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The erased type corresponding to this type after
+ all transformations from Scala to Java have been performed.</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#exists" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="exists(p:Types.this.Type=&gt;Boolean):Boolean"></a>
+      <a id="exists((Universe.Type)⇒Boolean):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exists</span><span class="params">(<span name="p">p: (<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>) ⇒ <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Is there part of this type which satisfies predicate <code>p</code>?</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#find" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="find(p:Types.this.Type=&gt;Boolean):Option[Types.this.Type]"></a>
+      <a id="find((Universe.Type)⇒Boolean):Option[Universe.Type]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">find</span><span class="params">(<span name="p">p: (<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>) ⇒ <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="../../Option.html" class="extype" name="scala.Option">Option</a>[<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns optionally first type (in a preorder traversal) which satisfies predicate <code>p</code>,
+ or None if none exists.</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#foreach" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="foreach(f:Types.this.Type=&gt;Unit):Unit"></a>
+      <a id="foreach((Universe.Type)⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreach</span><span class="params">(<span name="f">f: (<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>) ⇒ <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Apply <code>f</code> to each part of this type, for side effects only</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#map" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="map(f:Types.this.Type=&gt;Types.this.Type):Types.this.Type"></a>
+      <a id="map((Universe.Type)⇒Universe.Type):Universe.Type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="params">(<span name="f">f: (<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>) ⇒ <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Apply <code>f</code> to each part of this type, returning
+ a new type.</p><div class="fullcomment"><div class="comment cmt"><p>Apply <code>f</code> to each part of this type, returning
+ a new type. children get mapped before their parents</p></div></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#member" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="member(name:Types.this.Name):Types.this.Symbol"></a>
+      <a id="member(Universe.Name):Universe.Symbol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">member</span><span class="params">(<span name="name">name: <a href="Universe.html#Name&gt;:Null&lt;:Names.this.NameApi" class="extmbr" name="scala.reflect.api.Universe.Name">Universe.Name</a></span>)</span><span class="result">: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The member with given name, either directly declared or inherited,
+ an OverloadedSymbol if several exist, NoSymbol if none exist.</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#members" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="members:Types.this.MemberScope"></a>
+      <a id="members:Universe.MemberScope"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">members</span><span class="result">: <a href="Universe.html#MemberScope&gt;:Null&lt;:Scopes.this.ScopewithScopes.this.MemberScopeApi" class="extmbr" name="scala.reflect.api.Scopes.MemberScope">Universe.MemberScope</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A <code>Scope</code> containing all members of this type (directly declared or inherited).</p><div class="fullcomment"><div class="comment cmt"><p>A <code>Scope</code> containing all members of this type (directly declared or inherited).
+ Unlike <code>declarations</code> this method also returns inherited members.</p><p> Members in the returned scope might appear in arbitrary order.
+ Use <code>declarations.sorted</code> to get an ordered list of members.
+</p></div></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#normalize" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="normalize:Types.this.Type"></a>
+      <a id="normalize:Universe.Type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">normalize</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"> Expands type aliases and converts higher-kinded TypeRefs to PolyTypes.</p><div class="fullcomment"><div class="comment cmt"><p> Expands type aliases and converts higher-kinded TypeRefs to PolyTypes.
+ Functions on types are also implemented as PolyTypes.</p><p> Example: (in the below, &lt;List&gt; is the type constructor of List)
+   TypeRef(pre, &lt;List&gt;, List()) is replaced by
+   PolyType(X, TypeRef(pre, &lt;List&gt;, List(X)))
+</p></div></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#substituteSymbols" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="substituteSymbols(from:List[Types.this.Symbol],to:List[Types.this.Symbol]):Types.this.Type"></a>
+      <a id="substituteSymbols(List[Universe.Symbol],List[Universe.Symbol]):Universe.Type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">substituteSymbols</span><span class="params">(<span name="from">from: <a href="../../package.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]</span>, <span name="to">to: <a href="../../package.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]</span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Substitute symbols in <code>to</code> for corresponding occurrences of references to
+ symbols <code>from</code> in this type.</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#substituteTypes" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="substituteTypes(from:List[Types.this.Symbol],to:List[Types.this.Type]):Types.this.Type"></a>
+      <a id="substituteTypes(List[Universe.Symbol],List[Universe.Type]):Universe.Type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">substituteTypes</span><span class="params">(<span name="from">from: <a href="../../package.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]</span>, <span name="to">to: <a href="../../package.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>]</span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Substitute types in <code>to</code> for corresponding occurrences of references to
+ symbols <code>from</code> in this type.</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#takesTypeArgs" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="takesTypeArgs:Boolean"></a>
+      <a id="takesTypeArgs:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">takesTypeArgs</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Is this type a type constructor that is missing its type arguments?
+</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#termSymbol" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="termSymbol:Types.this.Symbol"></a>
+      <a id="termSymbol:Universe.Symbol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">termSymbol</span><span class="result">: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The term symbol associated with the type, or <code>NoSymbol</code> for types
+ that do not refer to a term symbol.</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#typeConstructor" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="typeConstructor:Types.this.Type"></a>
+      <a id="typeConstructor:Universe.Type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeConstructor</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the corresponding type constructor (e.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the corresponding type constructor (e.g. List for List[T] or List[String])
+</p></div></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#typeSymbol" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="typeSymbol:Types.this.Symbol"></a>
+      <a id="typeSymbol:Universe.Symbol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeSymbol</span><span class="result">: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The type symbol associated with the type, or <code>NoSymbol</code> for types
+ that do not refer to a type symbol.</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#weak_&lt;:&lt;" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="weak_&lt;:&lt;(that:Types.this.Type):Boolean"></a>
+      <a id="weak_&lt;:&lt;(Universe.Type):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: weak_$less$colon$less" class="name">weak_&lt;:&lt;</span><span class="params">(<span name="that">that: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Does this type weakly conform to given type argument <code>that</code>, i.</p><div class="fullcomment"><div class="comment cmt"><p>Does this type weakly conform to given type argument <code>that</code>, i.e., either conforms in terms of <code>&lt;:&lt;</code> or both are primitive number types
+ that conform according to Section &quot;Weak Conformance&quot; in the spec. For example, Int weak_&lt;:&lt; Long.
+</p></div></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#widen" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="widen:Types.this.Type"></a>
+      <a id="widen:Universe.Type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">widen</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If this is a singleton type, widen it to its nearest underlying non-singleton
+ base type by applying one or more <code>underlying</code> dereferences.</p><div class="fullcomment"><div class="comment cmt"><p>If this is a singleton type, widen it to its nearest underlying non-singleton
+ base type by applying one or more <code>underlying</code> dereferences.
+ If this is not a singleton type, returns this type itself.</p><p> Example:</p><p> class Outer { class C ; val x: C }
+ val o: Outer
+ &lt;o.x.type&gt;.widen = o.C
+</p></div></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+ For <code>null</code> returns a hashcode where <code>null.hashCode</code> throws a
+ <code>NullPointerException</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(Universe.TypeApi,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>] performed by method any2ArrowAssoc in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+ The expression <code>x == that</code> is equivalent to <code>if (x eq null) that eq null else x.equals(that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt">ClassCastException<p>if the receiver object is not an instance of the erasure of type <code>T0</code>.</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((Universe.TypeApi)⇒Boolean,⇒Any):Universe.TypeApi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>) ⇒ <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((Universe.TypeApi)⇒Boolean):Universe.TypeApi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>) ⇒ <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):Universe.TypeApi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):Universe.TypeApi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>arg0</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation" target="_blank">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  Default implementation delegates to <code>eq</code>.</p><p> See also <code>equals</code> in <a href="../../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns string formatted according to given <code>format</code> string.</p><div class="fullcomment"><div class="comment cmt"><p>Returns string formatted according to given <code>format</code> string.
+ Format strings are as for <code>String.format</code>
+ (@see java.lang.String.format).
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A representation that corresponds to the dynamic class of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>A representation that corresponds to the dynamic class of the receiver object.</p><p> The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a href="../../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef
+</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../../Long.html" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../../Long.html" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(Universe.TypeApi,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>] performed by method any2ArrowAssoc in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Shadowed Implicit Value Members</h3>
+              <ol><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(typeApi: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(typeApi: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Universe.TypeApi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>] performed by method any2ArrowAssoc in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(typeApi: ArrowAssoc[Universe.TypeApi]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Universe.TypeApi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to
+            <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>] performed by method any2Ensuring in <a href="../../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(typeApi: Ensuring[Universe.TypeApi]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to <a href="../../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringfmt">
+              <h3>Inherited by implicit conversion any2stringfmt from
+                <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to <a href="../../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
+              <h3>Inherited by implicit conversion any2ArrowAssoc from
+                <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to <a href="../../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2Ensuring">
+              <h3>Inherited by implicit conversion any2Ensuring from
+                <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a> to <a href="../../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../../lib/diagrams.js"></script>
+    </body>
+      </html>

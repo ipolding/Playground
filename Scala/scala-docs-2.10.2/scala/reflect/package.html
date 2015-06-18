@@ -1,0 +1,489 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>reflect - Scala Standard Library API (Scaladoc) 2.10.2 - scala.reflect</title>
+          <meta name="description" content="reflect - Scala Standard Library API Scaladoc 2.10.2 - scala.reflect" />
+          <meta name="keywords" content="reflect Scala Standard Library API Scaladoc 2.10.2 scala.reflect" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.reflect.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a></p>
+        <h1>reflect</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reflect</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/library/scala/reflect/package.scala#L1" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1161" viewBox="0.00 0.00 332.00 282.00" height="282pt" width="332pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 278)" class="graph" id="graph1"><polygon points="-4,5 -4,-278 329,-278 329,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node default" id="graph1161_0"><a xlink:title="scala.reflect.ClassManifest"><polygon points="196,-149.5 100,-149.5 100,-124.5 196,-124.5 196,-149.5" stroke="#ababab" fill="#e1e1e1"></polygon><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-134.167" x="111.5" text-anchor="start">ClassManifest[T]</text></a></g><!-- node1 --><g class="node trait" id="graph1161_1"><a xlink:title="scala.reflect.OptManifest" xlink:href="OptManifest.html#inheritance-diagram"><polygon points="180,-274 72,-274 72,-248 180,-248 180,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-269" x="82" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="104" text-anchor="start">OptManifest[T]</text></a></g><!-- node3 --><g class="node object" id="graph1161_3"><a xlink:title="scala.reflect.NoManifest" xlink:href="NoManifest$.html#inheritance-diagram"><polygon points="94,-212 3.55271e-14,-212 -7.10543e-15,-186 94,-186 94,-212" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-207" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="32" text-anchor="start">NoManifest</text></a></g><!-- node1&#45;&gt;node3 --><g class="edge inheritance" id="graph1161_1_3"><a xlink:title="NoManifest is a subtype of OptManifest[T]"><path d="M105.008,-244.526C92.0939,-234.39 75.769,-221.578 63.7297,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="104.232,-246.141 109.246,-247.851 106.393,-243.388 104.232,-246.141" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node trait" id="graph1161_4"><a xlink:title="scala.reflect.ClassManifestDeprecatedApis" xlink:href="ClassManifestDeprecatedApis.html#inheritance-diagram"><polygon points="298,-212 112,-212 112,-186 298,-186 298,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-207" x="122" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="144" text-anchor="start">ClassManifestDeprecatedApis[T]</text></a></g><!-- node1&#45;&gt;node4 --><g class="edge inheritance" id="graph1161_1_4"><a xlink:title="ClassManifestDeprecatedApis[T] is a subtype of OptManifest[T]"><path d="M146.992,-244.526C159.906,-234.39 176.231,-221.578 188.27,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="145.607,-243.388 142.754,-247.851 147.768,-246.141 145.607,-243.388" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph1161_2"><a xlink:title="scala.reflect.ClassTag" xlink:href="ClassTag.html#inheritance-diagram"><polygon points="310,-150 214,-150 214,-124 310,-124 310,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-145" x="224" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="246" text-anchor="start">ClassTag[T]</text></a></g><!-- node6 --><g class="node trait" id="graph1161_6"><a xlink:title="scala.reflect.Manifest" xlink:href="Manifest.html#inheritance-diagram"><polygon points="309,-88 215,-88 215,-62 309,-62 309,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-83" x="225" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="247" text-anchor="start">Manifest[T]</text></a></g><!-- node2&#45;&gt;node6 --><g class="edge inheritance" id="graph1161_2_6"><a xlink:title="Manifest[T] is a subtype of ClassTag[T]"><path d="M262,-118.646C262,-108.843 262,-97.003 262,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="260.25,-118.851 262,-123.851 263.75,-118.851 260.25,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph1161_4_0"><a xlink:title="ClassManifest[T] is a subtype of ClassManifestDeprecatedApis[T]"><path d="M189.316,-181.94C179.945,-171.747 168.238,-159.013 159.681,-149.706" stroke="#d4d4d4" fill="none"></path><polygon points="188.239,-183.355 192.912,-185.851 190.816,-180.986 188.239,-183.355" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4&#45;&gt;node2 --><g class="edge inheritance" id="graph1161_4_2"><a xlink:title="ClassTag[T] is a subtype of ClassManifestDeprecatedApis[T]"><path d="M220.634,-181.994C229.873,-171.946 241.394,-159.414 249.929,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="219.184,-180.986 217.088,-185.851 221.761,-183.355 219.184,-180.986" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node5 --><g class="node class" id="graph1161_5"><a xlink:title="scala.reflect.AnyValManifest" xlink:href="AnyValManifest.html#inheritance-diagram"><polygon points="324,-26 200,-26 200,-1.24345e-14 324,-3.55271e-15 324,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="210" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="232" text-anchor="start">AnyValManifest[T]</text></a></g><!-- node6&#45;&gt;node5 --><g class="edge inheritance" id="graph1161_6_5"><a xlink:title="AnyValManifest[T] is a subtype of Manifest[T]"><path d="M262,-56.6463C262,-46.8429 262,-35.003 262,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="260.25,-56.8514 262,-61.8514 263.75,-56.8514 260.25,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.reflect"><span>reflect</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.reflect.AnyValManifest" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AnyValManifest[T&lt;:AnyVal]extendsManifest[T]withEquals"></a>
+      <a id="AnyValManifest[T&lt;:AnyVal]:AnyValManifest[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AnyValManifest.html"><span class="name">AnyValManifest</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../AnyVal.html" class="extype" name="scala.AnyVal">AnyVal</a></span>]</span><span class="result"> extends <a href="Manifest.html" class="extype" name="scala.reflect.Manifest">Manifest</a>[<span class="extype" name="scala.reflect.AnyValManifest.T">T</span>] with <a href="../Equals.html" class="extype" name="scala.Equals">Equals</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reflect.ClassTag" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClassTag[T]extendsClassManifestDeprecatedApis[T]withEqualswithSerializable"></a>
+      <a id="ClassTag[T]:ClassTag[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ClassTag.html"><span class="name">ClassTag</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ClassManifestDeprecatedApis.html" class="extype" name="scala.reflect.ClassManifestDeprecatedApis">ClassManifestDeprecatedApis</a>[<span class="extype" name="scala.reflect.ClassTag.T">T</span>] with <a href="../Equals.html" class="extype" name="scala.Equals">Equals</a> with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A <code>ClassTag[T]</code> stores the erased class of a given type <code>T</code>, accessible via the <code>runtimeClass</code>
+field.</p>
+    </li><li name="scala.reflect.Manifest" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Manifest[T]extendsClassManifest[T]withEquals"></a>
+      <a id="Manifest[T]:Manifest[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Manifest.html"><span class="name">Manifest</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="#ClassManifest[T]=scala.reflect.ClassTag[T]" class="extmbr" name="scala.reflect.ClassManifest">ClassManifest</a>[<span class="extype" name="scala.reflect.Manifest.T">T</span>] with <a href="../Equals.html" class="extype" name="scala.Equals">Equals</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A <code>Manifest[T]</code> is an opaque descriptor for type T.</p>
+    </li><li name="scala.reflect.OptManifest" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="OptManifest[+T]extendsSerializable"></a>
+      <a id="OptManifest[+T]:OptManifest[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="OptManifest.html"><span class="name">OptManifest</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A <code>OptManifest[T]</code> is an optional <a href="Manifest.html" class="extype" name="scala.reflect.Manifest">scala.reflect.Manifest</a>.</p>
+    </li><li name="scala.reflect.BeanDescription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BeanDescription=scala.beans.BeanDescription"></a>
+      <a id="BeanDescription:BeanDescription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use @scala.beans.BeanDescription instead">BeanDescription</span><span class="result"> = <a href="../beans/BeanDescription.html" class="extype" name="scala.beans.BeanDescription">beans.BeanDescription</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code>@scala.beans.BeanDescription</code> instead</p></dd></dl></div>
+    </li><li name="scala.reflect.BeanDisplayName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BeanDisplayName=scala.beans.BeanDisplayName"></a>
+      <a id="BeanDisplayName:BeanDisplayName"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use @scala.beans.BeanDisplayName instead">BeanDisplayName</span><span class="result"> = <a href="../beans/BeanDisplayName.html" class="extype" name="scala.beans.BeanDisplayName">beans.BeanDisplayName</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code>@scala.beans.BeanDisplayName</code> instead</p></dd></dl></div>
+    </li><li name="scala.reflect.BeanInfo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BeanInfo=scala.beans.BeanInfo"></a>
+      <a id="BeanInfo:BeanInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use @scala.beans.BeanInfo instead">BeanInfo</span><span class="result"> = <a href="../beans/BeanInfo.html" class="extype" name="scala.beans.BeanInfo">beans.BeanInfo</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code>@scala.beans.BeanInfo</code> instead</p></dd></dl></div>
+    </li><li name="scala.reflect.BeanInfoSkip" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BeanInfoSkip=scala.beans.BeanInfoSkip"></a>
+      <a id="BeanInfoSkip:BeanInfoSkip"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use @scala.beans.BeanInfoSkip instead">BeanInfoSkip</span><span class="result"> = <a href="../beans/BeanInfoSkip.html" class="extype" name="scala.beans.BeanInfoSkip">beans.BeanInfoSkip</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code>@scala.beans.BeanInfoSkip</code> instead</p></dd></dl></div>
+    </li><li name="scala.reflect.BeanProperty" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BeanProperty=scala.beans.BeanProperty"></a>
+      <a id="BeanProperty:BeanProperty"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use @scala.beans.BeanProperty instead">BeanProperty</span><span class="result"> = <a href="../beans/BeanProperty.html" class="extype" name="scala.beans.BeanProperty">beans.BeanProperty</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code>@scala.beans.BeanProperty</code> instead</p></dd></dl></div>
+    </li><li name="scala.reflect.BooleanBeanProperty" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BooleanBeanProperty=scala.beans.BooleanBeanProperty"></a>
+      <a id="BooleanBeanProperty:BooleanBeanProperty"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use @scala.beans.BooleanBeanProperty instead">BooleanBeanProperty</span><span class="result"> = <a href="../beans/BooleanBeanProperty.html" class="extype" name="scala.beans.BooleanBeanProperty">beans.BooleanBeanProperty</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code>@scala.beans.BooleanBeanProperty</code> instead</p></dd></dl></div>
+    </li><li name="scala.reflect.ClassManifest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ClassManifest[T]=scala.reflect.ClassTag[T]"></a>
+      <a id="ClassManifest[T]:ClassManifest[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use scala.reflect.ClassTag instead">ClassManifest</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="ClassTag.html" class="extype" name="scala.reflect.ClassTag">ClassTag</a>[<span class="extype" name="scala.reflect.ClassManifest.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A <code>ClassManifest[T]</code> is an opaque descriptor for type <code>T</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A <code>ClassManifest[T]</code> is an opaque descriptor for type <code>T</code>.
+ It is used by the compiler to preserve information necessary
+ for instantiating <code>Arrays</code> in those cases where the element type
+ is unknown at compile time.</p><p> The type-relation operators make an effort to present a more accurate
+ picture than can be realized with erased types, but they should not be
+ relied upon to give correct answers. In particular they are likely to
+ be wrong when variance is involved or when a subtype has a different
+ number of type arguments than a supertype.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+                <span class="name">@<a href="../annotation/implicitNotFound.html" class="extype" name="scala.annotation.implicitNotFound">implicitNotFound</a></span><span class="args">(<span>
+      msg = 
+      <span class="defval" name="&quot;No ClassManifest available for ${T}.&quot;">...</span>
+    </span>)</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use scala.reflect.ClassTag instead</p></dd></dl></div>
+    </li><li name="scala.reflect.ClassManifestDeprecatedApis" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ClassManifestDeprecatedApis[T]extendsOptManifest[T]"></a>
+      <a id="ClassManifestDeprecatedApis[T]:ClassManifestDeprecatedApis[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ClassManifestDeprecatedApis.html"><span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use scala.reflect.ClassTag instead">ClassManifestDeprecatedApis</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="OptManifest.html" class="extype" name="scala.reflect.OptManifest">OptManifest</a>[<span class="extype" name="scala.reflect.ClassManifestDeprecatedApis.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use scala.reflect.ClassTag instead</p></dd></dl></div>
+    </li><li name="scala.reflect.ScalaBeanInfo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ScalaBeanInfo=scala.beans.ScalaBeanInfo"></a>
+      <a id="ScalaBeanInfo:ScalaBeanInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use @scala.beans.ScalaBeanInfo instead">ScalaBeanInfo</span><span class="result"> = <a href="../beans/ScalaBeanInfo.html" class="extype" name="scala.beans.ScalaBeanInfo">beans.ScalaBeanInfo</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code>@scala.beans.ScalaBeanInfo</code> instead</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.reflect.ClassManifestFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClassManifestFactory"></a>
+      <a id="ClassManifestFactory:ClassManifestFactory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ClassManifestFactory$.html"><span class="name">ClassManifestFactory</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt"><code>ClassManifestFactory</code> defines factory methods for manifests.</p>
+    </li><li name="scala.reflect.ClassTag" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClassTag"></a>
+      <a id="ClassTag:ClassTag"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ClassTag$.html"><span class="name">ClassTag</span></a><span class="result"> extends <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Class tags corresponding to primitive types and constructor/extractor for ClassTags.</p>
+    </li><li name="scala.reflect.package#Manifest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Manifest:scala.reflect.ManifestFactory.type"></a>
+      <a id="Manifest:ManifestFactory.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Manifest</span><span class="result">: <a href="ManifestFactory$.html" class="extype" name="scala.reflect.ManifestFactory">ManifestFactory</a>.type</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The object <code>Manifest</code> defines factory methods for manifests.</p><div class="fullcomment"><div class="comment cmt"><p>The object <code>Manifest</code> defines factory methods for manifests.
+ It is intended for use by the compiler and should not be used in client code.
+</p></div></div>
+    </li><li name="scala.reflect.ManifestFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ManifestFactory"></a>
+      <a id="ManifestFactory:ManifestFactory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ManifestFactory$.html"><span class="name">ManifestFactory</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt"><code>ManifestFactory</code> defines factory methods for manifests.</p>
+    </li><li name="scala.reflect.NameTransformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NameTransformer"></a>
+      <a id="NameTransformer:NameTransformer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NameTransformer$.html"><span class="name">NameTransformer</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides functions to encode and decode Scala symbolic names.</p>
+    </li><li name="scala.reflect.NoManifest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoManifest"></a>
+      <a id="NoManifest:NoManifest"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NoManifest$.html"><span class="name">NoManifest</span></a><span class="result"> extends <a href="OptManifest.html" class="extype" name="scala.reflect.OptManifest">OptManifest</a>[<a href="../Nothing.html" class="extype" name="scala.Nothing">Nothing</a>] with <a href="../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">One of the branches of an <a href="OptManifest.html" class="extype" name="scala.reflect.OptManifest">scala.reflect.OptManifest</a>.</p>
+    </li><li name="scala.reflect.api" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="api"></a>
+      <a id="api:api"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="api/package.html"><span class="name">api</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.package#classTag" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="classTag[T](implicitctag:scala.reflect.ClassTag[T]):scala.reflect.ClassTag[T]"></a>
+      <a id="classTag[T](ClassTag[T]):ClassTag[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">classTag</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ctag">ctag: <a href="ClassTag.html" class="extype" name="scala.reflect.ClassTag">ClassTag</a>[<span class="extype" name="scala.reflect.classTag.T">T</span>]</span>)</span><span class="result">: <a href="ClassTag.html" class="extype" name="scala.reflect.ClassTag">ClassTag</a>[<span class="extype" name="scala.reflect.classTag.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.reflect.macros" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="macros"></a>
+      <a id="macros:macros"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="macros/package.html"><span class="name">macros</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span> </span></p>
+    </li><li name="scala.reflect.runtime" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="runtime"></a>
+      <a id="runtime:runtime"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="runtime/package.html"><span class="name">runtime</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Entry points into runtime reflection.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.reflect.package#ClassManifest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ClassManifest:scala.reflect.ClassManifestFactory.type"></a>
+      <a id="ClassManifest:ClassManifestFactory.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.0) Use scala.reflect.ClassTag instead">ClassManifest</span><span class="result">: <a href="ClassManifestFactory$.html" class="extype" name="scala.reflect.ClassManifestFactory">ClassManifestFactory</a>.type</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The object <code>ClassManifest</code> defines factory methods for manifests.</p><div class="fullcomment"><div class="comment cmt"><p>The object <code>ClassManifest</code> defines factory methods for manifests.
+ It is intended for use by the compiler and should not be used in client code.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use scala.reflect.ClassTag instead</p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../lib/diagrams.js"></script>
+    </body>
+      </html>

@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>CustomParallelizable - Scala Standard Library API (Scaladoc) 2.10.2 - scala.collection.CustomParallelizable</title>
+          <meta name="description" content="CustomParallelizable - Scala Standard Library API Scaladoc 2.10.2 - scala.collection.CustomParallelizable" />
+          <meta name="keywords" content="CustomParallelizable Scala Standard Library API Scaladoc 2.10.2 scala.collection.CustomParallelizable" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'scala.collection.CustomParallelizable';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../lib/trait_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="scala">scala</a>.<a href="package.html" class="extype" name="scala.collection">collection</a></p>
+        <h1>CustomParallelizable</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CustomParallelizable</span><span class="tparams">[<span name="A">+A</span>, <span name="ParRepr">+ParRepr &lt;: <a href="Parallel.html" class="extype" name="scala.collection.Parallel">Parallel</a></span>]</span><span class="result"> extends <a href="Parallelizable.html" class="extype" name="scala.collection.Parallelizable">Parallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/library/scala/collection/CustomParallelizable.scala#L1" target="_blank">CustomParallelizable.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="Parallelizable.html" class="extype" name="scala.collection.Parallelizable">Parallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>], <a href="../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a href="parallel/ParSeqViewLike$Appended.html" class="extype" name="scala.collection.parallel.ParSeqViewLike.Appended">Appended</a>, <a href="parallel/ParIterableViewLike$Appended.html" class="extype" name="scala.collection.parallel.ParIterableViewLike.Appended">Appended</a>, <a href="mutable/ArrayBuffer.html" class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</a>, <a href="mutable/ArrayOps.html" class="extype" name="scala.collection.mutable.ArrayOps">ArrayOps</a>, <a href="mutable/ArraySeq.html" class="extype" name="scala.collection.mutable.ArraySeq">ArraySeq</a>, <a href="parallel/ParMapLike$DefaultKeySet.html" class="extype" name="scala.collection.parallel.ParMapLike.DefaultKeySet">DefaultKeySet</a>, <a href="parallel/ParMapLike$DefaultValuesIterable.html" class="extype" name="scala.collection.parallel.ParMapLike.DefaultValuesIterable">DefaultValuesIterable</a>, <a href="parallel/ParSeqViewLike$Forced.html" class="extype" name="scala.collection.parallel.ParSeqViewLike.Forced">Forced</a>, <a href="parallel/ParIterableViewLike$Forced.html" class="extype" name="scala.collection.parallel.ParIterableViewLike.Forced">Forced</a>, <a href="mutable/HashMap.html" class="extype" name="scala.collection.mutable.HashMap">HashMap</a>, <a href="immutable/HashMap.html" class="extype" name="scala.collection.immutable.HashMap">HashMap</a>, <a href="immutable/HashMap$$HashMap1.html" class="extype" name="scala.collection.immutable.HashMap.HashMap1">HashMap1</a>, <a href="mutable/HashSet.html" class="extype" name="scala.collection.mutable.HashSet">HashSet</a>, <a href="immutable/HashSet.html" class="extype" name="scala.collection.immutable.HashSet">HashSet</a>, <a href="immutable/HashSet$$HashSet1.html" class="extype" name="scala.collection.immutable.HashSet.HashSet1">HashSet1</a>, <a href="immutable/HashMap$$HashTrieMap.html" class="extype" name="scala.collection.immutable.HashMap.HashTrieMap">HashTrieMap</a>, <a href="immutable/HashSet$$HashTrieSet.html" class="extype" name="scala.collection.immutable.HashSet.HashTrieSet">HashTrieSet</a>, <a href="immutable/Range$$Inclusive.html" class="extype" name="scala.collection.immutable.Range.Inclusive">Inclusive</a>, <a href="parallel/ParSeqViewLike$Mapped.html" class="extype" name="scala.collection.parallel.ParSeqViewLike.Mapped">Mapped</a>, <a href="parallel/ParIterableViewLike$Mapped.html" class="extype" name="scala.collection.parallel.ParIterableViewLike.Mapped">Mapped</a>, <a href="../xml/NodeBuffer.html" class="extype" name="scala.xml.NodeBuffer">NodeBuffer</a>, <a href="parallel/mutable/ParArray.html" class="extype" name="scala.collection.parallel.mutable.ParArray">ParArray</a>, <a href="parallel/mutable/ParHashMap.html" class="extype" name="scala.collection.parallel.mutable.ParHashMap">ParHashMap</a>, <a href="parallel/immutable/ParHashMap.html" class="extype" name="scala.collection.parallel.immutable.ParHashMap">ParHashMap</a>, <a href="parallel/mutable/ParHashSet.html" class="extype" name="scala.collection.parallel.mutable.ParHashSet">ParHashSet</a>, <a href="parallel/immutable/ParHashSet.html" class="extype" name="scala.collection.parallel.immutable.ParHashSet">ParHashSet</a>, <a href="parallel/mutable/ParIterable.html" class="extype" name="scala.collection.parallel.mutable.ParIterable">ParIterable</a>, <a href="parallel/immutable/ParIterable.html" class="extype" name="scala.collection.parallel.immutable.ParIterable">ParIterable</a>, <a href="parallel/ParIterable.html" class="extype" name="scala.collection.parallel.ParIterable">ParIterable</a>, <a href="parallel/ParIterableLike.html" class="extype" name="scala.collection.parallel.ParIterableLike">ParIterableLike</a>, <a href="parallel/ParIterableView.html" class="extype" name="scala.collection.parallel.ParIterableView">ParIterableView</a>, <a href="parallel/ParIterableViewLike.html" class="extype" name="scala.collection.parallel.ParIterableViewLike">ParIterableViewLike</a>, <a href="parallel/mutable/ParMap.html" class="extype" name="scala.collection.parallel.mutable.ParMap">ParMap</a>, <a href="parallel/immutable/ParMap.html" class="extype" name="scala.collection.parallel.immutable.ParMap">ParMap</a>, <a href="parallel/ParMap.html" class="extype" name="scala.collection.parallel.ParMap">ParMap</a>, <a href="parallel/mutable/ParMapLike.html" class="extype" name="scala.collection.parallel.mutable.ParMapLike">ParMapLike</a>, <a href="parallel/ParMapLike.html" class="extype" name="scala.collection.parallel.ParMapLike">ParMapLike</a>, <a href="parallel/immutable/ParRange.html" class="extype" name="scala.collection.parallel.immutable.ParRange">ParRange</a>, <a href="parallel/mutable/ParSeq.html" class="extype" name="scala.collection.parallel.mutable.ParSeq">ParSeq</a>, <a href="parallel/immutable/ParSeq.html" class="extype" name="scala.collection.parallel.immutable.ParSeq">ParSeq</a>, <a href="parallel/ParSeq.html" class="extype" name="scala.collection.parallel.ParSeq">ParSeq</a>, <a href="parallel/ParSeqLike.html" class="extype" name="scala.collection.parallel.ParSeqLike">ParSeqLike</a>, <a href="parallel/ParSeqView.html" class="extype" name="scala.collection.parallel.ParSeqView">ParSeqView</a>, <a href="parallel/ParSeqViewLike.html" class="extype" name="scala.collection.parallel.ParSeqViewLike">ParSeqViewLike</a>, <a href="parallel/mutable/ParSet.html" class="extype" name="scala.collection.parallel.mutable.ParSet">ParSet</a>, <a href="parallel/immutable/ParSet.html" class="extype" name="scala.collection.parallel.immutable.ParSet">ParSet</a>, <a href="parallel/ParSet.html" class="extype" name="scala.collection.parallel.ParSet">ParSet</a>, <a href="parallel/mutable/ParSetLike.html" class="extype" name="scala.collection.parallel.mutable.ParSetLike">ParSetLike</a>, <a href="parallel/ParSetLike.html" class="extype" name="scala.collection.parallel.ParSetLike">ParSetLike</a>, <a href="parallel/mutable/ParTrieMap.html" class="extype" name="scala.collection.parallel.mutable.ParTrieMap">ParTrieMap</a>, <a href="parallel/immutable/ParVector.html" class="extype" name="scala.collection.parallel.immutable.ParVector">ParVector</a>, <a href="parallel/ParSeqViewLike$Patched.html" class="extype" name="scala.collection.parallel.ParSeqViewLike.Patched">Patched</a>, <a href="../io/BytePickle$$PicklerEnv.html" class="extype" name="scala.io.BytePickle.PicklerEnv">PicklerEnv</a>, <a href="parallel/ParSeqViewLike$Prepended.html" class="extype" name="scala.collection.parallel.ParSeqViewLike.Prepended">Prepended</a>, <a href="immutable/Range.html" class="extype" name="scala.collection.immutable.Range">Range</a>, <a href="parallel/ParSeqViewLike$Reversed.html" class="extype" name="scala.collection.parallel.ParSeqViewLike.Reversed">Reversed</a>, <a href="script/Script.html" class="extype" name="scala.collection.script.Script">Script</a>, <a href="parallel/ParSeqViewLike$Sliced.html" class="extype" name="scala.collection.parallel.ParSeqViewLike.Sliced">Sliced</a>, <a href="parallel/ParIterableViewLike$Sliced.html" class="extype" name="scala.collection.parallel.ParIterableViewLike.Sliced">Sliced</a>, <a href="parallel/ParSeqViewLike$Transformed.html" class="extype" name="scala.collection.parallel.ParSeqViewLike.Transformed">Transformed</a>, <a href="parallel/ParIterableViewLike$Transformed.html" class="extype" name="scala.collection.parallel.ParIterableViewLike.Transformed">Transformed</a>, <a href="concurrent/TrieMap.html" class="extype" name="scala.collection.concurrent.TrieMap">TrieMap</a>, <a href="../io/BytePickle$$UnPicklerEnv.html" class="extype" name="scala.io.BytePickle.UnPicklerEnv">UnPicklerEnv</a>, <a href="immutable/Vector.html" class="extype" name="scala.collection.immutable.Vector">Vector</a>, <a href="parallel/mutable/ParMap$$WithDefault.html" class="extype" name="scala.collection.parallel.mutable.ParMap.WithDefault">WithDefault</a>, <a href="parallel/immutable/ParMap$$WithDefault.html" class="extype" name="scala.collection.parallel.immutable.ParMap.WithDefault">WithDefault</a>, <a href="parallel/ParMap$$WithDefault.html" class="extype" name="scala.collection.parallel.ParMap.WithDefault">WithDefault</a>, <a href="mutable/WrappedArray.html" class="extype" name="scala.collection.mutable.WrappedArray">WrappedArray</a>, <a href="parallel/ParSeqViewLike$Zipped.html" class="extype" name="scala.collection.parallel.ParSeqViewLike.Zipped">Zipped</a>, <a href="parallel/ParIterableViewLike$Zipped.html" class="extype" name="scala.collection.parallel.ParIterableViewLike.Zipped">Zipped</a>, <a href="parallel/ParSeqViewLike$ZippedAll.html" class="extype" name="scala.collection.parallel.ParSeqViewLike.ZippedAll">ZippedAll</a>, <a href="parallel/ParIterableViewLike$ZippedAll.html" class="extype" name="scala.collection.parallel.ParIterableViewLike.ZippedAll">ZippedAll</a>, <a href="mutable/WrappedArray$$ofBoolean.html" class="extype" name="scala.collection.mutable.WrappedArray.ofBoolean">ofBoolean</a>, <a href="mutable/ArrayOps$$ofBoolean.html" class="extype" name="scala.collection.mutable.ArrayOps.ofBoolean">ofBoolean</a>, <a href="mutable/WrappedArray$$ofByte.html" class="extype" name="scala.collection.mutable.WrappedArray.ofByte">ofByte</a>, <a href="mutable/ArrayOps$$ofByte.html" class="extype" name="scala.collection.mutable.ArrayOps.ofByte">ofByte</a>, <a href="mutable/WrappedArray$$ofChar.html" class="extype" name="scala.collection.mutable.WrappedArray.ofChar">ofChar</a>, <a href="mutable/ArrayOps$$ofChar.html" class="extype" name="scala.collection.mutable.ArrayOps.ofChar">ofChar</a>, <a href="mutable/WrappedArray$$ofDouble.html" class="extype" name="scala.collection.mutable.WrappedArray.ofDouble">ofDouble</a>, <a href="mutable/ArrayOps$$ofDouble.html" class="extype" name="scala.collection.mutable.ArrayOps.ofDouble">ofDouble</a>, <a href="mutable/WrappedArray$$ofFloat.html" class="extype" name="scala.collection.mutable.WrappedArray.ofFloat">ofFloat</a>, <a href="mutable/ArrayOps$$ofFloat.html" class="extype" name="scala.collection.mutable.ArrayOps.ofFloat">ofFloat</a>, <a href="mutable/WrappedArray$$ofInt.html" class="extype" name="scala.collection.mutable.WrappedArray.ofInt">ofInt</a>, <a href="mutable/ArrayOps$$ofInt.html" class="extype" name="scala.collection.mutable.ArrayOps.ofInt">ofInt</a>, <a href="mutable/WrappedArray$$ofLong.html" class="extype" name="scala.collection.mutable.WrappedArray.ofLong">ofLong</a>, <a href="mutable/ArrayOps$$ofLong.html" class="extype" name="scala.collection.mutable.ArrayOps.ofLong">ofLong</a>, <a href="mutable/WrappedArray$$ofRef.html" class="extype" name="scala.collection.mutable.WrappedArray.ofRef">ofRef</a>, <a href="mutable/ArrayOps$$ofRef.html" class="extype" name="scala.collection.mutable.ArrayOps.ofRef">ofRef</a>, <a href="mutable/WrappedArray$$ofShort.html" class="extype" name="scala.collection.mutable.WrappedArray.ofShort">ofShort</a>, <a href="mutable/ArrayOps$$ofShort.html" class="extype" name="scala.collection.mutable.ArrayOps.ofShort">ofShort</a>, <a href="mutable/WrappedArray$$ofUnit.html" class="extype" name="scala.collection.mutable.WrappedArray.ofUnit">ofUnit</a>, <a href="mutable/ArrayOps$$ofUnit.html" class="extype" name="scala.collection.mutable.ArrayOps.ofUnit">ofUnit</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1031" viewBox="0.00 0.00 1600.00 158.00" height="158pt" width="1600pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph1"><polygon points="-4,5 -4,-154 1597,-154 1597,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this trait" id="graph1031_0"><a xlink:title="scala.collection.CustomParallelizable (this trait)" xlink:href="#inheritance-diagram"><polygon points="816,-88 626,-88 626,-62 816,-62 816,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-83" x="636" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="658" text-anchor="start">CustomParallelizable[A, ParRepr]</text></a></g><!-- node1 --><g class="node class" id="graph1031_1"><a xlink:title="scala.collection.mutable.ArrayBuffer" xlink:href="mutable/ArrayBuffer.html#inheritance-diagram"><polygon points="106,-26 3.55271e-14,-26 0,-1.24345e-14 106,-3.55271e-15 106,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="32" text-anchor="start">ArrayBuffer[A]</text></a></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1031_0_1"><a xlink:title="ArrayBuffer[A] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M620.537,-70.7568C499.971,-64.771 291.917,-51.5964 115,-26 112.061,-25.5748 109.053,-25.0947 106.022,-24.576" stroke="#d4d4d4" fill="none"></path><polygon points="620.775,-72.5206 625.855,-71.0191 620.948,-69.0249 620.775,-72.5206" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph1031_2"><a xlink:title="scala.collection.mutable.ArrayOps" xlink:href="mutable/ArrayOps.html#inheritance-diagram"><polygon points="222,-26 124,-26 124,-1.24345e-14 222,-3.55271e-15 222,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-21" x="134" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="156" text-anchor="start">ArrayOps[T]</text></a></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1031_0_2"><a xlink:title="ArrayOps[T] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M620.428,-68.5126C521.05,-61.264 364.911,-47.6216 231,-26 228.148,-25.5394 225.225,-25.0241 222.282,-24.4715" stroke="#d4d4d4" fill="none"></path><polygon points="620.594,-70.2791 625.707,-68.8955 620.847,-66.7883 620.594,-70.2791" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node class" id="graph1031_3"><a xlink:title="scala.collection.mutable.ArraySeq" xlink:href="mutable/ArraySeq.html#inheritance-diagram"><polygon points="338,-26 240,-26 240,-1.24345e-14 338,-3.55271e-15 338,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="250" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="272" text-anchor="start">ArraySeq[A]</text></a></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1031_0_3"><a xlink:title="ArraySeq[A] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M620.336,-64.3056C544.837,-55.6809 439.093,-42.3193 347,-26 344.155,-25.4958 341.238,-24.9464 338.3,-24.3677" stroke="#d4d4d4" fill="none"></path><polygon points="620.553,-66.0915 625.719,-64.9183 620.949,-62.614 620.553,-66.0915" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node class" id="graph1031_4"><a xlink:title="scala.collection.immutable.HashMap" xlink:href="immutable/HashMap.html#inheritance-diagram"><polygon points="468,-26 356,-26 356,-1.24345e-14 468,-3.55271e-15 468,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="366" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="388" text-anchor="start">HashMap[A, B]</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge inheritance" id="graph1031_0_4"><a xlink:title="HashMap[A, B] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M650.893,-60.9332C595.537,-49.8262 519.33,-34.5354 468.001,-24.2364" stroke="#d4d4d4" fill="none"></path><polygon points="650.6,-62.6592 655.847,-61.9272 651.289,-59.2276 650.6,-62.6592" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node5 --><g class="node class" id="graph1031_5"><a xlink:title="scala.collection.mutable.HashMap" xlink:href="mutable/HashMap.html#inheritance-diagram"><polygon points="598,-26 486,-26 486,-1.24345e-14 598,-3.55271e-15 598,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="496" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="518" text-anchor="start">HashMap[A, B]</text></a></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph1031_0_5"><a xlink:title="HashMap[A, B] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M678.305,-60.2118C648.266,-49.8074 608.44,-36.0126 579.599,-26.0232" stroke="#d4d4d4" fill="none"></path><polygon points="677.741,-61.8685 683.039,-61.8514 678.887,-58.5613 677.741,-61.8685" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node6 --><g class="node class" id="graph1031_6"><a xlink:title="scala.collection.immutable.HashSet" xlink:href="immutable/HashSet.html#inheritance-diagram"><polygon points="712,-26 616,-26 616,-1.24345e-14 712,-3.55271e-15 712,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="626" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="648" text-anchor="start">HashSet[A]</text></a></g><!-- node0&#45;&gt;node6 --><g class="edge inheritance" id="graph1031_0_6"><a xlink:title="HashSet[A] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M705.366,-57.9943C696.127,-47.9456 684.606,-35.4138 676.071,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="704.239,-59.3549 708.912,-61.8514 706.816,-56.9861 704.239,-59.3549" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node7 --><g class="node class" id="graph1031_7"><a xlink:title="scala.collection.mutable.HashSet" xlink:href="mutable/HashSet.html#inheritance-diagram"><polygon points="826,-26 730,-26 730,-1.24345e-14 826,-3.55271e-15 826,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="740" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="762" text-anchor="start">HashSet[A]</text></a></g><!-- node0&#45;&gt;node7 --><g class="edge inheritance" id="graph1031_0_7"><a xlink:title="HashSet[A] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M736.634,-57.9943C745.873,-47.9456 757.394,-35.4138 765.929,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="735.184,-56.9861 733.088,-61.8514 737.761,-59.3549 735.184,-56.9861" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node8 --><g class="node trait" id="graph1031_8"><a xlink:title="scala.collection.parallel.ParIterableLike" xlink:href="parallel/ParIterableLike.html#inheritance-diagram"><polygon points="1042,-26 844,-26 844,-1.24345e-14 1042,-3.55271e-15 1042,-26" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-21" x="854" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="876" text-anchor="start">ParIterableLike[T, Repr, Sequential]</text></a></g><!-- node0&#45;&gt;node8 --><g class="edge inheritance" id="graph1031_0_8"><a xlink:title="ParIterableLike[T, Repr, Sequential] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M772.761,-60.5443C810.109,-50.1137 860.113,-36.1487 896.255,-26.055" stroke="#d4d4d4" fill="none"></path><polygon points="772.154,-58.8966 767.809,-61.9272 773.096,-62.2677 772.154,-58.8966" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node9 --><g class="node class" id="graph1031_9"><a xlink:title="scala.collection.immutable.Range" xlink:href="immutable/Range.html#inheritance-diagram"><polygon points="1180,-26 1060,-26 1060,-1.24345e-14 1180,-3.55271e-15 1180,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="1070" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1092" text-anchor="start">immutable.Range</text></a></g><!-- node0&#45;&gt;node9 --><g class="edge inheritance" id="graph1031_0_9"><a xlink:title="immutable.Range is a subtype of CustomParallelizable[A, ParRepr]"><path d="M820.47,-61.2562C886.046,-51.9431 973.764,-39.005 1051,-26 1053.88,-25.5142 1056.84,-25.0053 1059.81,-24.4818" stroke="#d4d4d4" fill="none"></path><polygon points="820.095,-59.5417 815.391,-61.9766 820.587,-63.0071 820.095,-59.5417" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node10 --><g class="node class" id="graph1031_10"><a xlink:title="scala.collection.concurrent.TrieMap" xlink:href="concurrent/TrieMap.html#inheritance-diagram"><polygon points="1304,-26 1198,-26 1198,-1.24345e-14 1304,-3.55271e-15 1304,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="1208" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1230" text-anchor="start">TrieMap[K, V]</text></a></g><!-- node0&#45;&gt;node10 --><g class="edge inheritance" id="graph1031_0_10"><a xlink:title="TrieMap[K, V] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M821.434,-67.477C916.466,-59.6522 1062.93,-45.7638 1189,-26 1191.93,-25.5401 1194.94,-25.0326 1197.97,-24.4927" stroke="#d4d4d4" fill="none"></path><polygon points="821.223,-65.7383 816.383,-67.8911 821.509,-69.2266 821.223,-65.7383" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node11 --><g class="node class" id="graph1031_11"><a xlink:title="scala.collection.immutable.Vector" xlink:href="immutable/Vector.html#inheritance-diagram"><polygon points="1456,-26 1322,-26 1322,-1.24345e-14 1456,-3.55271e-15 1456,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="1332" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1354" text-anchor="start">immutable.Vector[A]</text></a></g><!-- node0&#45;&gt;node11 --><g class="edge inheritance" id="graph1031_0_11"><a xlink:title="immutable.Vector[A] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M821.311,-69.3608C939.281,-62.1133 1140.86,-47.8045 1313,-26 1315.92,-25.6299 1318.9,-25.2275 1321.91,-24.8009" stroke="#d4d4d4" fill="none"></path><polygon points="820.99,-67.6271 816.106,-69.6794 821.203,-71.1206 820.99,-67.6271" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node12 --><g class="node class" id="graph1031_12"><a xlink:title="scala.collection.mutable.WrappedArray" xlink:href="mutable/WrappedArray.html#inheritance-diagram"><polygon points="1592,-26 1474,-26 1474,-1.24345e-14 1592,-3.55271e-15 1592,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-21" x="1484" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1506" text-anchor="start">WrappedArray[T]</text></a></g><!-- node0&#45;&gt;node12 --><g class="edge inheritance" id="graph1031_0_12"><a xlink:title="WrappedArray[T] is a subtype of CustomParallelizable[A, ParRepr]"><path d="M821.239,-72.3148C964.489,-67.5896 1235.8,-55.3433 1465,-26 1467.86,-25.6337 1470.78,-25.2218 1473.73,-24.7761" stroke="#d4d4d4" fill="none"></path><polygon points="821.138,-70.5671 816.198,-72.4797 821.252,-74.0652 821.138,-70.5671" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node13 --><g class="node trait" id="graph1031_13"><a xlink:title="scala.collection.Parallelizable" xlink:href="Parallelizable.html#inheritance-diagram"><polygon points="799,-150 643,-150 643,-124 799,-124 799,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-145" x="653" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="675" text-anchor="start">Parallelizable[A, ParRepr]</text></a></g><!-- node13&#45;&gt;node0 --><g class="edge inheritance" id="graph1031_13_0"><a xlink:title="CustomParallelizable[A, ParRepr] is a subtype of Parallelizable[A, ParRepr]"><path d="M721,-118.646C721,-108.843 721,-97.003 721,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="719.25,-118.851 721,-123.851 722.75,-118.851 719.25,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.collection.CustomParallelizable"><span>CustomParallelizable</span></li><li class="in" name="scala.collection.Parallelizable"><span>Parallelizable</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.Any#getClass" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the runtime class representation of the object.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the runtime class representation of the object.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a class object corresponding to the runtime type of the receiver.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.collection.Parallelizable#seq" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="seq:scala.collection.TraversableOnce[A]"></a>
+      <a id="seq:TraversableOnce[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">seq</span><span class="result">: <a href="TraversableOnce.html" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Parallelizable.html" class="extype" name="scala.collection.Parallelizable">Parallelizable</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+ For <code>null</code> returns a hashcode where <code>null.hashCode</code> throws a
+ <code>NullPointerException</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(CustomParallelizable[A,ParRepr],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]] performed by method any2ArrowAssoc in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test two objects for equality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for equality.
+ The expression <code>x == that</code> is equivalent to <code>if (x eq null) that eq null else x.equals(that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt">ClassCastException<p>if the receiver object is not an instance of the erasure of type <code>T0</code>.</p></span></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((CustomParallelizable[A,ParRepr])⇒Boolean,⇒Any):CustomParallelizable[A,ParRepr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]) ⇒ <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((CustomParallelizable[A,ParRepr])⇒Boolean):CustomParallelizable[A,ParRepr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]) ⇒ <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):CustomParallelizable[A,ParRepr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="msg">msg: ⇒ <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):CustomParallelizable[A,ParRepr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd></dl></div>
+    </li><li name="scala.Any#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Compares the receiver object (<code>this</code>) with the argument object (<code>that</code>) for equivalence.</p><div class="fullcomment"><div class="comment cmt"><p>Compares the receiver object (<code>this</code>) with the argument object (<code>that</code>) for equivalence.</p><p> Any implementation of this method should be an <a href="http://en.wikipedia.org/wiki/Equivalence_relation" target="_blank">equivalence relation</a>:</p><ul><li>It is reflexive: for any instance <code>x</code> of type <code>Any</code>, <code>x.equals(x)</code> should return <code>true</code>.</li><li>It is symmetric: for any instances <code>x</code> and <code>y</code> of type <code>Any</code>, <code>x.equals(y)</code> should return <code>true</code> if and
+   only if <code>y.equals(x)</code> returns <code>true</code>.</li><li>It is transitive: for any instances <code>x</code>, <code>y</code>, and <code>z</code> of type <code>AnyRef</code> if <code>x.equals(y)</code> returns <code>true</code> and
+   <code>y.equals(z)</code> returns <code>true</code>, then <code>x.equals(z)</code> should return <code>true</code>.</li></ul><p> If you override this method, you should verify that your implementation remains an equivalence relation.
+ Additionally, when overriding this method it is usually necessary to override <code>hashCode</code> to ensure that
+ objects which are &quot;equal&quot; (<code>o1.equals(o2)</code> returns <code>true</code>) hash to the same <a href="../Int.html" class="extype" name="scala.Int">scala.Int</a>.
+ (<code>o1.hashCode.equals(o2.hashCode)</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>)</span><span class="result">: <a href="../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns string formatted according to given <code>format</code> string.</p><div class="fullcomment"><div class="comment cmt"><p>Returns string formatted according to given <code>format</code> string.
+ Format strings are as for <code>String.format</code>
+ (@see java.lang.String.format).
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../inline.html" class="extype" name="scala.inline">inline</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Calculate a hash code value for the object.</p><div class="fullcomment"><div class="comment cmt"><p>Calculate a hash code value for the object.</p><p> The default hashing algorithm is platform dependent.</p><p> Note that it is allowed for two objects to have identical hash codes (<code>o1.hashCode.equals(o2.hashCode)</code>) yet
+ not be equal (<code>o1.equals(o2)</code> returns <code>false</code>).  A degenerate implementation could always return <code>0</code>.
+ However, it is required that if two objects are equal (<code>o1.equals(o2)</code> returns <code>true</code>) that they have
+ identical hash codes (<code>o1.hashCode.equals(o2.hashCode)</code>).  Therefore, when overriding this method, be sure
+ to verify that the behavior is consistent with the <code>equals</code> method.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.collection.Parallelizable#par" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="par:ParRepr"></a>
+      <a id="par:ParRepr"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">par</span><span class="result">: <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a parallel implementation of this collection.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a parallel implementation of this collection.</p><p> For most collection types, this method creates a new parallel collection by copying
+ all the elements. For these collection, <code>par</code> takes linear time. Mutable collections
+ in this category do not produce a mutable parallel collection that has the same
+ underlying dataset, so changes in one collection will not be reflected in the other one.</p><p> Specific collections (e.g. <code>ParArray</code> or <code>mutable.ParHashMap</code>) override this default
+ behaviour by creating a parallel collection which shares the same underlying dataset.
+ For these collections, <code>par</code> takes constant or sublinear time.</p><p> All parallel collections return a reference to themselves.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a parallel implementation of this collection
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Parallelizable.html" class="extype" name="scala.collection.Parallelizable">Parallelizable</a></dd></dl></div>
+    </li><li name="scala.collection.CustomParallelizable#parCombiner" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parCombiner:scala.collection.parallel.Combiner[A,ParRepr]"></a>
+      <a id="parCombiner:Combiner[A,ParRepr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parCombiner</span><span class="result">: <a href="parallel/Combiner.html" class="extype" name="scala.collection.parallel.Combiner">Combiner</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The default <code>par</code> implementation uses the combiner provided by this method
+ to create a new parallel collection.</p><div class="fullcomment"><div class="comment cmt"><p>The default <code>par</code> implementation uses the combiner provided by this method
+ to create a new parallel collection.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a combiner for the parallel collection of type <code>ParRepr</code>
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a> → <a href="Parallelizable.html" class="extype" name="scala.collection.Parallelizable">Parallelizable</a></dd></dl></div>
+    </li><li name="scala.Any#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a string representation of the object.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a string representation of the object.</p><p> The default representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a string representation of the object.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(CustomParallelizable[A,ParRepr],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]] performed by method any2ArrowAssoc in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Shadowed Implicit Value Members</h3>
+              <ol><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a> performed by method any2stringadd in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(customParallelizable: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <a href="../Any.html" class="extype" name="scala.Any">Any</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a> performed by method any2stringfmt in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(customParallelizable: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd><a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:CustomParallelizable[A,ParRepr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]] performed by method any2ArrowAssoc in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(customParallelizable: ArrowAssoc[CustomParallelizable[A, ParRepr]]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:CustomParallelizable[A,ParRepr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to
+            <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]] performed by method any2Ensuring in <a href="../Predef$.html" class="extype" name="scala.Predef">scala.Predef</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(customParallelizable: Ensuring[CustomParallelizable[A, ParRepr]]).x</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../deprecated.html" class="extype" name="scala.deprecated">deprecated</a></span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.collection.Parallelizable">
+              <h3>Inherited from <a href="Parallelizable.html" class="extype" name="scala.collection.Parallelizable">Parallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]</h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to <a href="../runtime/StringAdd.html" class="extype" name="scala.runtime.StringAdd">StringAdd</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringfmt">
+              <h3>Inherited by implicit conversion any2stringfmt from
+                <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to <a href="../runtime/StringFormat.html" class="extype" name="scala.runtime.StringFormat">StringFormat</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
+              <h3>Inherited by implicit conversion any2ArrowAssoc from
+                <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to <a href="../Predef$$ArrowAssoc.html" class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</a>[<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2Ensuring">
+              <h3>Inherited by implicit conversion any2Ensuring from
+                <a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>] to <a href="../Predef$$Ensuring.html" class="extype" name="scala.Predef.Ensuring">Ensuring</a>[<a href="" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.CustomParallelizable.A">A</span>, <span class="extype" name="scala.collection.CustomParallelizable.ParRepr">ParRepr</span>]]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../lib/diagrams.js"></script>
+    </body>
+      </html>

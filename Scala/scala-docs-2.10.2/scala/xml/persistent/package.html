@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>persistent - Scala Standard Library API (Scaladoc) 2.10.2 - scala.xml.persistent</title>
+          <meta name="description" content="persistent - Scala Standard Library API Scaladoc 2.10.2 - scala.xml.persistent" />
+          <meta name="keywords" content="persistent Scala Standard Library API Scaladoc 2.10.2 scala.xml.persistent" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'scala.xml.persistent.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.xml">xml</a></p>
+        <h1>persistent</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">persistent</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1477" viewBox="0.00 0.00 136.00 96.00" height="96pt" width="136pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 92)" class="graph" id="graph1"><polygon points="-4,5 -4,-92 133,-92 133,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node class" id="graph1477_0"><a xlink:title="scala.xml.persistent.CachedFileStorage" xlink:href="CachedFileStorage.html#inheritance-diagram"><polygon points="128,-88 6.39488e-14,-88 0,-62 128,-62 128,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="32" text-anchor="start">CachedFileStorage</text></a></g><!-- node1 --><g class="node class" id="graph1477_1"><a xlink:title="scala.xml.persistent.SetStorage" xlink:href="SetStorage.html#inheritance-diagram"><polygon points="111,-26 17,-26 17,-1.24345e-14 111,-3.55271e-15 111,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-21" x="27" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="49" text-anchor="start">SetStorage</text></a></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1477_0_1"><a xlink:title="SetStorage is a subtype of CachedFileStorage"><path d="M64,-56.6463C64,-46.8429 64,-35.003 64,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="62.2501,-56.8514 64,-61.8514 65.7501,-56.8514 62.2501,-56.8514" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.xml.persistent.CachedFileStorage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CachedFileStorageextendsThreadwithLogged"></a>
+      <a id="CachedFileStorage:CachedFileStorage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CachedFileStorage.html"><span class="name">CachedFileStorage</span></a><span class="result"> extends <span class="extype" name="java.lang.Thread">Thread</span> with <a href="../../util/logging/Logged.html" class="extype" name="scala.util.logging.Logged">Logged</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Mutable storage of immutable xml trees.</p>
+    </li><li name="scala.xml.persistent.Index" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Index[A]extendsxml.Node=&gt;A"></a>
+      <a id="Index[A]:Index[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Index.html"><span class="name">Index</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends (<a href="../Node.html" class="extype" name="scala.xml.Node">Node</a>) ⇒ <span class="extype" name="scala.xml.persistent.Index.A">A</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">an Index returns some unique key that is part of a node
+</p>
+    </li><li name="scala.xml.persistent.SetStorage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SetStorageextendsCachedFileStorage"></a>
+      <a id="SetStorage:SetStorage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SetStorage.html"><span class="name">SetStorage</span></a><span class="result"> extends <a href="CachedFileStorage.html" class="extype" name="scala.xml.persistent.CachedFileStorage">CachedFileStorage</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A persistent store with set semantics.</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../../lib/diagrams.js"></script>
+    </body>
+      </html>

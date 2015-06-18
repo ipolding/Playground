@@ -1,0 +1,6 @@
+myArray.reduceLeft(_ max _)
+
+// the reduceLeft method takes a function that takes two parameters of the same type
+// Arrays contain a single type so this is ok
+// the function first takes the first and second elements in the array and produces a result
+// the funciton then get called again using this result from above and the 3rd element in the array

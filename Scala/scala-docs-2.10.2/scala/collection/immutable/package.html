@@ -1,0 +1,1062 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>immutable - Scala Standard Library API (Scaladoc) 2.10.2 - scala.collection.immutable</title>
+          <meta name="description" content="immutable - Scala Standard Library API Scaladoc 2.10.2 - scala.collection.immutable" />
+          <meta name="keywords" content="immutable Scala Standard Library API Scaladoc 2.10.2 scala.collection.immutable" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'scala.collection.immutable.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="scala">scala</a>.<a href="../package.html" class="extype" name="scala.collection">collection</a></p>
+        <h1>immutable</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">immutable</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.10.2/src/library/scala/collection/immutable/package.scala#L1" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph827" viewBox="0.00 0.00 1852.00 344.00" height="344pt" width="1852pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 340)" class="graph" id="graph1"><polygon points="-4,5 -4,-340 1849,-340 1849,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node trait" id="graph827_0"><a xlink:title="scala.collection.immutable.MapLike" xlink:href="MapLike.html#inheritance-diagram"><polygon points="423,-274 291,-274 291,-248 423,-248 423,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-269" x="301" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="323" text-anchor="start">MapLike[A, B, This]</text></a></g><!-- node5 --><g class="node trait" id="graph827_5"><a xlink:title="scala.collection.immutable.SortedMap" xlink:href="SortedMap.html#inheritance-diagram"><polygon points="156,-150 38,-150 38,-124 156,-124 156,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="48" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="70" text-anchor="start">SortedMap[A, B]</text></a></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph827_0_5"><a xlink:title="SortedMap[A, B] is a subtype of MapLike[A, B, This]"><path d="M325.138,-245.804C273.602,-221.226 172.846,-173.173 124.357,-150.047" stroke="#d4d4d4" fill="none"></path><polygon points="324.4,-247.391 329.667,-247.964 325.907,-244.232 324.4,-247.391" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node12 --><g class="node class" id="graph827_12"><a xlink:title="scala.collection.immutable.TreeMap" xlink:href="TreeMap.html#inheritance-diagram"><polygon points="108,-88 4.9738e-14,-88 0,-62 108,-62 108,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="32" text-anchor="start">TreeMap[A, B]</text></a></g><!-- node0&#45;&gt;node12 --><g class="edge inheritance" id="graph827_0_12"><a xlink:title="TreeMap[A, B] is a subtype of MapLike[A, B, This]"><path d="M285.785,-247.085C198.629,-228.424 58.9043,-192.652 29,-150 15.6051,-130.895 31.0248,-104.091 42.8965,-88.2372" stroke="#d4d4d4" fill="none"></path><polygon points="285.675,-248.851 290.93,-248.18 286.404,-245.428 285.675,-248.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node19 --><g class="node class" id="graph827_19"><a xlink:title="scala.collection.immutable.ListMap" xlink:href="ListMap.html#inheritance-diagram"><polygon points="410,-150 304,-150 304,-124 410,-124 410,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-145" x="314" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="336" text-anchor="start">ListMap[A, B]</text></a></g><!-- node0&#45;&gt;node19 --><g class="edge inheritance" id="graph827_0_19"><a xlink:title="ListMap[A, B] is a subtype of MapLike[A, B, This]"><path d="M357,-242.646C357,-217.352 357,-172.391 357,-150.175" stroke="#d4d4d4" fill="none"></path><polygon points="355.25,-242.73 357,-247.73 358.75,-242.73 355.25,-242.73" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node23 --><g class="node class" id="graph827_23"><a xlink:title="scala.collection.immutable.IntMap" xlink:href="IntMap.html#inheritance-diagram"><polygon points="514,-150 428,-150 428,-124 514,-124 514,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-145" x="438" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="460" text-anchor="start">IntMap[T]</text></a></g><!-- node0&#45;&gt;node23 --><g class="edge inheritance" id="graph827_0_23"><a xlink:title="IntMap[T] is a subtype of MapLike[A, B, This]"><path d="M369.71,-243.548C381.377,-227.92 399.465,-204.66 417,-186 429.137,-173.085 444.149,-159.641 455.262,-150.109" stroke="#d4d4d4" fill="none"></path><polygon points="368.171,-242.685 366.595,-247.743 370.981,-244.772 368.171,-242.685" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node30 --><g class="node class" id="graph827_30"><a xlink:title="scala.collection.immutable.LongMap" xlink:href="LongMap.html#inheritance-diagram"><polygon points="898,-150 802,-150 802,-124 898,-124 898,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-145" x="812" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="834" text-anchor="start">LongMap[T]</text></a></g><!-- node0&#45;&gt;node30 --><g class="edge inheritance" id="graph827_0_30"><a xlink:title="LongMap[T] is a subtype of MapLike[A, B, This]"><path d="M413.693,-246.74C511.488,-222.143 710.192,-172.165 801.782,-149.128" stroke="#d4d4d4" fill="none"></path><polygon points="413.25,-245.047 408.828,-247.964 414.104,-248.442 413.25,-245.047" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node31 --><g class="node trait" id="graph827_31"><a xlink:title="scala.collection.immutable.Map" xlink:href="Map.html#inheritance-diagram"><polygon points="516,-212 426,-212 426,-186 516,-186 516,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-207" x="436" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="458" text-anchor="start">Map[A, B]</text></a></g><!-- node0&#45;&gt;node31 --><g class="edge inheritance" id="graph827_0_31"><a xlink:title="Map[A, B] is a subtype of MapLike[A, B, This]"><path d="M385.844,-245.313C404.694,-235.061 429.032,-221.825 446.858,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="384.733,-243.925 381.176,-247.851 386.405,-247 384.733,-243.925" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node35 --><g class="node class" id="graph827_35"><a xlink:title="scala.collection.immutable.HashMap" xlink:href="HashMap.html#inheritance-diagram"><polygon points="286,-150 174,-150 174,-124 286,-124 286,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-145" x="184" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="206" text-anchor="start">HashMap[A, B]</text></a></g><!-- node0&#45;&gt;node35 --><g class="edge inheritance" id="graph827_0_35"><a xlink:title="HashMap[A, B] is a subtype of MapLike[A, B, This]"><path d="M339.801,-244.207C314.233,-219.243 266.724,-172.856 243.494,-150.175" stroke="#d4d4d4" fill="none"></path><polygon points="338.609,-245.489 343.409,-247.73 341.054,-242.985 338.609,-245.489" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node1 --><g class="node class" id="graph827_1"><a xlink:title="scala.collection.immutable.StringOps" xlink:href="StringOps.html#inheritance-diagram"><polygon points="1618,-88 1530,-88 1530,-62 1618,-62 1618,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="1540" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1562" text-anchor="start">StringOps</text></a></g><!-- node2 --><g class="node class" id="graph827_2"><a xlink:title="scala.collection.immutable.Stack" xlink:href="Stack.html#inheritance-diagram"><polygon points="960,-88 876,-88 876,-62 960,-62 960,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="886" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="908" text-anchor="start">Stack[A]</text></a></g><!-- node3 --><g class="node class" id="graph827_3"><a xlink:title="scala.collection.immutable.Range" xlink:href="Range.html#inheritance-diagram"><polygon points="1142,-88 1070,-88 1070,-62 1142,-62 1142,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="1080" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1102" text-anchor="start">Range</text></a></g><!-- node4 --><g class="node trait" id="graph827_4"><a xlink:title="scala.collection.immutable.StreamView" xlink:href="StreamView.html#inheritance-diagram"><polygon points="1285,-274 1153,-274 1153,-248 1285,-248 1285,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-269" x="1163" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1185" text-anchor="start">StreamView[A, Coll]</text></a></g><!-- node5&#45;&gt;node12 --><g class="edge inheritance" id="graph827_5_12"><a xlink:title="TreeMap[A, B] is a subtype of SortedMap[A, B]"><path d="M85.0203,-119.727C78.0828,-109.724 69.4881,-97.3317 63.106,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="83.5933,-120.74 87.8808,-123.851 86.4693,-118.745 83.5933,-120.74" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node6 --><g class="node class" id="graph827_6"><a xlink:title="scala.collection.immutable.WrappedString" xlink:href="WrappedString.html#inheritance-diagram"><polygon points="1512,-88 1402,-88 1402,-62 1512,-62 1512,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="1412" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1434" text-anchor="start">WrappedString</text></a></g><!-- node7 --><g class="node class" id="graph827_7"><a xlink:title="scala.collection.immutable.List" xlink:href="List.html#inheritance-diagram"><polygon points="1052,-88 978,-88 978,-62 1052,-62 1052,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="988" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1010" text-anchor="start">List[A]</text></a></g><!-- node11 --><g class="node class" id="graph827_11"><a xlink:title="scala.collection.immutable.::" xlink:href="$colon$colon.html#inheritance-diagram"><polygon points="1008,-26 944,-26 944,-1.24345e-14 1008,-3.55271e-15 1008,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-21" x="954" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="976" text-anchor="start">::[B]</text></a></g><!-- node7&#45;&gt;node11 --><g class="edge inheritance" id="graph827_7_11"><a xlink:title="::[B] is a subtype of List[A]"><path d="M1003.97,-57.4585C997.703,-47.503 989.996,-35.2495 984.259,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1002.59,-58.5509 1006.73,-61.8514 1005.55,-56.6873 1002.59,-58.5509" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node34 --><g class="node object" id="graph827_34"><a xlink:title="scala.collection.immutable.Nil" xlink:href="Nil$.html#inheritance-diagram"><polygon points="1082,-26 1026,-26 1026,-1.24345e-14 1082,-3.55271e-15 1082,-26" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../../lib/object_diagram.png" y="-21" x="1036" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="1058" text-anchor="start">Nil</text></a></g><!-- node7&#45;&gt;node34 --><g class="edge inheritance" id="graph827_7_34"><a xlink:title="Nil is a subtype of List[A]"><path d="M1026.03,-57.4585C1032.3,-47.503 1040,-35.2495 1045.74,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1024.45,-56.6873 1023.27,-61.8514 1027.41,-58.5509 1024.45,-56.6873" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node8 --><g class="node trait" id="graph827_8"><a xlink:title="scala.collection.immutable.Set" xlink:href="Set.html#inheritance-diagram"><polygon points="1464,-212 1392,-212 1392,-186 1464,-186 1464,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-207" x="1402" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1424" text-anchor="start">Set[A]</text></a></g><!-- node14 --><g class="node class" id="graph827_14"><a xlink:title="scala.collection.immutable.HashSet" xlink:href="HashSet.html#inheritance-diagram"><polygon points="1476,-150 1380,-150 1380,-124 1476,-124 1476,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-145" x="1390" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1412" text-anchor="start">HashSet[A]</text></a></g><!-- node8&#45;&gt;node14 --><g class="edge inheritance" id="graph827_8_14"><a xlink:title="HashSet[A] is a subtype of Set[A]"><path d="M1428,-180.646C1428,-170.843 1428,-159.003 1428,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="1426.25,-180.851 1428,-185.851 1429.75,-180.851 1426.25,-180.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node21 --><g class="node trait" id="graph827_21"><a xlink:title="scala.collection.immutable.SortedSet" xlink:href="SortedSet.html#inheritance-diagram"><polygon points="1728,-150 1626,-150 1626,-124 1728,-124 1728,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1636" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1658" text-anchor="start">SortedSet[A]</text></a></g><!-- node8&#45;&gt;node21 --><g class="edge inheritance" id="graph827_8_21"><a xlink:title="SortedSet[A] is a subtype of Set[A]"><path d="M1469.31,-188.713C1512.19,-178.038 1579.33,-161.32 1625.6,-149.797" stroke="#d4d4d4" fill="none"></path><polygon points="1468.64,-187.078 1464.21,-189.985 1469.48,-190.475 1468.64,-187.078" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node26 --><g class="node trait" id="graph827_26"><a xlink:title="scala.collection.immutable.SetProxy" xlink:href="SetProxy.html#inheritance-diagram"><polygon points="1844,-150 1746,-150 1746,-124 1844,-124 1844,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1756" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1778" text-anchor="start">SetProxy[A]</text></a></g><!-- node8&#45;&gt;node26 --><g class="edge inheritance" id="graph827_8_26"><a xlink:title="SetProxy[A] is a subtype of Set[A]"><path d="M1469.52,-193.267C1528.97,-184.865 1641.71,-168.215 1737,-150 1739.94,-149.438 1742.96,-148.837 1746,-148.212" stroke="#d4d4d4" fill="none"></path><polygon points="1468.99,-191.574 1464.28,-194.005 1469.48,-195.04 1468.99,-191.574" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node28 --><g class="node class" id="graph827_28"><a xlink:title="scala.collection.immutable.ListSet" xlink:href="ListSet.html#inheritance-diagram"><polygon points="1362,-150 1274,-150 1274,-124 1362,-124 1362,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-145" x="1284" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1306" text-anchor="start">ListSet[A]</text></a></g><!-- node8&#45;&gt;node28 --><g class="edge inheritance" id="graph827_8_28"><a xlink:title="ListSet[A] is a subtype of Set[A]"><path d="M1400.17,-183.313C1381.98,-173.061 1358.5,-159.825 1341.29,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="1399.46,-184.921 1404.67,-185.851 1401.18,-181.872 1399.46,-184.921" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node9 --><g class="node trait" id="graph827_9"><a xlink:title="scala.collection.immutable.Traversable" xlink:href="Traversable.html#inheritance-diagram"><polygon points="1114,-336 1008,-336 1008,-310 1114,-310 1114,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-331" x="1018" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="1040" text-anchor="start">Traversable[A]</text></a></g><!-- node18 --><g class="node trait" id="graph827_18"><a xlink:title="scala.collection.immutable.Iterable" xlink:href="Iterable.html#inheritance-diagram"><polygon points="1106,-274 1016,-274 1016,-248 1106,-248 1106,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-269" x="1026" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1048" text-anchor="start">Iterable[A]</text></a></g><!-- node9&#45;&gt;node18 --><g class="edge inheritance" id="graph827_9_18"><a xlink:title="Iterable[A] is a subtype of Traversable[A]"><path d="M1061,-304.646C1061,-294.843 1061,-283.003 1061,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="1059.25,-304.851 1061,-309.851 1062.75,-304.851 1059.25,-304.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node10 --><g class="node trait" id="graph827_10"><a xlink:title="scala.collection.immutable.Seq" xlink:href="Seq.html#inheritance-diagram"><polygon points="1099,-212 1023,-212 1023,-186 1099,-186 1099,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-207" x="1033" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1055" text-anchor="start">Seq[A]</text></a></g><!-- node16 --><g class="node trait" id="graph827_16"><a xlink:title="scala.collection.immutable.IndexedSeq" xlink:href="IndexedSeq.html#inheritance-diagram"><polygon points="1256,-150 1148,-150 1148,-124 1256,-124 1256,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1158" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1180" text-anchor="start">IndexedSeq[A]</text></a></g><!-- node10&#45;&gt;node16 --><g class="edge inheritance" id="graph827_10_16"><a xlink:title="IndexedSeq[A] is a subtype of Seq[A]"><path d="M1095.5,-183.832C1118.97,-173.511 1149.72,-159.989 1172.14,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="1094.78,-182.237 1090.9,-185.851 1096.18,-185.441 1094.78,-182.237" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node27 --><g class="node trait" id="graph827_27"><a xlink:title="scala.collection.immutable.LinearSeq" xlink:href="LinearSeq.html#inheritance-diagram"><polygon points="1018,-150 916,-150 916,-124 1018,-124 1018,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="926" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="948" text-anchor="start">LinearSeq[A]</text></a></g><!-- node10&#45;&gt;node27 --><g class="edge inheritance" id="graph827_10_27"><a xlink:title="LinearSeq[A] is a subtype of Seq[A]"><path d="M1036.82,-183.052C1021.33,-172.837 1001.48,-159.742 986.906,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="1035.93,-184.559 1041.07,-185.851 1037.85,-181.638 1035.93,-184.559" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node13 --><g class="node trait" id="graph827_13"><a xlink:title="scala.collection.immutable.MapProxy" xlink:href="MapProxy.html#inheritance-diagram"><polygon points="784,-150 670,-150 670,-124 784,-124 784,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="680" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="702" text-anchor="start">MapProxy[A, B]</text></a></g><!-- node15 --><g class="node class" id="graph827_15"><a xlink:title="scala.collection.immutable.Queue" xlink:href="Queue.html#inheritance-diagram"><polygon points="750,-88 664,-88 664,-62 750,-62 750,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="674" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="696" text-anchor="start">Queue[A]</text></a></g><!-- node16&#45;&gt;node3 --><g class="edge inheritance" id="graph827_16_3"><a xlink:title="Range is a subtype of IndexedSeq[A]"><path d="M1177.31,-121.052C1161.49,-110.837 1141.21,-97.7425 1126.33,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1176.49,-122.609 1181.64,-123.851 1178.39,-119.669 1176.49,-122.609" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node16&#45;&gt;node6 --><g class="edge inheritance" id="graph827_16_6"><a xlink:title="WrappedString is a subtype of IndexedSeq[A]"><path d="M1260.67,-122.735C1303.65,-112.285 1361.54,-98.2105 1403.31,-88.055" stroke="#d4d4d4" fill="none"></path><polygon points="1260.21,-121.045 1255.77,-123.927 1261.04,-124.446 1260.21,-121.045" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node24 --><g class="node class" id="graph827_24"><a xlink:title="scala.collection.immutable.Vector" xlink:href="Vector.html#inheritance-diagram"><polygon points="1246,-88 1160,-88 1160,-62 1246,-62 1246,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="1170" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1192" text-anchor="start">Vector[A]</text></a></g><!-- node16&#45;&gt;node24 --><g class="edge inheritance" id="graph827_16_24"><a xlink:title="Vector[A] is a subtype of IndexedSeq[A]"><path d="M1202.3,-118.646C1202.45,-108.843 1202.65,-97.003 1202.79,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1200.54,-118.824 1202.21,-123.851 1204.04,-118.88 1200.54,-118.824" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node29 --><g class="node class" id="graph827_29"><a xlink:title="scala.collection.immutable.NumericRange" xlink:href="NumericRange.html#inheritance-diagram"><polygon points="1384,-88 1264,-88 1264,-62 1384,-62 1384,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="1274" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1296" text-anchor="start">NumericRange[T]</text></a></g><!-- node16&#45;&gt;node29 --><g class="edge inheritance" id="graph827_16_29"><a xlink:title="NumericRange[T] is a subtype of IndexedSeq[A]"><path d="M1232.36,-121.573C1252.6,-111.286 1278.93,-97.9068 1298.16,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1231.54,-120.026 1227.87,-123.851 1233.12,-123.146 1231.54,-120.026" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node17 --><g class="node trait" id="graph827_17"><a xlink:title="scala.collection.immutable.StringLike" xlink:href="StringLike.html#inheritance-diagram"><polygon points="1608,-150 1494,-150 1494,-124 1608,-124 1608,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="1504" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1526" text-anchor="start">StringLike[Repr]</text></a></g><!-- node17&#45;&gt;node1 --><g class="edge inheritance" id="graph827_17_1"><a xlink:title="StringOps is a subtype of StringLike[Repr]"><path d="M1557.71,-118.918C1561.36,-109.062 1565.81,-97.0852 1569.13,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1555.98,-118.555 1555.88,-123.851 1559.26,-119.772 1555.98,-118.555" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node17&#45;&gt;node6 --><g class="edge inheritance" id="graph827_17_6"><a xlink:title="WrappedString is a subtype of StringLike[Repr]"><path d="M1526.82,-121.052C1511.33,-110.837 1491.48,-97.7425 1476.91,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1525.93,-122.559 1531.07,-123.851 1527.85,-119.638 1525.93,-122.559" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node18&#45;&gt;node8 --><g class="edge inheritance" id="graph827_18_8"><a xlink:title="Set[A] is a subtype of Iterable[A]"><path d="M1111.3,-252.503C1186.44,-239.808 1326.21,-216.197 1392,-205.083" stroke="#d4d4d4" fill="none"></path><polygon points="1110.64,-250.839 1106,-253.398 1111.22,-254.29 1110.64,-250.839" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node18&#45;&gt;node10 --><g class="edge inheritance" id="graph827_18_10"><a xlink:title="Seq[A] is a subtype of Iterable[A]"><path d="M1061,-242.646C1061,-232.843 1061,-221.003 1061,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="1059.25,-242.851 1061,-247.851 1062.75,-242.851 1059.25,-242.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node18&#45;&gt;node31 --><g class="edge inheritance" id="graph827_18_31"><a xlink:title="Map[A, B] is a subtype of Iterable[A]"><path d="M1010.41,-255.683C897.018,-243.768 624.052,-215.083 516.066,-203.736" stroke="#d4d4d4" fill="none"></path><polygon points="1010.53,-257.456 1015.68,-256.238 1010.89,-253.975 1010.53,-257.456" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node20 --><g class="node trait" id="graph827_20"><a xlink:title="scala.collection.immutable.DefaultMap" xlink:href="DefaultMap.html#inheritance-diagram"><polygon points="652,-150 532,-150 532,-124 652,-124 652,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-145" x="542" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="564" text-anchor="start">DefaultMap[A, B]</text></a></g><!-- node25 --><g class="node class" id="graph827_25"><a xlink:title="scala.collection.immutable.TreeSet" xlink:href="TreeSet.html#inheritance-diagram"><polygon points="1821,-88 1729,-88 1729,-62 1821,-62 1821,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="1739" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1761" text-anchor="start">TreeSet[A]</text></a></g><!-- node21&#45;&gt;node25 --><g class="edge inheritance" id="graph827_21_25"><a xlink:title="TreeSet[A] is a subtype of SortedSet[A]"><path d="M1702.21,-121.052C1718.35,-110.837 1739.05,-97.7425 1754.25,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1701.07,-119.699 1697.78,-123.851 1702.94,-122.657 1701.07,-119.699" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node33 --><g class="node class" id="graph827_33"><a xlink:title="scala.collection.immutable.BitSet" xlink:href="BitSet.html#inheritance-diagram"><polygon points="1711,-88 1639,-88 1639,-62 1711,-62 1711,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="1649" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1671" text-anchor="start">BitSet</text></a></g><!-- node21&#45;&gt;node33 --><g class="edge inheritance" id="graph827_21_33"><a xlink:title="BitSet is a subtype of SortedSet[A]"><path d="M1676.41,-118.646C1676.09,-108.843 1675.71,-97.003 1675.42,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1674.67,-118.91 1676.58,-123.851 1678.16,-118.798 1674.67,-118.91" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node22 --><g class="node trait" id="graph827_22"><a xlink:title="scala.collection.immutable.StreamViewLike" xlink:href="StreamViewLike.html#inheritance-diagram"><polygon points="1306,-336 1132,-336 1132,-310 1306,-310 1306,-336" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-331" x="1142" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-320.667" x="1164" text-anchor="start">StreamViewLike[A, Coll, This]</text></a></g><!-- node22&#45;&gt;node4 --><g class="edge inheritance" id="graph827_22_4"><a xlink:title="StreamView[A, Coll] is a subtype of StreamViewLike[A, Coll, This]"><path d="M1219,-304.646C1219,-294.843 1219,-283.003 1219,-274.13" stroke="#d4d4d4" fill="none"></path><polygon points="1217.25,-304.851 1219,-309.851 1220.75,-304.851 1217.25,-304.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node27&#45;&gt;node2 --><g class="edge inheritance" id="graph827_27_2"><a xlink:title="Stack[A] is a subtype of LinearSeq[A]"><path d="M953.349,-119.727C945.443,-109.724 935.649,-97.3317 928.377,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="952.135,-121.014 956.608,-123.851 954.881,-118.843 952.135,-121.014" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node27&#45;&gt;node7 --><g class="edge inheritance" id="graph827_27_7"><a xlink:title="List[A] is a subtype of LinearSeq[A]"><path d="M980.373,-119.727C988.117,-109.724 997.711,-97.3317 1004.84,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="978.857,-118.826 977.18,-123.851 981.624,-120.969 978.857,-118.826" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node27&#45;&gt;node15 --><g class="edge inheritance" id="graph827_27_15"><a xlink:title="Queue[A] is a subtype of LinearSeq[A]"><path d="M910.644,-123.943C868.772,-114.188 810.273,-100.448 759,-88 756.106,-87.2975 753.123,-86.5674 750.119,-85.8278" stroke="#d4d4d4" fill="none"></path><polygon points="910.399,-125.682 915.666,-125.112 911.193,-122.274 910.399,-125.682" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node32 --><g class="node class" id="graph827_32"><a xlink:title="scala.collection.immutable.Stream" xlink:href="Stream.html#inheritance-diagram"><polygon points="858,-88 768,-88 768,-62 858,-62 858,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-83" x="778" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="800" text-anchor="start">Stream[A]</text></a></g><!-- node27&#45;&gt;node32 --><g class="edge inheritance" id="graph827_27_32"><a xlink:title="Stream[A] is a subtype of LinearSeq[A]"><path d="M929.628,-121.954C903.861,-111.581 869.956,-97.9304 845.348,-88.0232" stroke="#d4d4d4" fill="none"></path><polygon points="929.049,-123.607 934.341,-123.851 930.356,-120.361 929.049,-123.607" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node31&#45;&gt;node5 --><g class="edge inheritance" id="graph827_31_5"><a xlink:title="SortedMap[A, B] is a subtype of Map[A, B]"><path d="M420.81,-191.438C360.129,-182.185 254.941,-165.795 165,-150 162.159,-149.501 159.253,-148.981 156.319,-148.449" stroke="#d4d4d4" fill="none"></path><polygon points="420.615,-193.178 425.821,-192.201 421.142,-189.718 420.615,-193.178" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node31&#45;&gt;node13 --><g class="edge inheritance" id="graph827_31_13"><a xlink:title="MapProxy[A, B] is a subtype of Map[A, B]"><path d="M521.144,-186.856C564.861,-176.268 628.119,-160.948 672.952,-150.09" stroke="#d4d4d4" fill="none"></path><polygon points="520.626,-185.181 516.178,-188.058 521.45,-188.582 520.626,-185.181" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node31&#45;&gt;node19 --><g class="edge inheritance" id="graph827_31_19"><a xlink:title="ListMap[A, B] is a subtype of Map[A, B]"><path d="M442.156,-183.313C423.306,-173.061 398.968,-159.825 381.142,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="441.595,-185 446.824,-185.851 443.267,-181.925 441.595,-185" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node31&#45;&gt;node20 --><g class="edge inheritance" id="graph827_31_20"><a xlink:title="DefaultMap[A, B] is a subtype of Map[A, B]"><path d="M501.361,-183.443C521.404,-173.173 547.375,-159.866 566.376,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="500.313,-182.014 496.661,-185.851 501.909,-185.129 500.313,-182.014" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node31&#45;&gt;node23 --><g class="edge inheritance" id="graph827_31_23"><a xlink:title="IntMap[T] is a subtype of Map[A, B]"><path d="M471,-180.646C471,-170.843 471,-159.003 471,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="469.25,-180.851 471,-185.851 472.75,-180.851 469.25,-180.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node31&#45;&gt;node30 --><g class="edge inheritance" id="graph827_31_30"><a xlink:title="LongMap[T] is a subtype of Map[A, B]"><path d="M521.483,-192.483C585.046,-184.009 697.493,-168.133 793,-150 795.892,-149.451 798.86,-148.859 801.85,-148.242" stroke="#d4d4d4" fill="none"></path><polygon points="520.965,-190.786 516.239,-193.18 521.426,-194.255 520.965,-190.786" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node31&#45;&gt;node35 --><g class="edge inheritance" id="graph827_31_35"><a xlink:title="HashMap[A, B] is a subtype of Map[A, B]"><path d="M421.027,-186.144C379.93,-175.571 321.946,-160.654 280.662,-150.033" stroke="#d4d4d4" fill="none"></path><polygon points="420.674,-187.86 425.952,-187.411 421.546,-184.47 420.674,-187.86" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="scala.collection.immutable"><span>immutable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.collection.immutable.::" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="::[B]extendsList[B]withProductwithSerializable"></a>
+      <a id="::[B]:::[B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="$colon$colon.html"><span title="gt4s: $colon$colon" class="name">::</span></a><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="hd">hd: <span class="extype" name="scala.collection.immutable.::.B">B</span></span>, <span name="tl">tl: <a href="List.html" class="extype" name="scala.collection.immutable.List">List</a>[<span class="extype" name="scala.collection.immutable.::.B">B</span>]</span>)</span><span class="result"> extends <a href="List.html" class="extype" name="scala.collection.immutable.List">List</a>[<span class="extype" name="scala.collection.immutable.::.B">B</span>] with <a href="../../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A non empty list characterized by a head and a tail.</p>
+    </li><li name="scala.collection.immutable.BitSet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BitSetextendsAbstractSet[Int]withSortedSet[Int]withBitSetwithBitSetLike[scala.collection.immutable.BitSet]withSerializable"></a>
+      <a id="BitSet:BitSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BitSet.html"><span class="name">BitSet</span></a><span class="result"> extends <span class="extype" name="scala.collection.AbstractSet">AbstractSet</span>[<a href="../../Int.html" class="extype" name="scala.Int">Int</a>] with <a href="SortedSet.html" class="extype" name="scala.collection.immutable.SortedSet">SortedSet</a>[<a href="../../Int.html" class="extype" name="scala.Int">Int</a>] with <a href="../BitSet.html" class="extype" name="scala.collection.BitSet">collection.BitSet</a> with <a href="../BitSetLike.html" class="extype" name="scala.collection.BitSetLike">BitSetLike</a>[<a href="BitSet.html" class="extype" name="scala.collection.immutable.BitSet">BitSet</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A class for immutable bitsets.</p>
+    </li><li name="scala.collection.immutable.DefaultMap" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DefaultMap[A,+B]extendsMap[A,B]"></a>
+      <a id="DefaultMap[A,+B]:DefaultMap[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DefaultMap.html"><span class="name">DefaultMap</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">+B</span>]</span><span class="result"> extends <a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.collection.immutable.DefaultMap.A">A</span>, <span class="extype" name="scala.collection.immutable.DefaultMap.B">B</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A default map which implements the <code>+</code> and <code>-</code>
+ methods of maps.</p>
+    </li><li name="scala.collection.immutable.HashMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HashMap[A,+B]extendsAbstractMap[A,B]withMap[A,B]withMapLike[A,B,scala.collection.immutable.HashMap[A,B]]withSerializablewithCustomParallelizable[(A,B),scala.collection.parallel.immutable.ParHashMap[A,B]]"></a>
+      <a id="HashMap[A,+B]:HashMap[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="HashMap.html"><span class="name">HashMap</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">+B</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.immutable.AbstractMap">AbstractMap</span>[<span class="extype" name="scala.collection.immutable.HashMap.A">A</span>, <span class="extype" name="scala.collection.immutable.HashMap.B">B</span>] with <a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.collection.immutable.HashMap.A">A</span>, <span class="extype" name="scala.collection.immutable.HashMap.B">B</span>] with <a href="MapLike.html" class="extype" name="scala.collection.immutable.MapLike">MapLike</a>[<span class="extype" name="scala.collection.immutable.HashMap.A">A</span>, <span class="extype" name="scala.collection.immutable.HashMap.B">B</span>, <a href="HashMap.html" class="extype" name="scala.collection.immutable.HashMap">HashMap</a>[<span class="extype" name="scala.collection.immutable.HashMap.A">A</span>, <span class="extype" name="scala.collection.immutable.HashMap.B">B</span>]] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a> with <a href="../CustomParallelizable.html" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[(<span class="extype" name="scala.collection.immutable.HashMap.A">A</span>, <span class="extype" name="scala.collection.immutable.HashMap.B">B</span>), <a href="../parallel/immutable/ParHashMap.html" class="extype" name="scala.collection.parallel.immutable.ParHashMap">ParHashMap</a>[<span class="extype" name="scala.collection.immutable.HashMap.A">A</span>, <span class="extype" name="scala.collection.immutable.HashMap.B">B</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class implements immutable maps using a hash trie.</p>
+    </li><li name="scala.collection.immutable.HashSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HashSet[A]extendsAbstractSet[A]withSet[A]withGenericSetTemplate[A,scala.collection.immutable.HashSet]withSetLike[A,scala.collection.immutable.HashSet[A]]withCustomParallelizable[A,scala.collection.parallel.immutable.ParHashSet[A]]withSerializable"></a>
+      <a id="HashSet[A]:HashSet[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="HashSet.html"><span class="name">HashSet</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractSet">AbstractSet</span>[<span class="extype" name="scala.collection.immutable.HashSet.A">A</span>] with <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>[<span class="extype" name="scala.collection.immutable.HashSet.A">A</span>] with <a href="../generic/GenericSetTemplate.html" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.immutable.HashSet.A">A</span>, <a href="HashSet.html" class="extype" name="scala.collection.immutable.HashSet">HashSet</a>] with <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a>[<span class="extype" name="scala.collection.immutable.HashSet.A">A</span>, <a href="HashSet.html" class="extype" name="scala.collection.immutable.HashSet">HashSet</a>[<span class="extype" name="scala.collection.immutable.HashSet.A">A</span>]] with <a href="../CustomParallelizable.html" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.immutable.HashSet.A">A</span>, <a href="../parallel/immutable/ParHashSet.html" class="extype" name="scala.collection.parallel.immutable.ParHashSet">ParHashSet</a>[<span class="extype" name="scala.collection.immutable.HashSet.A">A</span>]] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class implements immutable sets using a hash trie.</p>
+    </li><li name="scala.collection.immutable.IndexedSeq" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IndexedSeq[+A]extendsSeq[A]withIndexedSeq[A]withGenericTraversableTemplate[A,scala.collection.immutable.IndexedSeq]withIndexedSeqLike[A,scala.collection.immutable.IndexedSeq[A]]"></a>
+      <a id="IndexedSeq[+A]:IndexedSeq[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="IndexedSeq.html"><span class="name">IndexedSeq</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <a href="Seq.html" class="extype" name="scala.collection.immutable.Seq">Seq</a>[<span class="extype" name="scala.collection.immutable.IndexedSeq.A">A</span>] with <a href="../IndexedSeq.html" class="extype" name="scala.collection.IndexedSeq">collection.IndexedSeq</a>[<span class="extype" name="scala.collection.immutable.IndexedSeq.A">A</span>] with <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.immutable.IndexedSeq.A">A</span>, <a href="IndexedSeq.html" class="extype" name="scala.collection.immutable.IndexedSeq">IndexedSeq</a>] with <a href="../IndexedSeqLike.html" class="extype" name="scala.collection.IndexedSeqLike">IndexedSeqLike</a>[<span class="extype" name="scala.collection.immutable.IndexedSeq.A">A</span>, <a href="IndexedSeq.html" class="extype" name="scala.collection.immutable.IndexedSeq">IndexedSeq</a>[<span class="extype" name="scala.collection.immutable.IndexedSeq.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A subtrait of <code>collection.IndexedSeq</code> which represents indexed sequences
+ that are guaranteed immutable.</p>
+    </li><li name="scala.collection.immutable.IntMap" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IntMap[+T]extendsAbstractMap[scala.collection.immutable.IntMapUtils.Int,T]withMap[scala.collection.immutable.IntMapUtils.Int,T]withMapLike[scala.collection.immutable.IntMapUtils.Int,T,scala.collection.immutable.IntMap[T]]"></a>
+      <a id="IntMap[+T]:IntMap[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IntMap.html"><span class="name">IntMap</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.immutable.AbstractMap">AbstractMap</span>[<span class="extype" name="scala.collection.generic.BitOperations.Int.Int">immutable.IntMapUtils.Int</span>, <span class="extype" name="scala.collection.immutable.IntMap.T">T</span>] with <a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.collection.generic.BitOperations.Int.Int">immutable.IntMapUtils.Int</span>, <span class="extype" name="scala.collection.immutable.IntMap.T">T</span>] with <a href="MapLike.html" class="extype" name="scala.collection.immutable.MapLike">MapLike</a>[<span class="extype" name="scala.collection.generic.BitOperations.Int.Int">immutable.IntMapUtils.Int</span>, <span class="extype" name="scala.collection.immutable.IntMap.T">T</span>, <a href="IntMap.html" class="extype" name="scala.collection.immutable.IntMap">IntMap</a>[<span class="extype" name="scala.collection.immutable.IntMap.T">T</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Specialised immutable map structure for integer keys, based on
+ <a href="http://citeseer.ist.psu.edu/okasaki98fast.html">Fast Mergeable Integer Maps</a>
+ by Okasaki and Gill.</a></p>
+    </li><li name="scala.collection.immutable.Iterable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Iterable[+A]extendsTraversable[A]withIterable[A]withGenericTraversableTemplate[A,scala.collection.immutable.Iterable]withIterableLike[A,scala.collection.immutable.Iterable[A]]withParallelizable[A,scala.collection.parallel.immutable.ParIterable[A]]"></a>
+      <a id="Iterable[+A]:Iterable[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Iterable.html"><span class="name">Iterable</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.immutable.Iterable.A">A</span>] with <a href="../Iterable.html" class="extype" name="scala.collection.Iterable">collection.Iterable</a>[<span class="extype" name="scala.collection.immutable.Iterable.A">A</span>] with <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.immutable.Iterable.A">A</span>, <a href="Iterable.html" class="extype" name="scala.collection.immutable.Iterable">Iterable</a>] with <a href="../IterableLike.html" class="extype" name="scala.collection.IterableLike">IterableLike</a>[<span class="extype" name="scala.collection.immutable.Iterable.A">A</span>, <a href="Iterable.html" class="extype" name="scala.collection.immutable.Iterable">Iterable</a>[<span class="extype" name="scala.collection.immutable.Iterable.A">A</span>]] with <a href="../Parallelizable.html" class="extype" name="scala.collection.Parallelizable">Parallelizable</a>[<span class="extype" name="scala.collection.immutable.Iterable.A">A</span>, <a href="../parallel/immutable/ParIterable.html" class="extype" name="scala.collection.parallel.immutable.ParIterable">ParIterable</a>[<span class="extype" name="scala.collection.immutable.Iterable.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A base trait for iterable collections that are guaranteed immutable.</p>
+    </li><li name="scala.collection.immutable.LinearSeq" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LinearSeq[+A]extendsSeq[A]withLinearSeq[A]withGenericTraversableTemplate[A,scala.collection.immutable.LinearSeq]withLinearSeqLike[A,scala.collection.immutable.LinearSeq[A]]"></a>
+      <a id="LinearSeq[+A]:LinearSeq[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="LinearSeq.html"><span class="name">LinearSeq</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <a href="Seq.html" class="extype" name="scala.collection.immutable.Seq">Seq</a>[<span class="extype" name="scala.collection.immutable.LinearSeq.A">A</span>] with <a href="../LinearSeq.html" class="extype" name="scala.collection.LinearSeq">collection.LinearSeq</a>[<span class="extype" name="scala.collection.immutable.LinearSeq.A">A</span>] with <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.immutable.LinearSeq.A">A</span>, <a href="LinearSeq.html" class="extype" name="scala.collection.immutable.LinearSeq">LinearSeq</a>] with <a href="../LinearSeqLike.html" class="extype" name="scala.collection.LinearSeqLike">LinearSeqLike</a>[<span class="extype" name="scala.collection.immutable.LinearSeq.A">A</span>, <a href="LinearSeq.html" class="extype" name="scala.collection.immutable.LinearSeq">LinearSeq</a>[<span class="extype" name="scala.collection.immutable.LinearSeq.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A subtrait of <code>collection.LinearSeq</code> which represents sequences that
+ are guaranteed immutable.</p>
+    </li><li name="scala.collection.immutable.List" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="List[+A]extendsAbstractSeq[A]withLinearSeq[A]withProductwithGenericTraversableTemplate[A,List]withLinearSeqOptimized[A,List[A]]"></a>
+      <a id="List[+A]:List[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="List.html"><span class="name">List</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractSeq">AbstractSeq</span>[<span class="extype" name="scala.collection.immutable.List.A">A</span>] with <a href="LinearSeq.html" class="extype" name="scala.collection.immutable.LinearSeq">LinearSeq</a>[<span class="extype" name="scala.collection.immutable.List.A">A</span>] with <a href="../../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.immutable.List.A">A</span>, <a href="List.html" class="extype" name="scala.collection.immutable.List">List</a>] with <a href="../LinearSeqOptimized.html" class="extype" name="scala.collection.LinearSeqOptimized">LinearSeqOptimized</a>[<span class="extype" name="scala.collection.immutable.List.A">A</span>, <a href="List.html" class="extype" name="scala.collection.immutable.List">List</a>[<span class="extype" name="scala.collection.immutable.List.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A class for immutable linked lists representing ordered collections
+ of elements of type.</p>
+    </li><li name="scala.collection.immutable.ListMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ListMap[A,+B]extendsAbstractMap[A,B]withMap[A,B]withMapLike[A,B,scala.collection.immutable.ListMap[A,B]]withSerializable"></a>
+      <a id="ListMap[A,+B]:ListMap[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ListMap.html"><span class="name">ListMap</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">+B</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.immutable.AbstractMap">AbstractMap</span>[<span class="extype" name="scala.collection.immutable.ListMap.A">A</span>, <span class="extype" name="scala.collection.immutable.ListMap.B">B</span>] with <a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.collection.immutable.ListMap.A">A</span>, <span class="extype" name="scala.collection.immutable.ListMap.B">B</span>] with <a href="MapLike.html" class="extype" name="scala.collection.immutable.MapLike">MapLike</a>[<span class="extype" name="scala.collection.immutable.ListMap.A">A</span>, <span class="extype" name="scala.collection.immutable.ListMap.B">B</span>, <a href="ListMap.html" class="extype" name="scala.collection.immutable.ListMap">ListMap</a>[<span class="extype" name="scala.collection.immutable.ListMap.A">A</span>, <span class="extype" name="scala.collection.immutable.ListMap.B">B</span>]] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class implements immutable maps using a list-based data structure.</p>
+    </li><li name="scala.collection.immutable.ListSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ListSet[A]extendsAbstractSet[A]withSet[A]withGenericSetTemplate[A,scala.collection.immutable.ListSet]withSetLike[A,scala.collection.immutable.ListSet[A]]withSerializable"></a>
+      <a id="ListSet[A]:ListSet[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ListSet.html"><span class="name">ListSet</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractSet">AbstractSet</span>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>] with <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>] with <a href="../generic/GenericSetTemplate.html" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>, <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>] with <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>, <a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>[<span class="extype" name="scala.collection.immutable.ListSet.A">A</span>]] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class implements immutable sets using a list-based data
+ structure.</p>
+    </li><li name="scala.collection.immutable.LongMap" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LongMap[+T]extendsAbstractMap[scala.collection.immutable.LongMapUtils.Long,T]withMap[scala.collection.immutable.LongMapUtils.Long,T]withMapLike[scala.collection.immutable.LongMapUtils.Long,T,scala.collection.immutable.LongMap[T]]"></a>
+      <a id="LongMap[+T]:LongMap[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LongMap.html"><span class="name">LongMap</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.immutable.AbstractMap">AbstractMap</span>[<span class="extype" name="scala.collection.generic.BitOperations.Long.Long">immutable.LongMapUtils.Long</span>, <span class="extype" name="scala.collection.immutable.LongMap.T">T</span>] with <a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.collection.generic.BitOperations.Long.Long">immutable.LongMapUtils.Long</span>, <span class="extype" name="scala.collection.immutable.LongMap.T">T</span>] with <a href="MapLike.html" class="extype" name="scala.collection.immutable.MapLike">MapLike</a>[<span class="extype" name="scala.collection.generic.BitOperations.Long.Long">immutable.LongMapUtils.Long</span>, <span class="extype" name="scala.collection.immutable.LongMap.T">T</span>, <a href="LongMap.html" class="extype" name="scala.collection.immutable.LongMap">LongMap</a>[<span class="extype" name="scala.collection.immutable.LongMap.T">T</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"> Specialised immutable map structure for long keys, based on
+ <a href="http://citeseer.ist.psu.edu/okasaki98fast.html">Fast Mergeable Long Maps</a>
+ by Okasaki and Gill.</a></p>
+    </li><li name="scala.collection.immutable.Map" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Map[A,+B]extendsIterable[(A,B)]withMap[A,B]withMapLike[A,B,scala.collection.immutable.Map[A,B]]"></a>
+      <a id="Map[A,+B]:Map[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Map.html"><span class="name">Map</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">+B</span>]</span><span class="result"> extends <a href="Iterable.html" class="extype" name="scala.collection.immutable.Iterable">Iterable</a>[(<span class="extype" name="scala.collection.immutable.Map.A">A</span>, <span class="extype" name="scala.collection.immutable.Map.B">B</span>)] with <a href="../Map.html" class="extype" name="scala.collection.Map">collection.Map</a>[<span class="extype" name="scala.collection.immutable.Map.A">A</span>, <span class="extype" name="scala.collection.immutable.Map.B">B</span>] with <a href="MapLike.html" class="extype" name="scala.collection.immutable.MapLike">MapLike</a>[<span class="extype" name="scala.collection.immutable.Map.A">A</span>, <span class="extype" name="scala.collection.immutable.Map.B">B</span>, <a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.collection.immutable.Map.A">A</span>, <span class="extype" name="scala.collection.immutable.Map.B">B</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A generic trait for immutable maps.</p>
+    </li><li name="scala.collection.immutable.MapLike" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MapLike[A,+B,+This&lt;:scala.collection.immutable.MapLike[A,B,This]withscala.collection.immutable.Map[A,B]]extendsMapLike[A,B,This]withParallelizable[(A,B),scala.collection.parallel.immutable.ParMap[A,B]]"></a>
+      <a id="MapLike[A,+B,+This&lt;:MapLike[A,B,This]withMap[A,B]]:MapLike[A,B,This]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="MapLike.html"><span class="name">MapLike</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">+B</span>, <span name="This">+This &lt;: <a href="MapLike.html" class="extype" name="scala.collection.immutable.MapLike">MapLike</a>[<span class="extype" name="scala.collection.immutable.MapLike.A">A</span>, <span class="extype" name="scala.collection.immutable.MapLike.B">B</span>, <span class="extype" name="scala.collection.immutable.MapLike.This">This</span>] with <a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.collection.immutable.MapLike.A">A</span>, <span class="extype" name="scala.collection.immutable.MapLike.B">B</span>]</span>]</span><span class="result"> extends <a href="../MapLike.html" class="extype" name="scala.collection.MapLike">collection.MapLike</a>[<span class="extype" name="scala.collection.immutable.MapLike.A">A</span>, <span class="extype" name="scala.collection.immutable.MapLike.B">B</span>, <span class="extype" name="scala.collection.immutable.MapLike.This">This</span>] with <a href="../Parallelizable.html" class="extype" name="scala.collection.Parallelizable">Parallelizable</a>[(<span class="extype" name="scala.collection.immutable.MapLike.A">A</span>, <span class="extype" name="scala.collection.immutable.MapLike.B">B</span>), <a href="../parallel/immutable/ParMap.html" class="extype" name="scala.collection.parallel.immutable.ParMap">ParMap</a>[<span class="extype" name="scala.collection.immutable.MapLike.A">A</span>, <span class="extype" name="scala.collection.immutable.MapLike.B">B</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"> A generic template for immutable maps from keys of type <code>A</code>
+ to values of type <code>B</code>.</p>
+    </li><li name="scala.collection.immutable.MapProxy" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MapProxy[A,+B]extendsMap[A,B]withMapProxyLike[A,B,scala.collection.immutable.Map[A,B]]"></a>
+      <a id="MapProxy[A,+B]:MapProxy[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="MapProxy.html"><span class="name">MapProxy</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">+B</span>]</span><span class="result"> extends <a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.collection.immutable.MapProxy.A">A</span>, <span class="extype" name="scala.collection.immutable.MapProxy.B">B</span>] with <a href="../MapProxyLike.html" class="extype" name="scala.collection.MapProxyLike">MapProxyLike</a>[<span class="extype" name="scala.collection.immutable.MapProxy.A">A</span>, <span class="extype" name="scala.collection.immutable.MapProxy.B">B</span>, <a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.collection.immutable.MapProxy.A">A</span>, <span class="extype" name="scala.collection.immutable.MapProxy.B">B</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"> This is a simple wrapper class for <a href="Map.html"
+ target="contentFrame">`scala.collection.immutable.Map`</a>.</a></p>
+    </li><li name="scala.collection.immutable.NumericRange" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="NumericRange[T]extendsAbstractSeq[T]withIndexedSeq[T]withSerializable"></a>
+      <a id="NumericRange[T]:NumericRange[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NumericRange.html"><span class="name">NumericRange</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractSeq">AbstractSeq</span>[<span class="extype" name="scala.collection.immutable.NumericRange.T">T</span>] with <a href="IndexedSeq.html" class="extype" name="scala.collection.immutable.IndexedSeq">IndexedSeq</a>[<span class="extype" name="scala.collection.immutable.NumericRange.T">T</span>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><code>NumericRange</code> is a more generic version of the
+ <code>Range</code> class which works with arbitrary types.</p>
+    </li><li name="scala.collection.immutable.PagedSeq" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PagedSeq[T]extendsAbstractSeq[T]withIndexedSeq[T]"></a>
+      <a id="PagedSeq[T]:PagedSeq[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PagedSeq.html"><span class="name">PagedSeq</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractSeq">AbstractSeq</span>[<span class="extype" name="scala.collection.immutable.PagedSeq.T">T</span>] with <a href="../IndexedSeq.html" class="extype" name="scala.collection.IndexedSeq">collection.IndexedSeq</a>[<span class="extype" name="scala.collection.immutable.PagedSeq.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An implementation of lazily computed sequences, where elements are stored
+ in &quot;pages&quot;, i.</p>
+    </li><li name="scala.collection.immutable.Queue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Queue[+A]extendsAbstractSeq[A]withLinearSeq[A]withGenericTraversableTemplate[A,scala.collection.immutable.Queue]withLinearSeqLike[A,scala.collection.immutable.Queue[A]]withSerializable"></a>
+      <a id="Queue[+A]:Queue[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Queue.html"><span class="name">Queue</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractSeq">AbstractSeq</span>[<span class="extype" name="scala.collection.immutable.Queue.A">A</span>] with <a href="LinearSeq.html" class="extype" name="scala.collection.immutable.LinearSeq">LinearSeq</a>[<span class="extype" name="scala.collection.immutable.Queue.A">A</span>] with <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.immutable.Queue.A">A</span>, <a href="Queue.html" class="extype" name="scala.collection.immutable.Queue">Queue</a>] with <a href="../LinearSeqLike.html" class="extype" name="scala.collection.LinearSeqLike">LinearSeqLike</a>[<span class="extype" name="scala.collection.immutable.Queue.A">A</span>, <a href="Queue.html" class="extype" name="scala.collection.immutable.Queue">Queue</a>[<span class="extype" name="scala.collection.immutable.Queue.A">A</span>]] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt"><code>Queue</code> objects implement data structures that allow to
+ insert and retrieve elements in a first-in-first-out (FIFO) manner.</p>
+    </li><li name="scala.collection.immutable.Range" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RangeextendsAbstractSeq[Int]withIndexedSeq[Int]withCustomParallelizable[Int,scala.collection.parallel.immutable.ParRange]withSerializable"></a>
+      <a id="Range:Range"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Range.html"><span class="name">Range</span></a><span class="result"> extends <span class="extype" name="scala.collection.AbstractSeq">AbstractSeq</span>[<a href="../../Int.html" class="extype" name="scala.Int">Int</a>] with <a href="IndexedSeq.html" class="extype" name="scala.collection.immutable.IndexedSeq">IndexedSeq</a>[<a href="../../Int.html" class="extype" name="scala.Int">Int</a>] with <a href="../CustomParallelizable.html" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../parallel/immutable/ParRange.html" class="extype" name="scala.collection.parallel.immutable.ParRange">ParRange</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The <code>Range</code> class represents integer values in range
+ <i>[start;end)</i> with non-zero step value <code>step</code>.</p>
+    </li><li name="scala.collection.immutable.Seq" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Seq[+A]extendsIterable[A]withSeq[A]withGenericTraversableTemplate[A,scala.collection.immutable.Seq]withSeqLike[A,scala.collection.immutable.Seq[A]]withParallelizable[A,scala.collection.parallel.immutable.ParSeq[A]]"></a>
+      <a id="Seq[+A]:Seq[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Seq.html"><span class="name">Seq</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <a href="Iterable.html" class="extype" name="scala.collection.immutable.Iterable">Iterable</a>[<span class="extype" name="scala.collection.immutable.Seq.A">A</span>] with <a href="../Seq.html" class="extype" name="scala.collection.Seq">collection.Seq</a>[<span class="extype" name="scala.collection.immutable.Seq.A">A</span>] with <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.immutable.Seq.A">A</span>, <a href="Seq.html" class="extype" name="scala.collection.immutable.Seq">Seq</a>] with <a href="../SeqLike.html" class="extype" name="scala.collection.SeqLike">SeqLike</a>[<span class="extype" name="scala.collection.immutable.Seq.A">A</span>, <a href="Seq.html" class="extype" name="scala.collection.immutable.Seq">Seq</a>[<span class="extype" name="scala.collection.immutable.Seq.A">A</span>]] with <a href="../Parallelizable.html" class="extype" name="scala.collection.Parallelizable">Parallelizable</a>[<span class="extype" name="scala.collection.immutable.Seq.A">A</span>, <a href="../parallel/immutable/ParSeq.html" class="extype" name="scala.collection.parallel.immutable.ParSeq">ParSeq</a>[<span class="extype" name="scala.collection.immutable.Seq.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A subtrait of <code>collection.Seq</code> which represents sequences
+ that are guaranteed immutable.</p>
+    </li><li name="scala.collection.immutable.Set" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Set[A]extendsIterable[A]withSet[A]withGenericSetTemplate[A,scala.collection.immutable.Set]withSetLike[A,scala.collection.immutable.Set[A]]withParallelizable[A,scala.collection.parallel.immutable.ParSet[A]]"></a>
+      <a id="Set[A]:Set[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Set.html"><span class="name">Set</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="Iterable.html" class="extype" name="scala.collection.immutable.Iterable">Iterable</a>[<span class="extype" name="scala.collection.immutable.Set.A">A</span>] with <a href="../Set.html" class="extype" name="scala.collection.Set">collection.Set</a>[<span class="extype" name="scala.collection.immutable.Set.A">A</span>] with <a href="../generic/GenericSetTemplate.html" class="extype" name="scala.collection.generic.GenericSetTemplate">GenericSetTemplate</a>[<span class="extype" name="scala.collection.immutable.Set.A">A</span>, <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>] with <a href="../SetLike.html" class="extype" name="scala.collection.SetLike">SetLike</a>[<span class="extype" name="scala.collection.immutable.Set.A">A</span>, <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>[<span class="extype" name="scala.collection.immutable.Set.A">A</span>]] with <a href="../Parallelizable.html" class="extype" name="scala.collection.Parallelizable">Parallelizable</a>[<span class="extype" name="scala.collection.immutable.Set.A">A</span>, <a href="../parallel/immutable/ParSet.html" class="extype" name="scala.collection.parallel.immutable.ParSet">ParSet</a>[<span class="extype" name="scala.collection.immutable.Set.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A generic trait for immutable sets.</p>
+    </li><li name="scala.collection.immutable.SetProxy" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SetProxy[A]extendsSet[A]withSetProxyLike[A,scala.collection.immutable.Set[A]]"></a>
+      <a id="SetProxy[A]:SetProxy[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SetProxy.html"><span class="name">SetProxy</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>[<span class="extype" name="scala.collection.immutable.SetProxy.A">A</span>] with <a href="../SetProxyLike.html" class="extype" name="scala.collection.SetProxyLike">SetProxyLike</a>[<span class="extype" name="scala.collection.immutable.SetProxy.A">A</span>, <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>[<span class="extype" name="scala.collection.immutable.SetProxy.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This is a simple wrapper class for <a href="Set.html"
+ target="contentFrame">`scala.collection.immutable.Set`</a>.</a></p>
+    </li><li name="scala.collection.immutable.SortedMap" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SortedMap[A,+B]extendsMap[A,B]withSortedMap[A,B]withMapLike[A,B,scala.collection.immutable.SortedMap[A,B]]withSortedMapLike[A,B,scala.collection.immutable.SortedMap[A,B]]"></a>
+      <a id="SortedMap[A,+B]:SortedMap[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SortedMap.html"><span class="name">SortedMap</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">+B</span>]</span><span class="result"> extends <a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.collection.immutable.SortedMap.A">A</span>, <span class="extype" name="scala.collection.immutable.SortedMap.B">B</span>] with <a href="../SortedMap.html" class="extype" name="scala.collection.SortedMap">collection.SortedMap</a>[<span class="extype" name="scala.collection.immutable.SortedMap.A">A</span>, <span class="extype" name="scala.collection.immutable.SortedMap.B">B</span>] with <a href="MapLike.html" class="extype" name="scala.collection.immutable.MapLike">MapLike</a>[<span class="extype" name="scala.collection.immutable.SortedMap.A">A</span>, <span class="extype" name="scala.collection.immutable.SortedMap.B">B</span>, <a href="SortedMap.html" class="extype" name="scala.collection.immutable.SortedMap">SortedMap</a>[<span class="extype" name="scala.collection.immutable.SortedMap.A">A</span>, <span class="extype" name="scala.collection.immutable.SortedMap.B">B</span>]] with <a href="../SortedMapLike.html" class="extype" name="scala.collection.SortedMapLike">SortedMapLike</a>[<span class="extype" name="scala.collection.immutable.SortedMap.A">A</span>, <span class="extype" name="scala.collection.immutable.SortedMap.B">B</span>, <a href="SortedMap.html" class="extype" name="scala.collection.immutable.SortedMap">SortedMap</a>[<span class="extype" name="scala.collection.immutable.SortedMap.A">A</span>, <span class="extype" name="scala.collection.immutable.SortedMap.B">B</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A map whose keys are sorted.</p>
+    </li><li name="scala.collection.immutable.SortedSet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SortedSet[A]extendsSet[A]withSortedSet[A]withSortedSetLike[A,scala.collection.immutable.SortedSet[A]]"></a>
+      <a id="SortedSet[A]:SortedSet[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SortedSet.html"><span class="name">SortedSet</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>[<span class="extype" name="scala.collection.immutable.SortedSet.A">A</span>] with <a href="../SortedSet.html" class="extype" name="scala.collection.SortedSet">collection.SortedSet</a>[<span class="extype" name="scala.collection.immutable.SortedSet.A">A</span>] with <a href="../SortedSetLike.html" class="extype" name="scala.collection.SortedSetLike">SortedSetLike</a>[<span class="extype" name="scala.collection.immutable.SortedSet.A">A</span>, <a href="SortedSet.html" class="extype" name="scala.collection.immutable.SortedSet">SortedSet</a>[<span class="extype" name="scala.collection.immutable.SortedSet.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A subtrait of <code>collection.SortedSet</code> which represents sorted sets
+ which cannot be mutated.</p>
+    </li><li name="scala.collection.immutable.Stack" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Stack[+A]extendsAbstractSeq[A]withLinearSeq[A]withGenericTraversableTemplate[A,scala.collection.immutable.Stack]withLinearSeqOptimized[A,scala.collection.immutable.Stack[A]]withSerializable"></a>
+      <a id="Stack[+A]:Stack[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Stack.html"><span class="name">Stack</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractSeq">AbstractSeq</span>[<span class="extype" name="scala.collection.immutable.Stack.A">A</span>] with <a href="LinearSeq.html" class="extype" name="scala.collection.immutable.LinearSeq">LinearSeq</a>[<span class="extype" name="scala.collection.immutable.Stack.A">A</span>] with <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.immutable.Stack.A">A</span>, <a href="Stack.html" class="extype" name="scala.collection.immutable.Stack">Stack</a>] with <a href="../LinearSeqOptimized.html" class="extype" name="scala.collection.LinearSeqOptimized">LinearSeqOptimized</a>[<span class="extype" name="scala.collection.immutable.Stack.A">A</span>, <a href="Stack.html" class="extype" name="scala.collection.immutable.Stack">Stack</a>[<span class="extype" name="scala.collection.immutable.Stack.A">A</span>]] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class implements immutable stacks using a list-based data
+ structure.</p>
+    </li><li name="scala.collection.immutable.Stream" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Stream[+A]extendsAbstractSeq[A]withLinearSeq[A]withGenericTraversableTemplate[A,scala.collection.immutable.Stream]withLinearSeqOptimized[A,scala.collection.immutable.Stream[A]]"></a>
+      <a id="Stream[+A]:Stream[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Stream.html"><span class="name">Stream</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractSeq">AbstractSeq</span>[<span class="extype" name="scala.collection.immutable.Stream.A">A</span>] with <a href="LinearSeq.html" class="extype" name="scala.collection.immutable.LinearSeq">LinearSeq</a>[<span class="extype" name="scala.collection.immutable.Stream.A">A</span>] with <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.immutable.Stream.A">A</span>, <a href="Stream.html" class="extype" name="scala.collection.immutable.Stream">Stream</a>] with <a href="../LinearSeqOptimized.html" class="extype" name="scala.collection.LinearSeqOptimized">LinearSeqOptimized</a>[<span class="extype" name="scala.collection.immutable.Stream.A">A</span>, <a href="Stream.html" class="extype" name="scala.collection.immutable.Stream">Stream</a>[<span class="extype" name="scala.collection.immutable.Stream.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The class <code>Stream</code> implements lazy lists where elements
+ are only evaluated when they are needed.</p>
+    </li><li name="scala.collection.immutable.StreamIterator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StreamIterator[+A]extendsAbstractIterator[A]withIterator[A]"></a>
+      <a id="StreamIterator[+A]:StreamIterator[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="StreamIterator.html"><span class="name">StreamIterator</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractIterator">AbstractIterator</span>[<span class="extype" name="scala.collection.immutable.StreamIterator.A">A</span>] with <a href="../Iterator.html" class="extype" name="scala.collection.Iterator">Iterator</a>[<span class="extype" name="scala.collection.immutable.StreamIterator.A">A</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A specialized, extra-lazy implementation of a stream iterator, so it can
+ iterate as lazily as it traverses the tail.</p>
+    </li><li name="scala.collection.immutable.StreamView" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StreamView[+A,+Coll]extendsStreamViewLike[A,Coll,scala.collection.immutable.StreamView[A,Coll]]"></a>
+      <a id="StreamView[+A,+Coll]:StreamView[A,Coll]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StreamView.html"><span class="name">StreamView</span></a><span class="tparams">[<span name="A">+A</span>, <span name="Coll">+Coll</span>]</span><span class="result"> extends <a href="StreamViewLike.html" class="extype" name="scala.collection.immutable.StreamViewLike">StreamViewLike</a>[<span class="extype" name="scala.collection.immutable.StreamView.A">A</span>, <span class="extype" name="scala.collection.immutable.StreamView.Coll">Coll</span>, <a href="StreamView.html" class="extype" name="scala.collection.immutable.StreamView">StreamView</a>[<span class="extype" name="scala.collection.immutable.StreamView.A">A</span>, <span class="extype" name="scala.collection.immutable.StreamView.Coll">Coll</span>]]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.collection.immutable.StreamViewLike" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StreamViewLike[+A,+Coll,+This&lt;:scala.collection.immutable.StreamView[A,Coll]withscala.collection.immutable.StreamViewLike[A,Coll,This]]extendsSeqView[A,Coll]withSeqViewLike[A,Coll,This]"></a>
+      <a id="StreamViewLike[+A,+Coll,+This&lt;:StreamView[A,Coll]withStreamViewLike[A,Coll,This]]:StreamViewLike[A,Coll,This]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StreamViewLike.html"><span class="name">StreamViewLike</span></a><span class="tparams">[<span name="A">+A</span>, <span name="Coll">+Coll</span>, <span name="This">+This &lt;: <a href="StreamView.html" class="extype" name="scala.collection.immutable.StreamView">StreamView</a>[<span class="extype" name="scala.collection.immutable.StreamViewLike.A">A</span>, <span class="extype" name="scala.collection.immutable.StreamViewLike.Coll">Coll</span>] with <a href="StreamViewLike.html" class="extype" name="scala.collection.immutable.StreamViewLike">StreamViewLike</a>[<span class="extype" name="scala.collection.immutable.StreamViewLike.A">A</span>, <span class="extype" name="scala.collection.immutable.StreamViewLike.Coll">Coll</span>, <span class="extype" name="scala.collection.immutable.StreamViewLike.This">This</span>]</span>]</span><span class="result"> extends <a href="../SeqView.html" class="extype" name="scala.collection.SeqView">SeqView</a>[<span class="extype" name="scala.collection.immutable.StreamViewLike.A">A</span>, <span class="extype" name="scala.collection.immutable.StreamViewLike.Coll">Coll</span>] with <a href="../SeqViewLike.html" class="extype" name="scala.collection.SeqViewLike">SeqViewLike</a>[<span class="extype" name="scala.collection.immutable.StreamViewLike.A">A</span>, <span class="extype" name="scala.collection.immutable.StreamViewLike.Coll">Coll</span>, <span class="extype" name="scala.collection.immutable.StreamViewLike.This">This</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.collection.immutable.StringLike" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StringLike[+Repr]extendsAnywithIndexedSeqOptimized[Char,Repr]withOrdered[String]"></a>
+      <a id="StringLike[+Repr]:StringLike[Repr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StringLike.html"><span class="name">StringLike</span></a><span class="tparams">[<span name="Repr">+Repr</span>]</span><span class="result"> extends <a href="../IndexedSeqOptimized.html" class="extype" name="scala.collection.IndexedSeqOptimized">IndexedSeqOptimized</a>[<a href="../../Char.html" class="extype" name="scala.Char">Char</a>, <span class="extype" name="scala.collection.immutable.StringLike.Repr">Repr</span>] with <a href="../../package.html#Ordered[T]=scala.math.Ordered[T]" class="extmbr" name="scala.Ordered">Ordered</a>[<a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A trait describing stringlike collections.</p>
+    </li><li name="scala.collection.immutable.StringOps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StringOpsextendsAnyValwithStringLike[String]"></a>
+      <a id="StringOps:StringOps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="StringOps.html"><span class="name">StringOps</span></a><span class="result"> extends <a href="../../AnyVal.html" class="extype" name="scala.AnyVal">AnyVal</a> with <a href="StringLike.html" class="extype" name="scala.collection.immutable.StringLike">StringLike</a>[<a href="../../Predef$.html#String=String" class="extmbr" name="scala.Predef.String">String</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"> This class serves as a wrapper providing <code>String</code>s with all the operations
+ found in indexed sequences.</p>
+    </li><li name="scala.collection.immutable.Traversable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Traversable[+A]extendsTraversable[A]withGenericTraversableTemplate[A,scala.collection.immutable.Traversable]withTraversableLike[A,scala.collection.immutable.Traversable[A]]withImmutable"></a>
+      <a id="Traversable[+A]:Traversable[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Traversable.html"><span class="name">Traversable</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <a href="../Traversable.html" class="extype" name="scala.collection.Traversable">collection.Traversable</a>[<span class="extype" name="scala.collection.immutable.Traversable.A">A</span>] with <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.immutable.Traversable.A">A</span>, <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>] with <a href="../TraversableLike.html" class="extype" name="scala.collection.TraversableLike">TraversableLike</a>[<span class="extype" name="scala.collection.immutable.Traversable.A">A</span>, <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.immutable.Traversable.A">A</span>]] with <a href="../../Immutable.html" class="extype" name="scala.Immutable">Immutable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A trait for traversable collections that are guaranteed immutable.</p>
+    </li><li name="scala.collection.immutable.TreeMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TreeMap[A,+B]extendsSortedMap[A,B]withSortedMapLike[A,B,scala.collection.immutable.TreeMap[A,B]]withMapLike[A,B,scala.collection.immutable.TreeMap[A,B]]withSerializable"></a>
+      <a id="TreeMap[A,+B]:TreeMap[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TreeMap.html"><span class="name">TreeMap</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">+B</span>]</span><span class="result"> extends <a href="SortedMap.html" class="extype" name="scala.collection.immutable.SortedMap">SortedMap</a>[<span class="extype" name="scala.collection.immutable.TreeMap.A">A</span>, <span class="extype" name="scala.collection.immutable.TreeMap.B">B</span>] with <a href="../SortedMapLike.html" class="extype" name="scala.collection.SortedMapLike">SortedMapLike</a>[<span class="extype" name="scala.collection.immutable.TreeMap.A">A</span>, <span class="extype" name="scala.collection.immutable.TreeMap.B">B</span>, <a href="TreeMap.html" class="extype" name="scala.collection.immutable.TreeMap">TreeMap</a>[<span class="extype" name="scala.collection.immutable.TreeMap.A">A</span>, <span class="extype" name="scala.collection.immutable.TreeMap.B">B</span>]] with <a href="MapLike.html" class="extype" name="scala.collection.immutable.MapLike">MapLike</a>[<span class="extype" name="scala.collection.immutable.TreeMap.A">A</span>, <span class="extype" name="scala.collection.immutable.TreeMap.B">B</span>, <a href="TreeMap.html" class="extype" name="scala.collection.immutable.TreeMap">TreeMap</a>[<span class="extype" name="scala.collection.immutable.TreeMap.A">A</span>, <span class="extype" name="scala.collection.immutable.TreeMap.B">B</span>]] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class implements immutable maps using a tree.</p>
+    </li><li name="scala.collection.immutable.TreeSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TreeSet[A]extendsSortedSet[A]withSortedSetLike[A,scala.collection.immutable.TreeSet[A]]withSerializable"></a>
+      <a id="TreeSet[A]:TreeSet[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TreeSet.html"><span class="name">TreeSet</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="SortedSet.html" class="extype" name="scala.collection.immutable.SortedSet">SortedSet</a>[<span class="extype" name="scala.collection.immutable.TreeSet.A">A</span>] with <a href="../SortedSetLike.html" class="extype" name="scala.collection.SortedSetLike">SortedSetLike</a>[<span class="extype" name="scala.collection.immutable.TreeSet.A">A</span>, <a href="TreeSet.html" class="extype" name="scala.collection.immutable.TreeSet">TreeSet</a>[<span class="extype" name="scala.collection.immutable.TreeSet.A">A</span>]] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class implements immutable sets using a tree.</p>
+    </li><li name="scala.collection.immutable.Vector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Vector[+A]extendsAbstractSeq[A]withIndexedSeq[A]withGenericTraversableTemplate[A,scala.collection.immutable.Vector]withIndexedSeqLike[A,scala.collection.immutable.Vector[A]]withVectorPointer[A@scala.annotation.unchecked.uncheckedVariance]withSerializablewithCustomParallelizable[A,scala.collection.parallel.immutable.ParVector[A]]"></a>
+      <a id="Vector[+A]:Vector[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Vector.html"><span class="name">Vector</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractSeq">AbstractSeq</span>[<span class="extype" name="scala.collection.immutable.Vector.A">A</span>] with <a href="IndexedSeq.html" class="extype" name="scala.collection.immutable.IndexedSeq">IndexedSeq</a>[<span class="extype" name="scala.collection.immutable.Vector.A">A</span>] with <a href="../generic/GenericTraversableTemplate.html" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="scala.collection.immutable.Vector.A">A</span>, <a href="Vector.html" class="extype" name="scala.collection.immutable.Vector">Vector</a>] with <a href="../IndexedSeqLike.html" class="extype" name="scala.collection.IndexedSeqLike">IndexedSeqLike</a>[<span class="extype" name="scala.collection.immutable.Vector.A">A</span>, <a href="Vector.html" class="extype" name="scala.collection.immutable.Vector">Vector</a>[<span class="extype" name="scala.collection.immutable.Vector.A">A</span>]] with <span class="extype" name="scala.collection.immutable.VectorPointer">VectorPointer</span>[<span class="extype" name="scala.collection.immutable.Vector.A">A</span>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a> with <a href="../CustomParallelizable.html" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[<span class="extype" name="scala.collection.immutable.Vector.A">A</span>, <a href="../parallel/immutable/ParVector.html" class="extype" name="scala.collection.parallel.immutable.ParVector">ParVector</a>[<span class="extype" name="scala.collection.immutable.Vector.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Vector is a general-purpose, immutable data structure.</p>
+    </li><li name="scala.collection.immutable.VectorBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VectorBuilder[A]extendsBuilder[A,scala.collection.immutable.Vector[A]]withVectorPointer[A@scala.annotation.unchecked.uncheckedVariance]"></a>
+      <a id="VectorBuilder[A]:VectorBuilder[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VectorBuilder.html"><span class="name">VectorBuilder</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../mutable/Builder.html" class="extype" name="scala.collection.mutable.Builder">Builder</a>[<span class="extype" name="scala.collection.immutable.VectorBuilder.A">A</span>, <a href="Vector.html" class="extype" name="scala.collection.immutable.Vector">Vector</a>[<span class="extype" name="scala.collection.immutable.VectorBuilder.A">A</span>]] with <span class="extype" name="scala.collection.immutable.VectorPointer">VectorPointer</span>[<span class="extype" name="scala.collection.immutable.VectorBuilder.A">A</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.collection.immutable.VectorIterator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VectorIterator[+A]extendsAbstractIterator[A]withIterator[A]withVectorPointer[A@scala.annotation.unchecked.uncheckedVariance]"></a>
+      <a id="VectorIterator[+A]:VectorIterator[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VectorIterator.html"><span class="name">VectorIterator</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <span class="extype" name="scala.collection.AbstractIterator">AbstractIterator</span>[<span class="extype" name="scala.collection.immutable.VectorIterator.A">A</span>] with <a href="../Iterator.html" class="extype" name="scala.collection.Iterator">Iterator</a>[<span class="extype" name="scala.collection.immutable.VectorIterator.A">A</span>] with <span class="extype" name="scala.collection.immutable.VectorPointer">VectorPointer</span>[<span class="extype" name="scala.collection.immutable.VectorIterator.A">A</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.collection.immutable.WrappedString" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WrappedStringextendsAbstractSeq[Char]withIndexedSeq[Char]withStringLike[scala.collection.immutable.WrappedString]"></a>
+      <a id="WrappedString:WrappedString"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="WrappedString.html"><span class="name">WrappedString</span></a><span class="result"> extends <span class="extype" name="scala.collection.AbstractSeq">AbstractSeq</span>[<a href="../../Char.html" class="extype" name="scala.Char">Char</a>] with <a href="IndexedSeq.html" class="extype" name="scala.collection.immutable.IndexedSeq">IndexedSeq</a>[<a href="../../Char.html" class="extype" name="scala.Char">Char</a>] with <a href="StringLike.html" class="extype" name="scala.collection.immutable.StringLike">StringLike</a>[<a href="WrappedString.html" class="extype" name="scala.collection.immutable.WrappedString">WrappedString</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt"> This class serves as a wrapper augmenting <code>String</code>s with all the operations
+ found in indexed sequences.</p>
+    </li><li name="scala.collection.immutable.RangeUtils" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RangeUtils[+Repr&lt;:scala.collection.immutable.RangeUtils[Repr]]extendsAnyRef"></a>
+      <a id="RangeUtils[+Repr&lt;:RangeUtils[Repr]]:RangeUtils[Repr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RangeUtils.html"><span class="name deprecated" title="Deprecated: (Since version 2.10.0) this class will be removed">RangeUtils</span></a><span class="tparams">[<span name="Repr">+Repr &lt;: <a href="RangeUtils.html" class="extype" name="scala.collection.immutable.RangeUtils">RangeUtils</a>[<span class="extype" name="scala.collection.immutable.RangeUtils.Repr">Repr</span>]</span>]</span><span class="result"> extends <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">It looks like once upon a time this was used by ParRange, but
+ since December 2010 in r23721 it is not used by anything.</p>
+    </li><li name="scala.collection.immutable.RedBlack" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RedBlack[A]extendsSerializable"></a>
+      <a id="RedBlack[A]:RedBlack[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RedBlack.html"><span class="name deprecated" title="Deprecated: (Since version 2.10.0) use TreeMap or TreeSet instead">RedBlack</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Old base class that was used by previous implementations of <code>TreeMaps</code> and <code>TreeSets</code>.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.collection.immutable.BitSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BitSet"></a>
+      <a id="BitSet:BitSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BitSet$.html"><span class="name">BitSet</span></a><span class="result"> extends <a href="../generic/BitSetFactory.html" class="extype" name="scala.collection.generic.BitSetFactory">BitSetFactory</a>[<a href="BitSet.html" class="extype" name="scala.collection.immutable.BitSet">BitSet</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations to create <code><code>immutable.BitSet</code></code> values.</p>
+    </li><li name="scala.collection.immutable.HashMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HashMap"></a>
+      <a id="HashMap:HashMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="HashMap$.html"><span class="name">HashMap</span></a><span class="result"> extends <a href="../generic/ImmutableMapFactory.html" class="extype" name="scala.collection.generic.ImmutableMapFactory">ImmutableMapFactory</a>[<a href="HashMap.html" class="extype" name="scala.collection.immutable.HashMap">HashMap</a>] with <span class="extype" name="scala.collection.generic.BitOperations.Int">generic.BitOperations.Int</span> with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations needed to create <code><code>immutable.HashMap</code></code> values.</p>
+    </li><li name="scala.collection.immutable.HashSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HashSet"></a>
+      <a id="HashSet:HashSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="HashSet$.html"><span class="name">HashSet</span></a><span class="result"> extends <a href="../generic/ImmutableSetFactory.html" class="extype" name="scala.collection.generic.ImmutableSetFactory">ImmutableSetFactory</a>[<a href="HashSet.html" class="extype" name="scala.collection.immutable.HashSet">HashSet</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations needed to create <code><code>immutable.HashSet</code></code> values.</p>
+    </li><li name="scala.collection.immutable.IndexedSeq" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IndexedSeq"></a>
+      <a id="IndexedSeq:IndexedSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="IndexedSeq$.html"><span class="name">IndexedSeq</span></a><span class="result"> extends <a href="../generic/SeqFactory.html" class="extype" name="scala.collection.generic.SeqFactory">SeqFactory</a>[<a href="IndexedSeq.html" class="extype" name="scala.collection.immutable.IndexedSeq">IndexedSeq</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations to create <code><code>IndexedSeq</code></code> values.</p>
+    </li><li name="scala.collection.immutable.IntMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IntMap"></a>
+      <a id="IntMap:IntMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="IntMap$.html"><span class="name">IntMap</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">A companion object for integer maps.</p>
+    </li><li name="scala.collection.immutable.Iterable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Iterable"></a>
+      <a id="Iterable:Iterable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Iterable$.html"><span class="name">Iterable</span></a><span class="result"> extends <a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a>[<a href="Iterable.html" class="extype" name="scala.collection.immutable.Iterable">Iterable</a>] with <a href="../generic/TraversableFactory.html" class="extype" name="scala.collection.generic.TraversableFactory">TraversableFactory</a>[<a href="Iterable.html" class="extype" name="scala.collection.immutable.Iterable">Iterable</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations to create <code><code>immutable.Iterable</code></code> values.</p>
+    </li><li name="scala.collection.immutable.LinearSeq" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LinearSeq"></a>
+      <a id="LinearSeq:LinearSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LinearSeq$.html"><span class="name">LinearSeq</span></a><span class="result"> extends <a href="../generic/SeqFactory.html" class="extype" name="scala.collection.generic.SeqFactory">SeqFactory</a>[<a href="LinearSeq.html" class="extype" name="scala.collection.immutable.LinearSeq">LinearSeq</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations to create <code><code>immutable.LinearSeq</code></code> values.</p>
+    </li><li name="scala.collection.immutable.List" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="List"></a>
+      <a id="List:List"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="List$.html"><span class="name">List</span></a><span class="result"> extends <a href="../generic/SeqFactory.html" class="extype" name="scala.collection.generic.SeqFactory">SeqFactory</a>[<a href="List.html" class="extype" name="scala.collection.immutable.List">List</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations to create <code><code>List</code></code> values.</p>
+    </li><li name="scala.collection.immutable.ListMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ListMap"></a>
+      <a id="ListMap:ListMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ListMap$.html"><span class="name">ListMap</span></a><span class="result"> extends <a href="../generic/ImmutableMapFactory.html" class="extype" name="scala.collection.generic.ImmutableMapFactory">ImmutableMapFactory</a>[<a href="ListMap.html" class="extype" name="scala.collection.immutable.ListMap">ListMap</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations needed to create <code>immutable.ListMap</code> values.</p>
+    </li><li name="scala.collection.immutable.ListSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ListSet"></a>
+      <a id="ListSet:ListSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ListSet$.html"><span class="name">ListSet</span></a><span class="result"> extends <a href="../generic/ImmutableSetFactory.html" class="extype" name="scala.collection.generic.ImmutableSetFactory">ImmutableSetFactory</a>[<a href="ListSet.html" class="extype" name="scala.collection.immutable.ListSet">ListSet</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations needed to create <code>immutable.ListSet</code> values.</p>
+    </li><li name="scala.collection.immutable.LongMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LongMap"></a>
+      <a id="LongMap:LongMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LongMap$.html"><span class="name">LongMap</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">A companion object for long maps.</p>
+    </li><li name="scala.collection.immutable.Map" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Map"></a>
+      <a id="Map:Map"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Map$.html"><span class="name">Map</span></a><span class="result"> extends <a href="../generic/ImmutableMapFactory.html" class="extype" name="scala.collection.generic.ImmutableMapFactory">ImmutableMapFactory</a>[<a href="Map.html" class="extype" name="scala.collection.immutable.Map">Map</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations needed to create <code><code>immutable.Map</code></code> values.</p>
+    </li><li name="scala.collection.immutable.Nil" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Nil"></a>
+      <a id="Nil:Nil"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Nil$.html"><span class="name">Nil</span></a><span class="result"> extends <a href="List.html" class="extype" name="scala.collection.immutable.List">List</a>[<a href="../../Nothing.html" class="extype" name="scala.Nothing">Nothing</a>] with <a href="../../Product.html" class="extype" name="scala.Product">Product</a> with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">The empty list.</p>
+    </li><li name="scala.collection.immutable.NumericRange" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NumericRange"></a>
+      <a id="NumericRange:NumericRange"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NumericRange$.html"><span class="name">NumericRange</span></a><span class="result"> extends <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A companion object for numeric ranges.</p>
+    </li><li name="scala.collection.immutable.PagedSeq" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PagedSeq"></a>
+      <a id="PagedSeq:PagedSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PagedSeq$.html"><span class="name">PagedSeq</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">The <code>PagedSeq</code> object defines a lazy implementations of
+ a random access sequence.</p>
+    </li><li name="scala.collection.immutable.Queue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Queue"></a>
+      <a id="Queue:Queue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Queue$.html"><span class="name">Queue</span></a><span class="result"> extends <a href="../generic/SeqFactory.html" class="extype" name="scala.collection.generic.SeqFactory">SeqFactory</a>[<a href="Queue.html" class="extype" name="scala.collection.immutable.Queue">Queue</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations to create <code><code>immutable.Queue</code></code> values.</p>
+    </li><li name="scala.collection.immutable.Range" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Range"></a>
+      <a id="Range:Range"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Range$.html"><span class="name">Range</span></a><span class="result"> extends <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A companion object for the <code>Range</code> class.</p>
+    </li><li name="scala.collection.immutable.Seq" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Seq"></a>
+      <a id="Seq:Seq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Seq$.html"><span class="name">Seq</span></a><span class="result"> extends <a href="../generic/SeqFactory.html" class="extype" name="scala.collection.generic.SeqFactory">SeqFactory</a>[<a href="Seq.html" class="extype" name="scala.collection.immutable.Seq">Seq</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations to create <code><code>immutable.Seq</code></code> values.</p>
+    </li><li name="scala.collection.immutable.Set" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Set"></a>
+      <a id="Set:Set"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Set$.html"><span class="name">Set</span></a><span class="result"> extends <a href="../generic/ImmutableSetFactory.html" class="extype" name="scala.collection.generic.ImmutableSetFactory">ImmutableSetFactory</a>[<a href="Set.html" class="extype" name="scala.collection.immutable.Set">Set</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations needed to create <code><code>immutable.Set</code></code> values.</p>
+    </li><li name="scala.collection.immutable.SortedMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SortedMap"></a>
+      <a id="SortedMap:SortedMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SortedMap$.html"><span class="name">SortedMap</span></a><span class="result"> extends <a href="../generic/ImmutableSortedMapFactory.html" class="extype" name="scala.collection.generic.ImmutableSortedMapFactory">ImmutableSortedMapFactory</a>[<a href="SortedMap.html" class="extype" name="scala.collection.immutable.SortedMap">SortedMap</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations needed to create sorted maps of type <code>immutable.SortedMap</code>.</p>
+    </li><li name="scala.collection.immutable.SortedSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SortedSet"></a>
+      <a id="SortedSet:SortedSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SortedSet$.html"><span class="name">SortedSet</span></a><span class="result"> extends <a href="../generic/ImmutableSortedSetFactory.html" class="extype" name="scala.collection.generic.ImmutableSortedSetFactory">ImmutableSortedSetFactory</a>[<a href="SortedSet.html" class="extype" name="scala.collection.immutable.SortedSet">SortedSet</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations needed to create sorted sets of type <code><code>immutable.SortedSet</code></code>.</p>
+    </li><li name="scala.collection.immutable.Stack" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Stack"></a>
+      <a id="Stack:Stack"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Stack$.html"><span class="name">Stack</span></a><span class="result"> extends <a href="../generic/SeqFactory.html" class="extype" name="scala.collection.generic.SeqFactory">SeqFactory</a>[<a href="Stack.html" class="extype" name="scala.collection.immutable.Stack">Stack</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations to create <code><code>immutable.Stack</code></code> values.</p>
+    </li><li name="scala.collection.immutable.Stream" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Stream"></a>
+      <a id="Stream:Stream"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Stream$.html"><span class="name">Stream</span></a><span class="result"> extends <a href="../generic/SeqFactory.html" class="extype" name="scala.collection.generic.SeqFactory">SeqFactory</a>[<a href="Stream.html" class="extype" name="scala.collection.immutable.Stream">Stream</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The object <code>Stream</code> provides helper functions to manipulate streams.</p>
+    </li><li name="scala.collection.immutable.StringLike" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StringLike"></a>
+      <a id="StringLike:StringLike"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StringLike$.html"><span class="name">StringLike</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">A companion object for the <code>StringLike</code> containing some constants.</p>
+    </li><li name="scala.collection.immutable.Traversable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Traversable"></a>
+      <a id="Traversable:Traversable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Traversable$.html"><span class="name">Traversable</span></a><span class="result"> extends <a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>] with <a href="../generic/TraversableFactory.html" class="extype" name="scala.collection.generic.TraversableFactory">TraversableFactory</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations to create <code><code>immutable.Traversable</code></code> values.</p>
+    </li><li name="scala.collection.immutable.TreeMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TreeMap"></a>
+      <a id="TreeMap:TreeMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TreeMap$.html"><span class="name">TreeMap</span></a><span class="result"> extends <a href="../generic/ImmutableSortedMapFactory.html" class="extype" name="scala.collection.generic.ImmutableSortedMapFactory">ImmutableSortedMapFactory</a>[<a href="TreeMap.html" class="extype" name="scala.collection.immutable.TreeMap">TreeMap</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations needed to create sorted maps of type <code>immutable.TreeMap</code>.</p>
+    </li><li name="scala.collection.immutable.TreeSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TreeSet"></a>
+      <a id="TreeSet:TreeSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TreeSet$.html"><span class="name">TreeSet</span></a><span class="result"> extends <a href="../generic/ImmutableSortedSetFactory.html" class="extype" name="scala.collection.generic.ImmutableSortedSetFactory">ImmutableSortedSetFactory</a>[<a href="TreeSet.html" class="extype" name="scala.collection.immutable.TreeSet">TreeSet</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">   This object provides a set of operations needed to create sorted sets of type <code><code>immutable.TreeSet</code></code>.</p>
+    </li><li name="scala.collection.immutable.Vector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Vector"></a>
+      <a id="Vector:Vector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Vector$.html"><span class="name">Vector</span></a><span class="result"> extends <a href="../generic/SeqFactory.html" class="extype" name="scala.collection.generic.SeqFactory">SeqFactory</a>[<a href="Vector.html" class="extype" name="scala.collection.immutable.Vector">Vector</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Companion object to the Vector class
+</p>
+    </li><li name="scala.collection.immutable.WrappedString" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WrappedString"></a>
+      <a id="WrappedString:WrappedString"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="WrappedString$.html"><span class="name">WrappedString</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">A companion object for wrapped strings.</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2013 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://typesafe.com" target="_top">Typesafe</a>.</div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script><script defer="defer" type="text/javascript" id="modernizr-custom-js" src="../../../lib/modernizr.custom.js"></script><script defer="defer" type="text/javascript" id="diagrams-js" src="../../../lib/diagrams.js"></script>
+    </body>
+      </html>
