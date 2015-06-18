@@ -1,0 +1,12 @@
+@(dealList: List[Deal])
+
+@main("Wowcher - Play-Java edition!!!") {
+
+    <ul>
+    @for(d <- dealList) {
+        <h1>@d.title</h1>
+        <h2>from @d.businessName</h2>
+        <p>@Html(d.description)</p>
+    }
+    </ul>
+}

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: spring-boot-POC
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: ian.polding
+Implementation-Vendor-Id: uk.co.ipolding
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_25
+Main-Class: ${start-class}
+
