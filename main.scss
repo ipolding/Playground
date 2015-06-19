@@ -1,5 +1,0 @@
-
-@for $i from 1 through 10 {
-    .logo-#{$i*10}px {height: 10px * $i;
-    }
-}
