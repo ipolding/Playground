@@ -2,203 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c46b22a8-ee71-499e-9ac3-f4b55b6b763f" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\.idea\modules\json-combinators-build.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\.idea\modules\json-combinators.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\.idea\sbt.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\.idea\scala_compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\.idea\uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\build.sbt" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\build.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\plugins.sbt" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$0eb91ecc9f9e4358d3a2$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$0eb91ecc9f9e4358d3a2$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$0eb91ecc9f9e4358d3a2.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$0eb91ecc9f9e4358d3a2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$3b5ca165988cd6885c86$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$3b5ca165988cd6885c86$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$3b5ca165988cd6885c86.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$3b5ca165988cd6885c86.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$6244e0b5cdbcbf5f855f$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$6244e0b5cdbcbf5f855f$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$6244e0b5cdbcbf5f855f.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\project\target\config-classes\$6244e0b5cdbcbf5f855f.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$41df8212fc6eea40453d$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$41df8212fc6eea40453d$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$41df8212fc6eea40453d.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$41df8212fc6eea40453d.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$7038bf049f4a2bc05788$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$7038bf049f4a2bc05788$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$7038bf049f4a2bc05788.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$7038bf049f4a2bc05788.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$81eb43d1e26c9b20c6f1$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$81eb43d1e26c9b20c6f1$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$81eb43d1e26c9b20c6f1.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$81eb43d1e26c9b20c6f1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$8d1f27aab51fa3da317d$$anonfun$$sbtdef$1$$anonfun$apply$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$8d1f27aab51fa3da317d$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$8d1f27aab51fa3da317d$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$8d1f27aab51fa3da317d.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$8d1f27aab51fa3da317d.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$956ccca98904caf79f45$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$956ccca98904caf79f45$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$956ccca98904caf79f45.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$956ccca98904caf79f45.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$a8635ddf4a7227d8e0c7$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$a8635ddf4a7227d8e0c7$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$a8635ddf4a7227d8e0c7.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$a8635ddf4a7227d8e0c7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$b321cf85150593a298c8$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$b321cf85150593a298c8$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$b321cf85150593a298c8.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$b321cf85150593a298c8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$e035208e026bed82ecc8$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$e035208e026bed82ecc8$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$e035208e026bed82ecc8.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$e035208e026bed82ecc8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$fea1391e38b10d98da48$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$fea1391e38b10d98da48$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$fea1391e38b10d98da48.cache" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\config-classes\$fea1391e38b10d98da48.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\default\json-combinators-build\scala_2.10\sbt_0.13\0.1-SNAPSHOT\resolved.xml.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\default\json-combinators-build\scala_2.10\sbt_0.13\0.1-SNAPSHOT\resolved.xml.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-compile-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-compile.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-docs.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-optional.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-plugin.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-provided.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-runtime-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-runtime.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-scala-tool.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-sources.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-test-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\default-json-combinators-build-test.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\ivy-report.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\resolution-cache\reports\ivy-report.xsl" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\$global\$global\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\$global\dependencyPositions\$global\streams\update_cache_2.10\input_dsp" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\$global\dependencyPositions\$global\streams\update_cache_2.10\output_dsp" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\$global\ivyConfiguration\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\$global\ivySbt\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\$global\projectDescriptors\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\$global\update\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\$global\update\$global\streams\update_cache_2.10\inputs" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\$global\update\$global\streams\update_cache_2.10\output" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\$global\$global\discoveredMainClasses\data" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\compileIncremental\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\compileIncremental\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\compile\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\copyResources\$global\streams\copy-resources" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\copyResources\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\dependencyClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\exportedProducts\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\externalDependencyClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\internalDependencyClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\managedClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\unmanagedClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\compile\unmanagedJars\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\runtime\dependencyClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\runtime\exportedProducts\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\runtime\externalDependencyClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\runtime\fullClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\runtime\internalDependencyClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\runtime\managedClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\runtime\unmanagedClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\project\target\streams\runtime\unmanagedJars\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\src\main\scala\App.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\src\main\scala\VanillaTests.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\src\test\scala\JsonParserTest.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\src\test\scala\JsonParserTests.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\.history" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\default\json-combinators$sbt_2.11\1.0\resolved.xml.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\default\json-combinators$sbt_2.11\1.0\resolved.xml.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\default\json-combinators$sources_2.11\1.0\resolved.xml.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\default\json-combinators$sources_2.11\1.0\resolved.xml.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\default\json-combinators$sources_javadoc_2.11\1.0\resolved.xml.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\default\json-combinators$sources_javadoc_2.11\1.0\resolved.xml.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\default\json-combinators_2.11\1.0\resolved.xml.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\default\json-combinators_2.11\1.0\resolved.xml.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sbt_2.11-default.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_2.11-default.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-compile-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-compile.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-docs.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-optional.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-plugin.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-provided.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-runtime-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-runtime.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-scala-tool.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-sources.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-test-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators$sources_javadoc_2.11-test.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-compile-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-compile.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-docs.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-optional.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-plugin.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-provided.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-runtime-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-runtime.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-scala-tool.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-sources.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-test-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\default-json-combinators_2.11-test.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\ivy-report.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\resolution-cache\reports\ivy-report.xsl" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Authority$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Authority.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\JsonConverter$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\JsonConverter.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$5$$anonfun$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$collectAndReadPollutantForAuthority$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$collectAndReadPollutantLevel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$collectPollutantLevels$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$readPollutantForAuthority$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$readPollutantForLondon$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$$anonfun$readSpeciesAtSite$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main$delayedInit$body.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\Main.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\VanillaTests$.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\VanillaTests$delayedInit$body.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\scala-2.11\classes\VanillaTests.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\$global\dependencyPositions\$global\streams\update_cache_2.11\input_dsp" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\$global\dependencyPositions\$global\streams\update_cache_2.11\output_dsp" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\$global\ivyConfiguration\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\$global\ivySbt\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\$global\projectDescriptors\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\$global\updateClassifiers\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\$global\updateSbtClassifiers\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\$global\update\$global\streams\out" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\$global\update\$global\streams\update_cache_2.11\inputs" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\$global\update\$global\streams\update_cache_2.11\output" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\compile\externalDependencyClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\compile\managedClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\compile\unmanagedClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\compile\unmanagedJars\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\runtime\externalDependencyClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\runtime\managedClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\runtime\unmanagedClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\runtime\unmanagedJars\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\test\externalDependencyClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\test\managedClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\test\unmanagedClasspath\$global\streams\export" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\playground\json-combinators\target\streams\test\unmanagedJars\$global\streams\export" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/CsvWriter.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../json-combinators/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../json-combinators/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../json-combinators/.idea/modules.xml" afterPath="$PROJECT_DIR$/../../json-combinators/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../json-combinators/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../json-combinators/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/App.scala" afterPath="$PROJECT_DIR$/src/main/scala/App.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/json-combinators.iml" afterPath="$PROJECT_DIR$/.idea/modules/json-combinators.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sbt.xml" afterPath="$PROJECT_DIR$/.idea/sbt.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="json-combinators.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -251,11 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="App.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/App.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.007782" vertical-offset="487" max-vertical-offset="1411">
-              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="1462">
+              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -264,18 +74,18 @@
       <file leaf-file-name="AbstractFunction0.scala" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.6-sources.jar!/scala/runtime/AbstractFunction0.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="340">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VanillaTests.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VanillaTests.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/VanillaTests.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="680">
-              <caret line="8" column="2457" selection-start-line="8" selection-start-column="2455" selection-end-line="8" selection-end-column="2457" />
+            <state vertical-scroll-proportion="0.7016885" vertical-offset="0" max-vertical-offset="680">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -294,7 +104,7 @@
       <file leaf-file-name="JsonParserTests.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/JsonParserTests.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="44404" max-vertical-offset="44880">
+            <state vertical-scroll-proportion="0.0" vertical-offset="44105" max-vertical-offset="44880">
               <caret line="2612" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="2634" selection-end-column="0" />
               <folding />
             </state>
@@ -304,13 +114,44 @@
       <file leaf-file-name="JsValue.scala" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.ivy2/cache/com.typesafe.play/play-json_2.11/srcs/play-json_2.11-2.3.4-sources.jar!/play/api/libs/json/JsValue.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="8534">
+            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="8772">
               <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CsvWriter.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/CsvWriter.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+              <caret line="10" column="96" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
               <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="e#102#176#0" expanded="false" />
-                <element signature="e#14312#14353#0" expanded="false" />
+                <element signature="e#0#34#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="output.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output.csv">
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5" vertical-offset="17" max-vertical-offset="680">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -326,11 +167,13 @@
         <option value="$PROJECT_DIR$/project/plugins.sbt" />
         <option value="$PROJECT_DIR$/src/test/scala/JsonParserTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/JsonParserTests.scala" />
-        <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/test/scala/VanillaTests.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/VanillaTests.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/JsonParserTests.scala" />
+        <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/App.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/CsvWriter.scala" />
+        <option value="$PROJECT_DIR$/output.csv" />
       </list>
     </option>
   </component>
@@ -341,10 +184,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-8" />
-    <option name="width" value="1863" />
-    <option name="height" value="1096" />
+    <option name="x" value="-69" />
+    <option name="y" value="792" />
+    <option name="width" value="1792" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -371,7 +214,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -473,6 +315,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -933,7 +776,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1434577742011" />
+        <entry key="$PROJECT_DIR$" value="1434727137583" />
       </map>
     </option>
   </component>
@@ -954,35 +797,36 @@
       <workItem from="1434560994126" duration="2507000" />
       <workItem from="1434714973038" duration="4559000" />
       <workItem from="1434720455843" duration="92000" />
+      <workItem from="1434722579260" duration="932000" />
+      <workItem from="1434726593463" duration="1713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41834000" />
+    <option name="totallyTimeSpent" value="44479000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-8" width="1863" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="-69" y="792" width="1792" height="1092" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39510116" sideWeight="0.49362174" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.087631725" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.091224015" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.685836" sideWeight="0.11480865" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3647059" sideWeight="0.114896074" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13006397" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.685836" sideWeight="0.8851913" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3647059" sideWeight="0.88510394" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22573489" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23498845" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -993,6 +837,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1020,6 +865,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/JsonParserTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/JsonParserTests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="44404" max-vertical-offset="44880">
+          <caret line="2612" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="2634" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.typesafe.play/play-json_2.11/srcs/play-json_2.11-2.3.4-sources.jar!/play/api/libs/json/JsValue.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="8772">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/App.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
@@ -1064,11 +933,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="8534">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#102#176#0" expanded="false" />
-            <element signature="e#14312#14353#0" expanded="false" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/App.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.6-sources.jar!/scala/runtime/AbstractFunction0.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="340">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/VanillaTests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="680">
+          <caret line="8" column="2457" selection-start-line="8" selection-start-column="2455" selection-end-line="8" selection-end-column="2457" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/JsonParserTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/JsonParserTests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="44404" max-vertical-offset="44880">
+          <caret line="2612" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="2634" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.typesafe.play/play-json_2.11/srcs/play-json_2.11-2.3.4-sources.jar!/play/api/libs/json/JsValue.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="8534">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1270,13 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -1284,31 +1190,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/JsonParserTests.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="2612" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="2634" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/VanillaTests.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="680">
-          <caret line="8" column="2457" selection-start-line="8" selection-start-column="2455" selection-end-line="8" selection-end-column="2457" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.typesafe.play/play-json_2.11/srcs/play-json_2.11-2.3.4-sources.jar!/play/api/libs/json/JsValue.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8534">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#102#176#0" expanded="false" />
-            <element signature="e#14312#14353#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1316,6 +1202,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/CsvWriter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="10" column="96" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/JsonParserTests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="2612" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="2634" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1330,8 +1242,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/App.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.007782" vertical-offset="487" max-vertical-offset="1411">
-          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="1462">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output.csv">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="17" max-vertical-offset="663">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/VanillaTests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7016885" vertical-offset="0" max-vertical-offset="680">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -18,9 +18,6 @@ object Main extends App {
 
   def readSpeciesAtSite  = (site : JsObject) =>  {site.as[JsValue](readSpecies)}
 
-  def collectPollutantLevels(pollutant : String)(species : List[JsValue]): List[JsValue] = {
-    species.filter(js => (js.as[String](readSpeciesCode).equals(pollutant)))
-  }
 
   val authorityList : List[JsObject] = londonAirQualityJson.as[List[JsObject]](authorityJsObjectsReads)
 
@@ -30,6 +27,10 @@ object Main extends App {
 
   def readSpecies(siteList : JsValue): List[JsValue] = {
     JsonConverter.toList(siteList.as[JsValue](readSpecies))
+  }
+
+  def collectPollutantLevels(pollutant : String)(species : List[JsValue]): List[JsValue] = {
+    species.filter(js => (js.as[String](readSpeciesCode).equals(pollutant)))
   }
 
   def collectAndReadPollutantLevel(pollutant : String)(species : List[JsValue]) : List[Int] = {
@@ -57,6 +58,8 @@ object Main extends App {
   }
 
   readPollutantForLondon("NO2")(londonAirQualityJson).foreach(println(_))
+
+  CsvWriter.recordPollutant(readPollutantForLondon("NO2")(londonAirQualityJson), "NO2")
 }
 
 case class Authority(name : String, pollutant : String, average : Double)
