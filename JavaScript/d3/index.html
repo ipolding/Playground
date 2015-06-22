@@ -1,6 +1,37 @@
 <!DOCTYPE HTML>
 <html>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+    </head>
+<a href="http://www.recursion.org/d3-for-mere-mortals">Resoure</a>
+
+    <body>
+        <script type="text/javascript">
+            var dataset = [ 5, 10, 15, 20, 25 ];
+            d3
+            .select("body")
+            .selectAll("p")
+            .data(dataset)
+            .enter()
+            .append("p")
+            .text(function(datapoint) {return datapoint});
+
+            var rectDemo = d3.select("#rect-demo").
+              append("svg:svg").
+              attr("width", 400).
+              attr("height", 300);
+
+              var xScale = d3.scale.linear().
+                domain([0, 20]). // your data minimum and maximum
+                range([0, 100]); // the pixels to map to, e.g., the width of the diagram.
+
+
+
+        </script>
+    </body>
+
 
 </html>
