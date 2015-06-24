@@ -12,6 +12,7 @@
                 width: 20px;
                 height: 75px;   /* We'll override height later */
                 background-color: teal;
+                margin-right: 2px;
             }
         </style>
     </head>
@@ -20,32 +21,33 @@
     <body>
         <script type="text/javascript">
 
-            var 
+            
 
             var dataset = [{"name":"Barking and Dagenham","NO2":2.0},{"name":"Barnet","NO2":null},{"name":"Bexley","NO2":1.25},{"name":"Brent","NO2":null},{"name":"Bromley","NO2":null},{"name":"Camden","NO2":2.25},{"name":"City of London","NO2":2.0},{"name":"Croydon","NO2":1.0},{"name":"Ealing","NO2":1.75},{"name":"Enfield","NO2":1.5},{"name":"Greenwich","NO2":1.25},{"name":"Hackney","NO2":2.0},{"name":"Hammersmith and Fulham","NO2":2.0},{"name":"Haringey","NO2":1.0},{"name":"Harrow","NO2":1.0},{"name":"Havering","NO2":1.5},{"name":"Hillingdon","NO2":2.0},{"name":"Hounslow","NO2":null},{"name":"Islington","NO2":2.0},{"name":"Kensington and Chelsea","NO2":1.8},{"name":"Kingston","NO2":2.0},{"name":"Lambeth","NO2":2.3333333333333335},{"name":"Lewisham","NO2":1.5},{"name":"Merton","NO2":2.0},{"name":"Newham","NO2":null},{"name":"Redbridge","NO2":2.0},{"name":"Richmond","NO2":1.0},{"name":"Southwark","NO2":2.0},{"name":"Sutton","NO2":1.2},{"name":"Tower Hamlets","NO2":2.0},{"name":"Waltham Forest","NO2":null},{"name":"Wandsworth","NO2":1.5},{"name":"Westminster","NO2":2.8}];
+
+           //Width and height
+            var w = 500;
+            var h = 100;     
+            var barPadding = 1;     
+
+            //Create SVG element
+            var svg = d3.select("body")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+            svg.selectAll("rect")
+               .data(dataset)
+               .enter()
+               .append("rect")
+                .attr("x", function(d, i) {
+                    return i * 21;  //Bar width of 20 plus 1 for padding
+                })               
+             
+                .attr("width", w / dataset.length - barPadding)
+               .attr("height", function(d) {return h - d.NO2 * 10});
             
-            d3
-            .select("body")
-            .selectAll("p")
-            .data(dataset)
-            .enter()
-            .append("p")
-            .text(function(datapoint) {return datapoint});
-
-            var rectDemo = d3.select("#rect-demo").
-              append("svg:svg").
-              attr("width", 400).
-              attr("height", 300);
-
-              var xScale = d3.scale.linear().
-                domain([0, 20]). // your data minimum and maximum
-                range([0, 100]); // the pixels to map to, e.g., the width of the diagram.
-
-
-
-        </script>
-
-        <div class="bar"/>
+       </script>
     </body>
 
 
