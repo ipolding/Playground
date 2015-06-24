@@ -1,3 +1,5 @@
+import java.io.{File, PrintWriter}
+
 import play.api.libs.json._
 
 object Main extends App {
@@ -17,7 +19,6 @@ object Main extends App {
   val readAirQualityIndex :  Reads[String] = (__ \ "@AirQualityIndex").read[String]
 
   def readSpeciesAtSite  = (site : JsObject) =>  {site.as[JsValue](readSpecies)}
-
 
   val authorityList : List[JsObject] = londonAirQualityJson.as[List[JsObject]](authorityJsObjectsReads)
 
@@ -52,17 +53,34 @@ object Main extends App {
     allAuthorities.map(authority =>  {
       val authorityName = authority.as[String](readAuthorityName)
       val sumIndices : List[Int] = readPollutantForAuthority(pollutant)(authority)
-      val averageIndex = (sumIndices.sum.toDouble) / sumIndices.size.toDouble
+
+      val averageIndex : Option[Double] = sumIndices match {
+        case Nil => None
+        case x :: xs =>  Some((sumIndices.sum) / sumIndices.size.toDouble)
+      }
       Authority(authorityName, pollutant, averageIndex)
     });
   }
 
-  readPollutantForLondon("NO2")(londonAirQualityJson).foreach(println(_))
+  implicit val authorityWrites = new Writes[Authority] {
+    def writes(authority: Authority) = Json.obj(
+      "name" -> authority.name,
+      authority.pollutant -> authority.average
+    )
+  }
 
-  CsvWriter.recordPollutant(readPollutantForLondon("NO2")(londonAirQualityJson), "NO2")
+  def getLondonPollutantJson(pollutant : String, json : JsValue) : JsObject = {
+    val authorityJsonList = readPollutantForLondon(pollutant)(londonAirQualityJson).map(Json.toJson(_))
+    Json.obj(("pollutionData", authorityJsonList.map(Json.toJson(_))))
+  }
+
+  val printWriter = new PrintWriter(new File("pollution.json"))
+  printWriter.append(getLondonPollutantJson("NO2", londonAirQualityJson).toString())
+  printWriter.close()
+
 }
 
-case class Authority(name : String, pollutant : String, average : Double)
+case class Authority(name : String, pollutant : String, average : Option[Double])
 
 object JsonConverter {
 
