@@ -29,7 +29,12 @@ $(document).ready(function() {
                     //showstatic: true,    // wanted on the toolbar
                     showselection: false    // wanted on selection
                 },
-                // Smiley plugin
+                insertimage: {
+                    title: 'Insert image',
+                    image: '\uf030', // <img src="path/to/image.png" width="16" height="16" alt="" />
+                    //showstatic: true,    // wanted on the toolbar
+                    showselection: index == 2 ? true : false    // wanted on selection
+                },
                 insertvideo: {
                     title: 'Insert video',
                     image: '\uf03d', // <img src="path/to/image.png" width="16" height="16" alt="" />
@@ -204,6 +209,50 @@ $(document).ready(function() {
                                 }
                             }
                         },
+            onImageUpload: function( insert_image ) {
+                            // A bit tricky, because we can't easily upload a file via
+                            // '$.ajax()' on a legacy browser without XMLHttpRequest2.
+                            // You have to submit the form into an '<iframe/>' element.
+                            // Call 'insert_image(url)' as soon as the file is online
+                            // and the URL is available.
+                            // Example server script (written in PHP):
+                            /*
+                            <?php
+                            $upload = $_FILES['upload-filename'];
+                            // Crucial: Forbid code files
+                            $file_extension = pathinfo( $upload['name'], PATHINFO_EXTENSION );
+                            if( $file_extension != 'jpeg' && $file_extension != 'jpg' && $file_extension != 'png' && $file_extension != 'gif' )
+                                die("Wrong file extension.");
+                            $filename = 'image-'.md5(microtime(true)).'.'.$file_extension;
+                            $filepath = '/path/to/'.$filename;
+                            $serverpath = 'http://domain.com/path/to/'.$filename;
+                            move_uploaded_file( $upload['tmp_name'], $filepath );
+                            echo $serverpath;
+                            */
+                            // Example client script (without upload-progressbar):
+                            var iframe_name = 'legacy-uploader-' + Math.random().toString(36).substring(2);
+                            $('<iframe>').attr('name',iframe_name)
+                                         .load(function() {
+                                            // <iframe> is ready - we will find the URL in the iframe-body
+                                            var iframe = this;
+                                            var iframedoc = iframe.contentDocument ? iframe.contentDocument :
+                                                           (iframe.contentWindow ? iframe.contentWindow.document : iframe.document);
+                                            var iframebody = iframedoc.getElementsByTagName('body')[0];
+                                            var image_url = iframebody.innerHTML;
+                                            insert_image( image_url );
+                                            $(iframe).remove();
+                                         })
+                                         .appendTo(document.body);
+                            var $input = $(this);
+                            $input.attr('name','upload-filename')
+                                  .parents('form')
+                                  .attr('action','/script.php') // accessing cross domain <iframes> could be difficult
+                                  .attr('method','POST')
+                                  .attr('enctype','multipart/form-data')
+                                  .attr('target',iframe_name)
+                                  .submit();
+                        },
+            forceImageUpload: false,    // upload images even if File-API is present                        
             videoFromUrl: function( url ) {
                 // Contributions are welcome :-)
 
