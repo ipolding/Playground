@@ -5,12 +5,25 @@
         <meta charset="utf-8">
         <title>D3 Test</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+
+        <style>
+            div.bar {
+                display: inline-block;
+                width: 20px;
+                height: 75px;   /* We'll override height later */
+                background-color: teal;
+            }
+        </style>
     </head>
 <a href="http://www.recursion.org/d3-for-mere-mortals">Resoure</a>
 
     <body>
         <script type="text/javascript">
-            var dataset = [ 5, 10, 15, 20, 25 ];
+
+            var 
+
+            var dataset = [{"name":"Barking and Dagenham","NO2":2.0},{"name":"Barnet","NO2":null},{"name":"Bexley","NO2":1.25},{"name":"Brent","NO2":null},{"name":"Bromley","NO2":null},{"name":"Camden","NO2":2.25},{"name":"City of London","NO2":2.0},{"name":"Croydon","NO2":1.0},{"name":"Ealing","NO2":1.75},{"name":"Enfield","NO2":1.5},{"name":"Greenwich","NO2":1.25},{"name":"Hackney","NO2":2.0},{"name":"Hammersmith and Fulham","NO2":2.0},{"name":"Haringey","NO2":1.0},{"name":"Harrow","NO2":1.0},{"name":"Havering","NO2":1.5},{"name":"Hillingdon","NO2":2.0},{"name":"Hounslow","NO2":null},{"name":"Islington","NO2":2.0},{"name":"Kensington and Chelsea","NO2":1.8},{"name":"Kingston","NO2":2.0},{"name":"Lambeth","NO2":2.3333333333333335},{"name":"Lewisham","NO2":1.5},{"name":"Merton","NO2":2.0},{"name":"Newham","NO2":null},{"name":"Redbridge","NO2":2.0},{"name":"Richmond","NO2":1.0},{"name":"Southwark","NO2":2.0},{"name":"Sutton","NO2":1.2},{"name":"Tower Hamlets","NO2":2.0},{"name":"Waltham Forest","NO2":null},{"name":"Wandsworth","NO2":1.5},{"name":"Westminster","NO2":2.8}];
+            
             d3
             .select("body")
             .selectAll("p")
@@ -31,6 +44,8 @@
 
 
         </script>
+
+        <div class="bar"/>
     </body>
 
 

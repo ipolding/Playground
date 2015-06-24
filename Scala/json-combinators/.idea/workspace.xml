@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c46b22a8-ee71-499e-9ac3-f4b55b6b763f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/App.scala" afterPath="$PROJECT_DIR$/src/main/scala/App.scala" />
-    </list>
+    <list default="true" id="c46b22a8-ee71-499e-9ac3-f4b55b6b763f" name="Default" comment="" />
     <ignored path="json-combinators.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -174,7 +172,7 @@
         <entry file="file://$PROJECT_DIR$/pollution.json">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="642">
-              <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+              <caret line="0" column="112" selection-start-line="0" selection-start-column="112" selection-end-line="0" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -209,8 +207,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-8" />
+    <option name="x" value="1545" />
+    <option name="y" value="379" />
     <option name="width" value="1863" />
     <option name="height" value="1096" />
   </component>
@@ -836,15 +834,15 @@
       <workItem from="1434726593463" duration="2854000" />
       <workItem from="1434965515716" duration="117000" />
       <workItem from="1434977573138" duration="103000" />
-      <workItem from="1435144688049" duration="8513000" />
+      <workItem from="1435144688049" duration="9351000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54353000" />
+    <option name="totallyTimeSpent" value="55191000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-8" width="1863" height="1096" extended-state="6" />
+    <frame x="1545" y="379" width="1863" height="1096" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1332,7 +1330,7 @@
     <entry file="file://$PROJECT_DIR$/pollution.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="642">
-          <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+          <caret line="0" column="112" selection-start-line="0" selection-start-column="112" selection-end-line="0" selection-end-column="112" />
           <folding />
         </state>
       </provider>
