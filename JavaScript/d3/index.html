@@ -43,6 +43,17 @@
                     "height" : function(d) {return d.NO2*80},
                     "fill" : "teal"
                 });            
+
+            svg.selectAll("text")                
+            .data(dataset)
+            .enter()
+            .append("text")
+            .text(function(d) {return d.name})
+            .attr({
+                "x" : function(d, i) {return i * (w / dataset.length);},
+                "y" : function(d, i) {return h - (d.NO2 * 4);},
+                "transform" : "rotate(45 50 50)"
+            })
        </script>
     </body>
 </html>
