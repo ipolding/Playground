@@ -14,6 +14,24 @@
                 background-color: teal;
                 margin-right: 2px;
             }
+
+            .axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.tick line {
+     fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
         </style>
     </head>
     <body>
@@ -23,7 +41,7 @@
 
            //Width and height
             var w = 1000;
-            var h = 200;     
+            var h = 300;     
             var barPadding = 50;    
 
             var yScale = 
@@ -32,9 +50,10 @@
                 .range([0, h]);
 
 
-
-            
-
+            var yAxis = d3.svg.axis()
+                            .scale(yScale)
+                            .orient("left")
+                            .ticks(5);
 
             //Create SVG element
             var svg = d3.select("body")
@@ -64,6 +83,11 @@
                 "y" : function(d) {return h - (d.NO2 * 80);}
                 // ,"transform" : "rotate(0 90 0)"
             })
+
+            svg.append("g")
+                .attr("class", "axis")
+                .attr("transform", "translate(" + padding + ",0)")
+                .call(yAxis);
        </script>
     </body>
 </html>
