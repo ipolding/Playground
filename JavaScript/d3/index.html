@@ -16,18 +16,14 @@
             }
         </style>
     </head>
-<a href="http://www.recursion.org/d3-for-mere-mortals">Resoure</a>
-
     <body>
         <script type="text/javascript">
-
-            
 
             var dataset = [{"name":"Barking and Dagenham","NO2":2.0},{"name":"Barnet","NO2":null},{"name":"Bexley","NO2":1.25},{"name":"Brent","NO2":null},{"name":"Bromley","NO2":null},{"name":"Camden","NO2":2.25},{"name":"City of London","NO2":2.0},{"name":"Croydon","NO2":1.0},{"name":"Ealing","NO2":1.75},{"name":"Enfield","NO2":1.5},{"name":"Greenwich","NO2":1.25},{"name":"Hackney","NO2":2.0},{"name":"Hammersmith and Fulham","NO2":2.0},{"name":"Haringey","NO2":1.0},{"name":"Harrow","NO2":1.0},{"name":"Havering","NO2":1.5},{"name":"Hillingdon","NO2":2.0},{"name":"Hounslow","NO2":null},{"name":"Islington","NO2":2.0},{"name":"Kensington and Chelsea","NO2":1.8},{"name":"Kingston","NO2":2.0},{"name":"Lambeth","NO2":2.3333333333333335},{"name":"Lewisham","NO2":1.5},{"name":"Merton","NO2":2.0},{"name":"Newham","NO2":null},{"name":"Redbridge","NO2":2.0},{"name":"Richmond","NO2":1.0},{"name":"Southwark","NO2":2.0},{"name":"Sutton","NO2":1.2},{"name":"Tower Hamlets","NO2":2.0},{"name":"Waltham Forest","NO2":null},{"name":"Wandsworth","NO2":1.5},{"name":"Westminster","NO2":2.8}];
 
            //Width and height
             var w = 500;
-            var h = 100;     
+            var h = 200;     
             var barPadding = 1;     
 
             //Create SVG element
@@ -37,18 +33,16 @@
                 .attr("height", h);
 
             svg.selectAll("rect")
-               .data(dataset)
-               .enter()
-               .append("rect")
-                .attr("x", function(d, i) {
-                    return i * 21;  //Bar width of 20 plus 1 for padding
-                })               
-             
-                .attr("width", w / dataset.length - barPadding)
-               .attr("height", function(d) {return h - d.NO2 * 10});
-            
+                .data(dataset)
+                .enter()
+                .append("rect")
+                .attr({
+                    "x" : function(d, i) {return i * 21;},
+                    "y": function(d) {return h - (d.NO2 *80)},
+                    "width" : w / dataset.length,
+                    "height" : function(d) {return d.NO2*80},
+                    "fill" : "teal"
+                });            
        </script>
     </body>
-
-
 </html>
