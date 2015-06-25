@@ -53,7 +53,6 @@
             var yAxis = d3.svg.axis()
                             .scale(yScale)
                             .orient("left")
-                            .ticks(5);
 
             //Create SVG element
             var svg = d3.select("body")
@@ -85,8 +84,7 @@
             })
 
             svg.append("g")
-                .attr("class", "axis")
-                .attr("transform", "translate(" + padding + ",0)")
+            .attr("class", "axis")
                 .call(yAxis);
        </script>
     </body>
