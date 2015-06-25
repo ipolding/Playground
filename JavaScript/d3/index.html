@@ -24,7 +24,17 @@
            //Width and height
             var w = 1000;
             var h = 200;     
-            var barPadding = 50;     
+            var barPadding = 50;    
+
+            var yScale = 
+            d3.scale.linear()
+                .domain([0, d3.max(dataset, function(d) {return d.NO2})])
+                .range([0, h]);
+
+
+
+            
+
 
             //Create SVG element
             var svg = d3.select("body")
@@ -38,9 +48,9 @@
                 .append("rect")
                 .attr({
                     "x" : function(d, i) {return i * 21;},
-                    "y": function(d) {return h - (d.NO2 *80)},
+                    "y": function(d) {return h - (yScale(d.NO2))},
                     "width" : w / (dataset.length + barPadding),
-                    "height" : function(d) {return d.NO2*80},
+                    "height" : function(d) {return yScale(d.NO2)},
                     "fill" : "teal"
                 });            
 
