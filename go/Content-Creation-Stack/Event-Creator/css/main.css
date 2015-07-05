@@ -1,0 +1,55 @@
+.logo-10px {
+  height: 10px; }
+
+.logo-20px {
+  height: 20px; }
+
+.logo-30px {
+  height: 30px; }
+
+.logo-40px {
+  height: 40px; }
+
+.logo-50px {
+  height: 50px; }
+
+.logo-60px {
+  height: 60px; }
+
+.logo-70px {
+  height: 70px; }
+
+.logo-80px {
+  height: 80px; }
+
+.logo-90px {
+  height: 90px; }
+
+.logo-100px {
+  height: 100px; }
+
+/*# sourceMappingURL=main.css.map */
+
+
+#bubble-banner {
+      background-image: url('../images/bubble-logo-large-transparent.png');
+      background-size: 230px;
+      background-color: #2D2D87;
+      background-repeat: no-repeat;
+      height: 200px;
+      background-position: 0 2px;
+      min-width: 986px;
+      font-size: 16px;
+      display: block;
+    }
+
+#bubble-banner-nav {
+      background-color: #1371b7;
+}
+
+#page-footer {
+    height: 80px;
+    color: grey;
+    background-color: black;
+}
+
