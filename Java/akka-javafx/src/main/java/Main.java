@@ -1,8 +1,26 @@
-public class Main {
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-    public static void main(String[] args) {
+public class Main extends Application {
 
-        akka.Main.main(new String[] {Player.class.getName()});
+    ActorSystem actorSystem = ActorSystem.create();
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        ActorRef game = actorSystem.actorOf(Props.create(GameBoard.class)
+                .withDispatcher("javafx-dispatcher"), "Game");
+
+
+        ActorRef playingPiece = actorSystem.actorOf(Props.create(PlayingPiece.class)
+                .withDispatcher("javafx-dispatcher"), "PlayingPiece");
+
+
+        playingPiece.tell(Move.apply(game, 100, Move.Direction.HORIZONTAL), game);
+        playingPiece.tell(Move.apply(game, 100, Move.Direction.HORIZONTAL), game);
 
     }
 }
