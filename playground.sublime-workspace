@@ -1,0 +1,795 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bar",
+				"barPadding"
+			],
+			[
+				"selec",
+				"selectAll"
+			],
+			[
+				"data",
+				"dataset"
+			],
+			[
+				"Comm",
+				"CommentForm"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"branch",
+				"branchNameText"
+			],
+			[
+				"By",
+				"ByteArrayOutputStream"
+			],
+			[
+				"payap",
+				"paypal_po_1"
+			],
+			[
+				"paypal",
+				"paypal_id_1"
+			],
+			[
+				"al",
+				"alerterFunction"
+			],
+			[
+				"get",
+				"getX"
+			],
+			[
+				"sign",
+				"signedFieldsBusinessCenter"
+			],
+			[
+				"noP",
+				"noPaymentTokenBusinessCenter"
+			],
+			[
+				"siteL",
+				"siteLongitude"
+			],
+			[
+				"site",
+				"siteLatitude"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "I have an abstract test class:\n\n@RunWith(SpringJUnit4ClassRunner.class)\n@ContextConfiguration(locations = {\"/persistence-context.xml\"}) <-- My persistence layer contains my DAO classes\npublic abstract class MyBaseTest implements ApplicationContextAware { ... }\n\nMy actual tests are in a concrete class:\n\n@RunWith(SpringJUnit4ClassRunner.class)\n@ContextHierarchy({\n        @ContextConfiguration(classes = TestConfig.class)\n})\npublic class MyTest extends MyBaseTest { ... }\n\nMy TestConfig.class\n\n@Import(value = {AnotherConfigClass.class})\n@Configuration\npublic class TestConfig {\n\n    @Autowired\n    MyDAO myDAO; <-- this is null when loading classes\n\n\n    @Bean\n    public MyService myService() {\n        MyService myService = new MyService();\n        myService.setDAO(myDAO); <-- my DAO is null at this point!\n        return myService;\n    }\n\n    ...\n\n}    \n\n\nMy AnotherConfigClass.class\n\n@Configuration\npublic class AnotherConfigClass {\n\n    ...\n\n    @PostConstruct\n    public void init() {\n\n        myService.doSomethingUsingMyDAO(); <--- I need to use myService here.",
+			"settings":
+			{
+				"buffer_size": 1071,
+				"line_ending": "Unix",
+				"name": "I have an abstract test class:"
+			}
+		},
+		{
+			"file": "/C/dev/properties_files/application-local.properties",
+			"settings":
+			{
+				"buffer_size": 3231,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 173.0,
+		"last_filter": ":java",
+		"selected_items":
+		[
+			[
+				":java",
+				"Set Syntax: Java"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":uppe",
+				"Convert Case: Upper Case"
+			],
+			[
+				":scala",
+				"Set Syntax: Scala"
+			],
+			[
+				"<p>",
+				"Snippet: <?php $this->… ?>"
+			],
+			[
+				":con",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				":conver",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				":python",
+				"Set Syntax: Python"
+			],
+			[
+				":html",
+				"Set Syntax: HTML"
+			],
+			[
+				":htm",
+				"Set Syntax: HTML"
+			],
+			[
+				":sql",
+				"Set Syntax: SQL"
+			],
+			[
+				":json",
+				"Set Syntax: JSON"
+			],
+			[
+				":js",
+				"Set Syntax: JSON"
+			],
+			[
+				":xml",
+				"Set Syntax: XML"
+			],
+			[
+				":settext",
+				"Set Syntax: reStructuredText"
+			],
+			[
+				":sace",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				":sca",
+				"Set Syntax: Scala"
+			],
+			[
+				":ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				":prop",
+				"Set Syntax: Java Properties"
+			],
+			[
+				":javap",
+				"Set Syntax: Java Properties"
+			],
+			[
+				":javapr",
+				"Set Syntax: Java Properties"
+			],
+			[
+				":javaprop",
+				"Set Syntax: Java Properties"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/dev/playground",
+		"/C/dev/playground/JavaScript",
+		"/C/dev/playground/JavaScript/react",
+		"/C/dev/playground/JavaScript/react/google-maps-components"
+	],
+	"file_history":
+	[
+		"/C/dev/playground/JavaScript/react/google-maps-components/autocompletePlaceBox.html",
+		"/C/dev/properties_files/application-local.properties",
+		"/C/dev/playground/JavaScript/react/google-maps-components/PlacesAutoComplete.js",
+		"/C/dev/playground/JavaScript/react/google-maps-components/index.html",
+		"/C/dev/playground/JavaScript/react/index.html",
+		"/C/dev/playground/JavaScript/index.html",
+		"/C/dev/playground/JavaScript/react/autocompletePlaceBox.html",
+		"/C/dev/playground/JavaScript/autocompletePlaceBox.html",
+		"/C/tmp/intellij_tomcat_logs/console_output.log",
+		"/C/dev/playground/JavaScript/google/map.html",
+		"/C/dev/notes/Merchant Payment Deductions/MerchantPaymentReport_6.xls",
+		"//anl-pri-f01p-p/private$/ian.polding/Desktop/MERCHANT PAYMENT TEST REWRITE CLASSES/rewritten_test_class.java",
+		"//anl-pri-f01p-p/private$/ian.polding/Desktop/MERCHANT PAYMENT TEST REWRITE CLASSES/base_test_boosted",
+		"/C/dev/projects/wowcher/core-root/core-domain/database/northcliffedigital/Sprint-PAY-6/PAY-211-release.sql",
+		"/C/Program Files/PostgreSQL/9.4/data/pg_hba.conf",
+		"/C/dev/notes/Payment 500 Errors/Excpetion Handling/405 Request Path",
+		"/C/dev/notes/Payment 500 Errors/Excpetion Handling/NPE Request Path",
+		"/C/dev/notes/Payment 500 Errors/Excpetion Handling/500 Exception",
+		"//anl-pri-f01p-p/private$/ian.polding/Desktop/TMP/test.txt",
+		"/C/dev/notes/Payment 500 Errors/Excpetion Handling/405 Exception",
+		"/C/Program Files/PostgreSQL/9.4/data/pg_log/postgresql-2015-07-13_144712.log",
+		"/C/Apache Software Foundation/Apache2.2/logs/access.log",
+		"/C/Apache Software Foundation/Apache2.2/logs/error.log",
+		"/C/dev/notes/cybersource/cybersource_login_details.txt",
+		"//anl-pri-f01p-p/private$/ian.polding/Desktop/delete_branches.sh",
+		"//anl-pri-f01p-p/private$/ian.polding/Desktop/kill_greedy_processes.bat",
+		"/C/maven/.m2/settings.xml",
+		"/C/dev/projects/wowcher/core-root/commons/src/main/config/common-services-context.xml",
+		"/C/dev/tools/apache-maven-3.1.1/conf/settings.xml",
+		"/C/Users/ian.polding/.m2/settings.xml",
+		"/C/dev/properties_files/rabbit-mq.properties",
+		"/C/dev/properties_files/rabbitmq-local.properties",
+		"/C/dev/notes/Auto-Schedule/adding_new_controller_notes",
+		"/C/dev/tools/AppDynamics/conf/controller-info.xml",
+		"/C/dev/playground/JavaScript/d3/index.html",
+		"/C/dev/notes/Merchant Payment Deductions/Derby-testers-job-limit-hack",
+		"/C/dev/Wowcher Documentation/Confluence page moves.txt",
+		"/C/Users/ian.polding/AppData/Local/Temp/messages.log",
+		"/C/locations_relationships.cipher",
+		"/C/dev/projects/wowcher/wps-root/wps/src/test/resources/scheduling_relationships.cipher",
+		"/C/dev/tools/Servers/nginx-1.7.0/conf/nginx.conf",
+		"/C/dev/playground/Static Pages/index.html",
+		"//anl-pri-f01p-p/private$/ian.polding/Desktop/hibernate_integration_test.java",
+		"/C/Users/ian.polding/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/WHIXE3CZ/PAY-215-release.sql",
+		"/C/dev/notes/Auto Scheduling/neo4j/cipher_script_create_relationship_preparation.csv",
+		"/C/dev/properties_files/qas-local.properties",
+		"/C/dev/notes/Auto Scheduling/neo4j/create_relationships.cipher",
+		"/C/dev/notes/Auto Scheduling/neo4j/create_db.cipher",
+		"/C/Users/ian.polding/AppData/Local/Temp/outputFile4.csv",
+		"/C/dev/playground/Scala/.gitignore",
+		"/C/dev/notes/Merchant Payment May 2015/PAY-210/PAY-214-release.sql",
+		"/C/dev/notes/Merchant Payment May 2015/PAY-210/PAY-214-rollback.sql",
+		"/C/dev/tools/database/OracleXE/export-28may14.sql",
+		"/C/dev/tools/database/export-28may14.sql",
+		"/C/dev/projects/wowcher/delete-all.sh",
+		"/C/Users/ian.polding/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/WHIXE3CZ/PAY-214-release.sql",
+		"/C/Users/ian.polding/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/WHIXE3CZ/PAY-214-rollback.sql",
+		"/C/dev/projects/wowcher/core-root/core-domain/src/main/java/uk/co/wowcher/domain/LoyaltyExchange.java",
+		"/C/Users/ian.polding/.activator/activatorconfig.txt",
+		"/C/usr/ian/.activator/activatorconfig.txt",
+		"/C/Program Files/PostgreSQL/9.4/data/postgresql.conf",
+		"/C/Users/ian.polding/.activator/version-0.properties",
+		"/C/Program Files (x86)/JetBrains/IntelliJ IDEA 14.0.2/bin/idea.properties",
+		"//anl-pri-f01p-p/private$/ian.polding/Desktop/Common Wowcher References.txt",
+		"/C/dev/properties_files/dealcreator-local.properties",
+		"/C/pay_184/ian.txt",
+		"/C/ian.txt",
+		"/C/Program Files (x86)/JetBrains/0xDBE 139.795.5/bin/idea.properties",
+		"/C/Users/ian.polding/.ivy2/.credentials",
+		"/C/dev/properties_files/content.conf",
+		"/C/hello_world.txt",
+		"/C/dev/notes/Merchant Payment May 2015/deal_voucher_example column names for mapping against values",
+		"/C/dev/notes/Merchant Payment May 2015/PROD_ORDER_COL_NAMES",
+		"/C/dev/passwords/ADPwd.txt",
+		"/C/dev/notes/Merchant Payment May 2015/deal_voucher_example values for mapping against column number",
+		"/C/dev/notes/Merchant Payment May 2015/product_example values for mapping against column number",
+		"/C/dev/notes/Merchant Payment May 2015/PROD_ORDER_VALUES",
+		"/C/dev/notes/Merchant Payment May 2015/product_example column names for mapping against values",
+		"/C/dev/tools/cygwin64/home/ian.polding/input_dv_339039.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/oracle_to_h2.sh",
+		"/C/dev/tools/cygwin64/home/ian.polding/out_ol",
+		"/C/dev/tools/cygwin64/home/ian.polding/output_desc.sql",
+		"/C/Users/ian.polding/AppData/Roaming/Papercut/2015051214272522-d7de.eml",
+		"/C/dev/tools/cygwin64/home/ian.polding/pay_221/input_dv_339039.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/input_desc.sql",
+		"/C/Users/ian.polding/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/dev/projects/akka-http-prototype/.gitignore",
+		"/C/dev/tools/cygwin64/home/ian.polding/output_email.sql",
+		"/C/dev/notes/Deal Creator/email_single-digit-date",
+		"/C/dev/notes/Deal Creator/created_payment_vo.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/in_14040404.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/out_nicejlaksjdflk.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/input_emailbug.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/stats_input.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/output_98398",
+		"/C/dev/tools/cygwin64/home/ian.polding/output_9831000",
+		"/C/dev/tools/cygwin64/home/ian.polding/int_test_data_input.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/create_merchant_payment_tables.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/daily_deals_schema/input_1404.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/out_put_create",
+		"/C/dev/tools/cygwin64/home/ian.polding/output_09492",
+		"//anl-pri-f01p-p/private$/Ian.Polding/export.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/input_order_line.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/daily_deals_schema/pp_audit.sql",
+		"/C/dev/tools/cygwin64/home/ian.polding/sed_playground/transform_oracle_to_h2.sh",
+		"/C/dev/tools/cygwin64/home/ian.polding/transform_oracle_create_table_to_h2_schema.sh",
+		"/C/Users/ian.polding/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/ian.polding/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/playground/index.html",
+		"/C/dev/projects/deal-creator/.idea/libraries/Maven__oracle_com_ojdbc14_10G.xml",
+		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.5/user-files/simulations/DealCreatorLoadTesting.scala",
+		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.5/user-files/simulations/Load.scala",
+		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.5/user-files/simulations/dealcreator/DealCreatorLoad.scala",
+		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/default/DealCreatorSimulation.scala",
+		"/C/dev/notes/Deal Creator/TestSuiteFix/finding-errors-after-using-merge-into-instead-of-insert.log",
+		"/C/dev/notes/Deal Creator/TestSuiteFix/failures-11-errors-8-before-fixing-busi-address.log",
+		"/C/dev/notes/Deal Creator/TestSuiteFix/failures-11-errors-8-before-fixing-easy-wins.log",
+		"/C/dev/notes/Deal Creator/TestSuiteFix/failures-11-errors-8-before-fixing-easy-wins-part-2.log",
+		"/C/dev/notes/Deal Creator/TestSuiteFix/failures-11-errors-8-before-fixed-stupid-mistake-in-email-bug.log",
+		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/computerdatabase/DealCreatorHighLoadSimulation.scala",
+		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/computerdatabase/BasicSimulation.scala",
+		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/computerdatabase/CustomSimulation.scala",
+		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/DealCreatorHighLoadSimulation.scala",
+		"/C/dev/notes/Deal Creator/TestSuiteFix/failures-13-errors-8-before-fixing-busi-address.log",
+		"/C/dev/notes/Deal Creator/TestSuiteFix/60-errors-no-code-change.log",
+		"/C/dev/notes/Deal Creator/TestSuiteFix/60-errors-emailer-test-fixed.log",
+		"/C/dev/notes/Deal Creator/TestSuiteFix/FixingProgress Notes",
+		"/C/dev/notes/Deal Creator/TestSuiteFix/59-errors-before-deleting-between-tests.log"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"b",
+			"Embedded",
+			"failed",
+			"error",
+			"autoscheduler",
+			"circular",
+			"\"\n",
+			">",
+			"user",
+			"created",
+			"SALES",
+			"SALESS",
+			"salesperson",
+			".*DataSourceUtils.*",
+			".*HibernateTransactionManager.*",
+			"logLevel.*",
+			"^.*DataSourceUtils.*$",
+			"^.*HibernateTransactionManager.*$",
+			"logLevel=DEBUG [SessionFactoryUtils                     ] Closing Hibernate Session",
+			"logLevel.*",
+			"\\[.*",
+			"^\\s+",
+			"^[a-z]\\.+",
+			"^[a-z]\\.+[a-z\\.]",
+			"^[A-Z].*",
+			" \\w+\\(\\)",
+			"100",
+			"1",
+			"(\\d+h\\s\\d+m)",
+			"(departure.format\\([\\'h\\.ma\\sa\\)\\\"\\>]+)([\\d\\.apm\\s])+",
+			"(departure.format([h\\.ma]+",
+			"6.10",
+			"6.10am",
+			"_",
+			"SCHEDULING_LOCATION",
+			"Location",
+			"Hull_and_East_Riding",
+			"London_",
+			"Hull",
+			"lecture/73",
+			"Introduction",
+			"Why Actors",
+			")\n",
+			"d3",
+			" ",
+			"\\s\\s+",
+			"\"[\\w\\s]+\"",
+			"_",
+			"^$",
+			"$",
+			"(\\w)$",
+			",",
+			"^(?!\\s)",
+			"^[a-zA-Z_]+$",
+			",",
+			"^(?!\\s)",
+			"^(!?\\s)",
+			"^",
+			"\\s(?!^)",
+			",,,,,",
+			",,,,,,",
+			"\"",
+			"Unique where.*",
+			"(^\\s*TO_DATE\\('\\d+\\-\\w+\\-\\d+',)\\n",
+			"(^\\sTO_DATE\\('\\d+\\-\\w+\\-\\d+',)\\n",
+			",",
+			"TO_DATE.*,$",
+			",",
+			"MERGE",
+			"ORDER_LINE",
+			"CREATE TABLE ORDER_LINE",
+			"CREATE ORDER_LINE",
+			"ORDER_LINE",
+			"PROOF_OF_POSTAGE",
+			"POSTAGE_CONFIRMED_DATE",
+			"POSTAGE",
+			"*",
+			"insert into",
+			"^$",
+			"idle.*",
+			"&",
+			"private final.*",
+			",",
+			"^\\d\\d\\d",
+			",",
+			"user",
+			",",
+			",\\d\\);",
+			"\\d\\);",
+			",",
+			"sales",
+			",",
+			"\n/,/",
+			"^$",
+			"Good",
+			"April",
+			",,",
+			"g",
+			"E",
+			"desc NORTHCLIFFE.",
+			"line_endings",
+			"dealcreator.codeGenerator.",
+			"expected 1",
+			"expected 1, actual 3",
+			" Executed SQL script",
+			"actual 81",
+			"exception",
+			"TESTS",
+			"s.*c.*h.*e.*d.*u.*l.*e.*d",
+			"dear",
+			"Your deal for the",
+			"Tests run",
+			"^Tests run",
+			"startDate",
+			"CodeCreationEmailerIntegrationTest",
+			"^Running.*",
+			"^Tests run.*",
+			"Tests run.*",
+			"Tests run: 127, Failures: 0, Errors: 64, Skipped: 0",
+			"^Tests run.*",
+			"^Running",
+			"^Running(.\\n)*Tests Run",
+			"^Running.*Tests Run",
+			"^Running.*",
+			"^test_",
+			"insert into GENERATED_VOUCHER_CODE",
+			"unique",
+			"Date"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"LOCATION",
+			"SCHEDULING_LOCATION",
+			"Hull and East Riding",
+			"London ",
+			"_",
+			"\\n",
+			" ",
+			"",
+			"' CREATE (a)-[:ALSO_SCHEDULES]->(b)",
+			"${1}'\nCREATE (a)-[:ALSO_SCHEDULES]->(b)",
+			"' AND b.name = '",
+			"MATCH (a:Location),(b:Location) WHERE a.name = '",
+			"",
+			"' AND b.name = '",
+			"MATCH (a:Location),(b:Location) WHERE a.name ='",
+			"_",
+			"",
+			"\\\"",
+			"$1",
+			",\\n",
+			"INSERT",
+			"",
+			"&\\n",
+			",\\n",
+			"",
+			",\\n",
+			"\\n",
+			");",
+			",\\n",
+			",",
+			"CREATE TABLE ",
+			"codes.listenerScheduler.",
+			"",
+			"${2}\\n${1}",
+			"\\U${1}",
+			"@Column(name = \"${1}\", length = ${3})\\n${2} ${4};\\n",
+			"${2}\\n${1}",
+			"@Column(name = \"${1}\", length = ${3})\\n${2} ${4};\\n",
+			"\\U${1}",
+			"${2}\\n${1}",
+			"@NotNull",
+			",\\n",
+			",\\n1_$2",
+			"$1_$2",
+			",",
+			":,",
+			"$1",
+			"",
+			")",
+			"\\{",
+			"\\(",
+			"\\}\\,",
+			"\\{",
+			"",
+			"-",
+			"ServiceMock",
+			",",
+			"",
+			",\\n",
+			"productVO_2",
+			"",
+			",\\n",
+			"",
+			"\\n",
+			"",
+			";\\n",
+			"",
+			"\\U${1}",
+			"",
+			"${1}, length = ${4})\\nprivate ${3}",
+			"@Column(name=\"${1}\" ${2}",
+			"\\U${1}",
+			"${2}\\n${1}",
+			"@NotNull",
+			"${2}\\n${1}",
+			"@NotNull",
+			"@Column(name = \"${1}, length = ${2}, precision = ${3})\\nprivate double",
+			"@Column(name = \"${1}\", length = ${3})\\n${2} ${4};\\n",
+			"\\U${1}",
+			"@Column(name = \"${1}\")\\n${2}",
+			"${1}integer",
+			"${1}\\nBoolean",
+			"length = ${1})\\nString",
+			"length = 12)\\nlong",
+			"@Column(name = \"${1}, length = ${2}, precision = ${3})\\ndouble",
+			"@Column(name = \"${1}\", length = ${3})\\n${2} ${4};\\n",
+			"\\U${1}",
+			"${2}\\n${1}",
+			"@NotNull",
+			"@Column(${2}, ",
+			",\\n",
+			"${1}${3} ${2}",
+			"@Column(name = \"${1}\", length = ${3})\\n${2} ${4};\\n",
+			"@Column(name = \"${1}, length = ${2}, precision = ${3})\\ndouble",
+			"@Column(name = \"${1}\", length = ${3})\\n${2} ${4};\\n",
+			"\\U${1}",
+			"${2}\\n${1}",
+			"\\U${1}",
+			"${2}\\n${1}",
+			"@NotNull",
+			"\\U${1}",
+			"",
+			"\\n@NotNull",
+			"${1}integer",
+			"double ${1};",
+			"${1}integer",
+			"double ${1};",
+			"double ${1}",
+			"@Column(name = \"${1}, length = ${2}, precision = ${3})\\ndouble",
+			"Date",
+			"@Column(name = \"${1}, length = ${2}, precision = ${3})\\ndouble",
+			"Date",
+			"${1}\\nBoolean",
+			"length = ${1})\\nString",
+			"length = 12)\\nlong",
+			"@Column(name = \"${1}\", length = ${3})\\n${2} ${4};\\n",
+			"\\U${1}",
+			"${2}\\n${1}",
+			"@NotNull",
+			",\\n",
+			"${1}${3} ${2}",
+			"12)\\nlong ",
+			"@Column(name = \"${1}\", length = ${3})\\n${2} ${4};\\n",
+			"\\U${1}",
+			"${2}\\n${1}",
+			"@NotNull",
+			"12)\\nlong "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1071,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1071,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "I have an abstract test class:",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/dev/properties_files/application-local.properties",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1093,
+								1093
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/JavaProperties.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "playground.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"trace",
+				"ain Terrace&payment_date=03:22:48 Nov 27, 2014 PST"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\ian.polding\\Sublime Projects\\Hosts File.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 257.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
