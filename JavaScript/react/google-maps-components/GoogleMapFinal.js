@@ -10,7 +10,7 @@ var GoogleMap = React.createClass({
 
     render: function() {
         console.log("rendering")
-        return <div ref="map_canvas">
+        return <div ref="map_canvas" className="bigMap">
                     </div>
         
             }
