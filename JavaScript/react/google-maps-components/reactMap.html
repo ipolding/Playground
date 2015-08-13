@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn1rMvhaj2-2viRAjoUIrH-5FWo_yR8Z0"></script>
+  <title>React Map</title>
+  <style type="text/css">
+
+            #map {
+                height: 500px;
+                width: 500px;
+              }
+ </style>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script type="text/jsx" src="GoogleMap.js"></script>
+ </head>
+ <body>
+      <div id="map"></div>
+      
+<script type="text/jsx">
+ React.render(<GoogleMap/>, document.getElementById("map"));
+</script>
+  </body>
+</html>
