@@ -72,70 +72,11 @@
 	"buffers":
 	[
 		{
-			"contents": "I have an abstract test class:\n\n@RunWith(SpringJUnit4ClassRunner.class)\n@ContextConfiguration(locations = {\"/persistence-context.xml\"}) <-- My persistence layer contains my DAO classes\npublic abstract class MyBaseTest implements ApplicationContextAware { ... }\n\nMy actual tests are in a concrete class:\n\n@RunWith(SpringJUnit4ClassRunner.class)\n@ContextHierarchy({\n        @ContextConfiguration(classes = TestConfig.class)\n})\npublic class MyTest extends MyBaseTest { ... }\n\nMy TestConfig.class\n\n@Import(value = {AnotherConfigClass.class})\n@Configuration\npublic class TestConfig {\n\n    @Autowired\n    MyDAO myDAO; <-- this is null when loading classes\n\n\n    @Bean\n    public MyService myService() {\n        MyService myService = new MyService();\n        myService.setDAO(myDAO); <-- my DAO is null at this point!\n        return myService;\n    }\n\n    ...\n\n}    \n\n\nMy AnotherConfigClass.class\n\n@Configuration\npublic class AnotherConfigClass {\n\n    ...\n\n    @PostConstruct\n    public void init() {\n\n        myService.doSomethingUsingMyDAO(); <--- I need to use myService here.",
+			"file": "JavaScript/react/google-maps-components/GoogleMapFinal.js",
 			"settings":
 			{
-				"buffer_size": 1071,
-				"line_ending": "Unix",
-				"name": "I have an abstract test class:"
-			}
-		},
-		{
-			"file": "JavaScript/react/google-maps-components/autocompletePlaceBox.html",
-			"settings":
-			{
-				"buffer_size": 914,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "JavaScript/react/google-maps-components/GoogleMap.js",
-			"settings":
-			{
-				"buffer_size": 416,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/dev/tools/dailyDeals/tomcat7-fe-dd/conf/server.xml",
-			"settings":
-			{
-				"buffer_size": 6727,
+				"buffer_size": 906,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Apache Software Foundation/Apache2.2/conf/httpd.conf",
-			"settings":
-			{
-				"buffer_size": 17919,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Apache Software Foundation/Apache2.2/conf/extra/proxy.conf",
-			"settings":
-			{
-				"buffer_size": 182,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "//anl-pri-f01p-p/private$/ian.polding/Desktop/tony.txt",
-			"settings":
-			{
-				"buffer_size": 779,
-				"line_ending": "Unix",
-				"name": "-Xmx768m"
-			}
-		},
-		{
-			"file": "//anl-pri-f01p-p/private$/ian.polding/Desktop/simon.txt",
-			"settings":
-			{
-				"buffer_size": 967,
-				"line_ending": "Unix",
-				"name": "-Xmx768m"
 			}
 		}
 	],
@@ -267,9 +208,21 @@
 	],
 	"file_history":
 	[
+		"/C/Android/Wowcher/android/Android Code/Wowcher/src/com/anmedia/wowcher/async/GetSearchDealsTask.java",
+		"/C/dev/playground/JavaScript/react/google-maps-components/GoogleMap.js",
+		"/C/dev/tools/Profiling/xrebel/readme.txt",
+		"/C/Android/Wowcher/android/Android Code/Wowcher/src/com/anmedia/wowcher/ui/SearchResultsFragment.java",
 		"/C/dev/playground/JavaScript/react/google-maps-components/PlacesAutoComplete.js",
-		"/C/dev/tools/dailyDeals/tomcat7-wps-dd/bin/catalina.bat",
 		"/C/dev/playground/JavaScript/react/google-maps-components/autocompletePlaceBox.html",
+		"/C/dev/playground/JavaScript/react/google-maps-components/simpleMap.html",
+		"/C/dev/Batch Jobs/Human readable steps.txt",
+		"/C/dev/Batch Jobs/Dynamic module steps.xml",
+		"/C/dev/tools/dailyDeals/tomcat7-fe-dd/conf/server.xml",
+		"/C/Apache Software Foundation/Apache2.2/conf/httpd.conf",
+		"/C/Apache Software Foundation/Apache2.2/conf/extra/proxy.conf",
+		"//anl-pri-f01p-p/private$/ian.polding/Desktop/tony.txt",
+		"//anl-pri-f01p-p/private$/ian.polding/Desktop/simon.txt",
+		"/C/dev/tools/dailyDeals/tomcat7-wps-dd/bin/catalina.bat",
 		"/C/dev/properties_files/application-local.properties",
 		"/C/dev/playground/JavaScript/react/google-maps-components/index.html",
 		"/C/dev/playground/JavaScript/react/index.html",
@@ -382,19 +335,7 @@
 		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.5/user-files/simulations/Load.scala",
 		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.5/user-files/simulations/dealcreator/DealCreatorLoad.scala",
 		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/default/DealCreatorSimulation.scala",
-		"/C/dev/notes/Deal Creator/TestSuiteFix/finding-errors-after-using-merge-into-instead-of-insert.log",
-		"/C/dev/notes/Deal Creator/TestSuiteFix/failures-11-errors-8-before-fixing-busi-address.log",
-		"/C/dev/notes/Deal Creator/TestSuiteFix/failures-11-errors-8-before-fixing-easy-wins.log",
-		"/C/dev/notes/Deal Creator/TestSuiteFix/failures-11-errors-8-before-fixing-easy-wins-part-2.log",
-		"/C/dev/notes/Deal Creator/TestSuiteFix/failures-11-errors-8-before-fixed-stupid-mistake-in-email-bug.log",
-		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/computerdatabase/DealCreatorHighLoadSimulation.scala",
-		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/computerdatabase/BasicSimulation.scala",
-		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/computerdatabase/CustomSimulation.scala",
-		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/DealCreatorHighLoadSimulation.scala",
-		"/C/dev/notes/Deal Creator/TestSuiteFix/failures-13-errors-8-before-fixing-busi-address.log",
-		"/C/dev/notes/Deal Creator/TestSuiteFix/60-errors-no-code-change.log",
-		"/C/dev/notes/Deal Creator/TestSuiteFix/60-errors-emailer-test-fixed.log",
-		"/C/dev/notes/Deal Creator/TestSuiteFix/FixingProgress Notes"
+		"/C/dev/notes/Deal Creator/TestSuiteFix/finding-errors-after-using-merge-into-instead-of-insert.log"
 	],
 	"find":
 	{
@@ -686,237 +627,37 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "JavaScript/react/google-maps-components/GoogleMapFinal.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1071,
+						"buffer_size": 906,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1071,
-								0
+								729,
+								729
 							]
 						],
 						"settings":
 						{
-							"auto_name": "I have an abstract test class:",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "JavaScript/react/google-maps-components/autocompletePlaceBox.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 914,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								203,
-								203
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "JavaScript/react/google-maps-components/GoogleMap.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 416,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								398,
-								398
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/dev/tools/dailyDeals/tomcat7-fe-dd/conf/server.xml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6727,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4489,
-								4493
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 793.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Apache Software Foundation/Apache2.2/conf/httpd.conf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 17919,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								17826,
-								17831
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6150.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/Apache Software Foundation/Apache2.2/conf/extra/proxy.conf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 182,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								182,
-								182
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "//anl-pri-f01p-p/private$/ian.polding/Desktop/tony.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 779,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								567,
-								567
-							]
-						],
-						"settings":
-						{
-							"auto_name": "-Xmx768m",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "//anl-pri-f01p-p/private$/ian.polding/Desktop/simon.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 967,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								853,
-								853
-							]
-						],
-						"settings":
-						{
-							"auto_name": "-Xmx768m",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

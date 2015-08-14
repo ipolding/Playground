@@ -1,4 +1,4 @@
-var GooglePlaceAutocomplete = React.createClass({
+var PlacesAutocomplete = React.createClass({
 
     componentDidMount :  function() {
         new google.maps.places.Autocomplete(React.findDOMNode(this.refs.placeAutocomplete));
