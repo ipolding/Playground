@@ -1,12 +1,22 @@
 var GoogleMap = React.createClass({
 
+            getInitialState : function() {
+                state : {
+                    intialMarkerLat: this.props.initialMarkerLat,
+                    initialMarkerLng: this.props.initialMarkerLng
+                    } 
+            },
+
+            },  
+
             componentDidMount :  function() {
                             console.log("component has mounted")
-                                            new google.maps.Map(React.findDOMNode(this.refs.map_canvas), {
-                                                                zoom: 8,
-                                                                center: {lat: -34.397, lng: 150.644}
-                                                                        });
-                                },
+                            new google.maps.Map(React.findDOMNode(this.refs.map_canvas), 
+                            {zoom: 8,
+                             center: {lat: -34.397, lng: 150.644}
+                            });
+
+            },
 
             render: function() {
                             console.log("rendering")
