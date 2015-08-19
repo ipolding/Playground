@@ -1,7 +1,9 @@
-import play.api.libs.json._
 import play.api.libs.functional.syntax._
+import play.api.libs.json._
 
-object GooglePlacesParseTest extends App {
+case class Location(name : String, formattedAddress:String, coordinates: (Double, Double))
+
+object GooglePlacesParseScratchTest extends App {
 
   val zero_results =
     """
@@ -47,39 +49,38 @@ object GooglePlacesParseTest extends App {
   val googlePlaceJson = Json.parse(single_result);
   val zeroResultJson = Json.parse(zero_results);
 
-  val statusPath = JsPath \ "status"
-  googlePlaceJson \ "results"
+  val readId : Reads[String] = {(__ \ "place_id").read[String]}
+  val readName : Reads[String] = {(__ \ "name").read[String]}
+  val readFormattedAddress : Reads[String] = {(__ \ "formatted_address").read[String]}
+  val readLocation : Reads[JsObject] = {(__ \ "geometry" \ "location").read[JsObject]}
+  val readCoordinates : Reads[(Double, Double)] = {
+    ((__ \ "lat").read[Double]
+      and
+    (__ \ "lng").read[Double]).
+      apply((_, _))}
 
-  val readStatus: Reads[String] = (__ \ "status").read[String]
-  val readResultList: Reads[Seq[JsObject]] = {
-    Reads.seq((__ \ "results").read[JsObject])
+  val readResults : Reads[Seq[JsObject]] = {
+    (__ \ "results").read[Seq[JsObject]]
   }
 
-  val locationPath = (JsPath \ "geometry" \ "location")
-  val readResults = (JsPath \ "results")
+  case class GooglePlace(id : String, name : String, formattedAddress : String, coords : (Double, Double))
 
-  val readLocation: Reads[JsObject] = locationPath.read[JsObject]
-
-  val coordinatesReadsBuilder = (JsPath \ "lat").read[Double] and (JsPath \ "lng").read[Double]
-  val coordinates: Reads[(Double, Double)] = coordinatesReadsBuilder.apply((lat, lng) => (lat, lng))
-
-  readResults.readNullable(readLocation)
-
-  val readLocations: Reads[Seq[JsObject]] = {
-    Reads.seq(readLocation)
+  val readGooglePlace : Reads[GooglePlace] = {
+    (readId and
+      readName and
+      readFormattedAddress and
+      readLocation.andThen(readCoordinates))(GooglePlace.apply _)
   }
 
-
-  val readOptionalLocations: Reads[Option[Seq[JsObject]]] = {
-    (__ \ "results") readNullable (readLocations)
+  val maybeReadFirstResult : Reads[Option[JsObject]] = {
+    readResults.map(_.headOption)
   }
 
-  val readFirstLocation : Reads[Option[JsObject]] = {
-
-    readOptionalLocations map { case maybeLocations =>
-      maybeLocations.toList.flatten.headOption
+  val readPlace : Reads[Option[GooglePlace]] = {
+    maybeReadFirstResult.map(_.map(_.as[GooglePlace](readGooglePlace)))
     }
 
-  }
+  println(googlePlaceJson.as[Option[GooglePlace]](readPlace))
+  println(zeroResultJson.as[Option[GooglePlace]](readPlace))
 
 }
