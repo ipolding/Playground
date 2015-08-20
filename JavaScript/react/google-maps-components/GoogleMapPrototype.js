@@ -1,36 +1,42 @@
 var GoogleMap = React.createClass({
 
-            getInitialState : function() {
-                return {
-                    markers: []
-                    } 
-            },
+    getInitialState : function() {
+        return {
+            markers: []
+            } 
+    },
 
-            addMarker : function(latLng, map) {
+    addMarker : function(latLng, map) {
 
-                var marker = {
-                                position: latLng,    
-                                map:map
-                             }
-                this.setState({markers: [marker]})
+        var marker = new google.maps.Marker({
+            position: latLng,
+            map: map,
+            title: 'Hello World!'
+        });
+                
+        this.setState({markers: [marker]})
+    },  
 
-            },  
-
-            componentDidMount :  function() {
-                            console.log("component has mounted")
-                            new google.maps.Map(React.findDOMNode(this.refs.map_canvas), 
-                            {zoom: 8,
-                             center: {lat: -34.397, lng: 150.644}
+    componentDidMount :  function() {
+        var markerPosition = {lat: this.props.lat, lng: this.props.lng}
+        console.log("component has mounted")
+        var map = new google.maps.Map(React.findDOMNode(this.refs.map_canvas), 
+                            {
+                             minZoom: 3,
+                             zoom: 13,
+                             center: markerPosition
                             });
 
-                var markerPosition = {lat: this.props.lat, lng: this.props.lng}
+                            console.debug("props="+this.props)
+                            console.debug("state="+this.state)
 
-                            // this.addMarker(markerPosition, map)
-            },
+                
 
-            render: function() {
-                            console.log("rendering")
-                                            return <div ref="map_canvas" className="bigMap">
-                                                                </div>
+                this.addMarker(markerPosition, map)
+    },
+
+    render: function() {
+    
+    return <div ref="map_canvas" className="bigMap"></div>
             }
 });
