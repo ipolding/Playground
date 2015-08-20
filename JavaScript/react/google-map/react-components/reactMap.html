@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOXOWdhx4LzBIPkVuyDd0JAV-LU9Zg3Tc&libraries=places"></script>
+  <title>React Map</title>
+  <style type="text/css">
+
+            .bigMap {
+                height: 250px;
+                width: 250px;
+              }
+ </style>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script type="text/jsx" src="GoogleMapPrototype.js"></script>
+  <script type="text/jsx" src="PlacesAutoCompletePrototype.js"></script>
+  <script type="text/jsx" src="AddressBoxPrototype.js"></script>
+ </head>
+ <body>
+      <div id="map"></div>
+      <div id="autocomplete"></div>
+      <div id="addressBox"></div>
+      
+
+<script type="text/jsx">
+ React.render(<GoogleMap lat={51.07} lng={0} />, document.getElementById("map"));
+ React.render(<PlacesAutocomplete />, document.getElementById("autocomplete"));
+ React.render(<AddressBox />, document.getElementById("addressBox"));
+</script>
+  </body>
+</html>

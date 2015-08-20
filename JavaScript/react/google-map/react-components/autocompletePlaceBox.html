@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn1rMvhaj2-2viRAjoUIrH-5FWo_yR8Z0"></script>
+  <style type="text/css">
+      html, body {
+                  height: 100%;
+                  margin: 0;
+                  padding: 0;
+                }
+            #map {
+                height: 100%;
+              }
+ </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--    <script type="text/jsx" src="PlacesAutoComplete.js"></script> -->
+    <script type="text/jsx" src="GoogleMap.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <div id="googleMap"></div>
+
+  <script type="text/jsx">
+//      React.render(<GooglePlaceAutocomplete/>, document.getElementById("content"));
+      React.render(<GoogleMap/>, document.getElementById("googleMap"));
+  </script>
+  </body>
+</html>
+
