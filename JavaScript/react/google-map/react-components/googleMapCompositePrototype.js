@@ -7,6 +7,8 @@ var GoogleMapComposite = React.createClass({
             map: map,
             title: 'Hello World!'
         });
+
+        console.log(this.refs.map.state)
                 
     },  
 
@@ -14,11 +16,17 @@ var GoogleMapComposite = React.createClass({
        console.debug("composite mounted")
     },
 
+    communicateWithChild : function() {
+        console.log("what is my child doing?");
+        console.log(this.props.children.count);
+    },
+
     render: function() {
     
-    return  <div>
+    return  <div >
+    <button onClick={this.communicateWithChild}>CLIIICK</button>
                 <GoogleMap ref="map" lat={this.props.lat} lng={this.props.lng}/>                
-                <Directions ref="map" lat={this.props.lat} lng={this.props.lng}/>                
+                <Directions ref="directionsService" dance="Jiving"/>                
             </div>
             }
 });

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"lat",
+				"latLng"
+			],
+			[
 				"bar",
 				"barPadding"
 			],
@@ -72,11 +76,30 @@
 	"buffers":
 	[
 		{
-			"file": "JavaScript/react/google-maps-components/GoogleMapFinal.js",
+			"contents": "var GoogleMap = React.createClass({\nvar GoogleMap = React.createClass({\n\n        render: function() {\n        console.log(\"rendering\")\n        return <div className=\"GMap\">\n              <div ref=\"map_canvas\">\n                    </div>\n        </div>\n    },\n\n    componentDidMount :  function() {\n        console.log(\"component has mounted\")\n        new google.maps.Map(React.findDOMNode(this.refs.map_canvas), {\n            zoom: 8,\n            center: {lat: -34.397, lng: 150.644}\n        });\n    }\n\n\n});\n",
+			"file": "JavaScript/react/google-maps-components/GoogleMapRewrite.js",
+			"file_size": 492,
+			"file_write_time": 130840244094766613,
 			"settings":
 			{
-				"buffer_size": 906,
+				"buffer_size": 508,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "JavaScript/react/index.html",
+			"settings":
+			{
+				"buffer_size": 11,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "JavaScript/index.html",
+			"settings":
+			{
+				"buffer_size": 205,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -204,17 +227,27 @@
 		"/C/dev/playground",
 		"/C/dev/playground/JavaScript",
 		"/C/dev/playground/JavaScript/react",
-		"/C/dev/playground/JavaScript/react/google-maps-components"
+		"/C/dev/playground/JavaScript/react/examples"
 	],
 	"file_history":
 	[
+		"/C/dev/playground/JavaScript/react/google-maps-components/reactMapComposite.html",
+		"/C/dev/playground/JavaScript/react/google-maps-components/GoogleMapPrototype.js",
+		"/C/dev/playground/JavaScript/react/google-maps-components/googleMapCompositePrototype.js",
+		"/C/dev/playground/JavaScript/react/google-maps-components/AddressBoxPrototype.js",
+		"/C/dev/playground/JavaScript/react/google-maps-components/reactMap.html",
+		"/C/dev/playground/JavaScript/react/google-maps-components/PlacesAutoCompletePrototype.js",
+		"/C/Users/ian.polding/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/dev/playground/JavaScript/react/google-maps-components/simpleMap.html",
+		"/C/dev/playground/JavaScript/react/google-maps-components/oldCodeForRebuildBase.js",
+		"/C/dev/properties_files/application-local.properties",
+		"/C/dev/playground/JavaScript/react/google-maps-components/GoogleMapFinal.js",
 		"/C/Android/Wowcher/android/Android Code/Wowcher/src/com/anmedia/wowcher/async/GetSearchDealsTask.java",
 		"/C/dev/playground/JavaScript/react/google-maps-components/GoogleMap.js",
 		"/C/dev/tools/Profiling/xrebel/readme.txt",
 		"/C/Android/Wowcher/android/Android Code/Wowcher/src/com/anmedia/wowcher/ui/SearchResultsFragment.java",
 		"/C/dev/playground/JavaScript/react/google-maps-components/PlacesAutoComplete.js",
 		"/C/dev/playground/JavaScript/react/google-maps-components/autocompletePlaceBox.html",
-		"/C/dev/playground/JavaScript/react/google-maps-components/simpleMap.html",
 		"/C/dev/Batch Jobs/Human readable steps.txt",
 		"/C/dev/Batch Jobs/Dynamic module steps.xml",
 		"/C/dev/tools/dailyDeals/tomcat7-fe-dd/conf/server.xml",
@@ -223,7 +256,6 @@
 		"//anl-pri-f01p-p/private$/ian.polding/Desktop/tony.txt",
 		"//anl-pri-f01p-p/private$/ian.polding/Desktop/simon.txt",
 		"/C/dev/tools/dailyDeals/tomcat7-wps-dd/bin/catalina.bat",
-		"/C/dev/properties_files/application-local.properties",
 		"/C/dev/playground/JavaScript/react/google-maps-components/index.html",
 		"/C/dev/playground/JavaScript/react/index.html",
 		"/C/dev/playground/JavaScript/index.html",
@@ -326,16 +358,7 @@
 		"/C/dev/tools/cygwin64/home/ian.polding/input_order_line.sql",
 		"/C/dev/tools/cygwin64/home/ian.polding/daily_deals_schema/pp_audit.sql",
 		"/C/dev/tools/cygwin64/home/ian.polding/sed_playground/transform_oracle_to_h2.sh",
-		"/C/dev/tools/cygwin64/home/ian.polding/transform_oracle_create_table_to_h2_schema.sh",
-		"/C/Users/ian.polding/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/ian.polding/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/C/playground/index.html",
-		"/C/dev/projects/deal-creator/.idea/libraries/Maven__oracle_com_ojdbc14_10G.xml",
-		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.5/user-files/simulations/DealCreatorLoadTesting.scala",
-		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.5/user-files/simulations/Load.scala",
-		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.5/user-files/simulations/dealcreator/DealCreatorLoad.scala",
-		"/C/dev/tools/gatling-charts-highcharts-bundle-2.1.3/user-files/simulations/default/DealCreatorSimulation.scala",
-		"/C/dev/notes/Deal Creator/TestSuiteFix/finding-errors-after-using-merge-into-instead-of-insert.log"
+		"/C/dev/tools/cygwin64/home/ian.polding/transform_oracle_create_table_to_h2_schema.sh"
 	],
 	"find":
 	{
@@ -627,24 +650,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "JavaScript/react/google-maps-components/GoogleMapFinal.js",
+					"file": "JavaScript/react/google-maps-components/GoogleMapRewrite.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 906,
+						"buffer_size": 508,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								729,
-								729
+								508,
+								508
 							]
 						],
 						"settings":
@@ -657,9 +680,70 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "JavaScript/react/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11,
+								11
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "JavaScript/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								205,
+								205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
 					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -680,11 +764,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.733053221289,
 			1.0
 		],
 		"rows":
@@ -737,12 +828,12 @@
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 242.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 392.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -752,7 +843,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 257.0,
+	"side_bar_width": 421.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

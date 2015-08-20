@@ -1,5 +1,14 @@
 var GoogleMap = React.createClass({
 
+    getInitialState : function() {return {mapKey : null}},
+
+    initDirections : function() {
+        console.log("Reading state")
+        console.log(this.state)
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        directionsDisplay.setMap();
+    },
+
     addMarker : function(latLng, map) {
 
         var marker = new google.maps.Marker({
@@ -26,6 +35,10 @@ var GoogleMap = React.createClass({
                 
 
                 this.addMarker(markerPosition, map)
+                console.debug("map has mounted")
+        console.log(map)
+        this.setState({mapKey : map}, function() {this.initDirections()});
+              
     },
 
     render: function() {
