@@ -1,11 +1,18 @@
 var GoogleMap = React.createClass({
 
             getInitialState : function() {
-                state : {
-                    intialMarkerLat: this.props.initialMarkerLat,
-                    initialMarkerLng: this.props.initialMarkerLng
+                return {
+                    markers: []
                     } 
             },
+
+            addMarker : function(latLng, map) {
+
+                var marker = {
+                                position: latLng,    
+                                map:map
+                             }
+                this.setState({markers: [marker]})
 
             },  
 
@@ -16,12 +23,14 @@ var GoogleMap = React.createClass({
                              center: {lat: -34.397, lng: 150.644}
                             });
 
+                var markerPosition = {lat: this.props.lat, lng: this.props.lng}
+
+                            // this.addMarker(markerPosition, map)
             },
 
             render: function() {
                             console.log("rendering")
                                             return <div ref="map_canvas" className="bigMap">
                                                                 </div>
-                                                                        
-                                                                            }
+            }
 });
