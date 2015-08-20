@@ -18,7 +18,7 @@ var GoogleMapComposite = React.createClass({
     
     return  <div>
                 <GoogleMap ref="map" lat={this.props.lat} lng={this.props.lng}/>                
-/*                <Directions ref="map" lat={this.props.lat} lng={this.props.lng}/>                
-*/            </div>
+                <Directions ref="map" lat={this.props.lat} lng={this.props.lng}/>                
+            </div>
             }
 });
