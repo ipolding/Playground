@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<!--<link rel="icon" href="../../favicon.ico">-->
+<title>Events</title>
+<!-- Bootstrap core CSS -->
+<link href="../src/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="sticky-footer.css" rel="stylesheet">
+<link href="override.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="navbar.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- React -->
+<script src="/assets/javascripts/react/react.js"></script>
+<script src="/assets/javascripts/react/JSXTransformer.js"></script>
+</head>
+
+<div id="page-container" class="container"> <!-- Start of outermost container -->
+    <div class="row">  
+        <nav id="events-nav" class="col-md-3"> <!-- events nav column starts -->                                      
+            <h3>Past Events</h3>                   
+            <b><a href="/event/2">@pastEvent.title</a></b>
+            <br/>                   
+        </nav> <!-- events nav column starts -->
+        <div id="event-information" class="col-xs-12 col-md-9"> <!-- event information column starts -->
+            <div id="container"> <!-- event info grid start -->
+                <h1 "text-center"><i>@blog.title</i></h1>
+                <h4>by Nessa Kennedy</h4>
+                <img class="img-responsive" src="http://placehold.it/800x300&text=[img]"/>
+                <h3>@blog.intro</h3>    
+                <div class="text-justify">@blog.content</div>
+            </div><!-- event info grid end -->
+        </div> <!-- event information column ends -->
+    </div> <!-- End of single row in outermost container -->
+</div> <!-- End of outermost container -->
