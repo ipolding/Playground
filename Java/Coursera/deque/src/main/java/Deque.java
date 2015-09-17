@@ -3,9 +3,6 @@ import java.util.NoSuchElementException;
 public class Deque<Item> {
 
     public Node sentinelNode;
-
-    public Node first;
-    public Node last;
     private int size;
 
     public Deque() {
@@ -13,8 +10,6 @@ public class Deque<Item> {
         sentinelNode = new Node(null);
         sentinelNode.previous = sentinelNode;
         sentinelNode.next = sentinelNode;
-        first = sentinelNode;
-        last = sentinelNode;
     }
 
     public int size() {
@@ -24,21 +19,28 @@ public class Deque<Item> {
     @Override
     public String toString() {
         return "Deque{" +
-                "first=" + first +
-                ", last=" + last +
+                "first=" + first() +
+                ", last=" + last() +
                 ", size=" + size +
                 '}';
     }
 
+    public Node first() {
+        return sentinelNode.next;
+    }
+
+    public Node last() {
+        return sentinelNode.previous;
+    }
+
     public void addFirst(Item item) {
-        Node oldFirst = first;
+        Node oldFirst = sentinelNode.next;
 
         Node newNode = new Node(item);    //1) create a new nodew
         newNode.previous = sentinelNode;  //2) attach the node to the sentinel
+        newNode.next = oldFirst;
         sentinelNode.next = newNode;      //3) attach the sentinel to the node
-        first = sentinelNode.next;        //4) re-define first
-        first.next = oldFirst;            //5) attach first to previous first
-        oldFirst.previous = first;        //6) attach previous first to first
+        oldFirst.previous = newNode;        //6) attach previous first to first
         size++;
 
     }
@@ -47,28 +49,13 @@ public class Deque<Item> {
         if (isEmpty()) {
             throw new NoSuchElementException("The deque is empty!");
         }
-        Node returnNode = first;
-        first = returnNode.next;
-        return (Item) returnNode.value;
-    }
-
-    public Item removeLast() {
-        if (isEmpty()) {
-            throw new NoSuchElementException("The deque is empty!");
-        }
-        Node returnNode;
-        if (last == sentinelNode) {
-            returnNode = first;
-            first = sentinelNode;
-        } else {
-            returnNode = last;
-            last = returnNode.previous;
-        }
+        Node returnNode = sentinelNode.next;
+        sentinelNode.next = returnNode.next;
         return (Item) returnNode.value;
     }
 
     public boolean isEmpty() {
-        return first == sentinelNode && last == sentinelNode;
+        return sentinelNode.next ==null && sentinelNode.previous == null;
     }
 
     public class Node<Item> {
