@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="customLauncherEnabled" value="true" />
+    <option name="customLauncherPath" value="C:\dev\tools\build-tools\sbt\bin\sbt-launch.jar" />
+    <option name="vmParameters" value="-Darchiva.credentials=/dev/tools/build-tools/archiva.credentials -Dconfig.file=/dev/properties_files/gatling.properties -Dsbt.ivy.home=C:\dev\tools\build-tools\.ivy2" />
+  </component>
+</project>

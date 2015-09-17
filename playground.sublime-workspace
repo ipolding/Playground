@@ -95,7 +95,114 @@
 			"file": "CSS/bubble_layout_fixing/event.html",
 			"settings":
 			{
-				"buffer_size": 10816,
+				"buffer_size": 10403,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CSS/bubble_layout_fixing/eventTemplate.html",
+			"settings":
+			{
+				"buffer_size": 1852,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/dev/tools/build-tools/sbt/conf/sbtconfig.txt",
+			"settings":
+			{
+				"buffer_size": 147,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "realm=Repository Archiva Managed internal Repository\nhost=maven.stgwowcher.co.uk\nuser=ian.polding\npassword=Monday12",
+			"file": "/C/dev/tools/build-tools/.ivy2/.credentials",
+			"file_size": 115,
+			"file_write_time": 130845440565687057,
+			"settings":
+			{
+				"buffer_size": 115,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/dev/tools/build-tools/sbt.boot.properties0.11.3",
+			"settings":
+			{
+				"buffer_size": 668,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/Google/Chrome/Application/45.0.2454.85/45.0.2454.85.manifest",
+			"settings":
+			{
+				"buffer_size": 242,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/Google/Chrome/Application/45.0.2454.85/chrome.dll",
+			"settings":
+			{
+				"buffer_size": 81375847,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/ian.polding/AppData/Local/Spotify/clear_files.sh",
+			"settings":
+			{
+				"buffer_size": 56,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/dev/tools/build-tools/sbt/conf/sbtopts",
+			"settings":
+			{
+				"buffer_size": 939,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/dev/tools/build-tools/sbt/bin/sbt.bat",
+			"settings":
+			{
+				"buffer_size": 1321,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CSS/bubble_layout_fixing/blogTemplate.html",
+			"settings":
+			{
+				"buffer_size": 2197,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Program Files/Java/jdk1.7.0_45/bin/Ian.java",
+			"settings":
+			{
+				"buffer_size": 12,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/dev/properties_files/application-local.properties",
+			"settings":
+			{
+				"buffer_size": 3517,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 513,
 				"line_ending": "Unix"
 			}
 		},
@@ -242,10 +349,17 @@
 		"/C/dev/playground/CSS/bubble_layout_fixing",
 		"/C/dev/playground/CSS/grid_layouts",
 		"/C/dev/playground/CSS/src",
-		"/C/dev/playground/JavaScript"
+		"/C/dev/playground/CSS/src/bootstrap",
+		"/C/dev/playground/JavaScript",
+		"/C/dev/playground/SVG"
 	],
 	"file_history":
 	[
+		"/C/Users/ian.polding/.0xDBE10/config/projects/default/.idea/dataSources.xml",
+		"/C/Users/ian.polding/.0xDBE10/config/options/proxy.settings.xml",
+		"/C/Users/ian.polding/.0xDBE10/config/options/databaseSettings.xml",
+		"/C/dev/tools/build-tools/sbt/bin/sbt.boot.properties0.11.3",
+		"/C/dev/tools/build-tools/sbt/conf/sbtopts",
 		"/C/Program Files/JetBrains/0xDBE 142.2927.6/bin/idea.properties",
 		"/C/Program Files/JetBrains/IntelliJ IDEA 14.0.4/bin/idea.properties",
 		"/C/dev/AWS/Gatling_local/aws credentials for gatling.txt",
@@ -368,12 +482,7 @@
 		"/C/dev/properties_files/dealcreator-local.properties",
 		"/C/pay_184/ian.txt",
 		"/C/ian.txt",
-		"/C/Program Files (x86)/JetBrains/0xDBE 139.795.5/bin/idea.properties",
-		"/C/Users/ian.polding/.ivy2/.credentials",
-		"/C/dev/properties_files/content.conf",
-		"/C/hello_world.txt",
-		"/C/dev/notes/Merchant Payment May 2015/deal_voucher_example column names for mapping against values",
-		"/C/dev/notes/Merchant Payment May 2015/PROD_ORDER_COL_NAMES"
+		"/C/Program Files (x86)/JetBrains/0xDBE 139.795.5/bin/idea.properties"
 	],
 	"find":
 	{
@@ -392,6 +501,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"^\\s+",
+			"eventTemplate",
+			"Layout",
+			"The Public Bub",
+			"container",
+			"h1",
+			"md",
+			"blue",
+			"class=\".*\"",
 			"columns",
 			">",
 			"terracotta-3.6.2",
@@ -510,23 +628,16 @@
 			"TESTS",
 			"s.*c.*h.*e.*d.*u.*l.*e.*d",
 			"dear",
-			"Your deal for the",
-			"Tests run",
-			"^Tests run",
-			"startDate",
-			"CodeCreationEmailerIntegrationTest",
-			"^Running.*",
-			"^Tests run.*",
-			"Tests run.*",
-			"Tests run: 127, Failures: 0, Errors: 64, Skipped: 0",
-			"^Tests run.*"
+			"Your deal for the"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": true,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"",
+			"sm",
 			"cache\\terracotta-3.7.10",
 			"Foo",
 			"/",
@@ -652,9 +763,7 @@
 			"@NotNull",
 			",\\n",
 			"${1}${3} ${2}",
-			"12)\\nlong ",
-			"@Column(name = \"${1}\", length = ${3})\\n${2} ${4};\\n",
-			"\\U${1}"
+			"12)\\nlong "
 		],
 		"reverse": false,
 		"show_context": true,
@@ -665,7 +774,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 11,
 			"sheets":
 			[
 				{
@@ -674,15 +783,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10816,
+						"buffer_size": 10403,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3865,
-								3865
+								1202,
+								39
 							]
 						],
 						"settings":
@@ -691,14 +800,384 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1185.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "CSS/bubble_layout_fixing/eventTemplate.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1549,
+								1549
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/dev/tools/build-tools/sbt/conf/sbtconfig.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 147,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								147,
+								147
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/dev/tools/build-tools/.ivy2/.credentials",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/dev/tools/build-tools/sbt.boot.properties0.11.3",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								668,
+								668
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Program Files (x86)/Google/Chrome/Application/45.0.2454.85/45.0.2454.85.manifest",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 242,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Program Files (x86)/Google/Chrome/Application/45.0.2454.85/chrome.dll",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 81375847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/ian.polding/AppData/Local/Spotify/clear_files.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 56,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/dev/tools/build-tools/sbt/conf/sbtopts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 939,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								657,
+								657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/dev/tools/build-tools/sbt/bin/sbt.bat",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								418,
+								431
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Batch File/Batch File.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "CSS/bubble_layout_fixing/blogTemplate.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1348,
+								1348
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 65.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 11,
+					"file": "/C/Program Files/Java/jdk1.7.0_45/bin/Ian.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/C/dev/properties_files/application-local.properties",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								590,
+								590
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/JavaProperties.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 513,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								513,
+								513
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
 					"file": "/C/Program Files/JetBrains/0xDBE 142.2927.6/bin/idea.properties",
 					"semi_transient": false,
 					"settings":
@@ -722,11 +1201,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 15,
 					"file": "/C/dev/notes/BAU-1003 Errors/11-58 AM BUG.txt",
 					"semi_transient": false,
 					"settings":
@@ -752,7 +1231,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 15,
 					"type": "text"
 				}
 			]
