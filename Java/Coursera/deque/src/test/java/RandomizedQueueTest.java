@@ -11,6 +11,12 @@ public class RandomizedQueueTest extends TestCase {
     final boolean exceptionThrown = false;
 
     @Test
+    public void test_starts_off_empty() {
+        RandomizedQueue<String> testObj = new RandomizedQueue();
+        assertTrue(testObj.isEmpty());
+    }
+
+    @Test
     public void test_The_order_of_two_or_more_iterators_to_the_same_randomized_queue_must_be_mutually_independent() {
         assertTrue(false);
     }
