@@ -125,6 +125,21 @@ public class DequeTests {
     }
 
     @Test
+    public void supportIteratorSyntacticSugar() {
+
+        Deque<Integer> deque = new Deque();
+        deque.addLast(1);
+        deque.addLast(2);
+        deque.addLast(3);
+        Iterator<Integer> it = deque.iterator();
+        for (int i : deque) {
+            System.out.println(i);
+        }
+
+        System.out.println(deque.isEmpty());
+    }
+
+    @Test
     public void allowsForEach() {
         Deque<Integer> deque = new Deque();
         deque.addLast(1);
@@ -167,7 +182,6 @@ public class DequeTests {
         }
 
         assertFalse(deque.isEmpty());
-        //TODO may need implementation where deque is not emptied
 
     }
 
@@ -611,14 +625,34 @@ public class DequeTests {
         assertEquals(4, deque.removeFirst());
         assertEquals(2, deque.removeLast());
         assertEquals(3, deque.removeFirst());
+    }
 
+    @Test
+    public void test_The_order_of_two_or_more_iterators_to_the_same_randomized_queue_must_be_mutually_independent() {
+
+        Deque<Integer> queue1 = sizedDeque(10);
+
+        StringBuilder iterator1Output = new StringBuilder();
+        StringBuilder iterator1Output2 = new StringBuilder();
+
+        for (Integer i : queue1) {
+            iterator1Output.append(i + " ");
+            for (Integer j : queue1) {
+                iterator1Output2.append(j + " ");
+                System.out.println("DEQUE SIZE == " + queue1.size());
+            }
+        }
+
+        System.out.println("Outer loop" + iterator1Output.toString());
+        System.out.println("Inner loop" + iterator1Output2.toString());
+        assertFalse(iterator1Output.toString().equals(iterator1Output2.toString()));
 
     }
 
 
     private Deque sizedDeque(int size) {
         Deque smallDeque = new Deque<Integer>();
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size/2; i++) {
             smallDeque.addFirst(i);
             smallDeque.addLast(i);
         }
@@ -642,6 +676,8 @@ public class DequeTests {
         }
         return largeDeque;
     }
+    
+    
 
 }
 

@@ -8,7 +8,7 @@ public class Deque<Item> implements Iterable<Item> {
 
     public Deque() {
         // initialise the sentinel node and attach to itself
-        sentinelNode = new Node(null);
+        sentinelNode = new Node<Item>(null);
         sentinelNode.previous = sentinelNode;
         sentinelNode.next = sentinelNode;
     }
@@ -76,7 +76,7 @@ public class Deque<Item> implements Iterable<Item> {
 
     @Override
     public Iterator<Item> iterator() {
-        return new DequeIterator(this);
+        return new DequeIterator();
     }
 
     public class Node<Item> {
@@ -90,11 +90,11 @@ public class Deque<Item> implements Iterable<Item> {
 
     }
 
-    private class DequeIterator implements Iterator<Item> {
+    private class OldDequeIterator implements Iterator<Item> {
 
         private Deque<Item> deque;
 
-        public DequeIterator(Deque<Item> deque) {
+        public OldDequeIterator(Deque<Item> deque) {
             this.deque = deque;
         }
 
@@ -116,4 +116,18 @@ public class Deque<Item> implements Iterable<Item> {
             throw new UnsupportedOperationException("Iterator does not support remove");
         }
     }
+
+    private class DequeIterator implements Iterator<Item> {
+        private Node current = sentinelNode.next;
+        public boolean hasNext()  { return current != sentinelNode;                     }
+        public void remove()      { throw new UnsupportedOperationException("Iterator does not support remove");  }
+
+        public Item next() {
+            if (!hasNext()) throw new NoSuchElementException("No more items to return!");
+            Item item = (Item) current.value;
+            current = current.next;
+            return item;
+        }
+    }
+
 }
