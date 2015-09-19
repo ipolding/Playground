@@ -14,6 +14,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
     // construct an empty randomized queue
     public RandomizedQueue() {
+            itemArray = (Item[]) new Object[2]; //taken from ResizingArrayStack
     }
 
     public boolean isEmpty() {
@@ -29,23 +30,47 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         if (null == item) {
             throw new NullPointerException("You must not add a null Item");
         }
-        // TODO add the item
+        if (numberOfItems == itemArray.length) {
+            resize(2*itemArray.length);
+        }
+
+        // TODO add the item - array index corresponds to when the item was added
+        final int itemIndex = numberOfItems++;
+        itemArray[itemIndex] = item;
     }
 
     public Item dequeue() {
         if (this.isEmpty()) {
             throw new NoSuchElementException("This randomized queue is empty!");
         }
+        int removedItemIndex = randomNotNullIndex();
+
+        Item randomItem = itemArray[removedItemIndex];
+        itemArray[removedItemIndex] = null;
+        numberOfItems--;
+        if (numberOfItems > 0 && numberOfItems == itemArray.length/4) {
+            resize(itemArray.length/2);
+        }
         // TODO remove and return a random item
-        return null;
+        return randomItem;
     }
+
+    private void resize(int capacity) {
+        // resize the underlying array holding the elements
+            assert capacity >= numberOfItems;
+            Item[] temp = (Item[]) new Object[capacity];
+            for (int i = 0; i < numberOfItems; i++) {
+                temp[i] = itemArray[i];
+            }
+            itemArray = temp;
+        }
 
     public Item sample() {
         if (this.isEmpty()) {
             throw new NoSuchElementException("This randomized queue is empty!");
         }
 
-        Item returnValue = itemArray[randomIndex()];
+        Item returnValue = itemArray[randomNotNullIndex()];
         //TODO return (but do not remove) a random item
         return returnValue;
     }
@@ -55,13 +80,19 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         return null;
     }
 
-    private int randomIndex() {
-        return StdRandom.uniform(this.numberOfItems); //TODO won't be this simple - we need a guarantee we're not accessing an empty index
+    private int randomNotNullIndex() {
+        //number of items changes -
+        int index = StdRandom.uniform(this.itemArray.length);
+        while(itemArray[index]== null) {
+            index = StdRandom.uniform(this.itemArray.length);
+        }
+        //TODO need to ensure each added item preserves its index
+        return index;
     }
 
     public static void main(String[] args) {
         RandomizedQueue testObj = new RandomizedQueue<Integer>();
-        testObj.randomIndex();
+        testObj.randomNotNullIndex();
 
     } // unit testing
 
@@ -81,6 +112,27 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         @Override
         public void remove() {
 
+        }
+    }
+
+    private class ReverseArrayIterator implements Iterator<Item> {
+        private int i;
+
+        public ReverseArrayIterator() {
+            i = N-1;
+        }
+
+        public boolean hasNext() {
+            return i >= 0;
+        }
+
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+
+        public Item next() {
+            if (!hasNext()) throw new NoSuchElementException();
+            return a[i--];
         }
     }
 }

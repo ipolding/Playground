@@ -1,9 +1,12 @@
+import edu.princeton.cs.algs4.Stopwatch;
 import junit.framework.TestCase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import java.util.NoSuchElementException;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnit4.class)
 public class RandomizedQueueTest extends TestCase {
@@ -14,6 +17,41 @@ public class RandomizedQueueTest extends TestCase {
     public void test_starts_off_empty() {
         RandomizedQueue<String> testObj = new RandomizedQueue();
         assertTrue(testObj.isEmpty());
+    }
+
+    @Test
+    public void oneElementQ_sampleAlwaysReturnsSameElement() {
+        RandomizedQueue<Integer> testObj = new RandomizedQueue();
+        testObj.enqueue(1);
+
+        for (int i = 0; i < 10; i++) {
+            assertEquals(1, (int) testObj.sample());
+        }
+    }
+
+    @Test
+    public void oneElementQ_dequeueAlwaysReturnsSameElement() {
+
+        for (int i = 0; i < 10; i++) {
+            RandomizedQueue<Integer> testObj = new RandomizedQueue();
+            testObj.enqueue(1);
+            assertEquals(1, (int) testObj.dequeue());
+            assertTrue(testObj.isEmpty());
+        }
+    }
+
+    @Test
+    public void twoElementQ_dequeAlwaysReturnsOneOfTwoElements() {
+        //TODO debug stack overflow
+        for (int i = 0; i < 10; i++) {
+            RandomizedQueue<Integer> testObj = new RandomizedQueue();
+            testObj.enqueue(1);
+            testObj.enqueue(2);
+            int firstToComeOut = testObj.dequeue();
+            int secondToComeOut = testObj.dequeue();
+            assertTrue(firstToComeOut == 1 || firstToComeOut == 2);
+            assertTrue(testObj.isEmpty());
+        }
     }
 
     @Test
@@ -89,22 +127,59 @@ public class RandomizedQueueTest extends TestCase {
 
     @Test
     public void test_constantTime_for_size() {
-        RandomizedQueue testObj = new RandomizedQueue();
-        testObj.size();
+        RandomizedQueue largeN = largeQueue();
+
+        Stopwatch stopwatch = new Stopwatch();
+        largeN.size();
+        double smallTime = stopwatch.elapsedTime();
+
+
+        RandomizedQueue smallN = smallQueue();
+
+        stopwatch = new Stopwatch();
+        smallN.size();
+        double largeTime = stopwatch.elapsedTime();
+
+        assertEquals(smallTime, largeTime, 0);
 
     }
 
     @Test
     public void test_constantTime_for_enqueue() {
-        RandomizedQueue testObj = new RandomizedQueue();
-        testObj.enqueue(null);
+        RandomizedQueue largeN = largeQueue();
+
+        Stopwatch stopwatch = new Stopwatch();
+        largeN.enqueue(99);
+        double largeTime = stopwatch.elapsedTime();
+
+
+        RandomizedQueue smallN = smallQueue();
+
+        stopwatch = new Stopwatch();
+        smallN.enqueue(99);
+        double smallTime = stopwatch.elapsedTime();
+
+        assertEquals(smallTime, largeTime, 0);
 
     }
 
     @Test
     public void test_constantTime_for_dequeue() {
-        RandomizedQueue testObj = new RandomizedQueue();
-        testObj.dequeue();
+        RandomizedQueue largeN = largeQueue();
+
+        Stopwatch stopwatch = new Stopwatch();
+        largeN.dequeue();
+        double largeTime = stopwatch.elapsedTime();
+
+
+        RandomizedQueue smallN = smallQueue();
+
+        stopwatch = new Stopwatch();
+        smallN.dequeue();
+        double smallTime = stopwatch.elapsedTime();
+
+        assertEquals(smallTime, largeTime, 0);
+
 
     }
 
@@ -113,6 +188,22 @@ public class RandomizedQueueTest extends TestCase {
         RandomizedQueue testObj = new RandomizedQueue();
         testObj.sample();
 
+    }
+
+    public RandomizedQueue largeQueue() {
+        RandomizedQueue largeN = new RandomizedQueue<Integer>();
+        for (int i = 0; i < 10000000; i++) {
+            largeN.enqueue(i);
+        }
+        return largeN;
+    }
+
+    public RandomizedQueue smallQueue() {
+        RandomizedQueue smallN = new RandomizedQueue<Integer>();
+        for (int i = 0; i < 10; i++) {
+            smallN.enqueue(i);
+        }
+        return smallN;
     }
 
 }

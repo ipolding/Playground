@@ -1,3 +1,4 @@
+import edu.princeton.cs.algs4.Stopwatch;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -65,17 +66,17 @@ public class DequeTests {
     public void test_shouldBeAbleToAddLast_thenRemoveLastInReverseOrder() {
         Deque deque = new Deque();
         deque.addLast(1);
-            assertEquals(1, deque.size());
+        assertEquals(1, deque.size());
         deque.addLast(2);
-            assertEquals(2, deque.size());
+        assertEquals(2, deque.size());
         deque.addLast(3);
-            assertEquals(3, deque.size());
+        assertEquals(3, deque.size());
 
         assertEquals(3, deque.removeLast());
         assertEquals(2, deque.removeLast());
-            assertEquals(1, deque.size());
+        assertEquals(1, deque.size());
         assertEquals(1, deque.removeLast());
-            assertEquals(0, deque.size());
+        assertEquals(0, deque.size());
     }
 
     @Test
@@ -110,10 +111,10 @@ public class DequeTests {
     @Test
     public void supportBulkyIteratorSyntax() {
 
-            Deque<Integer> deque = new Deque();
-            deque.addLast(1);
-            deque.addLast(2);
-            deque.addLast(3);
+        Deque<Integer> deque = new Deque();
+        deque.addLast(1);
+        deque.addLast(2);
+        deque.addLast(3);
         Iterator<Integer> it = deque.iterator();
         while (it.hasNext()) {
             Integer i = it.next();
@@ -167,6 +168,21 @@ public class DequeTests {
 
         assertFalse(deque.isEmpty());
         //TODO may need implementation where deque is not emptied
+
+    }
+
+    @Test
+    public void test_emptyDequeThenBackAgain() {
+        Deque<Integer> deque = new Deque();
+        deque.addFirst(1);
+        deque.addFirst(2);
+        deque.removeFirst();
+        deque.removeLast();
+        assertEquals(0, deque.size());
+        assertTrue(deque.isEmpty());
+        deque.addFirst(4);
+        deque.addLast(5);
+        assertEquals(2, deque.size());
 
 
     }
@@ -353,7 +369,6 @@ public class DequeTests {
     }
 
 
-
     @Test
     public void removeFirstShouldRemoveElementsFromDeque_withOrdinalCalls() {
         Deque deque = new Deque();
@@ -478,98 +493,98 @@ public class DequeTests {
         }
     }
 
-    //@Test
-//    public void shouldPerformConstantWorstCaseTimeForAddFirst() {
-//        int N = 10;
-//
-//        Deque smallN = new Deque<Integer>();
-//        for (int i =0; i < 10; i++) {
-//            smallN.addFirst(i);
-//        }
-////        Stopwatch stopwatch = new Stopwatch();
-////        smallN.addFirst(9);
-////        double smallTime = stopwatch.elapsedTime();
-////
-////        Deque largeN = new Deque<Integer>();
-////        for (int i = 0; i < N * 10000; i++) {
-////            largeN.addFirst(i);
-////        }
-////        stopwatch = new Stopwatch();
-////        largeN.addFirst(9);
-////        double largeTime = stopwatch.elapsedTime();
-//
-//        assertEquals(smallTime, largeTime, 0);
-//    }
+    @Test
+    public void shouldPerformConstantWorstCaseTimeForAddFirst() {
+        int N = 10;
 
-   // @Test
-   // public void shouldPerformConstantWorstCaseTimeForAddLast() {
-   //     int N = 10;
-//
-   //     Deque smallN = smallDeque();
-   //     Deque largeN = largeDeque();
-//
-   //     Stopwatch stopwatch = new Stopwatch();
-   //     smallN.addLast(9);
-   //     double smallTime = stopwatch.elapsedTime();
-//
-   //     stopwatch = new Stopwatch();
-   //     largeN.addLast(9);
-   //     double largeTime = stopwatch.elapsedTime();
-//
-   //     assertEquals(smallTime, largeTime, 0);
-   // }
-//
-   // @Test
-   // public void shouldPerformConstantWorstCaseTimeForRemoveFirst() {
-   //     int N = 10;
-//
-   //     Deque smallN = smallDeque();
-   //     Deque largeN = largeDeque();
-//
-   //     Stopwatch stopwatch = new Stopwatch();
-   //     smallN.removeFirst();
-   //     double smallTime = stopwatch.elapsedTime();
-//
-   //     stopwatch = new Stopwatch();
-   //     largeN.removeFirst();
-   //     double largeTime = stopwatch.elapsedTime();
-//
-   //     assertEquals(smallTime, largeTime, 0);
-   // }
-//
-   // @Test
-   // public void shouldPerformConstantWorstCaseTimeForRemoveLast() {
-//
-   //     Deque smallN = smallDeque();
-   //     Deque largeN = largeDeque();
-//
-   //     Stopwatch stopwatch = new Stopwatch();
-   //     smallN.removeLast();
-   //     double smallTime = stopwatch.elapsedTime();
-//
-   //     stopwatch = new Stopwatch();
-   //     largeN.removeLast();
-   //     double largeTime = stopwatch.elapsedTime();
-//
-   //     assertEquals(smallTime, largeTime, 0);
-   // }
-//
-   // @Test
-   // public void shouldPerformConstantWorstCaseTimeFor_isEmpty() {
-   //     Deque smallN = smallDeque();
-   //     Deque largeN = largeDeque();
-//
-   //     Stopwatch stopwatch = new Stopwatch();
-   //     smallN.isEmpty();
-   //     double smallTime = stopwatch.elapsedTime();
-//
-   //     stopwatch = new Stopwatch();
-   //     largeN.isEmpty();
-//
-   //     double largeTime = stopwatch.elapsedTime();
-   //     System.out.println(smallTime);
-   //     assertEquals(smallTime, largeTime, 0);
-   // }
+        Deque smallN = new Deque<Integer>();
+        for (int i = 0; i < 10; i++) {
+            smallN.addFirst(i);
+        }
+        Stopwatch stopwatch = new Stopwatch();
+        smallN.addFirst(9);
+        double smallTime = stopwatch.elapsedTime();
+
+        Deque largeN = new Deque<Integer>();
+        for (int i = 0; i < N * 10000; i++) {
+            largeN.addFirst(i);
+        }
+        stopwatch = new Stopwatch();
+        largeN.addFirst(9);
+        double largeTime = stopwatch.elapsedTime();
+
+        assertEquals(smallTime, largeTime, 0);
+    }
+
+    @Test
+    public void shouldPerformConstantWorstCaseTimeForAddLast() {
+        int N = 10;
+
+        Deque smallN = smallDeque();
+        Deque largeN = largeDeque();
+
+        Stopwatch stopwatch = new Stopwatch();
+        smallN.addLast(9);
+        double smallTime = stopwatch.elapsedTime();
+
+        stopwatch = new Stopwatch();
+        largeN.addLast(9);
+        double largeTime = stopwatch.elapsedTime();
+
+        assertEquals(smallTime, largeTime, 0);
+    }
+
+    @Test
+    public void shouldPerformConstantWorstCaseTimeForRemoveFirst() {
+        int N = 10;
+
+        Deque smallN = smallDeque();
+        Deque largeN = largeDeque();
+
+        Stopwatch stopwatch = new Stopwatch();
+        smallN.removeFirst();
+        double smallTime = stopwatch.elapsedTime();
+
+        stopwatch = new Stopwatch();
+        largeN.removeFirst();
+        double largeTime = stopwatch.elapsedTime();
+
+        assertEquals(smallTime, largeTime, 0);
+    }
+
+    @Test
+    public void shouldPerformConstantWorstCaseTimeForRemoveLast() {
+
+        Deque smallN = smallDeque();
+        Deque largeN = largeDeque();
+
+        Stopwatch stopwatch = new Stopwatch();
+        smallN.removeLast();
+        double smallTime = stopwatch.elapsedTime();
+
+        stopwatch = new Stopwatch();
+        largeN.removeLast();
+        double largeTime = stopwatch.elapsedTime();
+
+        assertEquals(smallTime, largeTime, 0);
+    }
+
+    @Test
+    public void shouldPerformConstantWorstCaseTimeFor_isEmpty() {
+        Deque smallN = smallDeque();
+        Deque largeN = largeDeque();
+
+        Stopwatch stopwatch = new Stopwatch();
+        smallN.isEmpty();
+        double smallTime = stopwatch.elapsedTime();
+
+        stopwatch = new Stopwatch();
+        largeN.isEmpty();
+
+        double largeTime = stopwatch.elapsedTime();
+        System.out.println(smallTime);
+        assertEquals(smallTime, largeTime, 0);
+    }
 
     @Test
     public void jumbledDeque() {
@@ -586,7 +601,8 @@ public class DequeTests {
         deque.addFirst(3);
         deque.addFirst(4);
         deque.addLast(89);
-        deque.addLast(19);;
+        deque.addLast(19);
+        ;
         deque.addFirst(0); //0-4-3-32-4326-5-1-7-9-88-2-89-19
 
         assertEquals(19, deque.removeLast());
@@ -602,7 +618,7 @@ public class DequeTests {
 
     private Deque sizedDeque(int size) {
         Deque smallDeque = new Deque<Integer>();
-        for (int i =0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             smallDeque.addFirst(i);
             smallDeque.addLast(i);
         }
@@ -611,7 +627,7 @@ public class DequeTests {
 
     private Deque smallDeque() {
         Deque smallDeque = new Deque<Integer>();
-        for (int i =0; i < N; i++) {
+        for (int i = 0; i < N; i++) {
             smallDeque.addFirst(i);
             smallDeque.addLast(i);
         }

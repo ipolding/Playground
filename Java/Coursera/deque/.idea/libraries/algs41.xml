@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="algs41">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Dropbox/Coursera/Algorithms Part I - Princeton/Code/algs4.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/Coursera/Algorithms Part I - Princeton/Code/checkstyle-6.10-all.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Dropbox/Coursera/Algorithms Part I - Princeton/Code/algs4.jar!/" />
+    </SOURCES>
+  </library>
+</component>
