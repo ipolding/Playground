@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/dev/Playground/Java/Coursera/algorithms-and-data-structures/algorithms-and-data-structures.iml" filepath="$USER_HOME$/dev/Playground/Java/Coursera/algorithms-and-data-structures/algorithms-and-data-structures.iml" />
+      <module fileurl="file://$USER_HOME$/dev/Playground/Java/Coursera/algorithms-and-data-structures/deque/deque.iml" filepath="$USER_HOME$/dev/Playground/Java/Coursera/algorithms-and-data-structures/deque/deque.iml" />
+      <module fileurl="file://$USER_HOME$/dev/Playground/Java/Coursera/algorithms-and-data-structures/pattern-recognition/pattern-recognition.iml" filepath="$USER_HOME$/dev/Playground/Java/Coursera/algorithms-and-data-structures/pattern-recognition/pattern-recognition.iml" />
+    </modules>
+  </component>
+</project>

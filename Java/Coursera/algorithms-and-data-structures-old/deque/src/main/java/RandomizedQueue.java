@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 // Create a generic data type RandomizedQueue
 public class RandomizedQueue<Item> implements Iterable<Item> {
 
-    int numberOfItems = 0;
+    private int numberOfItems = 0;
     private Item[] itemArray;         // array of items
 
     //item removed is chosen uniformly at random from items in the data structure.
@@ -34,11 +34,12 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         }
         numberOfItems++; //adding an item so the number of items increases by 1
         // TODO add the item - array index corresponds to when the item was added
-        final int itemIndex = numberOfItems-1; //OBOB the index corresponding to numberOfItems is nullable
+        //OBOB the index corresponding to numberOfItems is nullable
+        final int itemIndex = numberOfItems-1;
         itemArray[itemIndex] = item;
     }
 
-    public Item oldDequeue() {
+    /*public Item oldDequeue() {
         if (this.isEmpty()) {
             throw new NoSuchElementException("This randomized queue is empty!");
         }
@@ -53,7 +54,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         // TODO remove and return a random item
         return randomItem;
     }
-
+*/
     public Item dequeue() {
         if (this.isEmpty()) {
             throw new NoSuchElementException("This randomized queue is empty!");
@@ -62,10 +63,14 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
         numberOfItems--;
 
-        Item swap = itemArray[firstNullableIndex()]; //we're about to nullify an index so get the value out of it
-        Item randomItem = itemArray[removedItemIndex]; //get the value out of the randomIndex
-        itemArray[removedItemIndex] = swap; //put the nullable index item in the removedItem Index
-        itemArray[firstNullableIndex()] = null; //nullify the known null index
+        //we're about to nullify an index so get the value out of it
+        Item swap = itemArray[firstNullableIndex()];
+        //get the value out of the randomIndex
+        Item randomItem = itemArray[removedItemIndex];
+        //put the nullable index item in the removedItem Index
+        itemArray[removedItemIndex] = swap;
+        //nullify the known null index
+        itemArray[firstNullableIndex()] = null;
 
         if (numberOfItems > 0 && numberOfItems == itemArray.length/4) {
             resize(itemArray.length/2);
@@ -106,14 +111,15 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
        return new RandomizedQueueIterator();
     }
 
-    private int whileLoopRandomIndex() {
+    /*private int whileLoopRandomIndex() {
         //number of items changes -
         int index = StdRandom.uniform(this.itemArray.length);
-        while(itemArray[index]== null) { //If we know where the null values are then we can avoid this.
+        //If we know where the null values are then we can avoid this.
+        while(itemArray[index]== null) {
             index = StdRandom.uniform(this.itemArray.length);
         }
         return index;
-    }
+    }*/
 
     private int knownNullRandomIndex() {
         //numberOfItems == nullable index so do not pick it!
@@ -122,21 +128,17 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
 
     public static void main(String[] args) {
-        RandomizedQueue testObj = new RandomizedQueue<Integer>();
-//        testObj.whileLoopRandomIndex();
 
     } // unit testing
 
 
     private class RandomizedQueueIterator implements Iterator<Item> {
 
-        RandomizedQueue<Item> randomizedQueue;
+        private RandomizedQueue<Item> randomizedQueue;
 
         // TODO memory usage = Linear in current # of items
-
-
-        public RandomizedQueueIterator() {
-            randomizedQueue = new RandomizedQueue();
+            RandomizedQueueIterator() {
+            randomizedQueue = new RandomizedQueue<Item>();
             for (Item i : itemArray) { //linear item
                 if (null != i) {
                     randomizedQueue.enqueue(i);
@@ -151,7 +153,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
         @Override
         public Item next() {
-            //TODO must be constant worst case
             if (!hasNext()) {
                 throw new NoSuchElementException();
             }
@@ -163,25 +164,4 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             throw new UnsupportedOperationException();
         }
     }
-
-/*    private class ReverseArrayIterator implements Iterator<Item> {
-        private int i;
-
-        public ReverseArrayIterator() {
-            i = N-1;
-        }
-
-        public boolean hasNext() {
-            return i >= 0;
-        }
-
-        public void remove() {
-            throw new UnsupportedOperationException();
-        }
-
-        public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
-            return a[i--];
-        }
-    }*/
 }
