@@ -1,0 +1,34 @@
+<div id="page-container" class="container"> <!-- Start of outermost container -->
+    <div class="row">  
+        <nav id="events-nav" class="col-md-3"> <!-- events nav column starts -->
+            <h3>Past Events</h3>                   
+            <b><a href="/event/2">@pastEvent.title</a></b>
+            <br/>                   
+        </nav> <!-- events nav column starts -->
+        <div id="event-information" class="col-xs-9 col-md-9"> <!-- event information column starts -->
+            <div id="container"> <!-- event info grid start -->
+                <div class="row">
+                    <h1 class="text-center"><i>@mainEvent.title</i></h1>
+                </div>
+                <div class="row">    
+                    <img class="col-xs-12 img-responsive" src="http://placehold.it/800x300&text=[img]"/>
+                </div>
+                <div class="row">
+                    <div id="whenAndWhere-grid" class="container" style="background-color: yellow">
+                        <div ="whenAndWhereRow" class="row">    
+                            <div id="when-and-where-text" style="background-color: purple" class="col-xs-6">
+                            @location.formattedAddress
+                            </div>
+                            <div id="address-map" style="background-color: pink" class="col-xs-6">
+                            <<< MAP PLACEHOLDER>>>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">    
+                    <div class="text-justify">@mainEvent.description</div>
+                </div>
+            </div><!-- event info grid end -->
+        </div> <!-- event information column ends -->
+    </div> <!-- End of single row in outermost container -->
+</div> <!-- End of outermost container -->

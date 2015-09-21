@@ -1,0 +1,27 @@
+.desktop-banner {
+  height : 80px;
+}
+
+.navbar {
+    background-color:#2D2D87;
+    color : white;
+}
+
+.footer {
+    background-color: black;
+}
+
+.icon-autosize {
+  height: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .icon-autosize {
+    height: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .icon-autosize {
+   height: 50px;
+  }
+}
