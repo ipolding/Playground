@@ -42,6 +42,7 @@ public class PointTest {
         assertEquals(1, slope1_a.slopeTo(slope1_b), 0);
         assertEquals(1, slope1_b.slopeTo(slope1_c), 0);
         assertEquals(1, slope1_a.slopeTo(slope1_c), 0);
+        assertEquals(1, slope1_a.slopeTo(slope1_c), 0);
 
         assertEquals(-1, slope1_c.slopeTo(slope1_b), 0);
         assertEquals(-1, slope1_b.slopeTo(slope1_a), 0);
@@ -50,7 +51,12 @@ public class PointTest {
 
     @Test
     public void test_slopeTo_should_Treat_the_slope_of_a_horizontal_line_segment_as_positive_zero() {
+        Point horizontal_a = new Point(1, 1);
+        Point horizontal_b = new Point(9, 1);
 
+        assertEquals(0.0, horizontal_a.slopeTo(horizontal_b), 0);
+        System.out.println(horizontal_a.slopeTo(horizontal_b));
+        assertEquals(0.0, horizontal_b.slopeTo(horizontal_a), 0);
     }
 
     @Test

@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -13,9 +14,9 @@ public class BruteCollinearPointsTest {
 
         try {
             new BruteCollinearPoints(null);
-            assertTrue(exceptionNotThrown);
+            Assert.assertTrue(exceptionNotThrown);
         } catch (NullPointerException npe) {
-            assertEquals("Don't give null arguments to the constructor", npe.getMessage());
+            Assert.assertEquals("Don't give null arguments to the constructor", npe.getMessage());
         }
 
     }
@@ -26,9 +27,9 @@ public class BruteCollinearPointsTest {
         try {
             Point[] nullPointsArray = new Point[] {new Point(1,0), new Point(9,4), null, new Point(3,1)};
             new BruteCollinearPoints(nullPointsArray);
-            assertTrue(exceptionNotThrown);
+            Assert.assertTrue(exceptionNotThrown);
         } catch (NullPointerException npe) {
-            assertEquals("Don't include null points in an array", npe.getMessage());
+            Assert.assertEquals("Don't include null points in an array", npe.getMessage());
         }
 
     }
@@ -38,9 +39,9 @@ public class BruteCollinearPointsTest {
 
         try {
 
-            assertTrue(exceptionNotThrown);
+            Assert.assertTrue(exceptionNotThrown);
         } catch (IllegalArgumentException iae) {
-            assertEquals("Do not repeat Points in the given array!", iae.getMessage());
+            Assert.assertEquals("Do not repeat Points in the given array!", iae.getMessage());
         }
 
     }
@@ -66,7 +67,7 @@ public class BruteCollinearPointsTest {
         BruteCollinearPoints testObj = new BruteCollinearPoints(pointsArray);
 
         LineSegment[] lineSegments = testObj.segments();
-        assertNotNull(lineSegments);
+        Assert.assertNotNull(lineSegments);
     }
 
 
