@@ -59,9 +59,18 @@ public class Point implements Comparable<Point> {
      * @return the slope between this point and the specified point
      */
     public double slopeTo(Point that) {
-        //TODO 1)To begin, implement the slopeTo() method. Be sure to consider a variety of corner cases, including horizontal, vertical, and degenerate line segments.
+        //TODO 1)To begin, implement the slopeTo() method.
+        // Be sure to consider a variety of corner cases, including horizontal, vertical, and degenerate line segments.
+
+        int multiplier = this.compareTo(that)  < 0 ? 1 : -1;
+
+        int dy = that.y - this.y;
+        int dx = that.x - this.x;
+
+        double slope = Double.valueOf(dy) / Double.valueOf(dx);
 
         /* YOUR CODE HERE */
+        return slope * multiplier;
     }
 
     /**
@@ -80,6 +89,12 @@ public class Point implements Comparable<Point> {
 
         //TODO Formally, the invoking point (x0, y0) is less than the argument point (x1, y1) if and only if either y0 < y1 or if y0 = y1 and x0 < x1.
         /* YOUR CODE HERE */
+
+        if (this.y < that.y) {return -1;}
+        if (this.y > that.y) {return +1;}
+        if (this.x < that.x) {return -1;}
+        if (this.x > that.x) {return +1;}
+        return 0;
     }
 
     /**
@@ -90,6 +105,7 @@ public class Point implements Comparable<Point> {
      */
     public Comparator<Point> slopeOrder() {
         /* YOUR CODE HERE */
+        return null;
     }
 
 
