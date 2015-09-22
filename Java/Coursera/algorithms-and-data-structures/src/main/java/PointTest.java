@@ -1,7 +1,14 @@
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
-import static org.junit.Assert.*;
+import java.util.Comparator;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+
+@RunWith(JUnit4.class)
 public class PointTest {
 
     @Test
@@ -61,17 +68,37 @@ public class PointTest {
 
     @Test
     public void test_slopeTo_should_Treat_the_slope_of_a_vertical_line_segment_as_positive_infinity() {
+        Point vertical_a = new Point(1, 1);
+        Point vertical_b = new Point(1, 10);
+
+        assertEquals(Double.POSITIVE_INFINITY, vertical_a.slopeTo(vertical_b), 0);
 
     }
 
     @Test
     public void test_slopeTo_should_treat_the_slope_of_a_degenerate_line_segment_between_a_point_and_itself_as_negative_infinity() {
+        Point degenerate_a = new Point(2, 2);
+        Point degenerate_b = new Point(2, 2);
 
+        assertEquals(Double.NEGATIVE_INFINITY, degenerate_a.slopeTo(degenerate_b), 0);
+        assertEquals(Double.NEGATIVE_INFINITY, degenerate_a.slopeTo(degenerate_a), 0);
     }
 
     @Test
     public void testSlopeOrder_should_return_a_comparator_that_compares_its_two_argument_points_by_the_slopes_they_make_with_the_invoking_point_x0_y0() throws Exception {
+        Point testObj = new Point(2, 2);
 
+        assertTrue(testObj.slopeOrder() instanceof Comparator);
+    }
+
+    @Test
+    public void testSlopeOrder_returns_a_comparator_that_compares_its_two_argument_points_by_the_slopes_they_make_with_the_invoking_point_x0_y0() throws Exception {
+        Point pointA = new Point(1, 1);
+        Point pointB = new Point(2, 3);
+        Point pointC = new Point(3, 2);
+
+        assertEquals(-1, pointA.slopeOrder().compare(pointC, pointB));
+        assertEquals(+1, pointA.slopeOrder().compare(pointB, pointC));
     }
 
     @Test
