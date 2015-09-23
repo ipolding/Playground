@@ -52,7 +52,28 @@ between p and q, between p and r, and between p and s are all equal.
 //                        }
 
                         if (oneSlopeToTwo == twoSlopeToThree && twoSlopeToThree == threeSlopeToFour) {
+                           /*
+                           * The problem is that, given for example the `LineSegment` (0|0) -> (1|1) -> (2|2) -> (3|3) -> (4|4), while the first pass-through yields the proper `LineSegment` (0|0) -> (4|4), the second one also returns another shorter segment (1|1) -> (4|4) (or depending on your implementation possibly even a completely incorrect one like (2|2) -> (4|4)).
+
+Here are a few hints that will hopefully guide you towards the solution without giving too much away ;)
+Feel free to ask any further questions about them.
+
+What is the actual order of the `Point`s when you find the shorter segments?
+Particularly, what happened to point (0|0) (from the example)?
+Based on this information, can you determine whether you are currently dealing with a smaller sub-segment?
+Is there a way to control the order of the points with equal slopes?
+Which algorithm does Java's `Arrays.sort()` use for sorting `Point`s? What are the key properties of this algorithm?
+
+Good luck!
+                           *
+                           *
+                           *
+                           * */
+
+
+
                             lineSegmentsArrayList.add(new LineSegment(one, four));
+
                         }
                     }
 

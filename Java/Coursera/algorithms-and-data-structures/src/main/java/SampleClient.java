@@ -6,7 +6,7 @@ import edu.princeton.cs.algs4.StdOut;
 public class SampleClient {
 
     public static void main(String[] args) {
-        Point[] points = contrivedPointArray();
+        Point[] points = manuallyCreatePointArray6();
         drawPoints(points);
 
 
