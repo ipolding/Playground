@@ -6,9 +6,8 @@ import edu.princeton.cs.algs4.StdOut;
 public class SampleClient {
 
     public static void main(String[] args) {
-        Point[] points = manuallyCreatePointArray6();
+        Point[] points = contrivedPointArray();
         drawPoints(points);
-
 
         // print and draw the line segments
         BruteCollinearPoints collinear = new BruteCollinearPoints(points);
@@ -31,16 +30,12 @@ public class SampleClient {
     }
 
     public static Point[] contrivedPointArray() {
-        //input 6 point array
         return new Point[]{
+                new Point(0, 0),
                 new Point(1, 1),
                 new Point(2, 2),
                 new Point(3, 3),
-                new Point(3, 3),
                 new Point(4, 4),
-                new Point(4, 4),
-                new Point(2, 2),
-                new Point(2, 2)
         };
     }
 
