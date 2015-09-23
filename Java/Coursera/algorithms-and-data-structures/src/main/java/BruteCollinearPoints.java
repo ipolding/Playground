@@ -14,7 +14,9 @@ between p and q, between p and r, and between p and s are all equal.
     private ArrayList<LineSegment> lineSegmentList = new ArrayList();
 
     public BruteCollinearPoints(Point[] points) {
-        if (null == points) {throw new NullPointerException("Don't give null arguments to the constructor or include null points in an array");}
+        if (null == points) {
+            throw new NullPointerException("Don't give null arguments to the constructor or include null points in an array");
+        }
 
 
         Arrays.sort(points);
@@ -35,62 +37,74 @@ between p and q, between p and r, and between p and s are all equal.
     }
 
     private ArrayList<LineSegment> get4Tuples(Point[] a) {
-            ArrayList<LineSegment> lineSegmentsArrayList = new ArrayList();
-            int N = a.length;
-            for (int i = 0; i < N-3; i++)
-                for (int j = N-1; j > 0; j--)
-                    /*for (int k = N-2; k > 1; k--)
-                    for (int l = N-3; l > 2; l--)*/ {
-                        final Point one = a[i];
-                        final Point two = a[j];
-                      //  final Point three = a[k];
-                       // final Point four = a[l];
+        ArrayList<LineSegment> lineSegmentsArrayList = new ArrayList();
+        int N = a.length;
+        for (int i = 0; i < N; i++) {
+            Point one = a[i];
+            Point two;
+            Point three;
+            Point mostRecentFour = null;
+            for (int j = i + 1; j < N; j++) {
+                two = a[j];
+                for (int k = j + 1; k < N; k++) {
+                    three = a[k];
+                    for (int l = k + 1; l < N; l++) {
+                        Point newFour = a[l];
+                        if (null == mostRecentFour || one.slopeTo(newFour) != one.slopeTo(mostRecentFour)) {
+
+
+                        mostRecentFour = a[k];
+
+                        //  final Point four = a[l];
 
                         System.out.println("point one = " + one);
                         System.out.println("point two = " + two);
-                      //  System.out.println("point three = " + three);
-                      //  System.out.println("point four = " + four);
+                        System.out.println("point three = " + three);
+                        System.out.println("point four = " + newFour);
+
+
 
                         double oneSlopeToTwo = getSlope(one, two);
-                       // double twoSlopeToThree = getSlope(two, three);
-                       // double threeSlopeToFour = getSlope(three, four);
+                        double twoSlopeToThree = getSlope(two, three);
+                        double threeSlopeToFour = getSlope(three, newFour);
 
-                       // checkForDuplicates(one, two, three, four);
+                        mostRecentFour = newFour;
+                        // double threeSlopeToFour = getSlope(three, four);
+
+                        // checkForDuplicates(one, two, three, four);
 
 //                        if (oneSlopeToTwo == Double.NEGATIVE_INFINITY || twoSlopeToThree == Double.NEGATIVE_INFINITY  || threeSlopeToFour == Double.NEGATIVE_INFINITY ) {
 //                            throw new IllegalArgumentException("No duplicate points allowed!");
 //                        }
 
-                    System.out.println(new LineSegment(one, two));
+                        if (oneSlopeToTwo == twoSlopeToThree && twoSlopeToThree == threeSlopeToFour) {
+                            lineSegmentList.add(new LineSegment(one, newFour));
+                           /* *
+                           The problem is that, given for example the `LineSegment`
+                                    (0|0) -> (1|1) -> (2|2) -> (3|3) -> (4|4)
+                            , while the first pass-through yields the proper `LineSegment` (0|0) -> (4|4),
+                            the second one also returns another shorter segment (1|1) -> (4|4) (or depending on your implementation possibly even a completely incorrect one like (2|2) -> (4|4)).
 
+                            Here are a few hints that will hopefully guide you towards the solution without giving too much away ;)
+                            Feel free to ask any further questions about them.
 
+                            What is the actual order of the `Point`s when you find the shorter segments?
+                            Particularly, what happened to point (0|0) (from the example)?
 
+                            Based on this information, can you determine whether you are currently dealing with a smaller sub-segment?
+                            Is there a way to control the order of the points with equal slopes?
+                            Which algorithm does Java's `Arrays.sort()` use for sorting `Point`s? What are the key properties of this algorithm?
 
-//                    if (oneSlopeToTwo == twoSlopeToThree && twoSlopeToThree == threeSlopeToFour) {
-//                           /* *
-//                            The problem is that, given for example the `LineSegment`
-//                                    (0|0) -> (1|1) -> (2|2) -> (3|3) -> (4|4)
-//                            , while the first pass-through yields the proper `LineSegment` (0|0) -> (4|4),
-//                            the second one also returns another shorter segment (1|1) -> (4|4) (or depending on your implementation possibly even a completely incorrect one like (2|2) -> (4|4)).
-//
-//                            Here are a few hints that will hopefully guide you towards the solution without giving too much away ;)
-//                            Feel free to ask any further questions about them.
-//
-//                            What is the actual order of the `Point`s when you find the shorter segments?
-//                            Particularly, what happened to point (0|0) (from the example)?
-//
-//                            Based on this information, can you determine whether you are currently dealing with a smaller sub-segment?
-//                            Is there a way to control the order of the points with equal slopes?
-//                            Which algorithm does Java's `Arrays.sort()` use for sorting `Point`s? What are the key properties of this algorithm?
-//
-//                            Good luck!
-//                           * */
-//
-//                            System.out.println(new LineSegment(one, four));
-//                        }
+                            Good luck!
+                           * */
+                         }
+                        }
                     }
+                }
+            }
+        }
 
-            return lineSegmentsArrayList;
+        return lineSegmentsArrayList;
     }
 
     private void checkForDuplicates(Point one, Point two, Point three, Point four) {
