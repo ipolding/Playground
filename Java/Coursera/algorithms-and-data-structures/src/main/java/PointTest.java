@@ -119,4 +119,5 @@ public class PointTest {
     public void testSlopeOrder() throws Exception {
 
     }
+
 }
