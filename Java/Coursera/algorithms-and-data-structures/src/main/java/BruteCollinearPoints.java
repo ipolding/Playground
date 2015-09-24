@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BruteCollinearPoints {
 
@@ -13,7 +14,10 @@ between p and q, between p and r, and between p and s are all equal.
     private ArrayList<LineSegment> lineSegmentList = new ArrayList();
 
     public BruteCollinearPoints(Point[] points) {
-        if (null == points) {throw new NullPointerException("Don't give null arguments to the constructor or include null points in an array");}
+        if (null == points) {
+            throw new NullPointerException("Don't give null arguments to the constructor or include null points in an array");
+        }
+
 
         lineSegmentList = get4Tuples(points);
 
@@ -30,16 +34,26 @@ between p and q, between p and r, and between p and s are all equal.
     }
 
     private ArrayList<LineSegment> get4Tuples(Point[] a) {
-            ArrayList<LineSegment> lineSegmentsArrayList = new ArrayList();
-            int N = a.length;
-            for (int i = 0; i < N; i++)
-                for (int j = i+1; j < N; j++)
-                    for (int k = j+1; k < N; k++)
-                    for (int l = k+1; l < N; l++) {
-                        final Point one = a[i];
-                        final Point two = a[j];
-                        final Point three = a[k];
-                        final Point four = a[l];
+        ArrayList<LineSegment> lineSegmentsArrayList = new ArrayList();
+        int N = a.length;
+        Point successfulFour = null;
+        for (int _first = 0; _first < N - 3; _first++) {
+
+            for (int _second = _first + 1; _second < N; _second++) {
+                for (int _third = _second + 1; _third < N; _third++) {
+                    for (int _fourth = _third + 1; _fourth < N; _fourth++) {
+                        Point one = a[_first]; //on first iteration, this is 0
+                        Point two = a[_second];
+                        Point three = a[_third];
+                        Point four = a[_fourth]; //on first iteration, this is N-1
+
+                        final Point[] sortedPoints = new Point[]{one, two, three, four};
+                        Arrays.sort(sortedPoints);
+
+                        one = sortedPoints[0];
+                        two = sortedPoints[1];
+                        three = sortedPoints[2];
+                        four = sortedPoints[3];
 
                         double oneSlopeToTwo = getSlope(one, two);
                         double twoSlopeToThree = getSlope(two, three);
@@ -47,22 +61,37 @@ between p and q, between p and r, and between p and s are all equal.
 
                         checkForDuplicates(one, two, three, four);
 
-//                        if (oneSlopeToTwo == Double.NEGATIVE_INFINITY || twoSlopeToThree == Double.NEGATIVE_INFINITY  || threeSlopeToFour == Double.NEGATIVE_INFINITY ) {
-//                            throw new IllegalArgumentException("No duplicate points allowed!");
-//                        }
+//                            if (oneSlopeToTwo == Double.NEGATIVE_INFINITY || twoSlopeToThree == Double.NEGATIVE_INFINITY  || threeSlopeToFour == Double.NEGATIVE_INFINITY ) {
+//                                throw new IllegalArgumentException("No duplicate points allowed!");
+//                            }
 
+                        //One approach is to form a line segment only if the 4 points are in ascending order
                         if (oneSlopeToTwo == twoSlopeToThree && twoSlopeToThree == threeSlopeToFour) {
+
+                            if (null == successfulFour || getSlope(three, four) != getSlope(three, successfulFour)) {
+
+//                                System.out.printf("%s = %s\n", "one", one);
+//                                System.out.printf("%s = %s\n", "two", two);
+//                                System.out.printf("%s = %s\n", "three", three);
+//                                System.out.printf("%s = %s\n", "four", four);
+//                                System.out.printf("%s = %s\n", "successfulFour", successfulFour);
+                                successfulFour = four;
+
+                                lineSegmentsArrayList.add(new LineSegment(one, four));
+
+                            }
+
                            /*
                            * The problem is that, given for example the `LineSegment` (0|0) -> (1|1) -> (2|2) -> (3|3) -> (4|4), while the first pass-through yields the proper `LineSegment` (0|0) -> (4|4), the second one also returns another shorter segment (1|1) -> (4|4) (or depending on your implementation possibly even a completely incorrect one like (2|2) -> (4|4)).
 
-Here are a few hints that will hopefully guide you towards the solution without giving too much away ;)
-Feel free to ask any further questions about them.
+                            Here are a few hints that will hopefully guide you towards the solution without giving too much away ;)
+                            Feel free to ask any further questions about them.
 
-What is the actual order of the `Point`s when you find the shorter segments?
-Particularly, what happened to point (0|0) (from the example)?
-Based on this information, can you determine whether you are currently dealing with a smaller sub-segment?
-Is there a way to control the order of the points with equal slopes?
-Which algorithm does Java's `Arrays.sort()` use for sorting `Point`s? What are the key properties of this algorithm?
+                            What is the actual order of the `Point`s when you find the shorter segments?
+                            Particularly, what happened to point (0|0) (from the example)?
+                            Based on this information, can you determine whether you are currently dealing with a smaller sub-segment?
+                            Is there a way to control the order of the points with equal slopes?
+                            Which algorithm does Java's `Arrays.sort()` use for sorting `Point`s? What are the key properties of this algorithm?
 
 Good luck!
                            *
@@ -70,14 +99,13 @@ Good luck!
                            *
                            * */
 
-
-
-                            lineSegmentsArrayList.add(new LineSegment(one, four));
-
                         }
                     }
+                }
+            }
+        }
 
-            return lineSegmentsArrayList;
+        return lineSegmentsArrayList;
     }
 
     private void checkForDuplicates(Point one, Point two, Point three, Point four) {
