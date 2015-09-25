@@ -20,7 +20,7 @@ public class FastCollinearPoints {
             assert p == points[0];
             Point one = p;
             Double slopeOne = null;
-            Point successfulFour = null;
+            double lastDocumentedSlope = Double.NaN;
             for (int i = 1; i < points.length-2; i++) {
                 Point two = points[i];
                 Point three = points[i+1];
@@ -32,15 +32,15 @@ public class FastCollinearPoints {
                 final Point[] sortedSegment = new Point[]{one, two, three, four};
                 Arrays.sort(sortedSegment);
 
-                if (slopeOne == slopeTwo && slopeTwo == slopeThree) {
-
-                    if (null == successfulFour || getSlope(three, four) != getSlope(three, successfulFour)) {
-                    successfulFour = four;
-                    lineSegmentList.add(new LineSegment(one, four));
+                if (slopeOne == slopeThree) {
+                    if (one.slopeTo(four) != lastDocumentedSlope && one.compareTo(four) > 0) {
+                        lastDocumentedSlope = one.slopeTo(four);
+                        lineSegmentList.add(new LineSegment(one, four));
+                    }
                 }
             }
         }
-    }}
+    }
 
     //TODO prive checkForDuplicates
 
