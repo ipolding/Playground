@@ -125,22 +125,30 @@ public class Point implements Comparable<Point> {
 
         final Point point0 = this;
 
-        return new Comparator<Point>() {
+        return new SlopeOrder(this);
+    }
+
+    private class SlopeOrder implements Comparator<Point> {
+           private final Point invokingPoint;
+
+            private SlopeOrder(Point invokingPoint) {
+                this.invokingPoint = invokingPoint;
+            }
+
             @Override
             public int compare(Point point1, Point point2) {
                 // point1 is less than point2 IFF the slope between 1 and 0 is less than the slope between 2 and 0
-                if (point0.slopeTo(point1) < point0.slopeTo(point2)) {
+                if (invokingPoint.slopeTo(point1) < invokingPoint.slopeTo(point2)) {
                     return -1;
                 }
-
-                if (point0.slopeTo(point1) > point0.slopeTo(point2)) {
+                if (invokingPoint.slopeTo(point1) > invokingPoint.slopeTo(point2)) {
                     return +1;
                 } else {
                     return 0;
                 }
             }
         };
-    }
+
 
 
     /**

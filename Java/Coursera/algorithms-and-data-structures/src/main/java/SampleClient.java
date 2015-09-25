@@ -9,12 +9,27 @@ public class SampleClient {
         Point[] points = manuallyCreatePointArray8();
         drawPoints(points);
 
+        System.out.println("*-*-*-*-*-*-*-*-*-*BRUTE TEST START *-*-*-*-*-*-*-*-*-*");
         // print and draw the line segments
-        BruteCollinearPoints collinear = new BruteCollinearPoints(points);
-        for (LineSegment segment : collinear.segments()) {
+        BruteCollinearPoints bruteCollinear = new BruteCollinearPoints(points);
+        for (LineSegment segment : bruteCollinear.segments()) {
             StdOut.println(segment);
             segment.draw();
         }
+        System.out.println("*-*-*-*-*-*-*-*-*-*BRUTE TEST FINISH *-*-*-*-*-*-*-*-*-*");
+        System.out.println("\n\n\n");
+
+        System.out.println("*-*-*-*-*-*-*-*-*-*FAST TEST START *-*-*-*-*-*-*-*-*-*");
+
+        // print and draw the line segments
+        FastCollinearPoints fastCollinear = new FastCollinearPoints(points);
+        for (LineSegment segment : fastCollinear.segments()) {
+            StdOut.println(segment);
+            segment.draw();
+        }
+        System.out.println("*-*-*-*-*-*-*-*-*-*FAST TEST FINISH *-*-*-*-*-*-*-*-*-*");
+
+
 
     }
 
