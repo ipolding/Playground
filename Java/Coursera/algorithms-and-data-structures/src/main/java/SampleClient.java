@@ -6,9 +6,26 @@ import edu.princeton.cs.algs4.StdOut;
 public class SampleClient {
 
     public static void main(String[] args) {
-        Point[] points = manuallyCreatePointArray8();
-        drawPoints(points);
 
+        Point[] points = contrivedPointArray();
+        bruteTest(points);
+        System.out.println("\n\n\n");
+        fastTest(points);
+        System.out.println("\n\n\n");
+        points = manuallyCreatePointArray6();
+        bruteTest(points);
+        System.out.println("\n\n\n");
+        fastTest(points);
+        System.out.println("\n\n\n");
+        points = manuallyCreatePointArray8();
+        bruteTest(points);
+        System.out.println("\n\n\n");
+        fastTest(points);
+
+
+    }
+
+    private static void bruteTest(Point[] points) {
         System.out.println("*-*-*-*-*-*-*-*-*-*BRUTE TEST START *-*-*-*-*-*-*-*-*-*");
         // print and draw the line segments
         BruteCollinearPoints bruteCollinear = new BruteCollinearPoints(points);
@@ -17,10 +34,10 @@ public class SampleClient {
             segment.draw();
         }
         System.out.println("*-*-*-*-*-*-*-*-*-*BRUTE TEST FINISH *-*-*-*-*-*-*-*-*-*");
-        System.out.println("\n\n\n");
+    }
 
+    private static void fastTest(Point[] points) {
         System.out.println("*-*-*-*-*-*-*-*-*-*FAST TEST START *-*-*-*-*-*-*-*-*-*");
-
         // print and draw the line segments
         FastCollinearPoints fastCollinear = new FastCollinearPoints(points);
         for (LineSegment segment : fastCollinear.segments()) {
@@ -28,9 +45,6 @@ public class SampleClient {
             segment.draw();
         }
         System.out.println("*-*-*-*-*-*-*-*-*-*FAST TEST FINISH *-*-*-*-*-*-*-*-*-*");
-
-
-
     }
 
     private static void drawPoints(Point[] points) {
@@ -47,7 +61,6 @@ public class SampleClient {
     public static Point[] contrivedPointArray() {
         //input 6 point array
         return new Point[]{
-                new Point(0, 0),
                 new Point(4, 4),
                 new Point(1, 1),
                 new Point(3, 3),

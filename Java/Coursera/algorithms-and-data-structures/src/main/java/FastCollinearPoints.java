@@ -17,19 +17,43 @@ public class FastCollinearPoints {
             Arrays.sort(points, p.slopeOrder());
 
             //Check if any 3 (or more) adjacent points in the sorted order have equal slopes with respect to p. If so, these points, together with p, are collinear.
-
             assert p == points[0];
-            for (int i = 1; i < points.length-1; i++) {
-                if (points[i] == points[i + 1] && points[i + 1] == points[2]) {
-                    lineSegmentList.add(new LineSegment(points[i], points[3]));
+            Point one = p;
+            Double slopeOne = null;
+            Point successfulFour = null;
+            for (int i = 1; i < points.length-2; i++) {
+                Point two = points[i];
+                Point three = points[i+1];
+                Point four = points[i+2];
+                slopeOne = p.slopeTo(two);
+                double slopeTwo = p.slopeTo(three);
+                double slopeThree = p.slopeTo(four);
+
+                final Point[] sortedSegment = new Point[]{one, two, three, four};
+                Arrays.sort(sortedSegment);
+
+                if (slopeOne == slopeTwo && slopeTwo == slopeThree) {
+
+                    if (null == successfulFour || getSlope(three, four) != getSlope(three, successfulFour)) {
+                    successfulFour = four;
+                    lineSegmentList.add(new LineSegment(one, four));
                 }
             }
         }
-    }
+    }}
+
+    //TODO prive checkForDuplicates
 
     public int numberOfSegments() {
         return lineSegmentList.size();
     }   // the number of line segments
+
+    private double getSlope(Point one, Point two) {
+        /*if (one.slopeTo(two) == Double.NEGATIVE_INFINITY) {
+            throw new IllegalArgumentException("Found duplicate points" + one + " and " + two);
+        }*/
+        return one.slopeTo(two);
+    }
 
 
     public LineSegment[] segments() {
