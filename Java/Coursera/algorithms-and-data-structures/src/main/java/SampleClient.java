@@ -7,10 +7,6 @@ public class SampleClient {
 
     public static void main(String[] args) {
 
-        System.out.println(0.0 == 0.0);
-
-
-
         Point[] points = contrivedPointArray();
         bruteTest(points);
         System.out.println("\n\n\n");
@@ -20,12 +16,6 @@ public class SampleClient {
         bruteTest(manuallyCreatePointArray6());
         System.out.println("\n\n\n");
         fastTest(manuallyCreatePointArray6());
-//        System.out.println("\n\n\n");
-//        points = manuallyCreatePointArray8();
-//        bruteTest(points);
-//        System.out.println("\n\n\n");
-//        fastTest(points);
-
     }
 
     private static void bruteTest(Point[] points) {
@@ -62,7 +52,6 @@ public class SampleClient {
     }
 
     public static Point[] contrivedPointArray() {
-        //input 6 point array
         return new Point[]{
                 new Point(4, 4),
                 new Point(1, 1),
@@ -71,6 +60,17 @@ public class SampleClient {
         };
     }
 
+    public static Point[] duplicatePoints() {
+        return new Point[]{
+                new Point(1, 1),
+                new Point(3, 3),
+                new Point(3, 3),
+                new Point(0, 3),
+                new Point(1, 4),
+                new Point(2, 5),
+                new Point(3, 6),
+        };
+    }
 
     public static Point[] manuallyCreatePointArray6() {
         //input 6 point array
