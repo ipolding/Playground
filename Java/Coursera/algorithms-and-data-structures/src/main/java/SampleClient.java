@@ -7,26 +7,29 @@ public class SampleClient {
 
     public static void main(String[] args) {
 
+        System.out.println(0.0 == 0.0);
+
+
+
         Point[] points = contrivedPointArray();
         bruteTest(points);
         System.out.println("\n\n\n");
         fastTest(points);
         System.out.println("\n\n\n");
-        points = manuallyCreatePointArray6();
-        bruteTest(points);
-        System.out.println("\n\n\n");
-        fastTest(points);
-        System.out.println("\n\n\n");
-        points = manuallyCreatePointArray8();
-        bruteTest(points);
-        System.out.println("\n\n\n");
-        fastTest(points);
 
+        bruteTest(manuallyCreatePointArray6());
+        System.out.println("\n\n\n");
+        fastTest(manuallyCreatePointArray6());
+//        System.out.println("\n\n\n");
+//        points = manuallyCreatePointArray8();
+//        bruteTest(points);
+//        System.out.println("\n\n\n");
+//        fastTest(points);
 
     }
 
     private static void bruteTest(Point[] points) {
-        System.out.println("*-*-*-*-*-*-*-*-*-*BRUTE TEST START *-*-*-*-*-*-*-*-*-*");
+        System.out.printf("*-*-*-*-*-*-*-*-*-*BRUTE TEST START %d Points*-*-*-*-*-*-*-*-*-*\n", points.length);
         // print and draw the line segments
         BruteCollinearPoints bruteCollinear = new BruteCollinearPoints(points);
         for (LineSegment segment : bruteCollinear.segments()) {
@@ -37,7 +40,7 @@ public class SampleClient {
     }
 
     private static void fastTest(Point[] points) {
-        System.out.println("*-*-*-*-*-*-*-*-*-*FAST TEST START *-*-*-*-*-*-*-*-*-*");
+        System.out.printf("*-*-*-*-*-*-*-*-*-*FAST TEST START %d Points*-*-*-*-*-*-*-*-*-*\n", points.length);
         // print and draw the line segments
         FastCollinearPoints fastCollinear = new FastCollinearPoints(points);
         for (LineSegment segment : fastCollinear.segments()) {
