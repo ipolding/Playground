@@ -7,15 +7,8 @@ public class SampleClient {
 
     public static void main(String[] args) {
 
-        Point[] points = contrivedPointArray();
-        bruteTest(points);
-        System.out.println("\n\n\n");
-        fastTest(points);
-        System.out.println("\n\n\n");
+        fastTest(manuallyCreatePointArray8());
 
-        bruteTest(manuallyCreatePointArray6());
-        System.out.println("\n\n\n");
-        fastTest(manuallyCreatePointArray6());
     }
 
     private static void bruteTest(Point[] points) {
