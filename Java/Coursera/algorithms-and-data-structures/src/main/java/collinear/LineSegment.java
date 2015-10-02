@@ -1,4 +1,4 @@
-import collinear.Point;
+package collinear;
 
 /*************************************************************************
  *  Compilation:  javac collinear.LineSegment.java
@@ -32,7 +32,7 @@ public class LineSegment {
         this.q = q;
     }
 
-    
+
     /**
      * Draws this line segment to standard draw.
      */
@@ -64,4 +64,3 @@ public class LineSegment {
     }
 
 }
-
