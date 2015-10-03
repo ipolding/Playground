@@ -1,6 +1,7 @@
 
 // TODO You must use MinPQ for the priority queue(s).
 
+import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.MinPQ;
 import edu.princeton.cs.algs4.StdOut;
 //TODO You may not call any library functions other those in java.lang, java.util, and algs4.jar.
@@ -73,13 +74,14 @@ public class Solver {
 
     public static void main(String[] args) {
 
-        int[][] blockSample = new int[][]{
-                new int[]{0, 1, 3},
-                new int[]{4, 2, 5},
-                new int[]{7, 8, 6}
-        };
-
-        Board initial = new Board(blockSample);
+        // create initial board from file
+        In in = new In(args[0]);
+        int N = in.readInt();
+        int[][] blocks = new int[N][N];
+        for (int i = 0; i < N; i++)
+            for (int j = 0; j < N; j++)
+                blocks[i][j] = in.readInt();
+        Board initial = new Board(blocks);
 
         // solve the puzzle
         Solver solver = new Solver(initial);
@@ -151,16 +153,28 @@ public class Solver {
 
     public Iterable<Board> solution() {
         // sequence of boards in a shortest solution; null if unsolvable
+        System.out.println("Using linkedlist");
+        return linkedListSolution();
+    }
 
-        Stack<Board> solutionBoards = new Stack<Board>();
+    private Iterable<Board> linkedListSolution() {
+        LinkedList<Board> solutionBoards = new LinkedList<Board>();
 
+//        Queue<Board> solutionBoards = Collections.asLifoQueue(new ArrayDeque());
+
+        if (null == solution) {
+            return solutionBoards;
+        }
         SearchNode previousNode = solution.previousSearchNode;
 
+
+
+        solutionBoards.add(solution.board);
         while (previousNode != null) {
-            solutionBoards.add(previousNode.board);
+            solutionBoards.addFirst(previousNode.board);
             previousNode = previousNode.previousSearchNode;
         }
-        solutionBoards.add(solution.board);
+//        Collections.reverse(solutionBoards);
         return solutionBoards;
     }
 
