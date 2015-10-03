@@ -31,4 +31,5 @@ public class SolverTest extends TestCase {
 //        even if it is too slow to solve some of them in a reasonable amount of time.
 
     }
+
 }
