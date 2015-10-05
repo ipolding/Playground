@@ -69,8 +69,12 @@ public class Solver {
 
     private int solvedBoardMoves = 0;
 
-    private final SearchNode solution;
+    private boolean twinSolved = false;
+    private boolean initialSolved = false;
+    private SearchNode solutionNode;
+    private SearchNode twinBoard;
 
+    private Iterable<Board> solutionIterator;
 
     public static void main(String[] args) {
 
@@ -96,121 +100,56 @@ public class Solver {
         }
     }
 
-    private final Board initial;
-
     public Solver(Board initial) {
-
         if (null == initial) {
             throw new NullPointerException();
         }
-        this.initial = initial;
-
-        if (isSolvable()) {
-             solution = solve(initial, solvedBoardMoves);
-        } else {
-            solution = null;
-        }
-
-
-
+        solve(initial);
     }
 
-    public boolean isSolvable() {
-        // is the initial board solvable?
+    private void solve(Board board) {
+        int initialMoves = 0;
+        int twinMoves = 0;
 
-        /**
-         * Detecting unsolvable puzzles. Not all initial boards can lead to the goal board by a sequence of legal moves,
-         * including the two below:
+        MinPQ<SearchNode> initialPQ = new MinPQ();
+        MinPQ<SearchNode> twinPQ = new MinPQ();
 
-         1  2  3         1  2  3  4
-         4  5  6         5  6  7  8
-         8  7            9 10 11 12
-         13 15 14
+        SearchNode nodeTowardsInitialSolution = new SearchNode(board, 0, null);
+        SearchNode nodeTowardsTwinSolution = new SearchNode(board.twin(), 0, null);
 
-         To detect such situations, use the fact that boards are divided into two equivalence classes with respect to
-         reachability: (i) those that lead to the goal board and (ii) those that lead to the goal board if we modify
-         the initial board by swapping any pair of blocks (the blank square is not a block).
-
-         To apply the fact, alternate between running the A* algorithm on two puzzle instances
-         -- one with the initial board*/
-
-        /*-- and one with the initial board modified by swapping a pair of blocks.*/
-
-        /* Exactly one of the two will lead to the goal board. */
-
-        if (null !=  solve(initial.twin(), 0)) {
-            return false;
+        // Repeat until we have the dequeued the solution i.e. when the solution == the minumum.
+        while (!twinSolved && !initialSolved) {
+            nodeTowardsInitialSolution = growQueueAndDeleteMinimum(nodeTowardsInitialSolution, initialPQ, initialMoves);
+            nodeTowardsTwinSolution = growQueueAndDeleteMinimum(nodeTowardsTwinSolution, twinPQ, twinMoves);
+            initialSolved = nodeTowardsInitialSolution.board.isGoal();
+            twinSolved = nodeTowardsTwinSolution.board.isGoal();
         }
-        return true;
+        if (initialSolved) {
+            solutionNode = nodeTowardsInitialSolution;
+            solutionIterator = linkedListSolution();
+        }
     }
 
-    public int moves() {
-        if (solvedBoardMoves == 0) {
-            return -1;
-        }
-        return solvedBoardMoves;
-    }
 
     public Iterable<Board> solution() {
-        // sequence of boards in a shortest solution; null if unsolvable
-        System.out.println("Using linkedlist");
-        return linkedListSolution();
+        return solutionIterator;
     }
 
     private Iterable<Board> linkedListSolution() {
         LinkedList<Board> solutionBoards = new LinkedList<Board>();
-
-//        Queue<Board> solutionBoards = Collections.asLifoQueue(new ArrayDeque());
-
-        if (null == solution) {
-            return solutionBoards;
+        if (!initialSolved) {
+            return null;
         }
-        SearchNode previousNode = solution.previousSearchNode;
-
-
-
-        solutionBoards.add(solution.board);
+        SearchNode previousNode = solutionNode.previousSearchNode;
+        solutionBoards.add(solutionNode.board);
         while (previousNode != null) {
             solutionBoards.addFirst(previousNode.board);
             previousNode = previousNode.previousSearchNode;
         }
-//        Collections.reverse(solutionBoards);
+        solvedBoardMoves = solutionBoards.size() - 1;
         return solutionBoards;
     }
 
-    private SearchNode solve(Board board, int moves) {
-
-        boolean solved = false;
-
-        MinPQ<SearchNode> minPQ = new MinPQ();
-
-        SearchNode minimum = new SearchNode(board, 0, null);
-        minPQ.insert(minimum);
-
-//    *  2) Delete the minimum priority Node from the queue.
-//    *  4) Repeat until we have the dequeued the solution i.e. when the solution == the minumum.
-        for (int i = 0; i < minimum.board.dimension() * minimum.board.dimension(); i++) {
-            if (minimum.getBoard().isGoal()) {
-                solvedBoardMoves = moves;
-                return minimum;
-            }
-//    *  3) Insert all neighbouring search nodes - those that can be reached in one move from the dequeued Node.
-                moves++;
-                for (Board neighbor : minimum.getBoard().neighbors()) {
-                    SearchNode searchNode = new SearchNode(neighbor, moves, minimum);
-                    if (null == minimum.previousSearchNode || !neighbor.equals(minimum.previousSearchNode.board)) {
-                        minPQ.insert(searchNode);
-                    }
-                }
-                minimum = minPQ.delMin();
-
-        }
-        return null;
-
-    }
-
-
-    /* <p><li> Write a nested class <tt>SearchNode</tt> that represents a search node */
     private class SearchNode implements Comparable<SearchNode> {
 
         private final Board board;
@@ -226,8 +165,8 @@ public class Solver {
         // The success of this approach hinges on the choice of priority function for a search node.
         public int compareTo(SearchNode that) {
 
-// a search node with a small number of blocks in the wrong position is close to the goal,
-// we prefer a search node that have been reached using a small number of moves.
+            // a search node with a small number of blocks in the wrong position is close to the goal,
+            // we prefer a search node that have been reached using a small number of moves.
             int hammingComparison = /*-1*/ (Integer.valueOf(board.hamming()).compareTo(that.board.manhattan()));
             if (hammingComparison == 0) {
                 return /*-1*/ (this.numberOfMovesToReachIt.compareTo(that.numberOfMovesToReachIt));
@@ -241,4 +180,27 @@ public class Solver {
         }
     }
 
+    private SearchNode growQueueAndDeleteMinimum(SearchNode minimum, MinPQ<SearchNode> minPQ, int moves) {
+
+        for (Board neighbor : minimum.getBoard().neighbors()) {
+            //    *  3) Insert all neighbouring search nodes - those that can be reached in one move from the dequeued Node.
+            SearchNode searchNode = new SearchNode(neighbor, moves, minimum);
+            if (null == minimum.previousSearchNode || !neighbor.equals(minimum.previousSearchNode.board)) {
+                minPQ.insert(searchNode);
+            }
+        }
+        // 2) Delete the minimum priority Node from the queue.
+        return minPQ.delMin();
+    }
+
+    public int moves() {
+        if (solvedBoardMoves == 0) {
+            return -1;
+        }
+        return solvedBoardMoves;
+    }
+
+    public boolean isSolvable() {
+        return !twinSolved;
+    }
 }
