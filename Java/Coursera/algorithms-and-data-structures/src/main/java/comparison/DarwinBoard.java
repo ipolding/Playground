@@ -1,10 +1,12 @@
+package comparison;
+
 import edu.princeton.cs.algs4.StdIn;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 
 
-public class Board {
+public class DarwinBoard  {
     //public DarwinBoard(int[][] blocks)           // construct a DarwinBoard from an N-by-N array of blocks
 //// (where blocks[i][j] = block in row i, column j)
 //public int dimension()                 // DarwinBoard dimension N
@@ -26,7 +28,7 @@ public class Board {
         }
         return newBlocks;
     }
-    public Board(int[][] blocks){
+    public DarwinBoard(int[][] blocks){
         if (blocks[0].length!=blocks.length) throw new InputMismatchException("It is not a square");
         N=blocks.length;
         this.blocks=blocks;
@@ -65,7 +67,7 @@ public class Board {
         }
         return hamming()==0;
     }
-    public Board twin(){
+    public DarwinBoard twin(){//TODO
         int[][] blocksChange=copyOfBlocks();
         for (int i = 0; i < N; i++) {
             if (blocksChange[i][N/2]!=0 && blocksChange[i][N/2-1]!=0) {
@@ -75,13 +77,13 @@ public class Board {
                 break;
             }
         }
-        return new Board(blocksChange);
+        return new DarwinBoard(blocksChange);
     }
     public boolean equals(Object y){
         if (this==y) return true;
         if (y==null) return false;
         if (this.getClass()!=y.getClass()) return false;
-        Board thatBoard=(Board)y;
+        DarwinBoard thatBoard=(DarwinBoard)y;
         if (this.dimension()!=thatBoard.dimension())return false;
         boolean identical=true;
         for (int i = 0; i < blocks.length; i++) {
@@ -94,8 +96,8 @@ public class Board {
         }
         return identical;
     }
-    public Iterable <Board> neighbors(){
-        ArrayList <Board> neighborsBoards=new ArrayList <Board>();
+    public Iterable <DarwinBoard> neighbors(){
+        ArrayList <DarwinBoard> neighborsBoards=new ArrayList <DarwinBoard>();
         int posI = 0,posJ = 0;
         for (int i = 0; i < blocks.length; i++) {
             for (int j = 0; j < blocks[i].length; j++) {
@@ -110,25 +112,25 @@ public class Board {
             int[][] tmpBlocks=copyOfBlocks();
             tmpBlocks[posI][posJ]=tmpBlocks[posI-1][posJ];
             tmpBlocks[posI-1][posJ]=0;
-            neighborsBoards.add(new Board(tmpBlocks));
+            neighborsBoards.add(new DarwinBoard(tmpBlocks));
         }
         if (posI<N-1) {
             int[][] tmpBlocks=copyOfBlocks();
             tmpBlocks[posI][posJ]=tmpBlocks[posI+1][posJ];
             tmpBlocks[posI+1][posJ]=0;
-            neighborsBoards.add(new Board(tmpBlocks));
+            neighborsBoards.add(new DarwinBoard(tmpBlocks));
         }
         if (posJ>0) {
             int[][] tmpBlocks=copyOfBlocks();
             tmpBlocks[posI][posJ]=tmpBlocks[posI][posJ-1];
             tmpBlocks[posI][posJ-1]=0;
-            neighborsBoards.add(new Board(tmpBlocks));
+            neighborsBoards.add(new DarwinBoard(tmpBlocks));
         }
         if (posJ<N-1) {
             int[][] tmpBlocks=copyOfBlocks();
             tmpBlocks[posI][posJ]=tmpBlocks[posI][posJ+1];
             tmpBlocks[posI][posJ+1]=0;
-            neighborsBoards.add(new Board(tmpBlocks));
+            neighborsBoards.add(new DarwinBoard(tmpBlocks));
         }
         return neighborsBoards;
     }
@@ -154,7 +156,7 @@ public class Board {
                 blocks1[i][j]=StdIn.readInt();
             }
         }
-        Board board1 =new Board(blocks1);
+        DarwinBoard board1 =new DarwinBoard(blocks1);
         int N2= StdIn.readInt();
         int[][] blocks2=new int[N2][N2];
         for (int i = 0; i < blocks2.length; i++) {
@@ -162,7 +164,7 @@ public class Board {
                 blocks2[i][j]=StdIn.readInt();
             }
         }
-        Board board2 =new Board(blocks2);
+        DarwinBoard board2 =new DarwinBoard(blocks2);
 //	 DarwinBoard DarwinBoard=new DarwinBoard(blocks);
 //		//System.out.println(board.manhattan());
 //		for (Board neighberBoard : DarwinBoard.neighbors()) {

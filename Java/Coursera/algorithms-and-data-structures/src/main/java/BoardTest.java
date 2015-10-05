@@ -39,7 +39,7 @@ public class BoardTest extends TestCase {
                 new int[]{7, 6, 5}
         };
 
-        Board testObj = new Board(blocks);
+        BrokenBoard testObj = new BrokenBoard(blocks);
 
         assertEquals(5, testObj.hamming());
     }
@@ -52,7 +52,7 @@ public class BoardTest extends TestCase {
 
 //        initial          goal         Hamming = 5 + 0
 
-        Board testObj = new Board(solvedBlocks);
+        BrokenBoard testObj = new BrokenBoard(solvedBlocks);
         assertTrue(testObj.isGoal());
         assertEquals(0, testObj.hamming());
     }
@@ -70,7 +70,7 @@ public class BoardTest extends TestCase {
                 new int[]{7, 6, 5}
         };
 
-        Board testObj = new Board(blocks);
+        BrokenBoard testObj = new BrokenBoard(blocks);
 
         assertEquals(10, testObj.manhattan());
     }
@@ -83,7 +83,7 @@ public class BoardTest extends TestCase {
 
 //        initial          goal        Manhattan = 10 + 0
 
-        Board testObj = new Board(solvedBlocks);
+        BrokenBoard testObj = new BrokenBoard(solvedBlocks);
 
         assertEquals(0, testObj.manhattan());
     }
@@ -96,8 +96,8 @@ public class BoardTest extends TestCase {
     @Test
     public void test_twin_createsAnBoardWithTwoNonZeroBlocksSwapped() throws Exception {
 
-        Board testObj = new Board(solvedBlocks);
-        Board twin = testObj.twin();
+        BrokenBoard testObj = new BrokenBoard(solvedBlocks);
+        BrokenBoard twin = testObj.twin();
 
         System.out.println(twin);
         System.out.println(testObj);
@@ -117,7 +117,7 @@ public class BoardTest extends TestCase {
                 new int[]{6, 7, 8}
         };
 
-        Board testObj = new Board(blocks);
+        BrokenBoard testObj = new BrokenBoard(blocks);
         assertEquals(testObj, testObj);
     }
 
@@ -129,8 +129,8 @@ public class BoardTest extends TestCase {
                 new int[]{6, 7, 8}
         };
 
-        Board testObj_1 = new Board(blocks_1);
-        Board testObj_2 = new Board(blocks_1);
+        BrokenBoard testObj_1 = new BrokenBoard(blocks_1);
+        BrokenBoard testObj_2 = new BrokenBoard(blocks_1);
         assertEquals(testObj_1, testObj_2);
         assertEquals(testObj_2, testObj_1);
 
@@ -150,8 +150,8 @@ public class BoardTest extends TestCase {
                 new int[]{6, 7, 8}
         };
 
-        Board testObj_1 = new Board(blocks_1);
-        Board testObj_2 = new Board(blocks_2);
+        BrokenBoard testObj_1 = new BrokenBoard(blocks_1);
+        BrokenBoard testObj_2 = new BrokenBoard(blocks_2);
         assertNotEquals(testObj_1, testObj_2);
         assertNotEquals(testObj_2, testObj_1);
 
@@ -166,9 +166,9 @@ public class BoardTest extends TestCase {
                 new int[]{6, 7, 8}
         };
 
-        Board testObj_1 = new Board(blocks_1);
-        Board testObj_2 = new Board(blocks_1);
-        Board testObj_3 = new Board(blocks_1);
+        BrokenBoard testObj_1 = new BrokenBoard(blocks_1);
+        BrokenBoard testObj_2 = new BrokenBoard(blocks_1);
+        BrokenBoard testObj_3 = new BrokenBoard(blocks_1);
         assertEquals(testObj_1, testObj_2);
         assertEquals(testObj_2, testObj_3);
         assertEquals(testObj_1, testObj_3);
@@ -182,7 +182,7 @@ public class BoardTest extends TestCase {
                 new int[]{0, 6, 7}
         };
 
-        Board testObj = new Board(blocks_awkward);
+        BrokenBoard testObj = new BrokenBoard(blocks_awkward);
         System.out.println(testObj);
         System.out.println(testObj.neighbors());
 
@@ -197,7 +197,7 @@ public class BoardTest extends TestCase {
                 new int[]{7, 8, 6}
         };
 
-        Board testObj = new Board(blocks);
+        BrokenBoard testObj = new BrokenBoard(blocks);
 
         System.out.println(testObj);
         assertEquals("3\n 1  0  3 \n 4  2  5 \n 7  8  6 \n", testObj.toString());
@@ -215,7 +215,7 @@ public class BoardTest extends TestCase {
                 new int[]{7, 6, 2}
         };
 
-        System.out.println(new Board(blocks_awkward));
+        System.out.println(new BrokenBoard(blocks_awkward));
 
     }
 
@@ -234,7 +234,7 @@ public class BoardTest extends TestCase {
                 new int[]{7, 6, 5}
         };
 
-        Board testObj = new Board(blocks);
+        BrokenBoard testObj = new BrokenBoard(blocks);
 
 //        assertEquals(1, testObj.convertToOneDimension(0, 0));
 //        assertEquals(2, testObj.convertToOneDimension(0, 1));
@@ -261,7 +261,7 @@ public class BoardTest extends TestCase {
                 new int[]{7, 6, 5}
         };
 
-        Board testObj = new Board(blocks);
+        BrokenBoard testObj = new BrokenBoard(blocks);
 
     //    assertEquals(2, testObj.manhattanDistance(8, 6));
     //    assertEquals(1, testObj.manhattanDistance(2, 1));

@@ -117,10 +117,13 @@ public class Solver {
         SearchNode nodeTowardsInitialSolution = new SearchNode(board, 0, null);
         SearchNode nodeTowardsTwinSolution = new SearchNode(board.twin(), 0, null);
 
+        initialPQ.insert(nodeTowardsInitialSolution);
+        twinPQ.insert(nodeTowardsTwinSolution);
+
         // Repeat until we have the dequeued the solution i.e. when the solution == the minumum.
         while (!twinSolved && !initialSolved) {
-            nodeTowardsInitialSolution = growQueueAndDeleteMinimum(nodeTowardsInitialSolution, initialPQ, initialMoves);
-            nodeTowardsTwinSolution = growQueueAndDeleteMinimum(nodeTowardsTwinSolution, twinPQ, twinMoves);
+            nodeTowardsInitialSolution = incrementSearchNode(initialPQ);
+            nodeTowardsTwinSolution = incrementSearchNode(twinPQ);
             initialSolved = nodeTowardsInitialSolution.board.isGoal();
             twinSolved = nodeTowardsTwinSolution.board.isGoal();
         }
@@ -153,12 +156,19 @@ public class Solver {
     private class SearchNode implements Comparable<SearchNode> {
 
         private final Board board;
-        private final Integer numberOfMovesToReachIt;
+        private Integer moves;
         private final SearchNode previousSearchNode;
 
-        private SearchNode(Board board, int numberOfMovesToReachIt, SearchNode previousSearchNode) {
+        private SearchNode(Board board, int moves, SearchNode previousSearchNode) {
             this.board = board;
-            this.numberOfMovesToReachIt = numberOfMovesToReachIt;
+
+            if (null == previousSearchNode) {
+                moves = 0;
+            } else {
+                moves = previousSearchNode.moves + 1;
+            }
+
+            this.moves = moves;
             this.previousSearchNode = previousSearchNode;
         }
 
@@ -167,11 +177,11 @@ public class Solver {
 
             // a search node with a small number of blocks in the wrong position is close to the goal,
             // we prefer a search node that have been reached using a small number of moves.
-            int hammingComparison = /*-1*/ (Integer.valueOf(board.hamming()).compareTo(that.board.manhattan()));
-            if (hammingComparison == 0) {
-                return /*-1*/ (this.numberOfMovesToReachIt.compareTo(that.numberOfMovesToReachIt));
+            int manhattan = /*-1*/ (Integer.valueOf(board.manhattan()).compareTo(that.board.manhattan()));
+            if (manhattan == 0) {
+                return /*-1*/ (this.moves.compareTo(that.moves));
             } else {
-                return hammingComparison;
+                return manhattan;
             }
         }
 
@@ -180,24 +190,28 @@ public class Solver {
         }
     }
 
-    private SearchNode growQueueAndDeleteMinimum(SearchNode minimum, MinPQ<SearchNode> minPQ, int moves) {
-
-        for (Board neighbor : minimum.getBoard().neighbors()) {
+    private SearchNode incrementSearchNode(MinPQ<SearchNode> minPQ) {
+        // 2) Delete the minimum priority Node from the queue.
+        int moves = 0;
+        SearchNode minimum = minPQ.delMin();
+        SearchNode previous = minimum.previousSearchNode;
+        if (null != previous) {
+            moves++;
+        }
+        for (Board neighbor : minimum.board.neighbors()) {
             //    *  3) Insert all neighbouring search nodes - those that can be reached in one move from the dequeued Node.
-            SearchNode searchNode = new SearchNode(neighbor, moves, minimum);
             if (null == minimum.previousSearchNode || !neighbor.equals(minimum.previousSearchNode.board)) {
-                minPQ.insert(searchNode);
+                minPQ.insert(new SearchNode(neighbor, moves, minimum));
             }
         }
-        // 2) Delete the minimum priority Node from the queue.
-        return minPQ.delMin();
+        return minimum;
     }
 
     public int moves() {
         if (solvedBoardMoves == 0) {
             return -1;
         }
-        return solvedBoardMoves;
+        return solutionNode.moves;
     }
 
     public boolean isSolvable() {
