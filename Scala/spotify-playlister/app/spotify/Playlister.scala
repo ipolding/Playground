@@ -20,7 +20,11 @@ class Playlister @Inject() (ws: WSClient) {
 //    List()
 //  }
 
-  def getArtistsTopTracks(artistName : String) : Future[List[Track]] = {
+  def getArtistsTopTracks(artistNames : List[String]) : List[Future[List[Track]]] = {
+    artistNames.map(getArtistTopTracks(_))
+  }
+
+  def getArtistTopTracks(artistName : String) : Future[List[Track]] = {
     val futureArtist = searchForArtist(artistName)
     futureArtist.flatMap(artist => 
          getTopTracks(artist)
