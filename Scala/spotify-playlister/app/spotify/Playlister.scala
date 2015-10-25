@@ -7,7 +7,7 @@ import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 
 
-case class Track(spotifyUri: String)
+case class Track(spotifyId: String)
 case class Artist(name: String, spotifyId: String)
 
 class Playlister @Inject() (ws: WSClient) {
@@ -19,6 +19,13 @@ class Playlister @Inject() (ws: WSClient) {
 //  def searchForArtists(artistNames : List[String]) : List[Future[Artist]] = {
 //    List()
 //  }
+
+  def getArtistsTopTracks(artistName : String) : Future[List[Track]] = {
+    val futureArtist = searchForArtist(artistName)
+    futureArtist.flatMap(artist => 
+         getTopTracks(artist)
+      )
+  }
 
   def searchForArtist(artistName : String) : Future[Artist] = {
     val futureResponse = ws.url("https://api.spotify.com/v1/search").withQueryString(
@@ -46,8 +53,9 @@ class Playlister @Inject() (ws: WSClient) {
   }
 
   private def transformToTracks (apiResponse : JsObject ) : List[Track] = {
-    val uris = (apiResponse \\ "uri").map(_.as[String])
-    val tracks = uris.filter(_.contains("track")).map(Track(_)).toList
+    val tracksJson = (apiResponse \ "tracks").as[List[JsObject]]
+    val trackIds : List[String] = tracksJson.map{json => (json \ "id").as[String]}
+    val tracks = trackIds.map(Track(_)).toList
     tracks
   }
 }

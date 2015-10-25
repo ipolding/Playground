@@ -1,7 +1,14 @@
-@(message: String)
+@import spotify.Track
+
+@(trackListing: List[Track])
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message)
+    @play20.welcome("Loading topTracks")
 
+@trackListing.map(_.spotifyId).mkString(",")
+
+<iframe src="https://embed.spotify.com/?uri=spotify:trackset:TOP_TRACKS:@trackListing.map(_.spotifyId).mkString(",")" frameborder="0" allowtransparency="true"></iframe>
+
+3HfB5hBU0dmBt8T0iCmH42,4toSP60xmDNCFuXly8ywNZ,18PbKNh8nuvrsq54GpCkoK,4uBzDO9wmPEXBKhfwAlMFJ,0Uro2xUVsEHQNKR5QL4Lku,0LTZD4vTsp0EN1wXatc9IR,1daWG6AYC20lWevL2r1Rm2,22cmWcCul4Px0b4rnC4fxo,31DVVa40JpTudyGDNC1ROW,5e2PJY0XHGcCLWxZj7UFpR
 }
