@@ -11,17 +11,10 @@ case class Track(spotifyId: String)
 case class Artist(name: String, spotifyId: String)
 
 class Playlister @Inject() (ws: WSClient) {
-//
-//  def generatePlaylist(artistNames :  List[String]) : Future[List[Track]] = {
-//    Future(List())
-//  }
-//
-//  def searchForArtists(artistNames : List[String]) : List[Future[Artist]] = {
-//    List()
-//  }
 
-  def getArtistsTopTracks(artistNames : List[String]) : List[Future[List[Track]]] = {
-    artistNames.map(getArtistTopTracks(_))
+  def getArtistsTopTracks(artistNames : List[String]) : Future[List[Track]] = {
+   val nestedTopTracks : Future[List[List[Track]]] = Future.sequence(artistNames.map(getArtistTopTracks(_)));
+   nestedTopTracks.map(_.flatten)
   }
 
   def getArtistTopTracks(artistName : String) : Future[List[Track]] = {
@@ -52,8 +45,7 @@ class Playlister @Inject() (ws: WSClient) {
     futureResponse.map(response =>  {
       val jsonResponse = response.json.asInstanceOf[JsObject]
       transformToTracks(jsonResponse)
-    }
-    )
+    })
   }
 
   private def transformToTracks (apiResponse : JsObject ) : List[Track] = {

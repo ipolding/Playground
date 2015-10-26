@@ -9,14 +9,13 @@ import spotify.{Artist, Playlister}
 
 class Application @Inject() (ws: WSClient)  extends Controller {
 //Radiohead ID = 4Z8W4fKeB5YxbusRsdQVPb
-  def index = Action.async {
+  def playlist(artistQuery : List[String]) = Action.async {
 
     import scala.concurrent.ExecutionContext.Implicits.global
 
     val playlist = new Playlister(ws)
-    val futureTopTracks = playlist.getTopTracks(Artist("Radiohead", "4Z8W4fKeB5YxbusRsdQVPb"))
+    val futureTopTracks = playlist.getArtistsTopTracks(artistQuery)
     futureTopTracks.map{
         topTracks => Ok(views.html.index(topTracks))}
   }
-
 }
