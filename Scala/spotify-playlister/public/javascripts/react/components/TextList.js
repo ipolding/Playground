@@ -9,7 +9,7 @@ var TextList = React.createClass({
       );
     });
     return (
-      <div className="textlisT">
+      <div className="textlist">
         {commentNodes}
       </div>
     );

@@ -1,41 +1,23 @@
 // tutorial4.js
-var Comment = React.createClass({
+var TextEntry = React.createClass({
   render: function() {
     return (
       <div className="comment">
-        <input value={this.props.artist}></input>          
+        <input defaultValue={this.props.artist}></input>          
           {this.props.children}
       </div>
     );
   }
 });
 
-// tutorial10.js
-var TextList = React.createClass({
-  render: function() {
-    var commentNodes = this.props.data.map(function (comment) {
-      return (
-        <Comment artist={comment.artist}>
-          {comment.text}
-        </Comment>
-      );
-    });
-    return (
-      <div className="textlisT">
-        {commentNodes}
-      </div>
-    );
-  }
-});
-
-var CommentForm = React.createClass({
+var TextEntryForm = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
     var artist = this.refs.artist.value.trim();
     if (!artist) {
       return;
     }
-    this.props.onCommentSubmit({artist: artist});
+    this.props.onTextEntrySubmit({artist: artist});
     this.refs.artist.value = '';    
     return;
   },
@@ -48,31 +30,49 @@ var CommentForm = React.createClass({
   }
 });
 
-var CommentBox = React.createClass({
-  handleCommentSubmit: function(comment) {
+// tutorial10.js
+var TextList = React.createClass({
+  render: function() {
+    var commentNodes = this.props.data.map(function (comment) {
+      return (
+        <TextEntry artist={comment.artist}>
+          {comment.text}
+        </TextEntry>
+      );
+    });
+    return (
+      <div className="textlist">
+        {commentNodes}
+      </div>
+    );
+  }
+});
+
+var TextEntryBox = React.createClass({
+  handleTextEntrySubmit: function(comment) {
     var comments = this.state.data;
-    var newComments = comments.concat([comment]);
-    this.setState({data: newComments});
+    var newTextEntrys = comments.concat([comment]);
+    this.setState({data: newTextEntrys});
   },
   getInitialState: function() {
     return {data: []};
   },
   componentDidMount: function() {
-   console.log("CommentBox did mount")
+   console.log("TextEntryBox did mount")
   },
   render: function() {
     return (
       <div className="commentBox">
         <h1>Artists</h1>
         <TextList data={this.state.data} />
-        <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+        <TextEntryForm onTextEntrySubmit={this.handleTextEntrySubmit} />
       </div>
     );
   }
 });
 
 ReactDOM.render(
-  <CommentBox />,
+  <TextEntryBox />,
   document.getElementById('artistList')
 );
 
