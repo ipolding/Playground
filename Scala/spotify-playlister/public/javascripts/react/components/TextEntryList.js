@@ -67,14 +67,42 @@ var TextEntryBox = React.createClass({
   },
 
   toJson : function() {
-    this.state.data.forEach(
-      function(datum) {
-        console.log(datum);
-      }); 
+    var stringArray = this.state.data.map(getTextEntryValues)
+    return stringArray;
+   }
+});
+
+var PlayListSubmitter = React.createClass({
+  handleTextEntrySubmit: function(textEntry) {
+    var textEntries = this.state.data;
+    var newTextEntrys = textEntries.concat([textEntry]);
+    this.setState({data: newTextEntrys});
+    this.toJson();
+  },
+  getInitialState: function() {
+    return {data: []};
+  },
+  render: function() {
+    return (
+      <div className="textEntryBox">
+        <TextEntryBox />
+        // Parent can call child method from here
+        <button>HELLO WORLD</button>
+      </div>
+    );
+  },
+
+  toJson : function() {
+    var stringArray = this.state.data.map(getTextEntryValues)
+    return stringArray;
    }
 });
 
 ReactDOM.render(
-  <TextEntryBox />,
+  <PlayListSubmitter />,
   document.getElementById('artistList')
 );
+
+function getTextEntryValues(textEntry) {
+    return textEntry.entry;
+}
