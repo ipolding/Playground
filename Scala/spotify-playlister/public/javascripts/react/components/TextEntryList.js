@@ -4,20 +4,21 @@ var TextEntry = React.createClass({
 
   keyHasBeenPressed : function(e) {
       if (e.keyCode == 13) {
-          this.props.handleEdit({entry: "TODO get this elements value"});
+        var textEntry = this.refs.textEntry.value;
+        this.props.handleEdit({entry: textEntry});           
       }      
   },
 
   editHasHappened : function(e) {
-      console.log("attempt to get value " + this.refs);
+      // var textEntry = this.refs.textEntry;
 
-      this.props.handleEdit({entry: "TODO get this elements value"});   
+      // this.props.handleEdit({entry: textEntry});   
   },
 
   render: function() {
     return (
       <div onBlur={this.editHasHappened} onKeyDown={this.keyHasBeenPressed} className="textEntry">
-        <input defaultValue={this.props.entry}></input>          
+        <input ref="textEntry"></input>          
           {this.props.children}
       </div>
     );
