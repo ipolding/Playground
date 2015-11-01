@@ -2,7 +2,7 @@ var TextEntry = React.createClass({
   render: function() {
     return (
       <div onChange={this.props.entryEdited} className="textEntry">
-        <input defaultValue={this.props.entry}></input>          
+        <input value={this.props.entry + "[DEFAULT]"}></input>          
           {this.props.children}
       </div>
     );
@@ -13,9 +13,7 @@ var PreviousTextEntries = React.createClass({
   render: function() {
     var textEntryNodes = this.props.data.map(function (textEntry) {
       return (
-        <TextEntry entry={textEntry.entry}>
-          {textEntry.text}
-        </TextEntry>
+        <TextEntry entry={textEntry.entry}/>
       );
     });
     return (
