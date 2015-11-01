@@ -1,45 +1,44 @@
 var TextEntry = React.createClass({
 
-  componentDidMount: function() {console.log("Text entry mounted")},
+  componentDidMount : function() {
+    console.log("text mounted")
+    this.refs.textEntry.value = "I AM The EGG MAN"
+  },
 
   keyHasBeenPressed : function(e) {
       if (e.keyCode == 13) {
         var textEntry = this.refs.textEntry.value;
-        this.props.handleEdit({entry: textEntry});           
+        this.props.appendEntry(textEntry);           
       }      
   },
 
   editHasHappened : function(e) {
-      // var textEntry = this.refs.textEntry;
-
-      // this.props.handleEdit({entry: textEntry});   
+      // TODO
   },
 
   render: function() {
+    console.log("default value is: " + this.props.defaultValue)
     return (
       <div onBlur={this.editHasHappened} onKeyDown={this.keyHasBeenPressed} className="textEntry">
-        <input ref="textEntry"></input>          
-          {this.props.children}
+        <input className="textEntry" type="text" autoComplete="off" defaultValue={this.props.defaultValue} placeholder={this.props.placeholder} ref="textEntry"/>          
       </div>
     );
   }
 });
 
 var PreviousTextEntries = React.createClass({
-    componentDidMount: function() {console.log("Previous text entries mounted")},
-
+  componentDidMount: function() {console.log("Previous text entries mounted")},
 
   render: function() {
-    var handleEdit = this.props.handleEdit;
-    var textEntryNodes = this.props.data.map(function (textEntry) {
+      var textEntryNodes = this.props.data.map(function (textEntry) {
+      console.log("Rendering previous entry " + JSON.stringify(textEntry))
       return (
-        <TextEntry handleEdit={handleEdit} entry={textEntry.entry}>
-          {textEntry.text}
+        <TextEntry defaultValue={textEntry.value} key={textEntry.id}>
         </TextEntry>
       );
     });
     return (
-      <div className="textEntrylist">
+      <div className="PreviousTextEntries">
         {textEntryNodes}
       </div>
     );
@@ -71,23 +70,29 @@ var TextEntryBox = React.createClass({
     return (
       <div className="textEntryBox">
         <h1>Artists</h1>
-        <PreviousTextEntries handleEdit={this.props.handleTextEntryEdit} data={this.props.data} />
-        <TextEntry handleEdit={this.props.handleTextEntryEdit} />
+        <PreviousTextEntries appendEntry={this.props.appendEntry} data={this.props.data} />
+        <TextEntry appendEntry={this.props.appendEntry} placeholder="Artist..." defaultValue="oogabooga" />
       </div>
     );
   }
 });
 
 var PlayListSubmitter = React.createClass({
-  handleTextEntryEdit: function(textEntry) {
-    console.log("handling text entry submit")
+  appendEntry: function(textEntry) {
+
+    console.log("handling text entry submit FOR " + JSON.stringify(textEntry));
     var textEntries = this.state.data;
-    var newTextEntrys = textEntries.concat([textEntry]);
-    this.setState({data: newTextEntrys});     
+    var newTextEntrys = textEntries.concat([{id : this.state.children++, value: textEntry}]);
+    this.setState({
+      children: this.state.children++,
+      data: newTextEntrys
+    });     
   },
 
   getInitialState: function() {
-    return {data: []};
+    return {
+      children : 0,
+      data: []};
   },
 
   getPlaylist : function() {
@@ -98,13 +103,14 @@ var PlayListSubmitter = React.createClass({
   render: function() {
     return (
       <div className="textEntryBox">
-        <TextEntryBox handleTextEntryEdit={this.handleTextEntryEdit} data={this.state.data}/>
+        <TextEntryBox appendEntry={this.appendEntry} data={this.state.data}/>
         <button onClick={this.getPlaylist} className="btn btn-primary btn-lg">Get Top Tracks! &raquo;</button>
       </div>
     );
   },
 
   toJson : function() {
+    console.log(this.state.data)
     var stringArray = this.state.data.map(getTextEntryValues)
     return stringArray;
    }
@@ -116,5 +122,6 @@ ReactDOM.render(
 );
 
 function getTextEntryValues(textEntry) {
+    console.log(Object.keys(textEntry))
     return textEntry.entry;
 }
