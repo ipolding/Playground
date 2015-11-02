@@ -1,4 +1,9 @@
 var TextEntry = React.createClass({
+
+  edit : function(e) {
+     console.log("EDITED VALUE = " + e.target.value);
+  },
+
   render: function() {
     return (
       <div onChange={this.props.entryEdited} className="textEntry">
