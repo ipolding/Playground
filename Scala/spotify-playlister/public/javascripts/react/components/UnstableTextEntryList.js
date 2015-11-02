@@ -1,20 +1,29 @@
 var TextEntry = React.createClass({
 
+  componentDidMount : function() {
+    console.log("component did mount with state " + JSON.stringify(this.state))
+  },
+
   componentDidUpdate : function() {
     console.log("COPMONENT DID UPDATE")
   },
 
   shouldComponentUpdate: function(nextProps, nextState) {
     console.log("SHOULD THE COMPONENT UPDATE")
+
+    console.log("nextProps = " + JSON.stringify(nextProps));
+    console.log("nextState = " + JSON.stringify(nextState));
+
     return true;
   },
 
   getInitialState: function() {
     var index = this.props.index;
     var data = this.props.data;
+    // var value = data[index].value
     return {
       index: index,
-      text: (typeof index !== 'undefined') ? data[index].value : ''      
+      text: (typeof index !== 'undefined') ? 'EXISTING ENTRY Index: ' + index : 'NEW ENTRY'      
     };
   },
 
@@ -44,10 +53,12 @@ var TextEntry = React.createClass({
   createEntry : function() {
     var textEntry = this.refs.textEntry.value;
     this.props.createEntry(textEntry);               
+    console.log("request to create entry")
   },
 
   keyHasBeenPressed : function(e) {
       if (e.keyCode == 13) {
+        console.log("enter key pressed")
         this.createEntry();
       }      
   },
@@ -56,7 +67,7 @@ var TextEntry = React.createClass({
      var message = this.state.message;
      return (
       <div onBlur={this.handleBlur} onChange={this.handleChange} onKeyDown={this.keyHasBeenPressed}>
-        <input placeholder={this.props.placeholder} value={this.state.text} className="textEntry" ref="textEntry"/>          
+        <input placeholder={this.props.placeholder} value={this.state.text} className="previousTextEntry" ref="textEntry"/>          
       </div>
     );
   }
@@ -93,10 +104,8 @@ var TextEntryBox = React.createClass({
       <div className="textEntryBox" onSubmit={this.handleSubmit}>
         <h1>Artists</h1>
         <PreviousTextEntries updateEntry={this.props.updateEntry} createEntry={this.props.createEntry} data={this.props.data} />
-        <div>
-             <TextEntry updateEntry={this.props.updateEntry} createEntry={this.props.createEntry} data={this.props.data} defaultValue="" placeholder="Artist..." />
+        <TextEntry updateEntry={this.props.updateEntry} createEntry={this.props.createEntry} data={this.props.data} />
         </div>
-      </div>
     );
   }
 });
