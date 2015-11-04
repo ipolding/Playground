@@ -1,64 +1,52 @@
 var TextEntry = React.createClass({
 
-  componentDidMount : function() {
-    console.log("component did mount with state " + JSON.stringify(this.state))
-  },
-
-  componentDidUpdate : function() {
-    console.log("COPMONENT DID UPDATE")
-  },
-
-  shouldComponentUpdate: function(nextProps, nextState) {
-    console.log("SHOULD THE COMPONENT UPDATE")
-
-    console.log("nextProps = " + JSON.stringify(nextProps));
-    console.log("nextState = " + JSON.stringify(nextState));
-
-    return true;
-  },
-
   getInitialState: function() {
+
+    var text = this.props.initialValue;
     var index = this.props.index;
-    var data = this.props.data;
-    // var value = data[index].value
     return {
       index: index,
-      text: (typeof index !== 'undefined') ? 'EXISTING ENTRY Index: ' + index : 'NEW ENTRY'      
+      text: text  
     };
   },
 
   handleChange : function(e) {
-    console.log("change request handled")
     this.setState(
       {
         index : this.props.dataPosition,
         text : e.target.value
       }
       );
-
-
-    console.log("updated after set statee" + this.state.updated)
   },
 
   handleBlur : function(e) {
     if (typeof this.props.index !== 'undefined') {
         this.props.updateEntry(this.props.index, this.state.text);  
-    } else {
-        console.log("target value == " + e.target.value);
-        console.log("state text value == " + this.state.text);        
-        this.createEntry();          
-      }       
+    } else {            
+        this.createEntry();
+        this.flushState();          
+      }
+                   
     },
 
   createEntry : function() {
     var textEntry = this.refs.textEntry.value;
     this.props.createEntry(textEntry);               
-    console.log("request to create entry")
+  },
+
+  flushState : function() {
+    this.setState(
+      {
+        index : this.props.dataPosition,
+        text : ''
+      }
+      );
   },
 
   keyHasBeenPressed : function(e) {
       if (e.keyCode == 13) {
-        console.log("enter key pressed")
+        this.flushState();      
+        
         this.createEntry();
       }      
   },
@@ -67,7 +55,7 @@ var TextEntry = React.createClass({
      var message = this.state.message;
      return (
       <div onBlur={this.handleBlur} onChange={this.handleChange} onKeyDown={this.keyHasBeenPressed}>
-        <input placeholder={this.props.placeholder} value={this.state.text} className="previousTextEntry" ref="textEntry"/>          
+        <input placeholder="Artist..." value={this.state.text} className="previousTextEntry" ref="textEntry"/>          
       </div>
     );
   }
@@ -82,7 +70,12 @@ var PreviousTextEntries = React.createClass({
       var textEntryNodes = parentData.map(function (textEntry) {
       
       return (
-        <TextEntry placeholder="Artist..." value={textEntry.value} key={textEntry.index} data={parentData} index={textEntry.index} createEntry={createEntry} updateEntry={updateEntry}/>
+        <TextEntry 
+              key={textEntry.index}
+              index={textEntry.index}
+              initialValue={textEntry.value}
+              createEntry={createEntry} 
+              />
       );
     });
     return (
