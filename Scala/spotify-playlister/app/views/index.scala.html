@@ -3,38 +3,6 @@
 @(trackListing: List[Track])
 
 @main("Spotify Playlister") {
-
-<!DOCTYPE html>
-<html lang="en">
-
-    <link rel="stylesheet" href="@routes.Assets.versioned("bootstrap/bootstrap.min.css")"/>
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="@routes.Assets.versioned("bootstrap/jumbotron.css")"/>
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>Jumbotron Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -61,99 +29,33 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    
-
-
 
     <div class="jumbotron">
       <div class="container">     
-
-
-    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
-
-    <form id="checkout" method="post" action="/checkout">
-  <div id="payment-form"></div>
-  <input type="submit" value="Pay $10">
-</form>
-
-<script src="https://js.braintreegateway.com/v2/braintree.js"></script>
-<script>
-// We generated a client token for you so you can test out this code
-// immediately. In a production-ready integration, you will need to
-// generate a client token on your server (see section below).
-var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIxODc1NWQyNDAwMmM0NTNiYmIwN2M3MjI5MzE1MGE0MjBjNjk5YmE4ZDdiODI3MTliNjcxYmQ1NGE0ZmNlZWJjfGNyZWF0ZWRfYXQ9MjAxNS0xMC0zMFQxNzo0MjowNC41NTg3MTA4MTcrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=";
-
-braintree.setup(clientToken, "custom", {
-  id: "my-sample-form",
-  hostedFields: {
-    styles: {
-      "input": {
-        "font-size": "16pt",
-        "color": "#3A3A3A"
-      },
-
-      ".number": {
-        "font-family": "monospace"
-      },
-
-      ".valid": {
-        "color": "green"
-      }
-    },
-    number: {
-      selector: "#card-number"
-    },
-    cvv: {
-      selector: "#cvv"
-    },
-    expirationDate: {
-      selector: "#expiration-date"
-    }
-  }
-});
-</script>
-
-
-
-     <h1>Create a playlist!</h1>
-     <p>Heard about a great new artist lately? Let us know who they are below and we'll find their top tracks on Spotify!<br>You'll be streets ahead in no time!</p>
-            <div id="artistList"></div>
-        
-        <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button"><!-- Get Top Tracks! &raquo; --></a></p>
-      </div>
-    </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-            <div class="col-md-2 col-md-offset-5"></div>
-                    <!-- <iframe style="centered" src="https://embed.spotify.com/?uri=spotify:trackset:TOP_TRACKS:@trackListing.map(_.spotifyId).mkString(",")" frameborder="0" allowtransparency="true"></iframe> -->
-       </div>
-      <hr>
-
-      <footer>
-        <p>&copy; iPolding 2015. Powered by Spotify</p>
-      </footer>
-    </div> <!-- /container -->
-
-    <!-- This element's contents will be replaced with your component. -->
+        <h1>
+        Create a playlist!
+        </h1>
+        <p>Heard about a great new artist lately? Let us know who they are below and we'll find their top tracks on Spotify!
+          <br>You'll be streets ahead in no time!
+        </p>
+        <div id="artistList"></div>
+        <hr>
+      </div> <!-- /container -->
+    </div>  <!-- /jumbotron -->
     
+    <footer class="container">
+      <p>&copy; iPolding 2015. Powered by Spotify</p>
+    </footer>
 
 <!-- react components -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.1/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.1/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
     <script type="text/babel" src="@routes.Assets.versioned("javascripts/react/components/UnstableTextEntryList.js")"></script>
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="@routes.Assets.versioned("bootstrap/bootstrap.min.js")"></script>
-    
-  </body>
-</html>
 }

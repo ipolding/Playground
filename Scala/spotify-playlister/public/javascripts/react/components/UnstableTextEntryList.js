@@ -22,7 +22,7 @@ var TextEntry = React.createClass({
   handleBlur : function(e) {
     if (typeof this.props.index !== 'undefined') {
         this.props.updateEntry(this.props.index, this.state.text);  
-    } else {            
+    } else if (e.target.value) {            
         this.createEntry();
         this.flushState();          
       }
@@ -54,8 +54,14 @@ var TextEntry = React.createClass({
   render: function() {
      var message = this.state.message;
      return (
-      <div onBlur={this.handleBlur} onChange={this.handleChange} onKeyDown={this.keyHasBeenPressed}>
-        <input placeholder="Artist..." value={this.state.text} className="previousTextEntry" ref="textEntry"/>          
+      <div>
+        <input placeholder="Artist..." 
+               value={this.state.text} 
+               className="previousTextEntry" 
+               onBlur={this.handleBlur} 
+               onChange={this.handleChange} 
+               onKeyDown={this.keyHasBeenPressed}
+               ref="textEntry"/>          
       </div>
     );
   }
@@ -107,7 +113,6 @@ var PlayListSubmitter = React.createClass({
 
   updateEntry: function(index, value) {
       var modifiedArray = this.state.data;
-      console.log("index " + index);
       console.log("modifiedArray " + JSON.stringify(modifiedArray));
       modifiedArray[index].value = value;
       this.setState({
