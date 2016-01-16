@@ -1,0 +1,61 @@
+@import spotify.Track
+
+@(trackListing: List[Track])
+
+@main("Spotify Playlister") {
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+    <div class="jumbotron">
+      <div class="container">     
+        <h1>
+        Create a playlist!
+        </h1>
+        <p>Heard about a great new artist lately? Let us know who they are below and we'll find their top tracks on Spotify!
+          <br>You'll be streets ahead in no time!
+        </p>
+        <div id="artistList"></div>
+        <hr>
+      </div> <!-- /container -->
+    </div>  <!-- /jumbotron -->
+    
+    <footer class="container">
+      <p>&copy; iPolding 2015. Powered by Spotify</p>
+    </footer>
+
+<!-- react components -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/babel" src="@routes.Assets.versioned("javascripts/react/components/UnstableTextEntryList.js")"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="@routes.Assets.versioned("bootstrap/bootstrap.min.js")"></script>
+}
