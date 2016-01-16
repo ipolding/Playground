@@ -10,15 +10,20 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 case class Track(spotifyId: String)
 case class Artist(name: String, spotifyId: String)
+case class TopTracksVO(artist: Artist, topTracks : List[Track])
 
 class Playlister @Inject() (ws: WSClient) {
 
-  def getArtistsTopTracks(artistNames : List[String]) : Future[List[Track]] = {
-   val nestedTopTracks : Future[List[List[Track]]] = Future.sequence(artistNames.map(getArtistTopTracks(_)));
-   nestedTopTracks.map(_.flatten)
+  def getArtistsTopTracks(artistNames : List[String]) : Future[List[TopTracksVO]] = {
+                // Future.sequence(artistNames.map(getArtistTopTracks(_).map(_.topTracks)));
+   
+    val topTrackVOCollection = artistNames.map(getArtistTopTracks(_))
+    
+   // Futures.sequence
+   Future.sequence(topTrackVOCollection.map(_.filter(!_.isEmpty).map(_.get)))
   }
 
-  def getArtistTopTracks(artistName : String) : Future[List[Track]] = {
+  def getArtistTopTracks(artistName : String) : Future[Option[TopTracksVO]] = {
     val futureArtist = searchForArtist(artistName)
     futureArtist.flatMap(artist => 
          getTopTracks(artist)
@@ -43,12 +48,12 @@ class Playlister @Inject() (ws: WSClient) {
       
       Artist(artistName, artistId)
     })
-  }
+  } 
 
-  def getTopTracks(artist : Artist) : Future[List[Track]] = {
+  def getTopTracks(artist : Artist) : Future[Option[TopTracksVO]] = {
 
     if (artist.name.isEmpty) {
-      return Future(List())
+      return Future(None)
     }
 
     val request = ws.url(s"https://api.spotify.com/v1/artists/${artist.spotifyId}/top-tracks")
@@ -61,7 +66,10 @@ class Playlister @Inject() (ws: WSClient) {
       Logger.info(s"topTracksResponse=${response.body}")
 
       val jsonResponse = response.json.asInstanceOf[JsObject]
-      transformToTracks(jsonResponse)
+      val topTracks = transformToTracks(jsonResponse)
+
+      Some(TopTracksVO(artist, topTracks))
+
     })
   }
 

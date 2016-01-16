@@ -16,14 +16,18 @@ class Application @Inject() (ws: WSClient)  extends Controller {
 
     val artistList = artistQuery.split(",");
 
-    Logger.info(s"searched for $artistQuery");
+    Logger.debug(s"searched for $artistQuery");
 
     val playlist = new Playlister(ws)
     val futureTopTracks = playlist.getArtistsTopTracks(artistList.toList)
     futureTopTracks.map{
         topTracks => {
-          val ids: List[String] = topTracks.map(_.spotifyId)
-          val jsonResponse  = Json.obj("playlist" -> Json.toJson(ids))
+          val artists: List[String] = topTracks.map(_.artist.name)
+          val playlist: List[String] = topTracks.flatMap(_.topTracks.map(_.spotifyId))
+          val jsonResponse  = Json.obj(
+            "artists" -> Json.toJson(artists),
+             "playlist" -> Json.toJson(playlist)
+            )
           Ok(jsonResponse)
         } 
     }
